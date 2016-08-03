@@ -1,0 +1,69 @@
+
+lapse_event = enum {
+	none;
+	camera_btn_capture;
+	camera_btn_pause;
+	camera_btn_stop;
+	camera_btn_resume;
+	camera_btn_lapse;
+	camera_btn_ratio;
+	camera_btn_more;
+	camera_btn_library;
+	camera_btn_switch;
+	max;
+}
+
+lapse_ui_scene = enum {
+	camera;
+	library;
+}
+
+video_info = record {
+	interval:f32;
+	fps:i32;
+	resolution:i32;
+	exposure:i32;
+	iso:i32;
+}
+
+const_define = record {
+	# camera
+	const FLASH:string = "flash";
+	const AUTO:string = "auto";
+	const STR_YES:string = "yes";
+	const STR_NO:string = "no";
+	const QUALITY:string = "quality";
+	const QUALITY_LOW:string = "low";
+	const QUALITY_MEDIUM:string = "medium";
+	const QUALITY_HIGH:string = "high";
+	const QUALITY_PHOTO:string = "photo";
+	const CAMERA_POS:string = "camera_pos";
+	const CAMERA_POS_FRONT:string = "front";
+	const CAMERA_POS_BACK:string = "back";
+	const EXPOSURE:string = "exposure";
+	const MANUAL:string = "manual";
+	const POINT:string = "point";
+	const EXPOSURE_X:string = "exposure_x";
+	const EXPOSURE_Y:string = "exposure_y";
+	const EXPOSURE_LEV:string = "exposure_lev";
+	const ISO:string = "iso";
+	const FOCUS:string = "focus";
+	const FOCUS_RANGE:string = "focus_range";
+	const LOCK:string = "lock";
+
+	#video
+	const INTERVAL:string = "interval";
+	const RESOLUTION:string = "resolution";
+	const FPS:string = "fps";
+	const BITRATE:string = "bitrate";
+}
+
+uilogic_gen = interface + c {
+	static instance():uilogic_gen;
+	initialize(scene:lapse_ui_scene):bool;
+}
+
+logic_gen = interface + c {
+	static instance():logic_gen;
+	initialize(config:string):bool;
+}

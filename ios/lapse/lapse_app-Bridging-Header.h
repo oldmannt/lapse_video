@@ -1,0 +1,38 @@
+//
+//  Use this file to import your target's public headers that you would like to expose to Swift.
+//
+
+#import "GBLogGen.h"
+
+#import "GBAsyncLoopGen.h"
+#import "GBUiManagerGen.h"
+#import "GBUiConfGen.h"
+#import "GBUiValueCheckerGen.h"
+#import "GBLangType.h"
+
+#import "GBArgbColor.h"
+#import "GBTextBoarder.h"
+#import "GBViewConf.h"
+#import "GBViewConstraint.h"
+#import "GBViewFrame.h"
+#import "GBViewGen.h"
+#import "GBViewFactoryGen.h"
+#import "GBViewEventHandler.h"
+#import "GBViewEvent.h"
+#import "GBViewEventParam.h"
+#import "GBTextKeyboard.h"
+
+#import "GBPlatformUtilityGen.h"
+
+#import "GBCameraFlash.h"
+#import "GBCameraQuality.h"
+#import "GBVideoFrameGen.h"
+#import "video_frame_imp.h"
+#import "GBCameraControllerGen.h"
+#import "GBVideoWriterGen.h"
+#import "GBInstanceGetterGen.h"
+#import "objc_utility.h"
+
+#import "LPALogicGen.h"
+#import "LPAUilogicGen.h"
+#import "LPALapseUiScene.h"

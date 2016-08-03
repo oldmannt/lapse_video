@@ -1,0 +1,21 @@
+{
+	"video":{
+		"interval":1000,
+		"resolution":480,
+		"fps":25,
+		"bitrate":400000
+	},
+
+	"camera":{
+		"flash":"auto,yes,no",
+		"quality":"photo,low,medium,high",
+		"front":"false",
+		"exposure":"auto,manual,point",
+		"exposure_x":0.5,
+		"exposure_y":0.5,
+		"iso":100,
+		"exposure_lev":40,
+		"focus":"auto,point,lock",
+		"focus_lev":111
+	}
+}

@@ -1,0 +1,943 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		338263111D46AA8400DA114F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263101D46AA8400DA114F /* AppDelegate.swift */; };
+		338263131D46AA8400DA114F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263121D46AA8400DA114F /* ViewController.swift */; };
+		338263161D46AA8400DA114F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338263141D46AA8400DA114F /* Main.storyboard */; };
+		338263181D46AA8400DA114F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338263171D46AA8400DA114F /* Assets.xcassets */; };
+		3382631B1D46AA8400DA114F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338263191D46AA8400DA114F /* LaunchScreen.storyboard */; };
+		338263261D46AA8400DA114F /* lapseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263251D46AA8400DA114F /* lapseTests.swift */; };
+		338263311D46AA8400DA114F /* lapseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263301D46AA8400DA114F /* lapseUITests.swift */; };
+		338263441D46AC7900DA114F /* camera_controller_imp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263431D46AC7900DA114F /* camera_controller_imp.swift */; };
+		3382638F1D47247900DA114F /* justfor_cpplink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3382638E1D47247900DA114F /* justfor_cpplink.cpp */; };
+		3382644A1D4748AF00DA114F /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382643D1D47489200DA114F /* libcurl.a */; };
+		3382644B1D4748AF00DA114F /* libdjinni_objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338264431D47489700DA114F /* libdjinni_objc.a */; };
+		3382644C1D4748AF00DA114F /* libgearsbox_objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338264371D47488C00DA114F /* libgearsbox_objc.a */; };
+		3382644D1D4748AF00DA114F /* libgearsbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338264351D47488C00DA114F /* libgearsbox.a */; };
+		3382644E1D4748AF00DA114F /* liblapse_objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382642D1D47488800DA114F /* liblapse_objc.a */; };
+		338264501D4748AF00DA114F /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338264491D47489C00DA114F /* libuv.a */; };
+		338264511D47E2FE00DA114F /* liblapse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382642B1D47488800DA114F /* liblapse.a */; };
+		338264731D49658100DA114F /* EditDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382646B1D49658100DA114F /* EditDelegate.swift */; };
+		338264741D49658100DA114F /* EditMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382646C1D49658100DA114F /* EditMaxLength.swift */; };
+		338264751D49658100DA114F /* GBViewFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382646D1D49658100DA114F /* GBViewFactoryImp.swift */; };
+		338264761D49658100DA114F /* GBViewImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382646E1D49658100DA114F /* GBViewImp.swift */; };
+		338264771D49658100DA114F /* NumInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3382646F1D49658100DA114F /* NumInputDelegate.swift */; };
+		338264781D49658100DA114F /* platform_utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338264701D49658100DA114F /* platform_utility.swift */; };
+		338264791D49658100DA114F /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338264711D49658100DA114F /* StringUtils.swift */; };
+		3382647A1D49658100DA114F /* TypeConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338264721D49658100DA114F /* TypeConvertor.swift */; };
+		33ED95391D51230500833349 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 33ED95381D51230500833349 /* user.json */; };
+		33ED953F1D51293500833349 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ED953E1D51293500833349 /* libz.tbd */; };
+		33ED95411D51295E00833349 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ED95401D51295E00833349 /* libiconv.tbd */; };
+		33ED95451D512EBC00833349 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ED95441D512EBC00833349 /* libbz2.tbd */; };
+		33ED95471D51332700833349 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338264581D48280A00DA114F /* libavcodec.a */; };
+		33ED95481D51332700833349 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338264591D48280A00DA114F /* libavdevice.a */; };
+		33ED95491D51332700833349 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382645A1D48280A00DA114F /* libavfilter.a */; };
+		33ED954A1D51332700833349 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382645B1D48280A00DA114F /* libavformat.a */; };
+		33ED954B1D51332700833349 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382645C1D48280A00DA114F /* libavutil.a */; };
+		33ED954C1D51332700833349 /* libpostproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382645D1D48280A00DA114F /* libpostproc.a */; };
+		33ED954D1D51332700833349 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382645E1D48280A00DA114F /* libswresample.a */; };
+		33ED954E1D51332700833349 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382645F1D48280A00DA114F /* libswscale.a */; };
+		33ED954F1D51332700833349 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338264601D48280A00DA114F /* libx264.a */; };
+		33ED95531D5142B600833349 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ED95521D5142B600833349 /* VideoToolbox.framework */; };
+		33ED95551D51A75E00833349 /* MainLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ED95541D51A75E00833349 /* MainLoop.swift */; };
+		F9A2B2A15F7EC3B47899379D /* libPods-lapse_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAA70029AF1BADD6551022 /* libPods-lapse_app.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		338263221D46AA8400DA114F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338263051D46AA8400DA114F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3382630C1D46AA8400DA114F;
+			remoteInfo = lapse;
+		};
+		3382632D1D46AA8400DA114F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338263051D46AA8400DA114F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3382630C1D46AA8400DA114F;
+			remoteInfo = lapse;
+		};
+		3382642A1D47488800DA114F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338264241D47488800DA114F /* lapse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9FCFFA70C2EDAEF80DCC479C;
+			remoteInfo = lapse;
+		};
+		3382642C1D47488800DA114F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338264241D47488800DA114F /* lapse.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D63DEB770FD191237E4726E;
+			remoteInfo = lapse_objc;
+		};
+		338264341D47488C00DA114F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3382642E1D47488C00DA114F /* gearsbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19B370ED43C38131B635AD67;
+			remoteInfo = gearsbox;
+		};
+		338264361D47488C00DA114F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3382642E1D47488C00DA114F /* gearsbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 45DD4DE04106DB9D6B96E9D6;
+			remoteInfo = gearsbox_objc;
+		};
+		3382643C1D47489200DA114F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338264381D47489100DA114F /* libcurl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 939A76A22F96172735F31158;
+			remoteInfo = libcurl;
+		};
+		338264421D47489700DA114F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3382643E1D47489700DA114F /* support_lib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C99AA4F95316AA552A79C55;
+			remoteInfo = djinni_objc;
+		};
+		338264481D47489C00DA114F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338264441D47489B00DA114F /* uv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1366FBDA3B41EA03E9CC86CA;
+			remoteInfo = libuv;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		175E8A8DBACAE7D99CCB77A8 /* Pods-lapse_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lapse_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lapse_app/Pods-lapse_app.debug.xcconfig"; sourceTree = "<group>"; };
+		3382630D1D46AA8400DA114F /* lapse_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lapse_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		338263101D46AA8400DA114F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		338263121D46AA8400DA114F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		338263151D46AA8400DA114F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		338263171D46AA8400DA114F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3382631A1D46AA8400DA114F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3382631C1D46AA8400DA114F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		338263211D46AA8400DA114F /* lapse_app.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lapse_app.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		338263251D46AA8400DA114F /* lapseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lapseTests.swift; sourceTree = "<group>"; };
+		338263271D46AA8400DA114F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3382632C1D46AA8400DA114F /* lapse_app.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lapse_app.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		338263301D46AA8400DA114F /* lapseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lapseUITests.swift; sourceTree = "<group>"; };
+		338263321D46AA8400DA114F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3382633E1D46AC0700DA114F /* lapse_app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lapse_app-Bridging-Header.h"; sourceTree = "<group>"; };
+		338263431D46AC7900DA114F /* camera_controller_imp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = camera_controller_imp.swift; path = ../../gearsbox/src/swift/camera_controller_imp.swift; sourceTree = "<group>"; };
+		3382638E1D47247900DA114F /* justfor_cpplink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = justfor_cpplink.cpp; sourceTree = "<group>"; };
+		338263D41D47434A00DA114F /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = ../gearsbox/deps/build/Debug/libgtest.a; sourceTree = "<group>"; };
+		338263D51D47434A00DA114F /* libsqlite3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsqlite3.a; path = ../gearsbox/deps/sqlite3/build/Debug/libsqlite3.a; sourceTree = "<group>"; };
+		338263D81D4743BB00DA114F /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../gearsbox/deps/curl/build/Debug/libcurl.a; sourceTree = "<group>"; };
+		338263D91D4743BB00DA114F /* libgearsbox_objc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgearsbox_objc.a; path = ../gearsbox/build/Debug/libgearsbox_objc.a; sourceTree = "<group>"; };
+		338263DA1D4743BB00DA114F /* libgearsbox.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgearsbox.a; path = ../gearsbox/build/Debug/libgearsbox.a; sourceTree = "<group>"; };
+		338263DB1D4743BB00DA114F /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuv.a; path = ../gearsbox/deps/libuv/build/Debug/libuv.a; sourceTree = "<group>"; };
+		338264241D47488800DA114F /* lapse.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lapse.xcodeproj; path = build_ios/lapse.xcodeproj; sourceTree = "<group>"; };
+		3382642E1D47488C00DA114F /* gearsbox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gearsbox.xcodeproj; path = build_ios/gearsbox/gearsbox.xcodeproj; sourceTree = "<group>"; };
+		338264381D47489100DA114F /* libcurl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libcurl.xcodeproj; path = build_ios/gearsbox/deps/curl/libcurl.xcodeproj; sourceTree = "<group>"; };
+		3382643E1D47489700DA114F /* support_lib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = support_lib.xcodeproj; path = "build_ios/gearsbox/deps/djinni/support-lib/support_lib.xcodeproj"; sourceTree = "<group>"; };
+		338264441D47489B00DA114F /* uv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = uv.xcodeproj; path = build_ios/gearsbox/deps/libuv/uv.xcodeproj; sourceTree = "<group>"; };
+		338264581D48280A00DA114F /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = "../gearsbox/deps/ffmpeg/ios-fat/libavcodec.a"; sourceTree = "<group>"; };
+		338264591D48280A00DA114F /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = "../gearsbox/deps/ffmpeg/ios-fat/libavdevice.a"; sourceTree = "<group>"; };
+		3382645A1D48280A00DA114F /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = "../gearsbox/deps/ffmpeg/ios-fat/libavfilter.a"; sourceTree = "<group>"; };
+		3382645B1D48280A00DA114F /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = "../gearsbox/deps/ffmpeg/ios-fat/libavformat.a"; sourceTree = "<group>"; };
+		3382645C1D48280A00DA114F /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = "../gearsbox/deps/ffmpeg/ios-fat/libavutil.a"; sourceTree = "<group>"; };
+		3382645D1D48280A00DA114F /* libpostproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpostproc.a; path = "../gearsbox/deps/ffmpeg/ios-fat/libpostproc.a"; sourceTree = "<group>"; };
+		3382645E1D48280A00DA114F /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = "../gearsbox/deps/ffmpeg/ios-fat/libswresample.a"; sourceTree = "<group>"; };
+		3382645F1D48280A00DA114F /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = "../gearsbox/deps/ffmpeg/ios-fat/libswscale.a"; sourceTree = "<group>"; };
+		338264601D48280A00DA114F /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libx264.a; path = "../gearsbox/deps/ffmpeg/ios-fat/libx264.a"; sourceTree = "<group>"; };
+		3382646A1D49276500DA114F /* lapse_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = lapse_app.entitlements; sourceTree = "<group>"; };
+		3382646B1D49658100DA114F /* EditDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditDelegate.swift; path = ../../gearsbox/src/swift/EditDelegate.swift; sourceTree = "<group>"; };
+		3382646C1D49658100DA114F /* EditMaxLength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditMaxLength.swift; path = ../../gearsbox/src/swift/EditMaxLength.swift; sourceTree = "<group>"; };
+		3382646D1D49658100DA114F /* GBViewFactoryImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GBViewFactoryImp.swift; path = ../../gearsbox/src/swift/GBViewFactoryImp.swift; sourceTree = "<group>"; };
+		3382646E1D49658100DA114F /* GBViewImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GBViewImp.swift; path = ../../gearsbox/src/swift/GBViewImp.swift; sourceTree = "<group>"; };
+		3382646F1D49658100DA114F /* NumInputDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumInputDelegate.swift; path = ../../gearsbox/src/swift/NumInputDelegate.swift; sourceTree = "<group>"; };
+		338264701D49658100DA114F /* platform_utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = platform_utility.swift; path = ../../gearsbox/src/swift/platform_utility.swift; sourceTree = "<group>"; };
+		338264711D49658100DA114F /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringUtils.swift; path = ../../gearsbox/src/swift/StringUtils.swift; sourceTree = "<group>"; };
+		338264721D49658100DA114F /* TypeConvertor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypeConvertor.swift; path = ../../gearsbox/src/swift/TypeConvertor.swift; sourceTree = "<group>"; };
+		33ED95381D51230500833349 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = user.json; path = ../data/user.json; sourceTree = "<group>"; };
+		33ED953A1D51274C00833349 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		33ED953C1D51284A00833349 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		33ED953E1D51293500833349 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		33ED95401D51295E00833349 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		33ED95421D512E9B00833349 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		33ED95441D512EBC00833349 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		33ED95521D5142B600833349 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		33ED95541D51A75E00833349 /* MainLoop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainLoop.swift; path = ../../gearsbox/src/swift/MainLoop.swift; sourceTree = "<group>"; };
+		4EDAA70029AF1BADD6551022 /* libPods-lapse_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lapse_app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFD487B950392F54D673ECBD /* Pods-lapse_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lapse_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-lapse_app/Pods-lapse_app.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3382630A1D46AA8400DA114F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33ED95531D5142B600833349 /* VideoToolbox.framework in Frameworks */,
+				33ED95451D512EBC00833349 /* libbz2.tbd in Frameworks */,
+				33ED95411D51295E00833349 /* libiconv.tbd in Frameworks */,
+				33ED953F1D51293500833349 /* libz.tbd in Frameworks */,
+				33ED95471D51332700833349 /* libavcodec.a in Frameworks */,
+				33ED95481D51332700833349 /* libavdevice.a in Frameworks */,
+				33ED95491D51332700833349 /* libavfilter.a in Frameworks */,
+				33ED954A1D51332700833349 /* libavformat.a in Frameworks */,
+				33ED954B1D51332700833349 /* libavutil.a in Frameworks */,
+				33ED954C1D51332700833349 /* libpostproc.a in Frameworks */,
+				33ED954D1D51332700833349 /* libswresample.a in Frameworks */,
+				33ED954E1D51332700833349 /* libswscale.a in Frameworks */,
+				33ED954F1D51332700833349 /* libx264.a in Frameworks */,
+				338264511D47E2FE00DA114F /* liblapse.a in Frameworks */,
+				3382644A1D4748AF00DA114F /* libcurl.a in Frameworks */,
+				3382644B1D4748AF00DA114F /* libdjinni_objc.a in Frameworks */,
+				3382644C1D4748AF00DA114F /* libgearsbox_objc.a in Frameworks */,
+				3382644D1D4748AF00DA114F /* libgearsbox.a in Frameworks */,
+				3382644E1D4748AF00DA114F /* liblapse_objc.a in Frameworks */,
+				338264501D4748AF00DA114F /* libuv.a in Frameworks */,
+				F9A2B2A15F7EC3B47899379D /* libPods-lapse_app.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3382631E1D46AA8400DA114F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338263291D46AA8400DA114F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		338263041D46AA8400DA114F = {
+			isa = PBXGroup;
+			children = (
+				33ED952E1D50658500833349 /* data */,
+				3382646A1D49276500DA114F /* lapse_app.entitlements */,
+				338263451D46B60700DA114F /* projects */,
+				3382630F1D46AA8400DA114F /* lapse */,
+				338263241D46AA8400DA114F /* lapseTests */,
+				3382632F1D46AA8400DA114F /* lapseUITests */,
+				3382630E1D46AA8400DA114F /* Products */,
+				3DD9FC27E578FEDB792B1B21 /* Pods */,
+				5E075F83473E59AEFCDEF25B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3382630E1D46AA8400DA114F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3382630D1D46AA8400DA114F /* lapse_app.app */,
+				338263211D46AA8400DA114F /* lapse_app.xctest */,
+				3382632C1D46AA8400DA114F /* lapse_app.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3382630F1D46AA8400DA114F /* lapse */ = {
+			isa = PBXGroup;
+			children = (
+				338263421D46AC6800DA114F /* gearsbox */,
+				338263101D46AA8400DA114F /* AppDelegate.swift */,
+				338263121D46AA8400DA114F /* ViewController.swift */,
+				338263141D46AA8400DA114F /* Main.storyboard */,
+				338263171D46AA8400DA114F /* Assets.xcassets */,
+				338263191D46AA8400DA114F /* LaunchScreen.storyboard */,
+				3382631C1D46AA8400DA114F /* Info.plist */,
+				3382633E1D46AC0700DA114F /* lapse_app-Bridging-Header.h */,
+				3382638E1D47247900DA114F /* justfor_cpplink.cpp */,
+			);
+			path = lapse;
+			sourceTree = "<group>";
+		};
+		338263241D46AA8400DA114F /* lapseTests */ = {
+			isa = PBXGroup;
+			children = (
+				338263251D46AA8400DA114F /* lapseTests.swift */,
+				338263271D46AA8400DA114F /* Info.plist */,
+			);
+			path = lapseTests;
+			sourceTree = "<group>";
+		};
+		3382632F1D46AA8400DA114F /* lapseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				338263301D46AA8400DA114F /* lapseUITests.swift */,
+				338263321D46AA8400DA114F /* Info.plist */,
+			);
+			path = lapseUITests;
+			sourceTree = "<group>";
+		};
+		338263421D46AC6800DA114F /* gearsbox */ = {
+			isa = PBXGroup;
+			children = (
+				33ED95541D51A75E00833349 /* MainLoop.swift */,
+				3382646B1D49658100DA114F /* EditDelegate.swift */,
+				3382646C1D49658100DA114F /* EditMaxLength.swift */,
+				3382646D1D49658100DA114F /* GBViewFactoryImp.swift */,
+				3382646E1D49658100DA114F /* GBViewImp.swift */,
+				3382646F1D49658100DA114F /* NumInputDelegate.swift */,
+				338264701D49658100DA114F /* platform_utility.swift */,
+				338264711D49658100DA114F /* StringUtils.swift */,
+				338264721D49658100DA114F /* TypeConvertor.swift */,
+				338263431D46AC7900DA114F /* camera_controller_imp.swift */,
+			);
+			name = gearsbox;
+			sourceTree = "<group>";
+		};
+		338263451D46B60700DA114F /* projects */ = {
+			isa = PBXGroup;
+			children = (
+				338264441D47489B00DA114F /* uv.xcodeproj */,
+				3382643E1D47489700DA114F /* support_lib.xcodeproj */,
+				338264381D47489100DA114F /* libcurl.xcodeproj */,
+				3382642E1D47488C00DA114F /* gearsbox.xcodeproj */,
+				338264241D47488800DA114F /* lapse.xcodeproj */,
+			);
+			name = projects;
+			sourceTree = "<group>";
+		};
+		338264251D47488800DA114F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3382642B1D47488800DA114F /* liblapse.a */,
+				3382642D1D47488800DA114F /* liblapse_objc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3382642F1D47488C00DA114F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				338264351D47488C00DA114F /* libgearsbox.a */,
+				338264371D47488C00DA114F /* libgearsbox_objc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		338264391D47489100DA114F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3382643D1D47489200DA114F /* libcurl.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3382643F1D47489700DA114F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				338264431D47489700DA114F /* libdjinni_objc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		338264451D47489B00DA114F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				338264491D47489C00DA114F /* libuv.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33ED952E1D50658500833349 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				33ED95381D51230500833349 /* user.json */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		3DD9FC27E578FEDB792B1B21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				175E8A8DBACAE7D99CCB77A8 /* Pods-lapse_app.debug.xcconfig */,
+				FFD487B950392F54D673ECBD /* Pods-lapse_app.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5E075F83473E59AEFCDEF25B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33ED95521D5142B600833349 /* VideoToolbox.framework */,
+				33ED95441D512EBC00833349 /* libbz2.tbd */,
+				33ED95421D512E9B00833349 /* AVFoundation.framework */,
+				33ED95401D51295E00833349 /* libiconv.tbd */,
+				33ED953E1D51293500833349 /* libz.tbd */,
+				33ED953C1D51284A00833349 /* CoreMedia.framework */,
+				33ED953A1D51274C00833349 /* CoreVideo.framework */,
+				338264581D48280A00DA114F /* libavcodec.a */,
+				338264591D48280A00DA114F /* libavdevice.a */,
+				3382645A1D48280A00DA114F /* libavfilter.a */,
+				3382645B1D48280A00DA114F /* libavformat.a */,
+				3382645C1D48280A00DA114F /* libavutil.a */,
+				3382645D1D48280A00DA114F /* libpostproc.a */,
+				3382645E1D48280A00DA114F /* libswresample.a */,
+				3382645F1D48280A00DA114F /* libswscale.a */,
+				338264601D48280A00DA114F /* libx264.a */,
+				338263D81D4743BB00DA114F /* libcurl.a */,
+				338263D91D4743BB00DA114F /* libgearsbox_objc.a */,
+				338263DA1D4743BB00DA114F /* libgearsbox.a */,
+				338263DB1D4743BB00DA114F /* libuv.a */,
+				338263D41D47434A00DA114F /* libgtest.a */,
+				338263D51D47434A00DA114F /* libsqlite3.a */,
+				4EDAA70029AF1BADD6551022 /* libPods-lapse_app.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3382630C1D46AA8400DA114F /* lapse_app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338263351D46AA8400DA114F /* Build configuration list for PBXNativeTarget "lapse_app" */;
+			buildPhases = (
+				5C7A723094A0E835126D9A90 /* 📦 Check Pods Manifest.lock */,
+				338263091D46AA8400DA114F /* Sources */,
+				3382630A1D46AA8400DA114F /* Frameworks */,
+				3382630B1D46AA8400DA114F /* Resources */,
+				202416BFE6BC63FF4BB0CE6B /* 📦 Embed Pods Frameworks */,
+				41495DFB1D57FCEFF0A91366 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lapse_app;
+			productName = lapse;
+			productReference = 3382630D1D46AA8400DA114F /* lapse_app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		338263201D46AA8400DA114F /* lapse_appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338263381D46AA8400DA114F /* Build configuration list for PBXNativeTarget "lapse_appTests" */;
+			buildPhases = (
+				3382631D1D46AA8400DA114F /* Sources */,
+				3382631E1D46AA8400DA114F /* Frameworks */,
+				3382631F1D46AA8400DA114F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				338263231D46AA8400DA114F /* PBXTargetDependency */,
+			);
+			name = lapse_appTests;
+			productName = lapseTests;
+			productReference = 338263211D46AA8400DA114F /* lapse_app.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3382632B1D46AA8400DA114F /* lapse_appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3382633B1D46AA8400DA114F /* Build configuration list for PBXNativeTarget "lapse_appUITests" */;
+			buildPhases = (
+				338263281D46AA8400DA114F /* Sources */,
+				338263291D46AA8400DA114F /* Frameworks */,
+				3382632A1D46AA8400DA114F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3382632E1D46AA8400DA114F /* PBXTargetDependency */,
+			);
+			name = lapse_appUITests;
+			productName = lapseUITests;
+			productReference = 3382632C1D46AA8400DA114F /* lapse_app.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		338263051D46AA8400DA114F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = dyno;
+				TargetAttributes = {
+					3382630C1D46AA8400DA114F = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 32DR82A3MW;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
+					338263201D46AA8400DA114F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 3382630C1D46AA8400DA114F;
+					};
+					3382632B1D46AA8400DA114F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 3382630C1D46AA8400DA114F;
+					};
+				};
+			};
+			buildConfigurationList = 338263081D46AA8400DA114F /* Build configuration list for PBXProject "lapse_app" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 338263041D46AA8400DA114F;
+			productRefGroup = 3382630E1D46AA8400DA114F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3382642F1D47488C00DA114F /* Products */;
+					ProjectRef = 3382642E1D47488C00DA114F /* gearsbox.xcodeproj */;
+				},
+				{
+					ProductGroup = 338264251D47488800DA114F /* Products */;
+					ProjectRef = 338264241D47488800DA114F /* lapse.xcodeproj */;
+				},
+				{
+					ProductGroup = 338264391D47489100DA114F /* Products */;
+					ProjectRef = 338264381D47489100DA114F /* libcurl.xcodeproj */;
+				},
+				{
+					ProductGroup = 3382643F1D47489700DA114F /* Products */;
+					ProjectRef = 3382643E1D47489700DA114F /* support_lib.xcodeproj */;
+				},
+				{
+					ProductGroup = 338264451D47489B00DA114F /* Products */;
+					ProjectRef = 338264441D47489B00DA114F /* uv.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3382630C1D46AA8400DA114F /* lapse_app */,
+				338263201D46AA8400DA114F /* lapse_appTests */,
+				3382632B1D46AA8400DA114F /* lapse_appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3382642B1D47488800DA114F /* liblapse.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblapse.a;
+			remoteRef = 3382642A1D47488800DA114F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3382642D1D47488800DA114F /* liblapse_objc.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblapse_objc.a;
+			remoteRef = 3382642C1D47488800DA114F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		338264351D47488C00DA114F /* libgearsbox.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgearsbox.a;
+			remoteRef = 338264341D47488C00DA114F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		338264371D47488C00DA114F /* libgearsbox_objc.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgearsbox_objc.a;
+			remoteRef = 338264361D47488C00DA114F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3382643D1D47489200DA114F /* libcurl.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcurl.a;
+			remoteRef = 3382643C1D47489200DA114F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		338264431D47489700DA114F /* libdjinni_objc.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libdjinni_objc.a;
+			remoteRef = 338264421D47489700DA114F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		338264491D47489C00DA114F /* libuv.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libuv.a;
+			remoteRef = 338264481D47489C00DA114F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3382630B1D46AA8400DA114F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33ED95391D51230500833349 /* user.json in Resources */,
+				3382631B1D46AA8400DA114F /* LaunchScreen.storyboard in Resources */,
+				338263181D46AA8400DA114F /* Assets.xcassets in Resources */,
+				338263161D46AA8400DA114F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3382631F1D46AA8400DA114F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3382632A1D46AA8400DA114F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		202416BFE6BC63FF4BB0CE6B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lapse_app/Pods-lapse_app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41495DFB1D57FCEFF0A91366 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lapse_app/Pods-lapse_app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C7A723094A0E835126D9A90 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		338263091D46AA8400DA114F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338264741D49658100DA114F /* EditMaxLength.swift in Sources */,
+				338264751D49658100DA114F /* GBViewFactoryImp.swift in Sources */,
+				338263131D46AA8400DA114F /* ViewController.swift in Sources */,
+				33ED95551D51A75E00833349 /* MainLoop.swift in Sources */,
+				3382638F1D47247900DA114F /* justfor_cpplink.cpp in Sources */,
+				338264761D49658100DA114F /* GBViewImp.swift in Sources */,
+				338264731D49658100DA114F /* EditDelegate.swift in Sources */,
+				3382647A1D49658100DA114F /* TypeConvertor.swift in Sources */,
+				338264771D49658100DA114F /* NumInputDelegate.swift in Sources */,
+				338264781D49658100DA114F /* platform_utility.swift in Sources */,
+				338264791D49658100DA114F /* StringUtils.swift in Sources */,
+				338263111D46AA8400DA114F /* AppDelegate.swift in Sources */,
+				338263441D46AC7900DA114F /* camera_controller_imp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3382631D1D46AA8400DA114F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338263261D46AA8400DA114F /* lapseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338263281D46AA8400DA114F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338263311D46AA8400DA114F /* lapseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		338263231D46AA8400DA114F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3382630C1D46AA8400DA114F /* lapse_app */;
+			targetProxy = 338263221D46AA8400DA114F /* PBXContainerItemProxy */;
+		};
+		3382632E1D46AA8400DA114F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3382630C1D46AA8400DA114F /* lapse_app */;
+			targetProxy = 3382632D1D46AA8400DA114F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		338263141D46AA8400DA114F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				338263151D46AA8400DA114F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		338263191D46AA8400DA114F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3382631A1D46AA8400DA114F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		338263331D46AA8400DA114F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		338263341D46AA8400DA114F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		338263361D46AA8400DA114F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 175E8A8DBACAE7D99CCB77A8 /* Pods-lapse_app.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				INFOPLIST_FILE = lapse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "../gearsbox/deps/ffmpeg/ios-fat";
+				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapse;
+				PRODUCT_NAME = lapse_app;
+				SWIFT_OBJC_BRIDGING_HEADER = "lapse/lapse_app-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "../gearsbox/src/swift ../gearsbox/generated-src/objc ../gearsbox/src/objc ../generated-src/objc ../src/cpp";
+			};
+			name = Debug;
+		};
+		338263371D46AA8400DA114F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFD487B950392F54D673ECBD /* Pods-lapse_app.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				INFOPLIST_FILE = lapse/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "../gearsbox/deps/ffmpeg/ios-fat";
+				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapse;
+				PRODUCT_NAME = lapse_app;
+				SWIFT_OBJC_BRIDGING_HEADER = "lapse/lapse_app-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "../gearsbox/src/swift ../gearsbox/generated-src/objc ../gearsbox/src/objc ../generated-src/objc ../src/cpp";
+			};
+			name = Release;
+		};
+		338263391D46AA8400DA114F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = lapseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapseTests;
+				PRODUCT_NAME = lapse_app;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lapse_app.app/lapse_app";
+			};
+			name = Debug;
+		};
+		3382633A1D46AA8400DA114F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = lapseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapseTests;
+				PRODUCT_NAME = lapse_app;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lapse_app.app/lapse_app";
+			};
+			name = Release;
+		};
+		3382633C1D46AA8400DA114F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = lapseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapseUITests;
+				PRODUCT_NAME = lapse_app;
+				TEST_TARGET_NAME = lapse;
+			};
+			name = Debug;
+		};
+		3382633D1D46AA8400DA114F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = lapseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapseUITests;
+				PRODUCT_NAME = lapse_app;
+				TEST_TARGET_NAME = lapse;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		338263081D46AA8400DA114F /* Build configuration list for PBXProject "lapse_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338263331D46AA8400DA114F /* Debug */,
+				338263341D46AA8400DA114F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		338263351D46AA8400DA114F /* Build configuration list for PBXNativeTarget "lapse_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338263361D46AA8400DA114F /* Debug */,
+				338263371D46AA8400DA114F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		338263381D46AA8400DA114F /* Build configuration list for PBXNativeTarget "lapse_appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338263391D46AA8400DA114F /* Debug */,
+				3382633A1D46AA8400DA114F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3382633B1D46AA8400DA114F /* Build configuration list for PBXNativeTarget "lapse_appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3382633C1D46AA8400DA114F /* Debug */,
+				3382633D1D46AA8400DA114F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 338263051D46AA8400DA114F /* Project object */;
+}
