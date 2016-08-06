@@ -21,13 +21,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var btn_resume: UIButton!
     @IBOutlet weak var btn_switch: UIButton!
     
+    let camera_controller:GBCameraControllerImp = GBCameraControllerImp()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //btn_show(nil)
         
         GBInstanceGetterGen.setPlatformUtility(GBPlatformUtilityImp())
-        let camera_controller:GBCameraControllerImp = GBCameraControllerImp()
         camera_controller.initializ_swif(self.view)
         camera_controller.startCamera()
         GBInstanceGetterGen.setCameraController(camera_controller)
@@ -85,6 +86,15 @@ class ViewController: UIViewController {
     @IBAction func library(sender: AnyObject) {
     }
     @IBAction func switch_camer(sender: UIButton) {
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        camera_controller.rotate()
+        return UIInterfaceOrientationMask.Landscape
+    }
+    
+    override func shouldAutorotate() -> Bool{
+        return true;
     }
     
     private func btn_show(btn: UIButton?){

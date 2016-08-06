@@ -109,6 +109,10 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LA-Ze-XF0">
                                 <rect key="frame" x="555" y="20" width="45" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2bN-2K-gkR"/>
+                                    <constraint firstAttribute="width" constant="45" id="R8m-TJ-2Qf"/>
+                                </constraints>
                                 <state key="normal" title="switch"/>
                                 <connections>
                                     <action selector="switch_camer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LGb-0f-zGF"/>
@@ -124,6 +128,7 @@
                             <constraint firstItem="e36-d7-Jw2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uqw-Pp-l0P"/>
                         </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="btn_capture" destination="3M3-Nu-Zft" id="zEM-pD-mFb"/>
                         <outlet property="btn_lapse" destination="uBb-Xr-myx" id="Uyz-yX-Cr1"/>
