@@ -126,7 +126,7 @@ void LogicImp::initialize_video(){
     
     std::time_t t = std::time(NULL);
     char mbstr[1024];
-    if (std::strftime(mbstr, sizeof(mbstr), "/lapse_%y%m%d%H%M%S.h264", std::localtime(&t))) {
+    if (std::strftime(mbstr, sizeof(mbstr), "/lapse_%y%m%d%H%M%S.mp4", std::localtime(&t))) {
         doc_dir += mbstr;
         m_video_writer->setFilePath(doc_dir);
     }
@@ -134,7 +134,7 @@ void LogicImp::initialize_video(){
         G_LOG_FC(LOG_ERROR, "time format failed");
         doc_dir += '/';
         doc_dir += std::to_string(TimerGen::currentTick());
-        doc_dir += ".h264";
+        doc_dir += ".mp4";
         m_video_writer->setFilePath(doc_dir);
     }
 }
