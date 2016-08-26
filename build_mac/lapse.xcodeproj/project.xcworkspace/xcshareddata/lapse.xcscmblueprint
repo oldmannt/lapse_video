@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6A1110D278D6BAE4A5654EF687AA6D05131CD849",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6A1110D278D6BAE4A5654EF687AA6D05131CD849" : 0,
+    "4E8EC1E97A744AECB2BFFE9D3D48C062D250382B" : 0,
+    "703C8D6A122D254C79740E410734EC0A4643394D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9C63BEF5-41EB-4ADE-8F4B-1517F467D667",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6A1110D278D6BAE4A5654EF687AA6D05131CD849" : "lapse_video\/",
+    "4E8EC1E97A744AECB2BFFE9D3D48C062D250382B" : "lapse_video\/gearsbox\/deps\/djinni\/",
+    "703C8D6A122D254C79740E410734EC0A4643394D" : "lapse_video\/gearsbox\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "lapse",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "build_mac\/lapse.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dropbox\/djinni.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4E8EC1E97A744AECB2BFFE9D3D48C062D250382B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/oldmannt\/lapse_video.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6A1110D278D6BAE4A5654EF687AA6D05131CD849"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/oldmannt\/gearsbox.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "703C8D6A122D254C79740E410734EC0A4643394D"
+    }
+  ]
+}

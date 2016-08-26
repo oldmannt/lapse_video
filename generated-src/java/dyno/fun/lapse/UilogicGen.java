@@ -8,6 +8,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public abstract class UilogicGen {
     public abstract boolean initialize(LapseUiScene scene);
 
+    public abstract String getEventStr(LapseEvent event);
+
     public static native UilogicGen instance();
 
     private static final class CppProxy extends UilogicGen
@@ -40,5 +42,13 @@ public abstract class UilogicGen {
             return native_initialize(this.nativeRef, scene);
         }
         private native boolean native_initialize(long _nativeRef, LapseUiScene scene);
+
+        @Override
+        public String getEventStr(LapseEvent event)
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getEventStr(this.nativeRef, event);
+        }
+        private native String native_getEventStr(long _nativeRef, LapseEvent event);
     }
 }

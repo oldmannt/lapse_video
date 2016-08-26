@@ -1,6 +1,7 @@
 
 lapse_event = enum {
 	none;
+	camera_begin;
 	camera_btn_capture;
 	camera_btn_pause;
 	camera_btn_stop;
@@ -10,7 +11,17 @@ lapse_event = enum {
 	camera_btn_more;
 	camera_btn_library;
 	camera_btn_switch;
-	max;
+	camera_end;
+
+	review_open;
+
+	projects_begin;
+	projects_btn_back;
+	projects_show;
+	projects_list_select;
+	projects_end;
+
+	ui_end;
 }
 
 lapse_ui_scene = enum {
@@ -61,9 +72,28 @@ const_define = record {
 uilogic_gen = interface + c {
 	static instance():uilogic_gen;
 	initialize(scene:lapse_ui_scene):bool;
+	getEventStr(event:lapse_event):string;
 }
 
 logic_gen = interface + c {
 	static instance():logic_gen;
 	initialize(config:string):bool;
+	getProjectsPath():string;
+}
+
+project_cell_gen = interface +c {
+	static create(path:string, out_w:i32, out_h:i32):project_cell_gen;
+	getPath():string;
+	getName():string;
+	getCreateTime():string;
+	getLength():string;
+	getFps():string;
+}
+
+project_list_gen = interface +c {
+	static instance():project_list_gen;
+	load(review_w:i32, review_h:i32):bool;
+	getProjectAmount():i32;
+	getProjectData(index:i32):project_cell_gen;
+	selectPrject(index:i32);
 }

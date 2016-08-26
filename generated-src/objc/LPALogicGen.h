@@ -11,4 +11,6 @@
 
 - (BOOL)initialize:(nonnull NSString *)config;
 
+- (nonnull NSString *)getProjectsPath;
+
 @end

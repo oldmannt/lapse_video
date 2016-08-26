@@ -3,6 +3,7 @@
 
 #include "NativeUilogicGen.hpp"  // my header
 #include "Marshal.hpp"
+#include "NativeLapseEvent.hpp"
 #include "NativeLapseUiScene.hpp"
 #include "NativeUilogicGen.hpp"
 
@@ -37,6 +38,16 @@ CJNIEXPORT jboolean JNICALL Java_dyno_fun_lapse_UilogicGen_00024CppProxy_native_
         const auto& ref = ::djinni::objectFromHandleAddress<::lpase::UilogicGen>(nativeRef);
         auto r = ref->initialize(::djinni_generated::NativeLapseUiScene::toCpp(jniEnv, j_scene));
         return ::djinni::release(::djinni::Bool::fromCpp(jniEnv, r));
+    } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
+}
+
+CJNIEXPORT jstring JNICALL Java_dyno_fun_lapse_UilogicGen_00024CppProxy_native_1getEventStr(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jobject j_event)
+{
+    try {
+        DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
+        const auto& ref = ::djinni::objectFromHandleAddress<::lpase::UilogicGen>(nativeRef);
+        auto r = ref->getEventStr(::djinni_generated::NativeLapseEvent::toCpp(jniEnv, j_event));
+        return ::djinni::release(::djinni::String::fromCpp(jniEnv, r));
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }
 

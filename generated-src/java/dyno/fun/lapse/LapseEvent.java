@@ -5,6 +5,7 @@ package dyno.fun.lapse;
 
 public enum LapseEvent {
     NONE,
+    CAMERA_BEGIN,
     CAMERA_BTN_CAPTURE,
     CAMERA_BTN_PAUSE,
     CAMERA_BTN_STOP,
@@ -14,6 +15,13 @@ public enum LapseEvent {
     CAMERA_BTN_MORE,
     CAMERA_BTN_LIBRARY,
     CAMERA_BTN_SWITCH,
-    MAX,
+    CAMERA_END,
+    REVIEW_OPEN,
+    PROJECTS_BEGIN,
+    PROJECTS_BTN_BACK,
+    PROJECTS_SHOW,
+    PROJECTS_LIST_SELECT,
+    PROJECTS_END,
+    UI_END,
     ;
 }

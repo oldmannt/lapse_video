@@ -26,6 +26,8 @@ public:
     
     virtual bool initialize(LapseUiScene scene);
     
+    virtual std::string getEventStr(LapseEvent event);
+    
     // gearsbox::ViewEventHandler
     virtual bool handle(const gearsbox::ViewEventParam & param, const std::shared_ptr<gearsbox::ViewGen> & view);
     
@@ -45,7 +47,7 @@ private:
     
     LapseEvent getUIEvent(const std::shared_ptr<gearsbox::ViewGen>& view);
     bool initializeCameraScene();
-    void btnShow(LapseEvent event);
+    void captureBtnShow(LapseEvent event);
 };
 }
 

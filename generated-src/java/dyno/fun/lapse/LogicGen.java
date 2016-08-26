@@ -8,6 +8,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public abstract class LogicGen {
     public abstract boolean initialize(String config);
 
+    public abstract String getProjectsPath();
+
     public static native LogicGen instance();
 
     private static final class CppProxy extends LogicGen
@@ -40,5 +42,13 @@ public abstract class LogicGen {
             return native_initialize(this.nativeRef, config);
         }
         private native boolean native_initialize(long _nativeRef, String config);
+
+        @Override
+        public String getProjectsPath()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getProjectsPath(this.nativeRef);
+        }
+        private native String native_getProjectsPath(long _nativeRef);
     }
 }

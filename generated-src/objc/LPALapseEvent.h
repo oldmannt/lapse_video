@@ -6,6 +6,7 @@
 typedef NS_ENUM(NSInteger, LPALapseEvent)
 {
     LPALapseEventNone,
+    LPALapseEventCameraBegin,
     LPALapseEventCameraBtnCapture,
     LPALapseEventCameraBtnPause,
     LPALapseEventCameraBtnStop,
@@ -15,5 +16,12 @@ typedef NS_ENUM(NSInteger, LPALapseEvent)
     LPALapseEventCameraBtnMore,
     LPALapseEventCameraBtnLibrary,
     LPALapseEventCameraBtnSwitch,
-    LPALapseEventMax,
+    LPALapseEventCameraEnd,
+    LPALapseEventReviewOpen,
+    LPALapseEventProjectsBegin,
+    LPALapseEventProjectsBtnBack,
+    LPALapseEventProjectsShow,
+    LPALapseEventProjectsListSelect,
+    LPALapseEventProjectsEnd,
+    LPALapseEventUiEnd,
 };

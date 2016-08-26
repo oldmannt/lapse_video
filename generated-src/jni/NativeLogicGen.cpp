@@ -39,4 +39,14 @@ CJNIEXPORT jboolean JNICALL Java_dyno_fun_lapse_LogicGen_00024CppProxy_native_1i
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }
 
+CJNIEXPORT jstring JNICALL Java_dyno_fun_lapse_LogicGen_00024CppProxy_native_1getProjectsPath(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef)
+{
+    try {
+        DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
+        const auto& ref = ::djinni::objectFromHandleAddress<::lpase::LogicGen>(nativeRef);
+        auto r = ref->getProjectsPath();
+        return ::djinni::release(::djinni::String::fromCpp(jniEnv, r));
+    } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
+}
+
 }  // namespace djinni_generated

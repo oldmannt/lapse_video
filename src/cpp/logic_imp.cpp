@@ -7,6 +7,7 @@
 //
 
 #include "logic_imp.hpp"
+#include "uilogic_gen.hpp"
 
 #include "macro.h"
 #include "task_manager_gen.hpp"
@@ -15,7 +16,9 @@
 #include "camera_controller_gen.hpp"
 #include "lapse_event.hpp"
 #include "platform_utility_gen.hpp"
+#include "project_list_gen.hpp"
 #include "timer_gen.hpp"
+#include "language_store_gen.hpp"
 
 using namespace lpase;
 using namespace gearsbox;
@@ -31,23 +34,35 @@ LogicImp::LogicImp():m_video_writer(nullptr){
 
 bool LogicImp::initialize(const std::string &config){
     TaskManagerGen::instance()->addTaskExcuser(shared_from_this());
-    std::shared_ptr<ConfigGen> user_config = InstanceGetterGen::getConfig("user");
-    CHECK_RTF(user_config, "get user config null");
+    m_user_config = InstanceGetterGen::getConfig("user");
+    CHECK_RTF(m_user_config, "get user config null");
     std::string pack_path = InstanceGetterGen::getPlatformUtility()->getPackFilePath(config);
-    CHECK_RTF(user_config->initialize(pack_path), "user config initialize failed %s", config.c_str());
-    m_vide_config = user_config->getSubConfig("video");
+    CHECK_RTF(m_user_config->initialize(pack_path), "user config initialize failed %s", config.c_str());
+    m_vide_config = m_user_config->getSubConfig("video");
     CHECK_RTF(m_vide_config!=nullptr, "get video node failed %s", config.c_str());
-    m_camera_config = user_config->getSubConfig("camera");
+    m_camera_config = m_user_config->getSubConfig("camera");
     CHECK_RTF(m_camera_config!=nullptr, "get camera node failed %s", config.c_str());
     initialize_camera();
+    
+    std::string lang_path = InstanceGetterGen::getPlatformUtility()->getPackFilePath("language.json");
+    CHECK(LanguageStoreGen::instance()->initialize(lang_path),"read language failed:%s", lang_path.c_str());
+    
+    LangType lang_type = InstanceGetterGen::getPlatformUtility()->getLanguage();
+    LanguageStoreGen::instance()->setLanguage(lang_type);
     return true;
 }
 
-void LogicImp::excuse(const gearsbox::TaskInfo & info){
-    G_LOG_C(LOG_INFO, "logic excuse, id:%d", info.tarsk_id);
+std::string LogicImp::getProjectsPath(){
+    std::string projects_dir = m_user_config->getString("projects_dir");
+    std::string rt = InstanceGetterGen::getPlatformUtility()->getSubDirInHome(projects_dir);
+    return rt;
+}
+
+void LogicImp::excuse(const std::shared_ptr<TaskInfoGen> & info){
+    LapseEvent event = (LapseEvent)info->getTaskId();
+    G_LOG_C(LOG_INFO, "logic excuse, id:%s", UilogicGen::instance()->getEventStr(event).c_str());
     
-    LapseEvent event = (LapseEvent)info.tarsk_id;
-    CHECK_RT(event>LapseEvent::NONE && event<LapseEvent::MAX, "not ui event");
+    CHECK_RT(event>LapseEvent::CAMERA_BEGIN && event<LapseEvent::UI_END, "not ui event");
     switch (event) {
         case LapseEvent::CAMERA_BTN_CAPTURE:
             this->captureStart();
@@ -86,8 +101,8 @@ void LogicImp::captureStart(){
     
     initialize_video();
     CHECK_RT(m_video_writer!=nullptr, "video writer initialize failed");
-    //m_video_writer->start(m_vide_config->getInt(ConstDefine::INTERVAL));
-    m_video_writer->start(33);
+    m_video_writer->start(m_vide_config->getInt(ConstDefine::INTERVAL));
+    //m_video_writer->start(33);
 }
 
 void LogicImp::capturePause(){
@@ -102,15 +117,22 @@ void LogicImp::captureResume(){
 
 void LogicImp::captureStop(){
     CHECK_RT(m_video_writer!=nullptr, "video_writer null stop");
+    
+    // handle in swift
+    std::string video = m_video_writer->getFilePath();
     m_video_writer->saveNRlease();
     m_video_writer = nullptr;
+    InstanceGetterGen::getPlatformUtility()->playVideo(video);
+}
+
+void LogicImp::gotoLibrary(){
+    
 }
 
 void LogicImp::initialize_camera(){
     std::shared_ptr<CameraControllerGen> camera_controller = InstanceGetterGen::getCameraController();
     CHECK_RT(camera_controller!=nullptr, "camera_controller null");
     CHECK_RT(m_camera_config!=nullptr, "camera config null");
-    
 }
 
 #include <ctime>
@@ -118,23 +140,25 @@ void LogicImp::initialize_camera(){
 #include <locale>
 
 void LogicImp::initialize_video(){
+    //TEST_EQ(m_vide_config->getInt("interval"), 1000, "interval");
+    //TEST_EQ(m_vide_config->getInt("resolution"), 480, "resolution");
+    
     m_video_writer = VideoWriterGen::create();
-    m_video_writer->setFPS(15);
-    m_video_writer->setBitRate(400000);
+    m_video_writer->setFPS(m_vide_config->getInt("fps"));
+    m_video_writer->setBitRate(m_vide_config->getInt("bitrate"));
     
-    std::string doc_dir = InstanceGetterGen::getPlatformUtility()->getHomeDirectory();
-    
+    std::string projects_dir = getProjectsPath();
     std::time_t t = std::time(NULL);
     char mbstr[1024];
     if (std::strftime(mbstr, sizeof(mbstr), "/lapse_%y%m%d%H%M%S.mp4", std::localtime(&t))) {
-        doc_dir += mbstr;
-        m_video_writer->setFilePath(doc_dir);
+        projects_dir += mbstr;
+        m_video_writer->setFilePath(projects_dir);
     }
     else{
         G_LOG_FC(LOG_ERROR, "time format failed");
-        doc_dir += '/';
-        doc_dir += std::to_string(TimerGen::currentTick());
-        doc_dir += ".mp4";
-        m_video_writer->setFilePath(doc_dir);
+        projects_dir += '/';
+        projects_dir += std::to_string(TimerGen::currentTick());
+        projects_dir += ".mp4";
+        m_video_writer->setFilePath(projects_dir);
     }
 }

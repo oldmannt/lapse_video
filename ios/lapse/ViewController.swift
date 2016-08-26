@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet weak var m_viewbtns: UIView!
     @IBOutlet weak var btn_lapse: UIButton!
     @IBOutlet weak var btn_library: UIButton!
@@ -28,11 +27,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //btn_show(nil)
         
-        GBInstanceGetterGen.setPlatformUtility(GBPlatformUtilityImp())
+        GBInstanceGetterGen.setPlatformUtility(GBPlatformUtilityImp.sharedInstance)
         camera_controller.initializ_swif(self.view)
         camera_controller.startCamera()
         GBInstanceGetterGen.setCameraController(camera_controller)
         
+        GBUiManagerGen.instance()?.initialize("", factory: GBViewFactoryImp.instance)
         GBViewFactoryImp.instance.addIOSViewToUIMgr(m_viewbtns, id: "camera_view_btns", constroller: self)
         GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_lapse, id: "camera_btn_lapse", constroller: self)
         GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_library, id: "camera_btn_library", constroller: self)
@@ -46,6 +46,9 @@ class ViewController: UIViewController {
         
         LPALogicGen.instance()?.initialize("user.json")
         LPAUilogicGen.instance()?.initialize(LPALapseUiScene.Camera)
+        
+        LogicTaskExcuserImp.sharedInstance.m_capture_vc = self
+        GBTaskManagerGen.instance()?.addTaskExcuser(LogicTaskExcuserImp.sharedInstance)
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,9 +85,6 @@ class ViewController: UIViewController {
 
     @IBAction func more_camera_setting(sender: UIButton) {
     }
-    
-    @IBAction func library(sender: AnyObject) {
-    }
     @IBAction func switch_camer(sender: UIButton) {
     }
     
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
     private func btn_show(btn: UIButton?){
         if btn == btn_capture {
             btn_capture.hidden = true;
-            btn_library.hidden = true;
+            //btn_library.hidden = true;
             btn_pause.hidden = false;
             btn_stop.hidden = false;
         }
@@ -114,7 +114,7 @@ class ViewController: UIViewController {
         }
         else if btn == btn_stop {
             btn_capture.hidden = false;
-            btn_library.hidden = false;
+            //btn_library.hidden = false;
             btn_pause.hidden = true;
             btn_stop.hidden = true;
             btn_resume.hidden = true;

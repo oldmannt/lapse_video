@@ -21,6 +21,7 @@
 #import "GBViewEvent.h"
 #import "GBViewEventParam.h"
 #import "GBTextKeyboard.h"
+#import "GBUiManagerGen.h"
 
 #import "GBPlatformUtilityGen.h"
 
@@ -32,7 +33,16 @@
 #import "GBVideoWriterGen.h"
 #import "GBInstanceGetterGen.h"
 #import "objc_utility.h"
+#import "GBTaskExcuserGen.h"
+#import "GBTaskInfoGen.h"
+#import "GBTaskManagerGen.h"
+#import "GBFileInfoGen.h"
+
+#import "video_frame_imp.h"
 
 #import "LPALogicGen.h"
 #import "LPAUilogicGen.h"
 #import "LPALapseUiScene.h"
+#import "LPALapseEvent.h"
+#import "LPAProjectListGen.h"
+#import "LPAProjectCellGen.h"

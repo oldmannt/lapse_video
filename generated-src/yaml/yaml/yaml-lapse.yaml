@@ -117,6 +117,64 @@ jni:
   typename: jobject
   typeSignature: 'Ldyno/fun/lapse/LogicGen;'
 ---
+name: lapse_project_cell_gen
+typedef: 'interface +c'
+params: []
+prefix: lapse_
+cpp:
+  typename: '::lpase::ProjectCellGen'
+  header: '"project_cell_gen.hpp"'
+  byValue: false
+objc:
+  typename: 'LPAProjectCellGen'
+  pointer: true
+  hash: '%s.hash'
+  boxed: 'LPAProjectCellGen'
+  header: '"LPAProjectCellGen.h"'
+objcpp:
+  translator: '::djinni_generated::ProjectCellGen'
+  header: '"LPAProjectCellGen+Private.h"'
+java:
+  reference: true
+  typename: 'dyno.fun.lapse.ProjectCellGen'
+  generic: true
+  hash: '%s.hashCode()'
+  boxed: 'dyno.fun.lapse.ProjectCellGen'
+jni:
+  translator: '::djinni_generated::NativeProjectCellGen'
+  header: '"NativeProjectCellGen.hpp"'
+  typename: jobject
+  typeSignature: 'Ldyno/fun/lapse/ProjectCellGen;'
+---
+name: lapse_project_list_gen
+typedef: 'interface +c'
+params: []
+prefix: lapse_
+cpp:
+  typename: '::lpase::ProjectListGen'
+  header: '"project_list_gen.hpp"'
+  byValue: false
+objc:
+  typename: 'LPAProjectListGen'
+  pointer: true
+  hash: '%s.hash'
+  boxed: 'LPAProjectListGen'
+  header: '"LPAProjectListGen.h"'
+objcpp:
+  translator: '::djinni_generated::ProjectListGen'
+  header: '"LPAProjectListGen+Private.h"'
+java:
+  reference: true
+  typename: 'dyno.fun.lapse.ProjectListGen'
+  generic: true
+  hash: '%s.hashCode()'
+  boxed: 'dyno.fun.lapse.ProjectListGen'
+jni:
+  translator: '::djinni_generated::NativeProjectListGen'
+  header: '"NativeProjectListGen.hpp"'
+  typename: jobject
+  typeSignature: 'Ldyno/fun/lapse/ProjectListGen;'
+---
 name: lapse_uilogic_gen
 typedef: 'interface +c'
 params: []

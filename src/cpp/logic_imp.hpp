@@ -11,7 +11,7 @@
 
 #include "logic_gen.hpp"
 #include "task_excuser_gen.hpp"
-#include "task_info.hpp"
+#include "task_info_gen.hpp"
 #include "video_writer_gen.hpp"
 #include "config_gen.hpp"
 
@@ -23,12 +23,14 @@ public:
     LogicImp();
     
     virtual bool initialize(const std::string & config);
+    virtual std::string getProjectsPath();
     
     //gearsbox::TaskExcuserGen
-    virtual void excuse(const gearsbox::TaskInfo & info);
+    virtual void excuse(const std::shared_ptr<gearsbox::TaskInfoGen> & info);
     
 private:
     std::shared_ptr<gearsbox::VideoWriterGen> m_video_writer;
+    std::shared_ptr<gearsbox::ConfigGen> m_user_config;
     std::shared_ptr<gearsbox::ConfigGen> m_vide_config;
     std::shared_ptr<gearsbox::ConfigGen> m_camera_config;
     
@@ -36,6 +38,7 @@ private:
     void capturePause();
     void captureResume();
     void captureStop();
+    void gotoLibrary();
     
     void initialize_camera();
     void initialize_video();

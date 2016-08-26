@@ -9,6 +9,7 @@ namespace lpase {
 
 enum class LapseEvent : int {
     NONE,
+    CAMERA_BEGIN,
     CAMERA_BTN_CAPTURE,
     CAMERA_BTN_PAUSE,
     CAMERA_BTN_STOP,
@@ -18,7 +19,14 @@ enum class LapseEvent : int {
     CAMERA_BTN_MORE,
     CAMERA_BTN_LIBRARY,
     CAMERA_BTN_SWITCH,
-    MAX,
+    CAMERA_END,
+    REVIEW_OPEN,
+    PROJECTS_BEGIN,
+    PROJECTS_BTN_BACK,
+    PROJECTS_SHOW,
+    PROJECTS_LIST_SELECT,
+    PROJECTS_END,
+    UI_END,
 };
 
 }  // namespace lpase

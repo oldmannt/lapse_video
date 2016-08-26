@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331E5A401D5A737000D32AEE /* LogicTaskExcuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331E5A3F1D5A737000D32AEE /* LogicTaskExcuser.swift */; };
+		331E5A4B1D5AA9C300D32AEE /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331E5A4A1D5AA9C300D32AEE /* ReviewViewController.swift */; };
+		331E5A601D5F01A400D32AEE /* GalleryTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331E5A5F1D5F01A400D32AEE /* GalleryTabBarController.swift */; };
+		331E5A621D60068900D32AEE /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331E5A611D60068900D32AEE /* ProjectsViewController.swift */; };
+		331E5A641D602E2700D32AEE /* PorjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331E5A631D602E2700D32AEE /* PorjectCell.swift */; };
 		338263111D46AA8400DA114F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263101D46AA8400DA114F /* AppDelegate.swift */; };
 		338263131D46AA8400DA114F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263121D46AA8400DA114F /* ViewController.swift */; };
 		338263161D46AA8400DA114F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338263141D46AA8400DA114F /* Main.storyboard */; };
@@ -31,6 +36,8 @@
 		338264781D49658100DA114F /* platform_utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338264701D49658100DA114F /* platform_utility.swift */; };
 		338264791D49658100DA114F /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338264711D49658100DA114F /* StringUtils.swift */; };
 		3382647A1D49658100DA114F /* TypeConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338264721D49658100DA114F /* TypeConvertor.swift */; };
+		339DB97D1D697E780047EC3E /* language.json in Resources */ = {isa = PBXBuildFile; fileRef = 339DB97C1D697E780047EC3E /* language.json */; };
+		33CDCC691D692D950042D4B7 /* GBFileInfoImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CDCC681D692D950042D4B7 /* GBFileInfoImp.swift */; };
 		33ED95391D51230500833349 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 33ED95381D51230500833349 /* user.json */; };
 		33ED953F1D51293500833349 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ED953E1D51293500833349 /* libz.tbd */; };
 		33ED95411D51295E00833349 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ED95401D51295E00833349 /* libiconv.tbd */; };
@@ -117,6 +124,11 @@
 
 /* Begin PBXFileReference section */
 		175E8A8DBACAE7D99CCB77A8 /* Pods-lapse_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lapse_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lapse_app/Pods-lapse_app.debug.xcconfig"; sourceTree = "<group>"; };
+		331E5A3F1D5A737000D32AEE /* LogicTaskExcuser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicTaskExcuser.swift; sourceTree = "<group>"; };
+		331E5A4A1D5AA9C300D32AEE /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		331E5A5F1D5F01A400D32AEE /* GalleryTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryTabBarController.swift; sourceTree = "<group>"; };
+		331E5A611D60068900D32AEE /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		331E5A631D602E2700D32AEE /* PorjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PorjectCell.swift; sourceTree = "<group>"; };
 		3382630D1D46AA8400DA114F /* lapse_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lapse_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338263101D46AA8400DA114F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338263121D46AA8400DA114F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +174,8 @@
 		338264701D49658100DA114F /* platform_utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = platform_utility.swift; path = ../../gearsbox/src/swift/platform_utility.swift; sourceTree = "<group>"; };
 		338264711D49658100DA114F /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringUtils.swift; path = ../../gearsbox/src/swift/StringUtils.swift; sourceTree = "<group>"; };
 		338264721D49658100DA114F /* TypeConvertor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypeConvertor.swift; path = ../../gearsbox/src/swift/TypeConvertor.swift; sourceTree = "<group>"; };
+		339DB97C1D697E780047EC3E /* language.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = language.json; path = ../data/language.json; sourceTree = "<group>"; };
+		33CDCC681D692D950042D4B7 /* GBFileInfoImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GBFileInfoImp.swift; path = ../../gearsbox/src/swift/GBFileInfoImp.swift; sourceTree = "<group>"; };
 		33ED95381D51230500833349 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = user.json; path = ../data/user.json; sourceTree = "<group>"; };
 		33ED953A1D51274C00833349 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		33ED953C1D51284A00833349 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -252,12 +266,17 @@
 				338263421D46AC6800DA114F /* gearsbox */,
 				338263101D46AA8400DA114F /* AppDelegate.swift */,
 				338263121D46AA8400DA114F /* ViewController.swift */,
+				331E5A4A1D5AA9C300D32AEE /* ReviewViewController.swift */,
 				338263141D46AA8400DA114F /* Main.storyboard */,
 				338263171D46AA8400DA114F /* Assets.xcassets */,
 				338263191D46AA8400DA114F /* LaunchScreen.storyboard */,
 				3382631C1D46AA8400DA114F /* Info.plist */,
 				3382633E1D46AC0700DA114F /* lapse_app-Bridging-Header.h */,
 				3382638E1D47247900DA114F /* justfor_cpplink.cpp */,
+				331E5A3F1D5A737000D32AEE /* LogicTaskExcuser.swift */,
+				331E5A5F1D5F01A400D32AEE /* GalleryTabBarController.swift */,
+				331E5A611D60068900D32AEE /* ProjectsViewController.swift */,
+				331E5A631D602E2700D32AEE /* PorjectCell.swift */,
 			);
 			path = lapse;
 			sourceTree = "<group>";
@@ -293,6 +312,7 @@
 				338264711D49658100DA114F /* StringUtils.swift */,
 				338264721D49658100DA114F /* TypeConvertor.swift */,
 				338263431D46AC7900DA114F /* camera_controller_imp.swift */,
+				33CDCC681D692D950042D4B7 /* GBFileInfoImp.swift */,
 			);
 			name = gearsbox;
 			sourceTree = "<group>";
@@ -355,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				33ED95381D51230500833349 /* user.json */,
+				339DB97C1D697E780047EC3E /* language.json */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -586,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33ED95391D51230500833349 /* user.json in Resources */,
+				339DB97D1D697E780047EC3E /* language.json in Resources */,
 				3382631B1D46AA8400DA114F /* LaunchScreen.storyboard in Resources */,
 				338263181D46AA8400DA114F /* Assets.xcassets in Resources */,
 				338263161D46AA8400DA114F /* Main.storyboard in Resources */,
@@ -662,17 +684,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				338264741D49658100DA114F /* EditMaxLength.swift in Sources */,
+				331E5A621D60068900D32AEE /* ProjectsViewController.swift in Sources */,
 				338264751D49658100DA114F /* GBViewFactoryImp.swift in Sources */,
+				331E5A4B1D5AA9C300D32AEE /* ReviewViewController.swift in Sources */,
 				338263131D46AA8400DA114F /* ViewController.swift in Sources */,
 				33ED95551D51A75E00833349 /* MainLoop.swift in Sources */,
 				3382638F1D47247900DA114F /* justfor_cpplink.cpp in Sources */,
 				338264761D49658100DA114F /* GBViewImp.swift in Sources */,
 				338264731D49658100DA114F /* EditDelegate.swift in Sources */,
+				331E5A601D5F01A400D32AEE /* GalleryTabBarController.swift in Sources */,
 				3382647A1D49658100DA114F /* TypeConvertor.swift in Sources */,
 				338264771D49658100DA114F /* NumInputDelegate.swift in Sources */,
+				331E5A401D5A737000D32AEE /* LogicTaskExcuser.swift in Sources */,
+				331E5A641D602E2700D32AEE /* PorjectCell.swift in Sources */,
 				338264781D49658100DA114F /* platform_utility.swift in Sources */,
 				338264791D49658100DA114F /* StringUtils.swift in Sources */,
 				338263111D46AA8400DA114F /* AppDelegate.swift in Sources */,
+				33CDCC691D692D950042D4B7 /* GBFileInfoImp.swift in Sources */,
 				338263441D46AC7900DA114F /* camera_controller_imp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -823,6 +851,7 @@
 				ENABLE_BITCODE = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				INFOPLIST_FILE = lapse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "../gearsbox/deps/ffmpeg/ios-fat";
 				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapse;
@@ -843,6 +872,7 @@
 				ENABLE_BITCODE = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				INFOPLIST_FILE = lapse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "../gearsbox/deps/ffmpeg/ios-fat";
 				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapse;

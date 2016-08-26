@@ -4,9 +4,11 @@
 #pragma once
 
 #include <memory>
+#include <string>
 
 namespace lpase {
 
+enum class LapseEvent;
 enum class LapseUiScene;
 
 class UilogicGen {
@@ -16,6 +18,8 @@ public:
     static std::shared_ptr<UilogicGen> instance();
 
     virtual bool initialize(LapseUiScene scene) = 0;
+
+    virtual std::string getEventStr(LapseEvent event) = 0;
 };
 
 }  // namespace lpase

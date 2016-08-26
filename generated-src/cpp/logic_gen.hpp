@@ -15,6 +15,8 @@ public:
     static std::shared_ptr<LogicGen> instance();
 
     virtual bool initialize(const std::string & config) = 0;
+
+    virtual std::string getProjectsPath() = 0;
 };
 
 }  // namespace lpase

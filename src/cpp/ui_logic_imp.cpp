@@ -39,15 +39,43 @@ bool UilogicImp::initialize(LapseUiScene scene){
     return true;
 }
 
+std::string UilogicImp::getEventStr(LapseEvent event){
+    switch (event) {
+        case LapseEvent::NONE: return "NONE";
+        case LapseEvent::CAMERA_BEGIN: return "CAMERA_BEGIN";
+        case LapseEvent::CAMERA_BTN_CAPTURE: return "CAMERA_BTN_CAPTURE";
+        case LapseEvent::CAMERA_BTN_PAUSE: return "CAMERA_BTN_PAUSE";
+        case LapseEvent::CAMERA_BTN_STOP: return "CAMERA_BTN_STOP";
+        case LapseEvent::CAMERA_BTN_RESUME: return "CAMERA_BTN_RESUME";
+        case LapseEvent::CAMERA_BTN_LAPSE: return "CAMERA_BTN_LAPSE";
+        case LapseEvent::CAMERA_BTN_RATIO: return "CAMERA_BTN_RATIO";
+        case LapseEvent::CAMERA_BTN_MORE: return "CAMERA_BTN_MORE";
+        case LapseEvent::CAMERA_BTN_LIBRARY: return "CAMERA_BTN_LIBRARY";
+        case LapseEvent::CAMERA_BTN_SWITCH: return "CAMERA_BTN_SWITCH";
+        case LapseEvent::CAMERA_END: return "CAMERA_END";
+        case LapseEvent::REVIEW_OPEN: return "REVIEW_OPEN";
+        case LapseEvent::PROJECTS_BEGIN: return "PROJECTS_BEGIN";
+        case LapseEvent::PROJECTS_BTN_BACK: return "PROJECTS_BTN_BACK";
+        case LapseEvent::PROJECTS_SHOW: return "PROJECTS_SHOW";
+        case LapseEvent::PROJECTS_LIST_SELECT: return "PROJECTS_LIST_SELECT";
+        case LapseEvent::PROJECTS_END: return "PROJECTS_END";
+        case LapseEvent::UI_END: return "UI_END";
+           
+        default:
+            break;
+    }
+    
+    return "err";
+}
+
 bool UilogicImp::handle(const gearsbox::ViewEventParam & param, const std::shared_ptr<gearsbox::ViewGen> & view){
     
     if (param.type == ViewEvent::TAP){
         LapseEvent event_id = this->getUIEvent(view);
-        G_LOG_C(LOG_INFO,"uievent %d", event_id);
-        if (event_id>LapseEvent::NONE && event_id<LapseEvent::MAX){
-            btnShow(event_id);
-            TaskManagerGen::instance()->addTask((int)event_id, -1, 0, nullptr);
-        }
+        G_LOG_C(LOG_INFO,"uievent %s", this->getEventStr(event_id).c_str());
+        
+        captureBtnShow(event_id);
+        TaskManagerGen::instance()->addTask((int)event_id, -1, 0, nullptr);
     }
     
 }
@@ -59,7 +87,7 @@ LapseEvent UilogicImp::getUIEvent(const std::shared_ptr<gearsbox::ViewGen>& view
     return m_uievent_map[view];
 }
 
-void UilogicImp::btnShow(LapseEvent event){
+void UilogicImp::captureBtnShow(LapseEvent event){
     switch (event) {
         case LapseEvent::NONE:
             m_btn_pasue->setVisiable(false);
@@ -94,6 +122,7 @@ void UilogicImp::btnShow(LapseEvent event){
         case LapseEvent::CAMERA_BTN_MORE:
             break;
         case LapseEvent::CAMERA_BTN_LIBRARY:
+            UiManagerGen::instance()->showViewController("gallery", false);
             break;
         case LapseEvent::CAMERA_BTN_SWITCH:
             break;
@@ -144,7 +173,7 @@ bool UilogicImp::initializeCameraScene(){
     m_uievent_map[m_btn_library] = LapseEvent::CAMERA_BTN_LIBRARY;
     m_uievent_map[m_btn_switch] = LapseEvent::CAMERA_BTN_SWITCH;
     
-    btnShow(LapseEvent::NONE);
+    captureBtnShow(LapseEvent::NONE);
     return true;
 }
 

@@ -1,9 +1,9 @@
 {
 	"video":{
-		"interval":1000,
+		"interval":500,
 		"resolution":480,
-		"fps":25,
-		"bitrate":400000
+		"fps":15,
+		"bitrate":800000
 	},
 
 	"camera":{
@@ -17,5 +17,8 @@
 		"exposure_lev":40,
 		"focus":"auto,point,lock",
 		"focus_lev":111
-	}
+	},
+    
+    "root":"home",
+    "projects_dir":""
 }
