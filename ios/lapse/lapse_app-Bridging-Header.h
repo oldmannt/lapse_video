@@ -27,6 +27,7 @@
 
 #import "GBCameraFlash.h"
 #import "GBCameraQuality.h"
+#import "GBCameraConfigGen.h"
 #import "GBVideoFrameGen.h"
 #import "video_frame_imp.h"
 #import "GBCameraControllerGen.h"
@@ -37,6 +38,10 @@
 #import "GBTaskInfoGen.h"
 #import "GBTaskManagerGen.h"
 #import "GBFileInfoGen.h"
+#import "GBConfigGen.h"
+#import "GBLanguageStoreGen.h"
+#import "GBCameraCaptureHandler.h"
+#import "GBTimerGen.h"
 
 #import "video_frame_imp.h"
 
@@ -46,3 +51,5 @@
 #import "LPALapseEvent.h"
 #import "LPAProjectListGen.h"
 #import "LPAProjectCellGen.h"
+#import "LPADataGen.h"
+#import "LPAConstDefine.h"

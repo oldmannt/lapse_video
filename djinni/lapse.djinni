@@ -11,6 +11,8 @@ lapse_event = enum {
 	camera_btn_more;
 	camera_btn_library;
 	camera_btn_switch;
+	camera_btn_lapse_stop;
+	camera_btn_lapse_resume;
 	camera_end;
 
 	review_open;
@@ -79,6 +81,52 @@ logic_gen = interface + c {
 	static instance():logic_gen;
 	initialize(config:string):bool;
 	getProjectsPath():string;
+
+	captureStart();
+	capturePause();
+	captureResume();
+	captureStop();
+	lapseStop();
+	lapseResume();
+}
+
+capture_quick_mode = record {
+	const TRAFFIC_FLOW:string = "traffic_flow";
+	const WIND_SKY:string = "wind_sky";
+	const SUN_RISE_SET:string = "sun_rise_set";
+	const NO_WIND_SKY:string = "no_wind_sky";
+	const FLOWERS_BLOOM_FADE:string = "flowers_bloom_fade";
+	const DAY_TURN_NIGHT:string = "day_turn_night";
+}
+
+config_key_value = record {
+	const CAPTURE_MODE:string = "capture_mode";
+	const CAPTURE_MODE_VIDEO:string = "video";
+	const CAPTURE_MODE_PHOTO:string = "photo";
+}
+
+data_gen = interface +c {
+	static instance():data_gen;
+
+	initialize(config:string):bool;
+
+	getProjectsDir():string;
+	getCaptureMode():string;
+	setCaptureMode(mode:string);
+
+	getCaptureIntevalMillsec():i32;
+	getCaptureInteval():i32;
+	getCaptureIntevalUnit():string;
+	setCaptureInteval(value:i32, unit:string);
+	setCaptureIntervalQuickMode(mode:string);
+	getCaptureIntervalQuickMode():string;
+
+	getFps():i32;
+	getBitrate():i32;
+	getResolution():i32;
+	setFps(fps:i32);
+	setBitrate(bitrate:i32);
+	setResolution(reso:i32);
 }
 
 project_cell_gen = interface +c {

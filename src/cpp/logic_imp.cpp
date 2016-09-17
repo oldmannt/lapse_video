@@ -8,9 +8,11 @@
 
 #include "logic_imp.hpp"
 #include "uilogic_gen.hpp"
+#include "data_imp.hpp"
 
 #include "macro.h"
 #include "task_manager_gen.hpp"
+#include "ui_manager_gen.hpp"
 #include "instance_getter_gen.hpp"
 #include "const_define.hpp"
 #include "camera_controller_gen.hpp"
@@ -19,6 +21,8 @@
 #include "project_list_gen.hpp"
 #include "timer_gen.hpp"
 #include "language_store_gen.hpp"
+#include "camera_config_gen.hpp"
+#include "config_key_value.hpp"
 
 using namespace lpase;
 using namespace gearsbox;
@@ -34,14 +38,7 @@ LogicImp::LogicImp():m_video_writer(nullptr){
 
 bool LogicImp::initialize(const std::string &config){
     TaskManagerGen::instance()->addTaskExcuser(shared_from_this());
-    m_user_config = InstanceGetterGen::getConfig("user");
-    CHECK_RTF(m_user_config, "get user config null");
-    std::string pack_path = InstanceGetterGen::getPlatformUtility()->getPackFilePath(config);
-    CHECK_RTF(m_user_config->initialize(pack_path), "user config initialize failed %s", config.c_str());
-    m_vide_config = m_user_config->getSubConfig("video");
-    CHECK_RTF(m_vide_config!=nullptr, "get video node failed %s", config.c_str());
-    m_camera_config = m_user_config->getSubConfig("camera");
-    CHECK_RTF(m_camera_config!=nullptr, "get camera node failed %s", config.c_str());
+    CHECK_RTF(DataGen::instance()->initialize(config),"initialize failed:%s", config.c_str());
     initialize_camera();
     
     std::string lang_path = InstanceGetterGen::getPlatformUtility()->getPackFilePath("language.json");
@@ -53,7 +50,7 @@ bool LogicImp::initialize(const std::string &config){
 }
 
 std::string LogicImp::getProjectsPath(){
-    std::string projects_dir = m_user_config->getString("projects_dir");
+    std::string projects_dir = DataGen::instance()->getProjectsDir();
     std::string rt = InstanceGetterGen::getPlatformUtility()->getSubDirInHome(projects_dir);
     return rt;
 }
@@ -83,10 +80,16 @@ void LogicImp::excuse(const std::shared_ptr<TaskInfoGen> & info){
         case LapseEvent::CAMERA_BTN_MORE:
             break;
         case LapseEvent::CAMERA_BTN_LIBRARY:
+            UiManagerGen::instance()->showViewController("gallery", false);
             break;
         case LapseEvent::CAMERA_BTN_SWITCH:
             break;
-            
+        case LapseEvent::CAMERA_BTN_LAPSE_STOP:
+            this->lapseStop();
+            break;
+        case LapseEvent::CAMERA_BTN_LAPSE_RESUME:
+            this->lapseResume();
+            break;            
         default:
             break;
     }
@@ -101,7 +104,7 @@ void LogicImp::captureStart(){
     
     initialize_video();
     CHECK_RT(m_video_writer!=nullptr, "video writer initialize failed");
-    m_video_writer->start(m_vide_config->getInt(ConstDefine::INTERVAL));
+    m_video_writer->start(DataGen::instance()->getCaptureIntevalMillsec());
     //m_video_writer->start(33);
 }
 
@@ -125,14 +128,28 @@ void LogicImp::captureStop(){
     InstanceGetterGen::getPlatformUtility()->playVideo(video);
 }
 
-void LogicImp::gotoLibrary(){
-    
+void LogicImp::lapseStop(){
+    CHECK_RT(m_video_writer!=nullptr, "video_writer null");
+    int64_t interval = int64_t(1000/m_video_writer->getFPS());
+    m_video_writer->setInterval(interval);
+}
+
+void LogicImp::lapseResume(){
+    CHECK_RT(m_video_writer!=nullptr, "video_writer null");
+    m_video_writer->setInterval(DataGen::instance()->getCaptureIntevalMillsec());
 }
 
 void LogicImp::initialize_camera(){
     std::shared_ptr<CameraControllerGen> camera_controller = InstanceGetterGen::getCameraController();
     CHECK_RT(camera_controller!=nullptr, "camera_controller null");
-    CHECK_RT(m_camera_config!=nullptr, "camera config null");
+    
+    camera_controller->setFlashMode(CameraConfigGen::instance()->getFlashMode());
+    camera_controller->setQuality(CameraConfigGen::instance()->getQuatityLevel());
+    std::string capture_mode = DataGen::instance()->getCaptureMode();
+    if (ConfigKeyValue::CAPTURE_MODE_PHOTO == capture_mode){
+        camera_controller->setFramePhoto(true);
+    }
+    
 }
 
 #include <ctime>
@@ -144,8 +161,8 @@ void LogicImp::initialize_video(){
     //TEST_EQ(m_vide_config->getInt("resolution"), 480, "resolution");
     
     m_video_writer = VideoWriterGen::create();
-    m_video_writer->setFPS(m_vide_config->getInt("fps"));
-    m_video_writer->setBitRate(m_vide_config->getInt("bitrate"));
+    m_video_writer->setFPS(DataGen::instance()->getFps());
+    m_video_writer->setBitRate(DataGen::instance()->getBitrate());
     
     std::string projects_dir = getProjectsPath();
     std::time_t t = std::time(NULL);

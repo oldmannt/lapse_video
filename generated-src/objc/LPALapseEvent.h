@@ -16,6 +16,8 @@ typedef NS_ENUM(NSInteger, LPALapseEvent)
     LPALapseEventCameraBtnMore,
     LPALapseEventCameraBtnLibrary,
     LPALapseEventCameraBtnSwitch,
+    LPALapseEventCameraBtnLapseStop,
+    LPALapseEventCameraBtnLapseResume,
     LPALapseEventCameraEnd,
     LPALapseEventReviewOpen,
     LPALapseEventProjectsBegin,

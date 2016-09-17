@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResolutionSetterView" customModule="lapse_app" customModuleProvider="target">
+            <connections>
+                <outlet property="m_resolution" destination="GNE-SQ-cNC" id="5J0-xd-G0r"/>
+                <outlet property="m_tittle" destination="3Fc-oY-uLi" id="6Ds-GQ-J06"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tittle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fc-oY-uLi">
+                    <rect key="frame" x="123" y="26" width="35" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GNE-SQ-cNC">
+                    <rect key="frame" x="33" y="65" width="215" height="29"/>
+                    <segments>
+                        <segment title="360P"/>
+                        <segment title="480P"/>
+                        <segment title="720P"/>
+                        <segment title="1080P"/>
+                    </segments>
+                </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31K-zr-mqu">
+                    <rect key="frame" x="36" y="129" width="50" height="50"/>
+                    <state key="normal" image="BTN_OK"/>
+                    <connections>
+                        <action selector="save:" destination="-1" eventType="touchUpInside" id="jpg-ws-w7W"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aK-Kg-g4o">
+                    <rect key="frame" x="194" y="129" width="50" height="50"/>
+                    <state key="normal" image="BTN_CANCEL"/>
+                    <connections>
+                        <action selector="cancel:" destination="-1" eventType="touchUpInside" id="Qpm-qK-6Vz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="GNE-SQ-cNC" firstAttribute="top" secondItem="3Fc-oY-uLi" secondAttribute="bottom" constant="18" id="74J-fr-uoS"/>
+                <constraint firstItem="0aK-Kg-g4o" firstAttribute="top" secondItem="31K-zr-mqu" secondAttribute="top" id="7xx-ZU-JYg"/>
+                <constraint firstItem="3Fc-oY-uLi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="L9k-GT-hLG"/>
+                <constraint firstAttribute="trailing" secondItem="0aK-Kg-g4o" secondAttribute="trailing" constant="36" id="RLT-B0-60S"/>
+                <constraint firstItem="31K-zr-mqu" firstAttribute="top" secondItem="GNE-SQ-cNC" secondAttribute="bottom" constant="36" id="YJ1-Zm-0eB"/>
+                <constraint firstItem="GNE-SQ-cNC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yaz-es-fWx"/>
+                <constraint firstItem="3Fc-oY-uLi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="26" id="rxA-Dx-YS5"/>
+                <constraint firstItem="31K-zr-mqu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="tin-dG-Gfa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BTN_CANCEL" width="50" height="50"/>
+        <image name="BTN_OK" width="50" height="50"/>
+    </resources>
+</document>

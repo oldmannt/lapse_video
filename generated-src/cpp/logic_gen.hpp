@@ -17,6 +17,18 @@ public:
     virtual bool initialize(const std::string & config) = 0;
 
     virtual std::string getProjectsPath() = 0;
+
+    virtual void captureStart() = 0;
+
+    virtual void capturePause() = 0;
+
+    virtual void captureResume() = 0;
+
+    virtual void captureStop() = 0;
+
+    virtual void lapseStop() = 0;
+
+    virtual void lapseResume() = 0;
 };
 
 }  // namespace lpase

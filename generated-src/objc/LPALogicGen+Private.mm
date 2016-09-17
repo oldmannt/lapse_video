@@ -51,6 +51,42 @@ static_assert(__has_feature(objc_arc), "Djinni requires ARC to be enabled for th
     } DJINNI_TRANSLATE_EXCEPTIONS()
 }
 
+- (void)captureStart {
+    try {
+        _cppRefHandle.get()->captureStart();
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (void)capturePause {
+    try {
+        _cppRefHandle.get()->capturePause();
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (void)captureResume {
+    try {
+        _cppRefHandle.get()->captureResume();
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (void)captureStop {
+    try {
+        _cppRefHandle.get()->captureStop();
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (void)lapseStop {
+    try {
+        _cppRefHandle.get()->lapseStop();
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (void)lapseResume {
+    try {
+        _cppRefHandle.get()->lapseResume();
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
 namespace djinni_generated {
 
 auto LogicGen::toCpp(ObjcType objc) -> CppType

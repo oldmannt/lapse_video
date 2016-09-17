@@ -88,6 +88,7 @@ LapseEvent UilogicImp::getUIEvent(const std::shared_ptr<gearsbox::ViewGen>& view
 }
 
 void UilogicImp::captureBtnShow(LapseEvent event){
+    /*
     switch (event) {
         case LapseEvent::NONE:
             m_btn_pasue->setVisiable(false);
@@ -130,6 +131,7 @@ void UilogicImp::captureBtnShow(LapseEvent event){
         default:
             break;
     }
+     */
 }
 
 bool UilogicImp::initializeCameraScene(){
@@ -153,6 +155,7 @@ bool UilogicImp::initializeCameraScene(){
     CHECK_RTF(m_btn_library!=nullptr, "btn_library null");
     CHECK_RTF(m_btn_switch!=nullptr, "btn_switch null");
     
+    /*
     m_btn_capture->setEventHandler(ViewEvent::TAP, shared_from_this());
     m_btn_pasue->setEventHandler(ViewEvent::TAP, shared_from_this());
     m_btn_resume->setEventHandler(ViewEvent::TAP, shared_from_this());
@@ -162,6 +165,7 @@ bool UilogicImp::initializeCameraScene(){
     m_btn_more->setEventHandler(ViewEvent::TAP, shared_from_this());
     m_btn_library->setEventHandler(ViewEvent::TAP, shared_from_this());
     m_btn_switch->setEventHandler(ViewEvent::TAP, shared_from_this());
+    */
     
     m_uievent_map[m_btn_capture] = LapseEvent::CAMERA_BTN_CAPTURE;
     m_uievent_map[m_btn_pasue] = LapseEvent::CAMERA_BTN_PAUSE;
@@ -173,7 +177,7 @@ bool UilogicImp::initializeCameraScene(){
     m_uievent_map[m_btn_library] = LapseEvent::CAMERA_BTN_LIBRARY;
     m_uievent_map[m_btn_switch] = LapseEvent::CAMERA_BTN_SWITCH;
     
-    captureBtnShow(LapseEvent::NONE);
+    //captureBtnShow(LapseEvent::NONE);
     return true;
 }
 

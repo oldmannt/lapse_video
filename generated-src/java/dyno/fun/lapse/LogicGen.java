@@ -10,6 +10,18 @@ public abstract class LogicGen {
 
     public abstract String getProjectsPath();
 
+    public abstract void captureStart();
+
+    public abstract void capturePause();
+
+    public abstract void captureResume();
+
+    public abstract void captureStop();
+
+    public abstract void lapseStop();
+
+    public abstract void lapseResume();
+
     public static native LogicGen instance();
 
     private static final class CppProxy extends LogicGen
@@ -50,5 +62,53 @@ public abstract class LogicGen {
             return native_getProjectsPath(this.nativeRef);
         }
         private native String native_getProjectsPath(long _nativeRef);
+
+        @Override
+        public void captureStart()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            native_captureStart(this.nativeRef);
+        }
+        private native void native_captureStart(long _nativeRef);
+
+        @Override
+        public void capturePause()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            native_capturePause(this.nativeRef);
+        }
+        private native void native_capturePause(long _nativeRef);
+
+        @Override
+        public void captureResume()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            native_captureResume(this.nativeRef);
+        }
+        private native void native_captureResume(long _nativeRef);
+
+        @Override
+        public void captureStop()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            native_captureStop(this.nativeRef);
+        }
+        private native void native_captureStop(long _nativeRef);
+
+        @Override
+        public void lapseStop()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            native_lapseStop(this.nativeRef);
+        }
+        private native void native_lapseStop(long _nativeRef);
+
+        @Override
+        public void lapseResume()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            native_lapseResume(this.nativeRef);
+        }
+        private native void native_lapseResume(long _nativeRef);
     }
 }

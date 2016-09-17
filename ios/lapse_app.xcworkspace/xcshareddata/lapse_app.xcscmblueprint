@@ -4,20 +4,27 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "6A1110D278D6BAE4A5654EF687AA6D05131CD849" : 0,
+    "703C8D6A122D254C79740E410734EC0A4643394D" : 0,
     "4E8EC1E97A744AECB2BFFE9D3D48C062D250382B" : 0,
-    "703C8D6A122D254C79740E410734EC0A4643394D" : 0
+    "1BF19058C9B814F8BA3C3075BCECA7739FE75020" : 0,
+    "6A1110D278D6BAE4A5654EF687AA6D05131CD849" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7ACB04BE-F973-40D5-911A-22CC619876F9",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "6A1110D278D6BAE4A5654EF687AA6D05131CD849" : "lapse_video\/",
+    "703C8D6A122D254C79740E410734EC0A4643394D" : "lapse_video\/gearsbox\/",
     "4E8EC1E97A744AECB2BFFE9D3D48C062D250382B" : "lapse_video\/gearsbox\/deps\/djinni\/",
-    "703C8D6A122D254C79740E410734EC0A4643394D" : "lapse_video\/gearsbox\/"
+    "1BF19058C9B814F8BA3C3075BCECA7739FE75020" : "..\/..\/..\/..\/Volumes\/hdd1t\/code\/ThirdPart\/ffmpeg\/FFmpeg-iOS-build-script",
+    "6A1110D278D6BAE4A5654EF687AA6D05131CD849" : "lapse_video\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "lapse_app",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/lapse_app.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kewlbear\/FFmpeg-iOS-build-script.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1BF19058C9B814F8BA3C3075BCECA7739FE75020"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dropbox\/djinni.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

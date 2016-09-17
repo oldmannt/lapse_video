@@ -32,7 +32,14 @@ bool ProjectCellImp::initializ(const std::string& path, int out_w, int out_h){
             m_video_info->getFPS(), m_video_info->getDuration());
     
     m_path = path;
-    m_length = std::to_string(m_video_info->getDuration());
+    
+    if (m_video_info->getDuration() < 1){
+        m_length = std::to_string(m_video_info->getFrameAmount()) + " frame";
+    }
+    else{
+        m_length = std::to_string(m_video_info->getDuration()) + " s";
+    }
+    
     m_fps = std::to_string(m_video_info->getFPS());
     
     std::shared_ptr<FileInfoGen> file_info = InstanceGetterGen::getPlatformUtility()->getFileInfo(path);

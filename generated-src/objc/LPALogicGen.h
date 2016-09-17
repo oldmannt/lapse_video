@@ -13,4 +13,16 @@
 
 - (nonnull NSString *)getProjectsPath;
 
+- (void)captureStart;
+
+- (void)capturePause;
+
+- (void)captureResume;
+
+- (void)captureStop;
+
+- (void)lapseStop;
+
+- (void)lapseResume;
+
 @end

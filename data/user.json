@@ -1,24 +1,26 @@
 {
 	"video":{
-		"interval":500,
-		"resolution":480,
-		"fps":15,
-		"bitrate":800000
+		"interval":1000,
+		"interval_unit":"mill_sec",
+		"interval_units":"mill_sec, second, minute",
+		"fps":25,
+		"bitrate":8000000,
+		"quick_mode":"traffic_flow",
+		"traffic_flow":100,
+		"wind_sky":300,
+		"sun_rise_set":500,
+		"no_wind_sky":1000,
+		"flowers_bloom_fade":60000,
+		"day_turn_night":90000
 	},
 
 	"camera":{
-		"flash":"auto,yes,no",
-		"quality":"photo,low,medium,high",
-		"front":"false",
-		"exposure":"auto,manual,point",
-		"exposure_x":0.5,
-		"exposure_y":0.5,
-		"iso":100,
-		"exposure_lev":40,
-		"focus":"auto,point,lock",
-		"focus_lev":111
+		"flash_mode":"auto",
+		"quality":"720p"
 	},
     
     "root":"home",
-    "projects_dir":""
+    "projects_dir":"",
+    "capture_mode":"video",
+    "capture_modes":"photo video"
 }

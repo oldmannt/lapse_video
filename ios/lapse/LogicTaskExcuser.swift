@@ -15,7 +15,7 @@ class LogicTaskExcuserImp : GBTaskExcuserGen {
     
     var m_capture_vc:ViewController?
     @objc internal func excuse(info: GBTaskInfoGen?){
-        print("LogicTaskExcuserImp excuse, id:\(info?.getTaskId()) data:\(info?.getData())")
+        //print("LogicTaskExcuserImp excuse, id:\(info?.getTaskId()) data:\(info?.getData())")
         if (info?.getTaskId() == Int64(LPALapseEvent.ReviewOpen.rawValue)){
             openReviewViewController((info?.getData())!)
         }
