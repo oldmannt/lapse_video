@@ -20,7 +20,9 @@ namespace lpase {
         
         virtual std::string getPath(){ return m_path;}
         
-        virtual std::string getName(){ return m_name;}
+        virtual std::string getName(){
+            return m_name;
+        }
         
         virtual std::string getCreateTime(){return m_create_time;}
         

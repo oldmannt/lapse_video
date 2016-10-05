@@ -39,37 +39,7 @@ video_info = record {
 	iso:i32;
 }
 
-const_define = record {
-	# camera
-	const FLASH:string = "flash";
-	const AUTO:string = "auto";
-	const STR_YES:string = "yes";
-	const STR_NO:string = "no";
-	const QUALITY:string = "quality";
-	const QUALITY_LOW:string = "low";
-	const QUALITY_MEDIUM:string = "medium";
-	const QUALITY_HIGH:string = "high";
-	const QUALITY_PHOTO:string = "photo";
-	const CAMERA_POS:string = "camera_pos";
-	const CAMERA_POS_FRONT:string = "front";
-	const CAMERA_POS_BACK:string = "back";
-	const EXPOSURE:string = "exposure";
-	const MANUAL:string = "manual";
-	const POINT:string = "point";
-	const EXPOSURE_X:string = "exposure_x";
-	const EXPOSURE_Y:string = "exposure_y";
-	const EXPOSURE_LEV:string = "exposure_lev";
-	const ISO:string = "iso";
-	const FOCUS:string = "focus";
-	const FOCUS_RANGE:string = "focus_range";
-	const LOCK:string = "lock";
 
-	#video
-	const INTERVAL:string = "interval";
-	const RESOLUTION:string = "resolution";
-	const FPS:string = "fps";
-	const BITRATE:string = "bitrate";
-}
 
 uilogic_gen = interface + c {
 	static instance():uilogic_gen;
@@ -100,9 +70,14 @@ capture_quick_mode = record {
 }
 
 config_key_value = record {
+	const VIDEO_INTERVAL:string = "interval";
+	const VIDEO_INTERVAL_UNIT:string = "interval_unit";
+	const VIDEO_FPS:string = "fps";
+	const VIDEO_BITRATE:string = "video_bitrate";
 	const CAPTURE_MODE:string = "capture_mode";
 	const CAPTURE_MODE_VIDEO:string = "video";
 	const CAPTURE_MODE_PHOTO:string = "photo";
+	const CAPTURE_MODE_LINE:string = "capture_video_line";
 }
 
 data_gen = interface +c {
@@ -127,6 +102,7 @@ data_gen = interface +c {
 	setFps(fps:i32);
 	setBitrate(bitrate:i32);
 	setResolution(reso:i32);
+	isCaptureModePhoto(interal:i32):bool;
 }
 
 project_cell_gen = interface +c {
@@ -138,10 +114,22 @@ project_cell_gen = interface +c {
 	getFps():string;
 }
 
+publish_channel = enum {
+	none;
+	facebook;
+	youtube;
+	miaopai;
+	youku;
+}
+
 project_list_gen = interface +c {
 	static instance():project_list_gen;
 	load(review_w:i32, review_h:i32):bool;
 	getProjectAmount():i32;
 	getProjectData(index:i32):project_cell_gen;
-	selectPrject(index:i32);
+	selectProject(index:i32);
+	deleteProject(index:i32);
+	publishProject(index:i32, channel:publish_channel);
+	saveProject(index:i32);
+	watchProject(index:i32);
 }

@@ -64,7 +64,6 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         let iso = GBCameraControllerImp.instance.getISO()
         let iso_max = GBCameraControllerImp.instance.getISOMax()
         let iso_min = GBCameraControllerImp.instance.getISOMin()
-        
 
         let focus:Float = GBCameraControllerImp.instance.getFocusLens()
         let focus_max:Float = GBCameraControllerImp.instance.getFocusMax()
@@ -89,11 +88,13 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         btn_show(nil)
+        btn_switch.hidden = true
         m_exposure_sel.hidden = true
         m_focus_sel.hidden = true
         
         GBInstanceGetterGen.setPlatformUtility(GBPlatformUtilityImp.sharedInstance)
         camera_controller.initializ_swif(self.view)
+        camera_controller.setAudioEnable(false)
         camera_controller.startCamera()
         camera_controller.setCapturePictureHandler(self)
         GBInstanceGetterGen.setCameraController(camera_controller)
@@ -136,6 +137,7 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
     }
     
     override func viewWillAppear(animated: Bool) {
+        
         self.view.bringSubviewToFront(m_debug_info)
         self.view.bringSubviewToFront(m_view_lapse_ctrl)
         self.view.bringSubviewToFront(m_viewbtns)
@@ -159,7 +161,7 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
             return
         }
         m_viewbtns.hidden = false
-        m_view_lapse_ctrl.hidden = btn_capture.hidden
+        m_view_lapse_ctrl.hidden = false
         
         UIView.animateWithDuration(0.5, animations: {
             self.m_exposure_sel.transform = CGAffineTransformScale(self.m_exposure_sel.transform, 0.5, 0.5)
@@ -268,7 +270,7 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
     }
     
     @IBAction func lapse(sender: UIButton) {
-        if !btn_capture.hidden {
+        if btn_capture.hidden && btn_resume.hidden{
             return
         }
         if nil == m_lapseSetterView {
@@ -288,7 +290,7 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
     }
     
     @IBAction func ratio(sender: AnyObject) {
-        if !btn_capture.hidden {
+        if btn_capture.hidden && btn_resume.hidden{
             return
         }
         if nil == m_resolutionSetterView {
@@ -298,7 +300,7 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
     }
 
     @IBAction func more_camera_setting(sender: UIButton) {
-        if !btn_capture.hidden {
+        if btn_capture.hidden && btn_resume.hidden{
             return
         }
         if nil == m_moreCameraSetterView {
@@ -368,5 +370,6 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         }
         
     }
+    
 }
 

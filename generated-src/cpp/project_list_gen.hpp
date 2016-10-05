@@ -9,6 +9,7 @@
 namespace lpase {
 
 class ProjectCellGen;
+enum class PublishChannel;
 
 class ProjectListGen {
 public:
@@ -22,7 +23,15 @@ public:
 
     virtual std::shared_ptr<ProjectCellGen> getProjectData(int32_t index) = 0;
 
-    virtual void selectPrject(int32_t index) = 0;
+    virtual void selectProject(int32_t index) = 0;
+
+    virtual void deleteProject(int32_t index) = 0;
+
+    virtual void publishProject(int32_t index, PublishChannel channel) = 0;
+
+    virtual void saveProject(int32_t index) = 0;
+
+    virtual void watchProject(int32_t index) = 0;
 };
 
 }  // namespace lpase

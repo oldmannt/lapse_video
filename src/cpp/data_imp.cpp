@@ -39,7 +39,7 @@ bool DataImp::initialize(const std::string & config){
 
 std::string DataImp::getProjectsDir(){
     CHECK_RTP(m_user_config, "", "m_user_config null");
-    m_user_config->getString("project_dir");
+    return m_user_config->getString("project_dir");
 }
 
 std::string DataImp::getCaptureMode(){
@@ -69,18 +69,18 @@ int32_t DataImp::getCaptureIntevalMillsec(){
 
 int32_t DataImp::getCaptureInteval(){
     CHECK_RTP(m_vide_config!=nullptr, 0, "m_video_config null");
-    return m_vide_config->getInt("interval");
+    return m_vide_config->getInt(ConfigKeyValue::VIDEO_INTERVAL);
 }
 
 std::string DataImp::getCaptureIntevalUnit(){
     CHECK_RTP(m_vide_config!=nullptr, "", "m_video_config null");
-    return m_vide_config->getString("interval_unit");
+    return m_vide_config->getString(ConfigKeyValue::VIDEO_INTERVAL_UNIT);
 }
 
 void DataImp::setCaptureInteval(int32_t value, const std::string & unit){
     CHECK_RT(m_vide_config!=nullptr, "m_video_config null");
-    m_vide_config->setInt("interval", value);
-    m_vide_config->setString("interval", unit);
+    m_vide_config->setInt(ConfigKeyValue::VIDEO_INTERVAL, value);
+    m_vide_config->setString(ConfigKeyValue::VIDEO_INTERVAL_UNIT, unit);
 }
 
 void DataImp::setCaptureIntervalQuickMode(const std::string & mode){
@@ -99,7 +99,7 @@ std::string DataImp::getCaptureIntervalQuickMode(){
 
 int32_t DataImp::getFps(){
     CHECK_RTP(m_vide_config!=nullptr, 0, "m_video_config null");
-    return m_vide_config->getInt("fps");
+    return m_vide_config->getInt(ConfigKeyValue::VIDEO_FPS);
 }
 
 int32_t DataImp::getBitrate(){
@@ -114,7 +114,7 @@ int32_t DataImp::getResolution(){
 
 void DataImp::setFps(int32_t fps){
     CHECK_RT(m_vide_config!=nullptr, "m_video_config null");
-    m_vide_config->setInt("fps", fps);
+    m_vide_config->setInt(ConfigKeyValue::VIDEO_FPS, fps);
 }
 
 void DataImp::setBitrate(int32_t bitrate){
@@ -125,4 +125,16 @@ void DataImp::setBitrate(int32_t bitrate){
 void DataImp::setResolution(int32_t reso){
     CHECK_RT(m_vide_config!=nullptr, "m_video_config null");
     m_vide_config->setInt("resolution", reso);
+}
+
+bool DataImp::isCaptureModePhoto(int32_t interal){
+    CHECK_RT(m_vide_config!=nullptr, "m_video_config null");
+    
+    int32_t line = m_user_config->getInt(ConfigKeyValue::CAPTURE_MODE_LINE);
+    if (interal<=0) {
+        return this->getCaptureIntevalMillsec() > line;
+    }
+    else {
+        return interal > line;
+    }
 }

@@ -4,11 +4,21 @@
 #import "LPAConfigKeyValue.h"
 
 
+NSString * __nonnull const LPAConfigKeyValueVIDEOINTERVAL = @"interval";
+
+NSString * __nonnull const LPAConfigKeyValueVIDEOINTERVALUNIT = @"interval_unit";
+
+NSString * __nonnull const LPAConfigKeyValueVIDEOFPS = @"fps";
+
+NSString * __nonnull const LPAConfigKeyValueVIDEOBITRATE = @"video_bitrate";
+
 NSString * __nonnull const LPAConfigKeyValueCAPTUREMODE = @"capture_mode";
 
 NSString * __nonnull const LPAConfigKeyValueCAPTUREMODEVIDEO = @"video";
 
 NSString * __nonnull const LPAConfigKeyValueCAPTUREMODEPHOTO = @"photo";
+
+NSString * __nonnull const LPAConfigKeyValueCAPTUREMODELINE = @"capture_video_line";
 
 @implementation LPAConfigKeyValue
 

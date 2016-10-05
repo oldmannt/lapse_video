@@ -5,10 +5,20 @@
 
 namespace lpase {
 
+std::string const ConfigKeyValue::VIDEO_INTERVAL = {"interval"};
+
+std::string const ConfigKeyValue::VIDEO_INTERVAL_UNIT = {"interval_unit"};
+
+std::string const ConfigKeyValue::VIDEO_FPS = {"fps"};
+
+std::string const ConfigKeyValue::VIDEO_BITRATE = {"video_bitrate"};
+
 std::string const ConfigKeyValue::CAPTURE_MODE = {"capture_mode"};
 
 std::string const ConfigKeyValue::CAPTURE_MODE_VIDEO = {"video"};
 
 std::string const ConfigKeyValue::CAPTURE_MODE_PHOTO = {"photo"};
+
+std::string const ConfigKeyValue::CAPTURE_MODE_LINE = {"capture_video_line"};
 
 }  // namespace lpase

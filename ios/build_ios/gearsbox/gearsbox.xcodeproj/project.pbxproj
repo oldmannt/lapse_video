@@ -159,6 +159,8 @@
 		31263D69BD764BA8B16A0599 /* GBTaskInfoGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBTaskInfoGen+Private.mm"; sourceTree = "<group>"; };
 		31DB65B21EFB740AA1EE80D2 /* GBTextBoarder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBTextBoarder.h; sourceTree = "<group>"; };
 		32C629B8EECEB5A970FA4E0F /* camera_focus_mode.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = camera_focus_mode.hpp; sourceTree = "<group>"; };
+		334979C71D9DD9C700F11CDF /* KFAACEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAACEncoder.h; sourceTree = "<group>"; };
+		334979C81D9DD9C700F11CDF /* KFAACEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAACEncoder.m; sourceTree = "<group>"; };
 		355EEED862602394BEA3599E /* GBViewConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBViewConstraint.h; sourceTree = "<group>"; };
 		365A9BD73947E27E83FE3DB1 /* GBTimerGen+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBTimerGen+Private.h"; sourceTree = "<group>"; };
 		37CC2A72FABA4BE08E2122BD /* GBCrashHandlerGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCrashHandlerGen.h; sourceTree = "<group>"; };
@@ -525,6 +527,8 @@
 		A7544BD4062D89935C66780C /* objc */ = {
 			isa = PBXGroup;
 			children = (
+				334979C71D9DD9C700F11CDF /* KFAACEncoder.h */,
+				334979C81D9DD9C700F11CDF /* KFAACEncoder.m */,
 				279F83B83877559208F83E47 /* objc_utility.h */,
 				C95D4AAA5FEF4F352759C63A /* objc_utility.m */,
 				092998B91B6B1929F7406DF2 /* video_frame_imp.h */,
@@ -757,7 +761,11 @@
 			};
 			buildConfigurationList = E9E9216BB526EDF7E0DEE3F0 /* Build configuration list for PBXProject "gearsbox" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = E5556F5BF901223E91FB62E7;
 			projectDirPath = ../../../gearsbox;
 			projectRoot = "";
@@ -893,6 +901,7 @@
 					deps/curl,
 					deps/curl/curl,
 					"deps/djinni/support-lib/objc",
+					./deps/ffmpeg/include,
 				);
 				OTHER_CFLAGS = "-Wall";
 				OTHER_CPLUSPLUSFLAGS = "-Wall";
@@ -1010,6 +1019,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = YES;
 				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					ZF_LOG_USE_NSLOG,
 					"DEBUG=1",
@@ -1023,6 +1033,7 @@
 					deps/curl,
 					deps/curl/curl,
 					"deps/djinni/support-lib/objc",
+					./deps/ffmpeg/include,
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-Wall";

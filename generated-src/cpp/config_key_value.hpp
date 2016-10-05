@@ -10,11 +10,21 @@ namespace lpase {
 
 struct ConfigKeyValue final {
 
+    static std::string const VIDEO_INTERVAL;
+
+    static std::string const VIDEO_INTERVAL_UNIT;
+
+    static std::string const VIDEO_FPS;
+
+    static std::string const VIDEO_BITRATE;
+
     static std::string const CAPTURE_MODE;
 
     static std::string const CAPTURE_MODE_VIDEO;
 
     static std::string const CAPTURE_MODE_PHOTO;
+
+    static std::string const CAPTURE_MODE_LINE;
 };
 
 }  // namespace lpase

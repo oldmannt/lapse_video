@@ -40,7 +40,7 @@ bool ProjectCellImp::initializ(const std::string& path, int out_w, int out_h){
         m_length = std::to_string(m_video_info->getDuration()) + " s";
     }
     
-    m_fps = std::to_string(m_video_info->getFPS());
+    m_fps = "fps:" + std::to_string(m_video_info->getFPS());
     
     std::shared_ptr<FileInfoGen> file_info = InstanceGetterGen::getPlatformUtility()->getFileInfo(path);
     CHECK_RTF(file_info!=nullptr,"get file info failed:%s", path.c_str());

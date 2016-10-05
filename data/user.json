@@ -1,10 +1,12 @@
 {
 	"video":{
-		"interval":1000,
+		"interval":400,
 		"interval_unit":"mill_sec",
 		"interval_units":"mill_sec, second, minute",
 		"fps":25,
-		"bitrate":8000000,
+		"video_bitrate":8000000,
+		"audio_bitrate":64000,
+		"audio_sample_rate":44100,
 		"quick_mode":"traffic_flow",
 		"traffic_flow":100,
 		"wind_sky":300,
@@ -21,6 +23,7 @@
     
     "root":"home",
     "projects_dir":"",
+    "capture_video_line":1500,
     "capture_mode":"video",
     "capture_modes":"photo video"
 }

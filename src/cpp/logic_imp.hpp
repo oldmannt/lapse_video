@@ -44,6 +44,7 @@ private:
     
     void initialize_camera();
     void initialize_video();
+    void setCaptureInteral(int32_t interval);
 };
     
 }

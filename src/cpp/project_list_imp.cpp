@@ -44,10 +44,43 @@ std::shared_ptr<ProjectCellGen> ProjectListImp::getProjectData(int32_t index){
     return m_project_cells[index];
 }
 
-void ProjectListImp::selectPrject(int32_t index){
-    G_LOG_C(LOG_INFO, "selectPrject");
-    
+void ProjectListImp::selectProject(int32_t index){
     CHECK_RT(index>=0&&index<m_project_cells.size(),"select project cell failed index:%d", index);
-    std::shared_ptr<ProjectCellGen> cell = m_project_cells[index];
+    
+    m_select = index;
+}
+
+void ProjectListImp::deleteProject(int32_t index){
+    int32_t target = index<0 ? m_select : index;
+    CHECK_RT(target>=0&&target<m_project_cells.size(),"select project cell failed index:%d", target);
+    
+    std::shared_ptr<ProjectCellGen> cell = m_project_cells[target];
+    CHECK_RT(cell!=nullptr,"cell null index:%d", target);
+    InstanceGetterGen::getPlatformUtility()->deleteFile(cell->getPath());
+}
+
+void ProjectListImp::publishProject(int32_t index, PublishChannel channel){
+    int32_t target = index<0 ? m_select : index;
+    CHECK_RT(target>=0&&target<m_project_cells.size(),"select project cell failed index:%d", target);
+    
+    std::shared_ptr<ProjectCellGen> cell = m_project_cells[target];
+    CHECK_RT(cell!=nullptr,"cell null index:%d", target);
+}
+
+void ProjectListImp::saveProject(int32_t index){
+    int32_t target = index<0 ? m_select : index;
+    CHECK_RT(target>=0&&target<m_project_cells.size(),"select project cell failed index:%d", target);
+    
+    std::shared_ptr<ProjectCellGen> cell = m_project_cells[target];
+    CHECK_RT(cell!=nullptr,"cell null index:%d", target);
+    CHECK_RT(InstanceGetterGen::getPlatformUtility()->isVideoFileCompatibleToSavedPhotosAlbum(cell->getPath()), "video is not compatible to photos album:%s", cell->getPath().c_str());
+    InstanceGetterGen::getPlatformUtility()->saveVideoFileToSavedPhotosAlbum(cell->getPath());
+}
+
+void ProjectListImp::watchProject(int32_t index){
+    int32_t target = index<0 ? m_select : index;
+    CHECK_RT(target>=0&&target<m_project_cells.size(),"select project cell failed index:%d", target);
+
+    std::shared_ptr<ProjectCellGen> cell = m_project_cells[target];
     InstanceGetterGen::getPlatformUtility()->playVideo(cell->getPath());
 }

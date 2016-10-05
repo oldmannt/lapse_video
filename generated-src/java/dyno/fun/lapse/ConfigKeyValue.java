@@ -5,11 +5,21 @@ package dyno.fun.lapse;
 
 public final class ConfigKeyValue {
 
+    public static final String VIDEO_INTERVAL = "interval";
+
+    public static final String VIDEO_INTERVAL_UNIT = "interval_unit";
+
+    public static final String VIDEO_FPS = "fps";
+
+    public static final String VIDEO_BITRATE = "video_bitrate";
+
     public static final String CAPTURE_MODE = "capture_mode";
 
     public static final String CAPTURE_MODE_VIDEO = "video";
 
     public static final String CAPTURE_MODE_PHOTO = "photo";
+
+    public static final String CAPTURE_MODE_LINE = "capture_video_line";
 
 
     public ConfigKeyValue(

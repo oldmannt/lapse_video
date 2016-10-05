@@ -59,35 +59,6 @@ jni:
   typename: jobject
   typeSignature: 'Ldyno/fun/lapse/ConfigKeyValue;'
 ---
-name: lapse_const_define
-typedef: 'record'
-params: []
-prefix: lapse_
-cpp:
-  typename: '::lpase::ConstDefine'
-  header: '"const_define.hpp"'
-  byValue: false
-objc:
-  typename: 'LPAConstDefine'
-  pointer: true
-  hash: '%s.hash'
-  boxed: 'LPAConstDefine'
-  header: '"LPAConstDefine.h"'
-objcpp:
-  translator: '::djinni_generated::ConstDefine'
-  header: '"LPAConstDefine+Private.h"'
-java:
-  reference: true
-  typename: 'dyno.fun.lapse.ConstDefine'
-  generic: true
-  hash: '%s.hashCode()'
-  boxed: 'dyno.fun.lapse.ConstDefine'
-jni:
-  translator: '::djinni_generated::NativeConstDefine'
-  header: '"NativeConstDefine.hpp"'
-  typename: jobject
-  typeSignature: 'Ldyno/fun/lapse/ConstDefine;'
----
 name: lapse_data_gen
 typedef: 'interface +c'
 params: []
@@ -261,6 +232,35 @@ jni:
   header: '"NativeProjectListGen.hpp"'
   typename: jobject
   typeSignature: 'Ldyno/fun/lapse/ProjectListGen;'
+---
+name: lapse_publish_channel
+typedef: 'enum'
+params: []
+prefix: lapse_
+cpp:
+  typename: '::lpase::PublishChannel'
+  header: '"publish_channel.hpp"'
+  byValue: true
+objc:
+  typename: 'LPAPublishChannel'
+  pointer: false
+  hash: '%s.hash'
+  boxed: 'NSNumber'
+  header: '"LPAPublishChannel.h"'
+objcpp:
+  translator: '::djinni::Enum<::lpase::PublishChannel, LPAPublishChannel>'
+  header: '"DJIMarshal+Private.h"'
+java:
+  reference: true
+  typename: 'dyno.fun.lapse.PublishChannel'
+  generic: true
+  hash: '%s.hashCode()'
+  boxed: 'dyno.fun.lapse.PublishChannel'
+jni:
+  translator: '::djinni_generated::NativePublishChannel'
+  header: '"NativePublishChannel.hpp"'
+  typename: jobject
+  typeSignature: 'Ldyno/fun/lapse/PublishChannel;'
 ---
 name: lapse_uilogic_gen
 typedef: 'interface +c'

@@ -61,9 +61,35 @@ static_assert(__has_feature(objc_arc), "Djinni requires ARC to be enabled for th
     } DJINNI_TRANSLATE_EXCEPTIONS()
 }
 
-- (void)selectPrject:(int32_t)index {
+- (void)selectProject:(int32_t)index {
     try {
-        _cppRefHandle.get()->selectPrject(::djinni::I32::toCpp(index));
+        _cppRefHandle.get()->selectProject(::djinni::I32::toCpp(index));
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (void)deleteProject:(int32_t)index {
+    try {
+        _cppRefHandle.get()->deleteProject(::djinni::I32::toCpp(index));
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (void)publishProject:(int32_t)index
+               channel:(LPAPublishChannel)channel {
+    try {
+        _cppRefHandle.get()->publishProject(::djinni::I32::toCpp(index),
+                                            ::djinni::Enum<::lpase::PublishChannel, LPAPublishChannel>::toCpp(channel));
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (void)saveProject:(int32_t)index {
+    try {
+        _cppRefHandle.get()->saveProject(::djinni::I32::toCpp(index));
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (void)watchProject:(int32_t)index {
+    try {
+        _cppRefHandle.get()->watchProject(::djinni::I32::toCpp(index));
     } DJINNI_TRANSLATE_EXCEPTIONS()
 }
 

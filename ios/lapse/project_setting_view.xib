@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProjectSettingView" customModule="lapse_app" customModuleProvider="target">
+            <connections>
+                <outlet property="m_btn_delete" destination="iXa-1Z-cbw" id="po8-qt-n8E"/>
+                <outlet property="m_btn_dissmiss" destination="HoO-eb-Uh6" id="R7H-3N-JXL"/>
+                <outlet property="m_btn_publish" destination="5wx-Eg-Nyh" id="CQg-2Q-Iqa"/>
+                <outlet property="m_btn_save" destination="J0r-jx-DZR" id="FST-BV-3mj"/>
+                <outlet property="m_btn_watch" destination="vn9-my-kgm" id="rHF-RS-Eeg"/>
+                <outlet property="view" destination="iN0-l3-epB" id="pa9-8P-d7W"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vn9-my-kgm" userLabel="watch">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="90"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="watch">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tapWatch:" destination="-1" eventType="touchUpInside" id="0km-Ca-J4X"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wx-Eg-Nyh" userLabel="publish">
+                    <rect key="frame" x="120" y="0.0" width="120" height="90"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="publish">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tapPublish:" destination="-1" eventType="touchUpInside" id="5lz-5e-gNs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0r-jx-DZR" userLabel="save to">
+                    <rect key="frame" x="240" y="0.0" width="120" height="90"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="save">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tapSave:" destination="-1" eventType="touchUpInside" id="but-Bi-Dh5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXa-1Z-cbw" userLabel="delete">
+                    <rect key="frame" x="360" y="0.0" width="120" height="90"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="delete">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tapDelete:" destination="-1" eventType="touchUpInside" id="Gv7-Lf-nKP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoO-eb-Uh6" userLabel="dismiss">
+                    <rect key="frame" x="480" y="0.0" width="120" height="90"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="dismiss">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tapDismiss:" destination="-1" eventType="touchUpInside" id="UU9-MG-3JF"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTN_PUBLIC" translatesAutoresizingMaskIntoConstraints="NO" id="90i-YS-2pp">
+                    <rect key="frame" x="155" y="16" width="50" height="50"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTN_SAVE" translatesAutoresizingMaskIntoConstraints="NO" id="RgQ-UR-fZt">
+                    <rect key="frame" x="275" y="16" width="50" height="50"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTN_DELETE" translatesAutoresizingMaskIntoConstraints="NO" id="iMF-ve-jFY">
+                    <rect key="frame" x="395" y="16" width="50" height="50"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTN_CANCEL" translatesAutoresizingMaskIntoConstraints="NO" id="xCs-yc-Jlv">
+                    <rect key="frame" x="515" y="16" width="50" height="50"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTN_WATCH" translatesAutoresizingMaskIntoConstraints="NO" id="zyQ-Vr-Tsh">
+                    <rect key="frame" x="35" y="16" width="50" height="50"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="iXa-1Z-cbw" firstAttribute="top" secondItem="vn9-my-kgm" secondAttribute="top" id="0RT-GV-8dT"/>
+                <constraint firstItem="J0r-jx-DZR" firstAttribute="leading" secondItem="5wx-Eg-Nyh" secondAttribute="trailing" id="2Xg-2i-TfO"/>
+                <constraint firstItem="xCs-yc-Jlv" firstAttribute="top" secondItem="zyQ-Vr-Tsh" secondAttribute="top" id="4UF-co-k4V"/>
+                <constraint firstItem="J0r-jx-DZR" firstAttribute="height" secondItem="vn9-my-kgm" secondAttribute="height" id="4vc-qU-NPh"/>
+                <constraint firstItem="iXa-1Z-cbw" firstAttribute="width" secondItem="vn9-my-kgm" secondAttribute="width" id="AwB-cj-14c"/>
+                <constraint firstItem="vn9-my-kgm" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="Crb-0D-rWY"/>
+                <constraint firstAttribute="trailing" secondItem="HoO-eb-Uh6" secondAttribute="trailing" id="E4L-d9-NRc"/>
+                <constraint firstItem="5wx-Eg-Nyh" firstAttribute="leading" secondItem="vn9-my-kgm" secondAttribute="trailing" id="Ewt-o6-dyD"/>
+                <constraint firstItem="vn9-my-kgm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Gvm-4c-EIC"/>
+                <constraint firstItem="xCs-yc-Jlv" firstAttribute="centerX" secondItem="HoO-eb-Uh6" secondAttribute="centerX" id="K0L-UT-Ekt"/>
+                <constraint firstItem="iMF-ve-jFY" firstAttribute="top" secondItem="zyQ-Vr-Tsh" secondAttribute="top" id="LSE-40-7cT"/>
+                <constraint firstItem="zyQ-Vr-Tsh" firstAttribute="top" secondItem="vn9-my-kgm" secondAttribute="top" constant="16" id="Obg-y6-maZ"/>
+                <constraint firstItem="iXa-1Z-cbw" firstAttribute="leading" secondItem="J0r-jx-DZR" secondAttribute="trailing" id="QeH-us-nvQ"/>
+                <constraint firstItem="5wx-Eg-Nyh" firstAttribute="width" secondItem="vn9-my-kgm" secondAttribute="width" id="T41-Un-Fch"/>
+                <constraint firstItem="HoO-eb-Uh6" firstAttribute="width" secondItem="vn9-my-kgm" secondAttribute="width" id="UET-Jr-TXI"/>
+                <constraint firstItem="RgQ-UR-fZt" firstAttribute="centerX" secondItem="J0r-jx-DZR" secondAttribute="centerX" id="WSo-c5-G4P"/>
+                <constraint firstItem="iMF-ve-jFY" firstAttribute="centerX" secondItem="iXa-1Z-cbw" secondAttribute="centerX" id="XKj-BX-jW0"/>
+                <constraint firstItem="90i-YS-2pp" firstAttribute="centerX" secondItem="5wx-Eg-Nyh" secondAttribute="centerX" id="ZvM-KH-0bY"/>
+                <constraint firstItem="5wx-Eg-Nyh" firstAttribute="top" secondItem="vn9-my-kgm" secondAttribute="top" id="bGf-l3-g3u"/>
+                <constraint firstItem="5wx-Eg-Nyh" firstAttribute="height" secondItem="vn9-my-kgm" secondAttribute="height" id="bS8-Xe-qB9"/>
+                <constraint firstItem="RgQ-UR-fZt" firstAttribute="top" secondItem="zyQ-Vr-Tsh" secondAttribute="top" id="euB-rF-MZW"/>
+                <constraint firstItem="zyQ-Vr-Tsh" firstAttribute="centerX" secondItem="vn9-my-kgm" secondAttribute="centerX" id="f7j-U4-bBV"/>
+                <constraint firstItem="J0r-jx-DZR" firstAttribute="width" secondItem="vn9-my-kgm" secondAttribute="width" id="kg1-V4-F5o"/>
+                <constraint firstItem="90i-YS-2pp" firstAttribute="top" secondItem="zyQ-Vr-Tsh" secondAttribute="top" id="o8O-eT-BOl"/>
+                <constraint firstItem="vn9-my-kgm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tZW-93-2C7"/>
+                <constraint firstItem="J0r-jx-DZR" firstAttribute="top" secondItem="vn9-my-kgm" secondAttribute="top" id="v0C-IF-bbE"/>
+                <constraint firstItem="HoO-eb-Uh6" firstAttribute="top" secondItem="vn9-my-kgm" secondAttribute="top" id="yEw-mf-1zH"/>
+                <constraint firstItem="vn9-my-kgm" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1:5" id="ybH-ne-e5J"/>
+                <constraint firstItem="HoO-eb-Uh6" firstAttribute="height" secondItem="vn9-my-kgm" secondAttribute="height" id="yvz-hJ-BKR"/>
+                <constraint firstItem="iXa-1Z-cbw" firstAttribute="height" secondItem="vn9-my-kgm" secondAttribute="height" id="z4a-D7-gQw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="404" y="490"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BTN_CANCEL" width="50" height="50"/>
+        <image name="BTN_DELETE" width="50" height="50"/>
+        <image name="BTN_PUBLIC" width="50" height="50"/>
+        <image name="BTN_SAVE" width="50" height="50"/>
+        <image name="BTN_WATCH" width="50" height="50"/>
+    </resources>
+</document>

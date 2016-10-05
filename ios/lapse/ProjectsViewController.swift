@@ -8,23 +8,34 @@
 
 import UIKit
 
-class ProjectsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ProjectsViewController: PopbaseUIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var m_btn_back: UIButton!
     @IBOutlet weak var m_table_view: UITableView!
+    
+    var m_project_setting_view: ProjectSettingView?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        //GBTaskManagerGen.instance()?.addTaskI(Int64(LPALapseEvent.ProjectsShow.rawValue), task: nil)
-        let cell = m_table_view.dequeueReusableCellWithIdentifier("project_cell") as! PorjectCell
-        LPAProjectListGen.instance()?.load(Int32(cell.m_video_review.frame.width)
-                                , reviewH: Int32(cell.m_video_review.frame.height))
+        
+        m_project_setting_view = ProjectSettingView(nibName: "project_setting_view", bundle: nil)
+        m_project_setting_view?.setPopbase(self)
+        
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(ProjectsViewController.longPress))
+        self.view.addGestureRecognizer(longPressRecognizer)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        // Do any additional setup after loading the view.
+        //GBTaskManagerGen.instance()?.addTaskI(Int64(LPALapseEvent.ProjectsShow.rawValue), task: nil)
+        let cell = m_table_view.dequeueReusableCellWithIdentifier("project_cell") as! PorjectCell
+        LPAProjectListGen.instance()?.load(Int32(cell.m_video_review.frame.width)
+            , reviewH: Int32(cell.m_video_review.frame.height))
+        m_table_view.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,11 +63,25 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        LPAProjectListGen.instance()?.selectPrject(Int32(indexPath.row))
+        LPAProjectListGen.instance()?.watchProject(Int32(indexPath.row))
     }
 
     @IBAction func btnBackClick(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func longPress(longPressGestureRecognizer: UILongPressGestureRecognizer) {
+        if longPressGestureRecognizer.state == UIGestureRecognizerState.Ended {
+            
+            let touchPoint = longPressGestureRecognizer.locationInView(self.m_table_view)
+            if let indexPath = m_table_view.indexPathForRowAtPoint(touchPoint) {
+                // your code here, get the row for the indexPath or do whatever you want
+                LPAProjectListGen.instance()?.selectProject(Int32(indexPath.row))
+                let cell = m_table_view.cellForRowAtIndexPath(indexPath)
+                let pos = cell?.convertPoint(CGPoint(x:0,y:0), toView: self.view)
+                self.presentpopupViewController(m_project_setting_view!, pos: pos!, size: (cell?.contentView.frame.size)!,animationType: .RightLeft, completion: nil)
+            }
+        }
     }
     /*
     // MARK: - Navigation

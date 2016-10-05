@@ -38,6 +38,8 @@ public abstract class DataGen {
 
     public abstract void setResolution(int reso);
 
+    public abstract boolean isCaptureModePhoto(int interal);
+
     public static native DataGen instance();
 
     private static final class CppProxy extends DataGen
@@ -190,5 +192,13 @@ public abstract class DataGen {
             native_setResolution(this.nativeRef, reso);
         }
         private native void native_setResolution(long _nativeRef, int reso);
+
+        @Override
+        public boolean isCaptureModePhoto(int interal)
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_isCaptureModePhoto(this.nativeRef, interal);
+        }
+        private native boolean native_isCaptureModePhoto(long _nativeRef, int interal);
     }
 }

@@ -42,4 +42,6 @@
 
 - (void)setResolution:(int32_t)reso;
 
+- (BOOL)isCaptureModePhoto:(int32_t)interal;
+
 @end

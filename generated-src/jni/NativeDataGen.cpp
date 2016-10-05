@@ -184,4 +184,14 @@ CJNIEXPORT void JNICALL Java_dyno_fun_lapse_DataGen_00024CppProxy_native_1setRes
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, )
 }
 
+CJNIEXPORT jboolean JNICALL Java_dyno_fun_lapse_DataGen_00024CppProxy_native_1isCaptureModePhoto(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jint j_interal)
+{
+    try {
+        DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
+        const auto& ref = ::djinni::objectFromHandleAddress<::lpase::DataGen>(nativeRef);
+        auto r = ref->isCaptureModePhoto(::djinni::I32::toCpp(jniEnv, j_interal));
+        return ::djinni::release(::djinni::Bool::fromCpp(jniEnv, r));
+    } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
+}
+
 }  // namespace djinni_generated

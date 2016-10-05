@@ -5,6 +5,7 @@
 #include "Marshal.hpp"
 #include "NativeProjectCellGen.hpp"
 #include "NativeProjectListGen.hpp"
+#include "NativePublishChannel.hpp"
 
 namespace djinni_generated {
 
@@ -61,12 +62,49 @@ CJNIEXPORT jobject JNICALL Java_dyno_fun_lapse_ProjectListGen_00024CppProxy_nati
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }
 
-CJNIEXPORT void JNICALL Java_dyno_fun_lapse_ProjectListGen_00024CppProxy_native_1selectPrject(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jint j_index)
+CJNIEXPORT void JNICALL Java_dyno_fun_lapse_ProjectListGen_00024CppProxy_native_1selectProject(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jint j_index)
 {
     try {
         DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
         const auto& ref = ::djinni::objectFromHandleAddress<::lpase::ProjectListGen>(nativeRef);
-        ref->selectPrject(::djinni::I32::toCpp(jniEnv, j_index));
+        ref->selectProject(::djinni::I32::toCpp(jniEnv, j_index));
+    } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, )
+}
+
+CJNIEXPORT void JNICALL Java_dyno_fun_lapse_ProjectListGen_00024CppProxy_native_1deleteProject(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jint j_index)
+{
+    try {
+        DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
+        const auto& ref = ::djinni::objectFromHandleAddress<::lpase::ProjectListGen>(nativeRef);
+        ref->deleteProject(::djinni::I32::toCpp(jniEnv, j_index));
+    } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, )
+}
+
+CJNIEXPORT void JNICALL Java_dyno_fun_lapse_ProjectListGen_00024CppProxy_native_1publishProject(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jint j_index, jobject j_channel)
+{
+    try {
+        DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
+        const auto& ref = ::djinni::objectFromHandleAddress<::lpase::ProjectListGen>(nativeRef);
+        ref->publishProject(::djinni::I32::toCpp(jniEnv, j_index),
+                            ::djinni_generated::NativePublishChannel::toCpp(jniEnv, j_channel));
+    } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, )
+}
+
+CJNIEXPORT void JNICALL Java_dyno_fun_lapse_ProjectListGen_00024CppProxy_native_1saveProject(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jint j_index)
+{
+    try {
+        DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
+        const auto& ref = ::djinni::objectFromHandleAddress<::lpase::ProjectListGen>(nativeRef);
+        ref->saveProject(::djinni::I32::toCpp(jniEnv, j_index));
+    } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, )
+}
+
+CJNIEXPORT void JNICALL Java_dyno_fun_lapse_ProjectListGen_00024CppProxy_native_1watchProject(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jint j_index)
+{
+    try {
+        DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
+        const auto& ref = ::djinni::objectFromHandleAddress<::lpase::ProjectListGen>(nativeRef);
+        ref->watchProject(::djinni::I32::toCpp(jniEnv, j_index));
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, )
 }
 

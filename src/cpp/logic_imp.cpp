@@ -14,7 +14,6 @@
 #include "task_manager_gen.hpp"
 #include "ui_manager_gen.hpp"
 #include "instance_getter_gen.hpp"
-#include "const_define.hpp"
 #include "camera_controller_gen.hpp"
 #include "lapse_event.hpp"
 #include "platform_utility_gen.hpp"
@@ -104,8 +103,9 @@ void LogicImp::captureStart(){
     
     initialize_video();
     CHECK_RT(m_video_writer!=nullptr, "video writer initialize failed");
+    
+    this->setCaptureInteral(0);
     m_video_writer->start(DataGen::instance()->getCaptureIntevalMillsec());
-    //m_video_writer->start(33);
 }
 
 void LogicImp::capturePause(){
@@ -115,6 +115,7 @@ void LogicImp::capturePause(){
 
 void LogicImp::captureResume(){
     CHECK_RT(m_video_writer!=nullptr, "video_writer null resume");
+    this->setCaptureInteral(0);
     m_video_writer->resume();
 }
 
@@ -131,12 +132,13 @@ void LogicImp::captureStop(){
 void LogicImp::lapseStop(){
     CHECK_RT(m_video_writer!=nullptr, "video_writer null");
     int64_t interval = int64_t(1000/m_video_writer->getFPS());
-    m_video_writer->setInterval(interval);
+    
+    this->setCaptureInteral((int32_t)interval);
 }
 
 void LogicImp::lapseResume(){
     CHECK_RT(m_video_writer!=nullptr, "video_writer null");
-    m_video_writer->setInterval(DataGen::instance()->getCaptureIntevalMillsec());
+    this->setCaptureInteral(0);
 }
 
 void LogicImp::initialize_camera(){
@@ -178,4 +180,14 @@ void LogicImp::initialize_video(){
         projects_dir += ".mp4";
         m_video_writer->setFilePath(projects_dir);
     }
+}
+
+void LogicImp::setCaptureInteral(int32_t interval){
+    int interval_capture = interval;
+    if (interval <= 0){
+        interval_capture = DataGen::instance()->getCaptureIntevalMillsec();
+    }
+    bool photo = DataGen::instance()->isCaptureModePhoto(interval_capture);
+    InstanceGetterGen::getCameraController()->setFramePhoto(photo);
+    m_video_writer->setInterval(interval_capture);
 }

@@ -38,6 +38,23 @@ class LapseSetterView: PopupViewController {
         m_segUnit.setTitle(GBLanguageStoreGen.instance()?.getString("capture_mill_second"), forSegmentAtIndex: 0)
         m_segUnit.setTitle(GBLanguageStoreGen.instance()?.getString("capture_second"), forSegmentAtIndex: 1)
         m_segUnit.setTitle(GBLanguageStoreGen.instance()?.getString("capture_minute"), forSegmentAtIndex: 2)
+        
+        //m_txtInterval.inputAccessoryView = self.addKeyboardToolbar()
+    }
+    
+    private func addKeyboardToolbar() -> UIToolbar{
+        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 35))
+        toolbar.barStyle = UIBarStyle.Default
+        toolbar.sizeToFit()
+        let btn_done:UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(LapseSetterView.tooldone))
+        let space:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        
+        toolbar.items = [space, btn_done]
+        return toolbar
+    }
+    
+    func tooldone() {
+        GBInstanceGetterGen.getPlatformUtility()?.endEniting(true)
     }
 
     override func didReceiveMemoryWarning() {

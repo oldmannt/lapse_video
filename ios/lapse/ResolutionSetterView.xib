@@ -32,7 +32,7 @@
                         <segment title="1080P"/>
                     </segments>
                 </segmentedControl>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31K-zr-mqu">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31K-zr-mqu">
                     <rect key="frame" x="36" y="129" width="50" height="50"/>
                     <state key="normal" image="BTN_OK"/>
                     <connections>

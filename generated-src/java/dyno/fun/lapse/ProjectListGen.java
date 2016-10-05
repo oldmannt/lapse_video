@@ -12,7 +12,15 @@ public abstract class ProjectListGen {
 
     public abstract ProjectCellGen getProjectData(int index);
 
-    public abstract void selectPrject(int index);
+    public abstract void selectProject(int index);
+
+    public abstract void deleteProject(int index);
+
+    public abstract void publishProject(int index, PublishChannel channel);
+
+    public abstract void saveProject(int index);
+
+    public abstract void watchProject(int index);
 
     public static native ProjectListGen instance();
 
@@ -64,11 +72,43 @@ public abstract class ProjectListGen {
         private native ProjectCellGen native_getProjectData(long _nativeRef, int index);
 
         @Override
-        public void selectPrject(int index)
+        public void selectProject(int index)
         {
             assert !this.destroyed.get() : "trying to use a destroyed object";
-            native_selectPrject(this.nativeRef, index);
+            native_selectProject(this.nativeRef, index);
         }
-        private native void native_selectPrject(long _nativeRef, int index);
+        private native void native_selectProject(long _nativeRef, int index);
+
+        @Override
+        public void deleteProject(int index)
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            native_deleteProject(this.nativeRef, index);
+        }
+        private native void native_deleteProject(long _nativeRef, int index);
+
+        @Override
+        public void publishProject(int index, PublishChannel channel)
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            native_publishProject(this.nativeRef, index, channel);
+        }
+        private native void native_publishProject(long _nativeRef, int index, PublishChannel channel);
+
+        @Override
+        public void saveProject(int index)
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            native_saveProject(this.nativeRef, index);
+        }
+        private native void native_saveProject(long _nativeRef, int index);
+
+        @Override
+        public void watchProject(int index)
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            native_watchProject(this.nativeRef, index);
+        }
+        private native void native_watchProject(long _nativeRef, int index);
     }
 }

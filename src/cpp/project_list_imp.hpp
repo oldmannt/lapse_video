@@ -20,6 +20,9 @@ namespace lpase {
     
     class ProjectListImp:public ProjectListGen {
     public:
+        ProjectListImp():m_select(0){
+            
+        }
         virtual ~ProjectListImp() {}
         
         virtual bool load(int32_t review_w, int32_t review_h);
@@ -30,13 +33,23 @@ namespace lpase {
         
         virtual std::shared_ptr<ProjectCellGen> getProjectData(int32_t index);
         
-        virtual void selectPrject(int32_t index);
+        virtual void selectProject(int32_t index);
+        
+        virtual void deleteProject(int32_t index);
+        
+        virtual void publishProject(int32_t index, PublishChannel channel);
+        
+        virtual void saveProject(int32_t index);
+        
+        virtual void watchProject(int32_t index);
         
     private:
         typedef std::vector<std::shared_ptr<ProjectCellGen>> VEC_CELLS;
         typedef std::unordered_set<std::string> SET_CELLS_PATH;
         VEC_CELLS m_project_cells;
         SET_CELLS_PATH m_project_paths;
+        
+        int32_t m_select;
     };
     
 }  // namespace lpase

@@ -46,6 +46,8 @@ public:
     virtual void setBitrate(int32_t bitrate) = 0;
 
     virtual void setResolution(int32_t reso) = 0;
+
+    virtual bool isCaptureModePhoto(int32_t interal) = 0;
 };
 
 }  // namespace lpase

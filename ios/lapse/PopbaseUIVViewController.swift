@@ -57,13 +57,17 @@ class PopbaseUIViewController: UIViewController {
 //            objc_setAssociatedObject(self, kSLViewDismissKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
 //        }
 //    }
-    
     func presentpopupViewController(popupViewController: UIViewController, animationType:SLpopupViewAnimationType, completion: (() -> Void)?) {
+        presentpopupViewController(popupViewController, pos: CGPoint(x: -1, y: -1), size: CGSize(width: -1, height: -1), animationType: animationType, completion: completion)
+    }
+    
+    func presentpopupViewController(popupViewController: UIViewController, pos: CGPoint, size: CGSize, animationType:SLpopupViewAnimationType, completion: (() -> Void)?) {
         let sourceView:UIView = self.getTopView()
         self.popupViewController = popupViewController
         let popupView:UIView = popupViewController.view
         sourceView.tag = kSourceViewTag
-        popupView.autoresizingMask = [.FlexibleTopMargin,.FlexibleLeftMargin,.FlexibleRightMargin,.FlexibleBottomMargin]
+        
+        
         popupView.tag = kpopupViewTag
         if(sourceView.subviews.contains(popupView)) {
             return
@@ -75,9 +79,10 @@ class PopbaseUIViewController: UIViewController {
 //        popupView.layer.shadowOpacity = 0.5
         popupView.layer.shouldRasterize = true
         popupView.layer.rasterizationScale = UIScreen.mainScreen().scale
-        
+        popupView.autoresizingMask = [.FlexibleTopMargin,.FlexibleLeftMargin,.FlexibleRightMargin,.FlexibleBottomMargin]
+
         let overlayView:UIView = UIView(frame: sourceView.bounds)
-        overlayView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        //overlayView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         overlayView.tag = kOverlayViewTag
         overlayView.backgroundColor = UIColor.clearColor()
         
@@ -88,51 +93,77 @@ class PopbaseUIViewController: UIViewController {
         if let _ = self.popupBackgroundView {
             overlayView.addSubview(self.popupBackgroundView!)
         }
-        //Background is button
-        let dismissButton: UIButton = UIButton(type: .Custom)
-        dismissButton.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        dismissButton.backgroundColor = UIColor.clearColor()
-        dismissButton.frame = sourceView.bounds
-        overlayView.addSubview(dismissButton)
         
         popupView.alpha = 0.0
         overlayView.addSubview(popupView)
         sourceView.addSubview(overlayView)
         
+        //Background is button
+        /*
+        let dismissButton: UIButton = UIButton(type: .Custom)
+        dismissButton.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        dismissButton.backgroundColor = UIColor.clearColor()
+        dismissButton.frame = sourceView.bounds
+        overlayView.addSubview(dismissButton)
         dismissButton.addTarget(self, action: #selector(PopbaseUIViewController.btnDismissViewControllerWithAnimation(_:)), forControlEvents: .TouchUpInside)
+        dismissButton.tag = animationType.rawValue
+        */
+        
+        let final_rect = self.finalRect(popupView, sourceView: sourceView, pos: pos, size: size)
         switch animationType {
         case .BottomTop, .BottomBottom,.TopTop,.TopBottom, .LeftLeft, .LeftRight,.RightLeft, .RightRight:
-            dismissButton.tag = animationType.rawValue
-            print("slider1")
-            self.slideView(popupView, sourceView: sourceView, overlayView: overlayView, animationType: animationType)
+            //dismissButton.tag = animationType.rawValue
+            self.slideView(popupView, sourceView: sourceView, frame:final_rect, animationType: animationType)
             
         default:
-            dismissButton.tag = SLpopupViewAnimationType.Fade.rawValue
-            self.fadeView(popupView, sourceView: sourceView, overlayView: overlayView)
+            //dismissButton.tag = SLpopupViewAnimationType.Fade.rawValue
+            self.fadeView(popupView, sourceView: sourceView, frame:final_rect)
         }
         
     }
-    func slideView(popupView: UIView, sourceView:UIView, overlayView:UIView, animationType: SLpopupViewAnimationType) {
+    
+    func finalRect(popupView: UIView, sourceView:UIView, pos:CGPoint, size:CGSize) -> CGRect {
+        let sourceSize: CGSize = sourceView.bounds.size
+        let popupSize: CGSize = popupView.bounds.size
+        var frame:CGRect = CGRectMake((sourceSize.width - popupSize.width)/2, (sourceSize.height - popupSize.height)/2, popupSize.width, popupSize.height)
+        
+        if pos.x >= 0 {
+            frame.origin.x = pos.x
+        }
+        if pos.y >= 0 {
+            frame.origin.y = pos.y
+        }
+        if size.width > 0 {
+            frame.size.width = size.width
+        }
+        if size.height > 0 {
+            frame.size.height = size.height
+        }
+        
+        return frame
+    }
+    
+    func slideView(popupView: UIView, sourceView:UIView, frame:CGRect, animationType: SLpopupViewAnimationType) {
         let sourceSize: CGSize = sourceView.bounds.size
         let popupSize: CGSize = popupView.bounds.size
         var popupStartRect:CGRect
         switch animationType {
         case .BottomTop, .BottomBottom:
-            popupStartRect = CGRectMake((sourceSize.width - popupSize.width)/2, sourceSize.height, popupSize.width, popupSize.height)
+            popupStartRect = CGRectMake(frame.origin.x, sourceSize.height, popupSize.width, popupSize.height)
         case .LeftLeft, .LeftRight:
-            popupStartRect = CGRectMake(-sourceSize.width, (sourceSize.height - popupSize.height)/2, popupSize.width, popupSize.height)
+            popupStartRect = CGRectMake(-sourceSize.width, frame.origin.y, popupSize.width, popupSize.height)
         case .TopTop, .TopBottom:
-            popupStartRect = CGRectMake((sourceSize.width - popupSize.width)/2, -sourceSize.height, popupSize.width, popupSize.height)
+            popupStartRect = CGRectMake(frame.origin.x, -sourceSize.height, popupSize.width, popupSize.height)
         default:
-            popupStartRect = CGRectMake(sourceSize.width, (sourceSize.height - popupSize.height)/2, popupSize.width, popupSize.height)
+            popupStartRect = CGRectMake(sourceSize.width, frame.origin.y, popupSize.width, popupSize.height)
         }
-        let popupEndRect:CGRect = CGRectMake((sourceSize.width - popupSize.width)/2, (sourceSize.height - popupSize.height)/2, popupSize.width, popupSize.height)
+
         popupView.frame = popupStartRect
         popupView.alpha = 1.0
         UIView.animateWithDuration(kpopupAnimationDuration, animations: { () -> Void in
             self.popupViewController?.viewWillAppear(false)
             self.popupBackgroundView?.alpha = 0.5
-            popupView.frame = popupEndRect
+            popupView.frame = frame
             }) { (finished) -> Void in
                 self.popupViewController?.viewDidAppear(false)
         }
@@ -141,16 +172,16 @@ class PopbaseUIViewController: UIViewController {
     func slideViewOut(popupView: UIView, sourceView:UIView, overlayView:UIView, animationType: SLpopupViewAnimationType) {
         let sourceSize: CGSize = sourceView.bounds.size
         let popupSize: CGSize = popupView.bounds.size
-        var popupEndRect:CGRect
+        var popupEndRect:CGRect = popupView.frame
         switch animationType {
         case .BottomTop, .TopTop:
-            popupEndRect = CGRectMake((sourceSize.width - popupSize.width)/2, -popupSize.height, popupSize.width, popupSize.height)
+            popupEndRect.origin.y = -popupSize.height
         case .BottomBottom, .TopBottom:
-            popupEndRect = CGRectMake((sourceSize.width - popupSize.width)/2, popupSize.height, popupSize.width, popupSize.height)
+            popupEndRect.origin.y = popupSize.height
         case .LeftRight, .RightRight:
-            popupEndRect = CGRectMake(sourceSize.width, popupView.frame.origin.y, popupSize.width, popupSize.height)
+            popupEndRect.origin.x = sourceSize.width
         default:
-            popupEndRect = CGRectMake(-popupSize.width, popupView.frame.origin.y, popupSize.width, popupSize.height)
+            popupEndRect.origin.x = -popupSize.width
         }
         
         UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
@@ -167,17 +198,10 @@ class PopbaseUIViewController: UIViewController {
                 }
         }
         
-        
-        
     }
     
-    func fadeView(popupView: UIView, sourceView:UIView, overlayView:UIView) {
-        let sourceSize: CGSize = sourceView.bounds.size
-        let popupSize: CGSize = popupView.bounds.size
-        popupView.frame = CGRectMake((sourceSize.width - popupSize.width)/2,
-                                                (sourceSize.height - popupSize.height)/2,
-                                                popupSize.width,
-                                                popupSize.height)
+    func fadeView(popupView: UIView, sourceView:UIView, frame:CGRect) {
+        popupView.frame = frame
         popupView.alpha = 0.0
         
         UIView.animateWithDuration(kpopupAnimationDuration, animations: { () -> Void in
