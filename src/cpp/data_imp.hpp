@@ -53,6 +53,8 @@ public:
     virtual void setResolution(int32_t reso);
     
     virtual bool isCaptureModePhoto(int32_t interal);
+    
+    virtual bool isCaptureImmediate(int32_t interal);
 private:
     std::shared_ptr<gearsbox::ConfigGen> m_user_config;
     std::shared_ptr<gearsbox::ConfigGen> m_vide_config;

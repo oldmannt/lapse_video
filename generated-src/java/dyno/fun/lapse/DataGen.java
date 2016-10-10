@@ -40,6 +40,8 @@ public abstract class DataGen {
 
     public abstract boolean isCaptureModePhoto(int interal);
 
+    public abstract boolean isCaptureImmediate(int interal);
+
     public static native DataGen instance();
 
     private static final class CppProxy extends DataGen
@@ -200,5 +202,13 @@ public abstract class DataGen {
             return native_isCaptureModePhoto(this.nativeRef, interal);
         }
         private native boolean native_isCaptureModePhoto(long _nativeRef, int interal);
+
+        @Override
+        public boolean isCaptureImmediate(int interal)
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_isCaptureImmediate(this.nativeRef, interal);
+        }
+        private native boolean native_isCaptureImmediate(long _nativeRef, int interal);
     }
 }

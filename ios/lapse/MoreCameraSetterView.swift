@@ -36,44 +36,44 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
     var m_updateCamera:GBTimerGen?
     
     enum ViewType: Int {
-        case Exposure = 0
-        case Focus;
-        case Zoom;
-        case More;
+        case exposure = 0
+        case focus;
+        case zoom;
+        case more;
         
-        static func fromIndex(index:Int) -> ViewType {
+        static func fromIndex(_ index:Int) -> ViewType {
             switch index {
             case 0:
-                return Exposure
+                return exposure
             case 1:
-                return Focus
+                return focus
             case 2:
-                return Zoom
+                return zoom
             case 3:
-                return More
+                return more
             default:
-                return Exposure
+                return exposure
             }
         }
     }
     
-    var m_curViewType:ViewType = .Exposure
+    var m_curViewType:ViewType = .exposure
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         //let transparent:UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-        m_exposure_view.backgroundColor = UIColor.clearColor()
-        m_focus_view.backgroundColor = UIColor.clearColor()
-        m_zoom_view.backgroundColor = UIColor.clearColor()
-        m_more_view.backgroundColor = UIColor.clearColor()
+        m_exposure_view.backgroundColor = UIColor.clear
+        m_focus_view.backgroundColor = UIColor.clear
+        m_zoom_view.backgroundColor = UIColor.clear
+        m_more_view.backgroundColor = UIColor.clear
         
         m_exposure_value_slider.maximumValue = GBCameraControllerImp.instance.getExposureMaxDuration()
         m_exposure_value_slider.minimumValue = GBCameraControllerImp.instance.getExposureMaxDuration()
         
         m_updateCamera = GBTimerGen.create(0, interval: 300, repeatTimes: -1, hander: self)
-        m_debug_overlay.hidden = true
+        m_debug_overlay.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,84 +81,84 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
-        switchViews(ViewType.Exposure)
+    override func viewWillAppear(_ animated: Bool) {
+        switchViews(ViewType.exposure)
         m_switch_views.selectedSegmentIndex = 0
         m_updateCamera?.start()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         m_updateCamera?.pause()
     }
     
-    @IBAction func switch_view_segment_change(sender: UISegmentedControl) {
+    @IBAction func switch_view_segment_change(_ sender: UISegmentedControl) {
         switchViews(ViewType.fromIndex(sender.selectedSegmentIndex))
     }
     
-    @IBAction func close(sender: AnyObject) {
-        self.dissmissPopup(.Fade)
+    @IBAction func close(_ sender: AnyObject) {
+        self.dissmissPopup(animationType: .fade)
     }
 
-    @IBAction func flashSegmentChange(sender: UISegmentedControl) {
+    @IBAction func flashSegmentChange(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            GBCameraControllerImp.instance.setFlashMode(GBCameraFlash.Auto)
+            GBCameraControllerImp.instance.setFlashMode(GBCameraFlash.auto)
         case 1:
-            GBCameraControllerImp.instance.setFlashMode(GBCameraFlash.On)
+            GBCameraControllerImp.instance.setFlashMode(GBCameraFlash.on)
         case 2:
-            GBCameraControllerImp.instance.setFlashMode(GBCameraFlash.Off)
+            GBCameraControllerImp.instance.setFlashMode(GBCameraFlash.off)
         default:
             break
         }
     }
     
-    @IBAction func focus_segment_change(sender: AnyObject) {
+    @IBAction func focus_segment_change(_ sender: AnyObject) {
         switch m_focus_control.selectedSegmentIndex {
         case 0:
-            GBCameraControllerImp.instance.setFocusMode(GBCameraFocusMode.Locked)
-            m_focus_slider.enabled = true
+            GBCameraControllerImp.instance.setFocusMode(GBCameraFocusMode.locked)
+            m_focus_slider.isEnabled = true
         case 1:
-            GBCameraControllerImp.instance.setFocusMode(GBCameraFocusMode.ContinuousAutoFocus)
-            m_focus_slider.enabled = false
+            GBCameraControllerImp.instance.setFocusMode(GBCameraFocusMode.continuousAutoFocus)
+            m_focus_slider.isEnabled = false
         case 2:
             let vc:ViewController = super.m_popbase as! ViewController
-            self.dissmissPopup(.None)
+            self.dissmissPopup(animationType: .none)
             vc.showFocusSel(CGPoint(x: -1,y: -1))
         default: break
             
         }
     }
 
-    @IBAction func focus_slider_change(sender: UISlider) {
+    @IBAction func focus_slider_change(_ sender: UISlider) {
         GBCameraControllerImp.instance.setFocusLens(sender.value)
         m_focus_control.selectedSegmentIndex = 0
     }
     
-    @IBAction func zoom_slider_change(sender: AnyObject) {
+    @IBAction func zoom_slider_change(_ sender: AnyObject) {
         GBCameraControllerImp.instance.setZoom(sender.value)
     }
 
 
-    @IBAction func exposure_control_select(sender: AnyObject) {
+    @IBAction func exposure_control_select(_ sender: AnyObject) {
         switch m_exposure_control.selectedSegmentIndex {
         case 0:
-            GBCameraControllerImp.instance.setExposureMode(GBCameraExposureMode.Locked)
-            m_exposure_value_slider.enabled = false
-            m_iso_value_slider.enabled = false
+            GBCameraControllerImp.instance.setExposureMode(GBCameraExposureMode.locked)
+            m_exposure_value_slider.isEnabled = false
+            m_iso_value_slider.isEnabled = false
             break
         case 1:
-            GBCameraControllerImp.instance.setExposureMode(GBCameraExposureMode.ContinuousAutoExposure)
-            m_exposure_value_slider.enabled = false
-            m_iso_value_slider.enabled = false
+            GBCameraControllerImp.instance.setExposureMode(GBCameraExposureMode.continuousAutoExposure)
+            m_exposure_value_slider.isEnabled = false
+            m_iso_value_slider.isEnabled = false
             break
         case 2:
-            GBCameraControllerImp.instance.setExposureMode(GBCameraExposureMode.ModeCustom)
-            m_exposure_value_slider.enabled = true
-            m_iso_value_slider.enabled = true
+            GBCameraControllerImp.instance.setExposureMode(GBCameraExposureMode.modeCustom)
+            m_exposure_value_slider.isEnabled = true
+            m_iso_value_slider.isEnabled = true
             break
         case 3:
             let vc:ViewController = super.m_popbase as! ViewController
-            self.dissmissPopup(.None)
+            self.dissmissPopup(animationType: .none)
             vc.showExposure(CGPoint(x: -1,y: -1))
             break
         default:
@@ -166,58 +166,58 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
         }
     }
     
-    @IBAction func exposure_slider_change(sender: UISlider) {
+    @IBAction func exposure_slider_change(_ sender: UISlider) {
         //print("exposure_slider_change \(sender.value)")
         GBCameraControllerImp.instance.setExposureDuration(sender.value)
     }
     
-    @IBAction func iso_slider_change(sender: UISlider) {
+    @IBAction func iso_slider_change(_ sender: UISlider) {
         //print("iso_slider_change \(sender.value)")
         GBCameraControllerImp.instance.setISO(Int32(sender.value))
     }
     
-    @objc func excuse(info: GBTaskInfoGen?){
+    @objc func excuse(_ info: GBTaskInfoGen?){
         self.updateExposure()
         self.updateZoom()
         self.updateFocus()
         //debuginfo()
     }
     
-    private func switchViews(index:ViewType){
-        m_exposure_view.hidden = true
-        m_focus_view.hidden = true
-        m_zoom_view.hidden = true
-        m_more_view.hidden = true
+    fileprivate func switchViews(_ index:ViewType){
+        m_exposure_view.isHidden = true
+        m_focus_view.isHidden = true
+        m_zoom_view.isHidden = true
+        m_more_view.isHidden = true
         
-        if index == ViewType.Exposure {
-            m_exposure_view.hidden = false
+        if index == ViewType.exposure {
+            m_exposure_view.isHidden = false
             m_exposure_tittle.text = GBLanguageStoreGen.instance()?.getString("exposure_tittle");
-            m_exposure_control.setTitle(GBLanguageStoreGen.instance()?.getString("exposure_lock"), forSegmentAtIndex: 0)
-            m_exposure_control.setTitle(GBLanguageStoreGen.instance()?.getString("exposure_dynamic"), forSegmentAtIndex: 1)
-            m_exposure_control.setTitle(GBLanguageStoreGen.instance()?.getString("exposure_manual"), forSegmentAtIndex: 2)
-            m_exposure_control.setTitle(GBLanguageStoreGen.instance()?.getString("exposure_touch"), forSegmentAtIndex: 3)
+            m_exposure_control.setTitle(GBLanguageStoreGen.instance()?.getString("exposure_lock"), forSegmentAt: 0)
+            m_exposure_control.setTitle(GBLanguageStoreGen.instance()?.getString("exposure_dynamic"), forSegmentAt: 1)
+            m_exposure_control.setTitle(GBLanguageStoreGen.instance()?.getString("exposure_manual"), forSegmentAt: 2)
+            m_exposure_control.setTitle(GBLanguageStoreGen.instance()?.getString("exposure_touch"), forSegmentAt: 3)
             
             let exposure_mode:GBCameraExposureMode = GBCameraControllerImp.instance.getExposureMode()
             switch exposure_mode {
-            case GBCameraExposureMode.Locked:
+            case GBCameraExposureMode.locked:
                 m_exposure_control.selectedSegmentIndex = 0
-                m_exposure_value_slider.enabled = false
-                m_iso_value_slider.enabled = false
+                m_exposure_value_slider.isEnabled = false
+                m_iso_value_slider.isEnabled = false
                 break
-            case GBCameraExposureMode.AutoExpose:
+            case GBCameraExposureMode.autoExpose:
                 m_exposure_control.selectedSegmentIndex = 1
-                m_exposure_value_slider.enabled = false
-                m_iso_value_slider.enabled = false
+                m_exposure_value_slider.isEnabled = false
+                m_iso_value_slider.isEnabled = false
                 break
-            case GBCameraExposureMode.ContinuousAutoExposure:
+            case GBCameraExposureMode.continuousAutoExposure:
                 m_exposure_control.selectedSegmentIndex = 1
-                m_exposure_value_slider.enabled = false
-                m_iso_value_slider.enabled = false
+                m_exposure_value_slider.isEnabled = false
+                m_iso_value_slider.isEnabled = false
                 break
-            case GBCameraExposureMode.ModeCustom:
+            case GBCameraExposureMode.modeCustom:
                 m_exposure_control.selectedSegmentIndex = 2
-                m_exposure_value_slider.enabled = true
-                m_iso_value_slider.enabled = true
+                m_exposure_value_slider.isEnabled = true
+                m_iso_value_slider.isEnabled = true
                 break
             default:
                 break
@@ -229,22 +229,22 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
             m_iso_value_slider.maximumValue = Float(GBCameraControllerImp.instance.getISOMax())
             m_iso_value_slider.minimumValue = Float(GBCameraControllerImp.instance.getISOMin())
         }
-        else if index == ViewType.Focus {
-            m_focus_view.hidden = false
+        else if index == ViewType.focus {
+            m_focus_view.isHidden = false
             m_focus_tittle.text = GBLanguageStoreGen.instance()?.getString("focus_tittle");
-            m_focus_control.setTitle(GBLanguageStoreGen.instance()?.getString("focus_lock"), forSegmentAtIndex: 0)
-            m_focus_control.setTitle(GBLanguageStoreGen.instance()?.getString("focus_dynamic"), forSegmentAtIndex: 1)
-            m_focus_control.setTitle(GBLanguageStoreGen.instance()?.getString("focus_touch"), forSegmentAtIndex: 2)
+            m_focus_control.setTitle(GBLanguageStoreGen.instance()?.getString("focus_lock"), forSegmentAt: 0)
+            m_focus_control.setTitle(GBLanguageStoreGen.instance()?.getString("focus_dynamic"), forSegmentAt: 1)
+            m_focus_control.setTitle(GBLanguageStoreGen.instance()?.getString("focus_touch"), forSegmentAt: 2)
             
             let focus_mode:GBCameraFocusMode = GBCameraControllerImp.instance.getFocusMode()
             switch focus_mode {
-            case GBCameraFocusMode.Locked:
+            case GBCameraFocusMode.locked:
                 m_focus_control.selectedSegmentIndex = 0
                 break
-            case GBCameraFocusMode.AutoFocus:
+            case GBCameraFocusMode.autoFocus:
                 m_focus_control.selectedSegmentIndex = 0
                 break
-            case GBCameraFocusMode.ContinuousAutoFocus:
+            case GBCameraFocusMode.continuousAutoFocus:
                 m_focus_control.selectedSegmentIndex = 1
                 break
             default:
@@ -254,30 +254,30 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
             m_focus_slider.minimumValue = GBCameraControllerImp.instance.getFocusMin()
             self.updateFocus()
         }
-        else if index == ViewType.Zoom {
-            m_zoom_view.hidden = false
+        else if index == ViewType.zoom {
+            m_zoom_view.isHidden = false
             m_zoom_tittle.text = GBLanguageStoreGen.instance()?.getString("zoom_tittle")
             
             m_zoom_slider.maximumValue = GBCameraControllerImp.instance.getZoomMax()
             m_zoom_slider.minimumValue = GBCameraControllerImp.instance.getZoomMin()
             self.updateZoom()
         }
-        else if index == ViewType.More {
-            m_more_view.hidden = false
+        else if index == ViewType.more {
+            m_more_view.isHidden = false
             m_more_tittle.text = GBLanguageStoreGen.instance()?.getString("camera_more_tittle")
-            m_lighting_segment.setTitle(GBLanguageStoreGen.instance()?.getString("lighting_auto"), forSegmentAtIndex: 0)
-            m_lighting_segment.setTitle(GBLanguageStoreGen.instance()?.getString("lighting_on"), forSegmentAtIndex: 1)
-            m_lighting_segment.setTitle(GBLanguageStoreGen.instance()?.getString("lighting_off"), forSegmentAtIndex: 2)
+            m_lighting_segment.setTitle(GBLanguageStoreGen.instance()?.getString("lighting_auto"), forSegmentAt: 0)
+            m_lighting_segment.setTitle(GBLanguageStoreGen.instance()?.getString("lighting_on"), forSegmentAt: 1)
+            m_lighting_segment.setTitle(GBLanguageStoreGen.instance()?.getString("lighting_off"), forSegmentAt: 2)
             
             let flash_mode:GBCameraFlash = GBCameraControllerImp.instance.getFlashMode()
             switch flash_mode {
-            case GBCameraFlash.Auto:
+            case GBCameraFlash.auto:
                 m_lighting_segment.selectedSegmentIndex = 0
                 break
-            case GBCameraFlash.On:
+            case GBCameraFlash.on:
                 m_lighting_segment.selectedSegmentIndex = 1
                 break
-            case GBCameraFlash.Off:
+            case GBCameraFlash.off:
                 m_lighting_segment.selectedSegmentIndex = 2
                 break
             default:
@@ -286,8 +286,8 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
         }
     }
     
-    private func updateExposure(){
-        if m_exposure_view.hidden || GBCameraControllerImp.instance.getExposureMode() == GBCameraExposureMode.ModeCustom{
+    fileprivate func updateExposure(){
+        if m_exposure_view.isHidden || GBCameraControllerImp.instance.getExposureMode() == GBCameraExposureMode.modeCustom{
             return
         }
         let duration = GBCameraControllerImp.instance.getExposureDuration()
@@ -307,8 +307,8 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
         m_iso_value.text = String(iso)
     }
     
-    private func updateFocus(){
-        if m_focus_view.hidden || GBCameraControllerImp.instance.getFocusMode() == GBCameraFocusMode.Locked{
+    fileprivate func updateFocus(){
+        if m_focus_view.isHidden || GBCameraControllerImp.instance.getFocusMode() == GBCameraFocusMode.locked{
             return
         }
         
@@ -316,8 +316,8 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
         m_focus_slider.setValue(focus, animated: false)
     }
     
-    private func updateZoom() {
-        if m_zoom_view.hidden {
+    fileprivate func updateZoom() {
+        if m_zoom_view.isHidden {
             return
         }
         
@@ -325,17 +325,17 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
         m_zoom_slider.setValue(zoom, animated: false)
     }
     
-    private func debuginfo(){
+    fileprivate func debuginfo(){
         var text:String = ""
-        if !m_exposure_view.hidden {
+        if !m_exposure_view.isHidden {
             let duration = GBCameraControllerImp.instance.getExposureDurationCMT()
             let iso = GBCameraControllerImp.instance.getISO()
             text = String("dration: \(duration!.value):\(duration!.timescale) second:\(duration!.seconds) max:\(GBCameraControllerImp.instance.getExposureMaxDuration()) min:\(GBCameraControllerImp.instance.getExposureMinDuration()) mode:\(GBCameraControllerImp.instance.getExposureMode().rawValue)\n iso: \(iso) max:\(GBCameraControllerImp.instance.getISOMax()) min:\(GBCameraControllerImp.instance.getISOMin())")
         }
-        else if !m_focus_view.hidden{
+        else if !m_focus_view.isHidden{
             
         }
-        else if !m_zoom_view.hidden{
+        else if !m_zoom_view.isHidden{
             
         }
         

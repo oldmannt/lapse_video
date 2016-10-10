@@ -21,6 +21,8 @@ public final class ConfigKeyValue {
 
     public static final String CAPTURE_MODE_LINE = "capture_video_line";
 
+    public static final String CAPTURE_IMMEDIATE_LINE = "capture_immediate_line";
+
 
     public ConfigKeyValue(
             ) {

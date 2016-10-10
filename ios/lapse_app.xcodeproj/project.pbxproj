@@ -30,15 +30,12 @@
 		332C75D11DA0657F00282A7F /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 332C75C01DA0657F00282A7F /* IQKeyboardManager.bundle */; };
 		332C75D31DA0E36300282A7F /* project_setting_view.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332C75D21DA0E36300282A7F /* project_setting_view.xib */; };
 		332C75D51DA1853A00282A7F /* ProjectSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C75D41DA1853A00282A7F /* ProjectSettingView.swift */; };
-		332C75EC1DA4542900282A7F /* GalleryTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C75EB1DA4542900282A7F /* GalleryTabBarController.swift */; };
 		334979CA1D9E3FD600F11CDF /* UIButtonBottomTittle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334979C91D9E3FD600F11CDF /* UIButtonBottomTittle.swift */; };
 		338263111D46AA8400DA114F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263101D46AA8400DA114F /* AppDelegate.swift */; };
 		338263131D46AA8400DA114F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263121D46AA8400DA114F /* ViewController.swift */; };
 		338263161D46AA8400DA114F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338263141D46AA8400DA114F /* Main.storyboard */; };
 		338263181D46AA8400DA114F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338263171D46AA8400DA114F /* Assets.xcassets */; };
 		3382631B1D46AA8400DA114F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338263191D46AA8400DA114F /* LaunchScreen.storyboard */; };
-		338263261D46AA8400DA114F /* lapseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263251D46AA8400DA114F /* lapseTests.swift */; };
-		338263311D46AA8400DA114F /* lapseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263301D46AA8400DA114F /* lapseUITests.swift */; };
 		338263441D46AC7900DA114F /* camera_controller_imp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263431D46AC7900DA114F /* camera_controller_imp.swift */; };
 		3382638F1D47247900DA114F /* justfor_cpplink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3382638E1D47247900DA114F /* justfor_cpplink.cpp */; };
 		3382644A1D4748AF00DA114F /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3382643D1D47489200DA114F /* libcurl.a */; };
@@ -82,6 +79,8 @@
 		33ED954F1D51332700833349 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 338264601D48280A00DA114F /* libx264.a */; };
 		33ED95531D5142B600833349 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ED95521D5142B600833349 /* VideoToolbox.framework */; };
 		33ED95551D51A75E00833349 /* MainLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ED95541D51A75E00833349 /* MainLoop.swift */; };
+		33F3BD401DA6175D0034AC18 /* PublishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3BD3E1DA6175D0034AC18 /* PublishView.swift */; };
+		33F3BD411DA6175D0034AC18 /* PublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F3BD3F1DA6175D0034AC18 /* PublishView.xib */; };
 		F9A2B2A15F7EC3B47899379D /* libPods-lapse_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAA70029AF1BADD6551022 /* libPods-lapse_app.a */; };
 /* End PBXBuildFile section */
 
@@ -177,7 +176,6 @@
 		332C75C01DA0657F00282A7F /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		332C75D21DA0E36300282A7F /* project_setting_view.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = project_setting_view.xib; sourceTree = "<group>"; };
 		332C75D41DA1853A00282A7F /* ProjectSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSettingView.swift; sourceTree = "<group>"; };
-		332C75EB1DA4542900282A7F /* GalleryTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryTabBarController.swift; sourceTree = "<group>"; };
 		334979C91D9E3FD600F11CDF /* UIButtonBottomTittle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonBottomTittle.swift; path = ../../gearsbox/src/swift/UIButtonBottomTittle.swift; sourceTree = "<group>"; };
 		3382630D1D46AA8400DA114F /* lapse_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lapse_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338263101D46AA8400DA114F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,11 +185,7 @@
 		3382631A1D46AA8400DA114F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3382631C1D46AA8400DA114F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		338263211D46AA8400DA114F /* lapse_app.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lapse_app.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		338263251D46AA8400DA114F /* lapseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lapseTests.swift; sourceTree = "<group>"; };
-		338263271D46AA8400DA114F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3382632C1D46AA8400DA114F /* lapse_app.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lapse_app.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		338263301D46AA8400DA114F /* lapseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lapseUITests.swift; sourceTree = "<group>"; };
-		338263321D46AA8400DA114F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3382633E1D46AC0700DA114F /* lapse_app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lapse_app-Bridging-Header.h"; sourceTree = "<group>"; };
 		338263431D46AC7900DA114F /* camera_controller_imp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = camera_controller_imp.swift; path = ../../gearsbox/src/swift/camera_controller_imp.swift; sourceTree = "<group>"; };
 		3382638E1D47247900DA114F /* justfor_cpplink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = justfor_cpplink.cpp; sourceTree = "<group>"; };
@@ -244,6 +238,8 @@
 		33ED95441D512EBC00833349 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		33ED95521D5142B600833349 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		33ED95541D51A75E00833349 /* MainLoop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainLoop.swift; path = ../../gearsbox/src/swift/MainLoop.swift; sourceTree = "<group>"; };
+		33F3BD3E1DA6175D0034AC18 /* PublishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishView.swift; sourceTree = "<group>"; };
+		33F3BD3F1DA6175D0034AC18 /* PublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishView.xib; sourceTree = "<group>"; };
 		4EDAA70029AF1BADD6551022 /* libPods-lapse_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lapse_app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD487B950392F54D673ECBD /* Pods-lapse_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lapse_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-lapse_app/Pods-lapse_app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -367,8 +363,6 @@
 				3382646A1D49276500DA114F /* lapse_app.entitlements */,
 				338263451D46B60700DA114F /* projects */,
 				3382630F1D46AA8400DA114F /* lapse */,
-				338263241D46AA8400DA114F /* lapseTests */,
-				3382632F1D46AA8400DA114F /* lapseUITests */,
 				3382630E1D46AA8400DA114F /* Products */,
 				3DD9FC27E578FEDB792B1B21 /* Pods */,
 				5E075F83473E59AEFCDEF25B /* Frameworks */,
@@ -400,30 +394,11 @@
 				3382631C1D46AA8400DA114F /* Info.plist */,
 				3382633E1D46AC0700DA114F /* lapse_app-Bridging-Header.h */,
 				3382638E1D47247900DA114F /* justfor_cpplink.cpp */,
-				332C75EB1DA4542900282A7F /* GalleryTabBarController.swift */,
 				331E5A611D60068900D32AEE /* ProjectsViewController.swift */,
 				331E5A631D602E2700D32AEE /* PorjectCell.swift */,
 				33E4D9571D7A8FF6002A3E39 /* PicturePreviewViewController.swift */,
 			);
 			path = lapse;
-			sourceTree = "<group>";
-		};
-		338263241D46AA8400DA114F /* lapseTests */ = {
-			isa = PBXGroup;
-			children = (
-				338263251D46AA8400DA114F /* lapseTests.swift */,
-				338263271D46AA8400DA114F /* Info.plist */,
-			);
-			path = lapseTests;
-			sourceTree = "<group>";
-		};
-		3382632F1D46AA8400DA114F /* lapseUITests */ = {
-			isa = PBXGroup;
-			children = (
-				338263301D46AA8400DA114F /* lapseUITests.swift */,
-				338263321D46AA8400DA114F /* Info.plist */,
-			);
-			path = lapseUITests;
 			sourceTree = "<group>";
 		};
 		338263421D46AC6800DA114F /* gearsbox */ = {
@@ -513,6 +488,8 @@
 				33E4D9161D73DD74002A3E39 /* MoreCameraSetterView.xib */,
 				332C75D21DA0E36300282A7F /* project_setting_view.xib */,
 				332C75D41DA1853A00282A7F /* ProjectSettingView.swift */,
+				33F3BD3E1DA6175D0034AC18 /* PublishView.swift */,
+				33F3BD3F1DA6175D0034AC18 /* PublishView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -630,13 +607,14 @@
 		338263051D46AA8400DA114F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = dyno;
 				TargetAttributes = {
 					3382630C1D46AA8400DA114F = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 32DR82A3MW;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 0;
@@ -645,10 +623,12 @@
 					};
 					338263201D46AA8400DA114F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 3382630C1D46AA8400DA114F;
 					};
 					3382632B1D46AA8400DA114F = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 3382630C1D46AA8400DA114F;
 					};
 				};
@@ -760,6 +740,7 @@
 				332C75D31DA0E36300282A7F /* project_setting_view.xib in Resources */,
 				33E4D9141D73CB25002A3E39 /* ResolutionSetterView.xib in Resources */,
 				3399AB7D1D7217AB00F5F3EA /* LapseSetterView.xib in Resources */,
+				33F3BD411DA6175D0034AC18 /* PublishView.xib in Resources */,
 				33E4D9181D73DD74002A3E39 /* MoreCameraSetterView.xib in Resources */,
 				332C75D11DA0657F00282A7F /* IQKeyboardManager.bundle in Resources */,
 			);
@@ -864,6 +845,7 @@
 				332C75C21DA0657F00282A7F /* IQUIScrollView+Additions.swift in Sources */,
 				331E5A401D5A737000D32AEE /* LogicTaskExcuser.swift in Sources */,
 				331E5A641D602E2700D32AEE /* PorjectCell.swift in Sources */,
+				33F3BD401DA6175D0034AC18 /* PublishView.swift in Sources */,
 				338264781D49658100DA114F /* platform_utility.swift in Sources */,
 				33E4D9131D73CB25002A3E39 /* ResolutionSetterView.swift in Sources */,
 				338264791D49658100DA114F /* StringUtils.swift in Sources */,
@@ -876,7 +858,6 @@
 				334979CA1D9E3FD600F11CDF /* UIButtonBottomTittle.swift in Sources */,
 				332C75C31DA0657F00282A7F /* IQUITextFieldView+Additions.swift in Sources */,
 				338263441D46AC7900DA114F /* camera_controller_imp.swift in Sources */,
-				332C75EC1DA4542900282A7F /* GalleryTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -884,7 +865,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338263261D46AA8400DA114F /* lapseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,7 +872,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338263311D46AA8400DA114F /* lapseUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,8 +924,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -991,8 +972,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1011,6 +994,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1024,16 +1008,21 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				INFOPLIST_FILE = lapse/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "../gearsbox/deps/ffmpeg/ios-fat";
-				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapse;
+				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapsevideo;
 				PRODUCT_NAME = lapse_app;
-				SDKROOT = iphoneos9.3;
+				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "lapse/lapse_app-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "../gearsbox/src/swift ../gearsbox/generated-src/objc ../gearsbox/src/objc ../generated-src/objc ../src/cpp";
 			};
 			name = Debug;
@@ -1046,15 +1035,20 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				INFOPLIST_FILE = lapse/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "../gearsbox/deps/ffmpeg/ios-fat";
-				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapse;
+				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapsevideo;
 				PRODUCT_NAME = lapse_app;
-				SDKROOT = iphoneos9.3;
+				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "lapse/lapse_app-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "../gearsbox/src/swift ../gearsbox/generated-src/objc ../gearsbox/src/objc ../generated-src/objc ../src/cpp";
 			};
 			name = Release;
@@ -1067,6 +1061,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapseTests;
 				PRODUCT_NAME = lapse_app;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lapse_app.app/lapse_app";
 			};
 			name = Debug;
@@ -1079,6 +1074,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapseTests;
 				PRODUCT_NAME = lapse_app;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lapse_app.app/lapse_app";
 			};
 			name = Release;
@@ -1090,6 +1086,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapseUITests;
 				PRODUCT_NAME = lapse_app;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = lapse;
 			};
 			name = Debug;
@@ -1101,6 +1098,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapseUITests;
 				PRODUCT_NAME = lapse_app;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = lapse;
 			};
 			name = Release;

@@ -17,3 +17,4 @@ extern NSString * __nonnull const LPAConfigKeyValueCAPTUREMODE;
 extern NSString * __nonnull const LPAConfigKeyValueCAPTUREMODEVIDEO;
 extern NSString * __nonnull const LPAConfigKeyValueCAPTUREMODEPHOTO;
 extern NSString * __nonnull const LPAConfigKeyValueCAPTUREMODELINE;
+extern NSString * __nonnull const LPAConfigKeyValueCAPTUREIMMEDIATELINE;

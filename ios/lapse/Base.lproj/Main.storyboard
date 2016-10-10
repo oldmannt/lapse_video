@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,11 +18,26 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LA-Ze-XF0">
-                                <rect key="frame" x="555" y="20" width="45" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03d-KZ-TGY">
+                                <frame key="frameInset" width="600" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24e-Z1-H5r" userLabel="Btn FPS" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
+                                <frame key="frameInset" minX="592" minY="300" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="FPS" image="BTN_FPS"/>
+                                <connections>
+                                    <action selector="tapFps:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pf8-u6-enF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LA-Ze-XF0">
+                                <frame key="frameInset" minX="555" minY="20" width="45" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2bN-2K-gkR"/>
                                     <constraint firstAttribute="width" constant="45" id="R8m-TJ-2Qf"/>
@@ -31,8 +47,8 @@
                                     <action selector="switch_camer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LGb-0f-zGF"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EXPOSURE_SEL" translatesAutoresizingMaskIntoConstraints="NO" id="R4P-dT-SaB">
-                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="EXPOSURE_SEL" translatesAutoresizingMaskIntoConstraints="NO" id="R4P-dT-SaB">
+                                <frame key="frameInset" minX="250" minY="250" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="hZP-sk-LTF"/>
                                     <constraint firstAttribute="height" constant="100" id="hfG-fH-wWs"/>
@@ -41,8 +57,8 @@
                                     <outletCollection property="gestureRecognizers" destination="Nak-e8-jPH" appends="YES" id="3ps-fk-PZz"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FOCUS_SEL" translatesAutoresizingMaskIntoConstraints="NO" id="0t1-lw-au1">
-                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FOCUS_SEL" translatesAutoresizingMaskIntoConstraints="NO" id="0t1-lw-au1">
+                                <frame key="frameInset" minX="250" minY="250" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="34y-4S-ahd"/>
@@ -52,11 +68,11 @@
                                     <outletCollection property="gestureRecognizers" destination="g3r-Ph-Ksu" appends="YES" id="ePP-WC-gdf"/>
                                 </connections>
                             </imageView>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRm-a8-Rov" userLabel="lapse_ctrl_view">
-                                <rect key="frame" x="540" y="230" width="60" height="140"/>
+                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CRm-a8-Rov" userLabel="lapse_ctrl_view">
+                                <frame key="frameInset" minX="540" minY="230" width="60" height="140"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLB-Jv-Cnn" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <rect key="frame" x="28" y="0.0" width="98" height="50"/>
+                                        <frame key="frameInset" minX="28" width="98" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="Pv7-6X-vAD"/>
                                             <constraint firstAttribute="height" constant="60" id="cXJ-jQ-s1r"/>
@@ -67,7 +83,6 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt9-UF-QnP" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="40" width="60" height="60"/>
                                         <state key="normal" title="resume" image="BTN_LAPSE_RESUME"/>
                                         <connections>
                                             <action selector="lapseResume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="850-4k-W3W"/>
@@ -86,44 +101,38 @@
                                 </constraints>
                             </view>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e36-d7-Jw2">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="600"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M3-Nu-Zft" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="3M3-Nu-Zft" secondAttribute="height" id="HMY-zt-uY6"/>
                                         </constraints>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="capture" image="BTN_CAPTURE">
-                                            <color key="titleColor" red="0.76862745099999996" green="0.1019607843" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.76862745099999996" green="0.1019607843" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="capture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nZn-1j-uwE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-Xr-myx" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120" width="120" height="120"/>
                                         <state key="normal" title="lapse" image="BTN_LAPSE"/>
                                         <connections>
                                             <action selector="lapse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NGY-9S-svq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7W-Uq-53v" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="240" width="120" height="120"/>
                                         <state key="normal" title="ratio" image="BTN_RESOLUTION"/>
                                         <connections>
                                             <action selector="ratio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DTM-rv-9d7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJj-Al-lTn" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="360" width="120" height="120"/>
                                         <state key="normal" title="more" image="BTN_MORE"/>
                                         <connections>
                                             <action selector="more_camera_setting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ad0-iM-cbr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4w-Yi-t3T" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="480" width="120" height="120"/>
                                         <state key="normal" title="library" image="BTN_LIBRARY"/>
                                         <connections>
                                             <action selector="library_tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fBw-GU-ezi"/>
@@ -131,21 +140,21 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1VT-JF-5EV" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <rect key="frame" x="120" y="0.0" width="120" height="120"/>
+                                        <frame key="frameInset" minX="120" width="120" height="120"/>
                                         <state key="normal" title="pause" image="BTN_PAUSE"/>
                                         <connections>
                                             <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="beY-JH-eER"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUy-5W-LOT" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <rect key="frame" x="120" y="133" width="120" height="120"/>
+                                        <frame key="frameInset" minX="120" minY="133" width="120" height="120"/>
                                         <state key="normal" title="resume" image="BTN_RESUME"/>
                                         <connections>
                                             <action selector="resume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQa-F4-Y1y"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuC-AN-waf">
-                                        <rect key="frame" x="120" y="480" width="120" height="120"/>
+                                        <frame key="frameInset" minX="120" minY="480" width="120" height="120"/>
                                         <state key="normal" title="stop" image="BTN_STOP"/>
                                         <connections>
                                             <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTx-ka-U29"/>
@@ -187,23 +196,21 @@
                                     <constraint firstItem="1VT-JF-5EV" firstAttribute="height" secondItem="3M3-Nu-Zft" secondAttribute="height" id="ztq-dn-z4o"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03d-KZ-TGY">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="233"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="0t1-lw-au1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2tS-Iq-HEx"/>
                             <constraint firstItem="e36-d7-Jw2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="2yB-2s-odr"/>
+                            <constraint firstItem="d4w-Yi-t3T" firstAttribute="height" secondItem="3M3-Nu-Zft" secondAttribute="height" id="7rm-gn-NSL"/>
                             <constraint firstItem="2LA-Ze-XF0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="FML-ZM-Gcp"/>
+                            <constraint firstItem="d4w-Yi-t3T" firstAttribute="leading" secondItem="3M3-Nu-Zft" secondAttribute="leading" id="Odq-4Y-uoj"/>
                             <constraint firstItem="e36-d7-Jw2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Sgz-s8-taU"/>
                             <constraint firstItem="R4P-dT-SaB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZC4-fD-NHj"/>
                             <constraint firstItem="CRm-a8-Rov" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aY0-Zf-vTQ"/>
                             <constraint firstItem="CRm-a8-Rov" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="fYU-3h-sWX"/>
+                            <constraint firstItem="d4w-Yi-t3T" firstAttribute="width" secondItem="3M3-Nu-Zft" secondAttribute="width" id="gKT-8j-Pzm"/>
+                            <constraint firstItem="d4w-Yi-t3T" firstAttribute="top" secondItem="VJj-Al-lTn" secondAttribute="bottom" id="guD-x2-2MH"/>
                             <constraint firstItem="2LA-Ze-XF0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="i6G-xZ-wUN"/>
                             <constraint firstItem="R4P-dT-SaB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ifC-39-9lx"/>
                             <constraint firstItem="e36-d7-Jw2" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="o0H-tk-4h1"/>
@@ -215,7 +222,6 @@
                             <outletCollection property="gestureRecognizers" destination="7vA-MJ-riR" appends="YES" id="fVB-4b-AtZ"/>
                         </connections>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="btn_capture" destination="3M3-Nu-Zft" id="zEM-pD-mFb"/>
                         <outlet property="btn_lapse" destination="uBb-Xr-myx" id="Uyz-yX-Cr1"/>
@@ -261,7 +267,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="72" y="511"/>
+            <point key="canvasLocation" x="124" y="634"/>
         </scene>
         <!--other-->
         <scene sceneID="LiO-YV-57I">
@@ -272,9 +278,9 @@
                         <viewControllerLayoutGuide type="bottom" id="Lyd-me-K1v"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vkK-Et-7yh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="jo9-MI-lwC"/>
                 </viewController>
@@ -291,14 +297,14 @@
                         <viewControllerLayoutGuide type="bottom" id="CbX-IW-cRO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OYf-yB-U2j">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j7M-Q7-ADh" userLabel="preview_image">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j7M-Q7-ADh" userLabel="preview_image">
+                                <frame key="frameInset" minY="64" width="600" height="536"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83F-kj-Q8d">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83F-kj-Q8d">
+                                <frame key="frameInset" minY="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Preview" id="sW7-FY-Q8c">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="fDl-uc-QqP">
@@ -325,7 +331,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="83F-kj-Q8d" firstAttribute="top" secondItem="l6y-N6-9J1" secondAttribute="bottom" id="222-O5-d3a"/>
                             <constraint firstItem="j7M-Q7-ADh" firstAttribute="top" secondItem="83F-kj-Q8d" secondAttribute="bottom" id="8go-Vn-mIu"/>
@@ -353,12 +359,12 @@
                         <viewControllerLayoutGuide type="bottom" id="cM1-ir-27S"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OXn-8v-if7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="awx-uu-1ST">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="awx-uu-1ST">
+                                <frame key="frameInset" minY="20" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Projects" id="Iwr-eq-ahH">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="5ge-Ah-m7r">
@@ -374,46 +380,41 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s51-q7-rQP">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s51-q7-rQP">
+                                <frame key="frameInset" minY="64" width="600" height="487"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="project_cell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="project_cell" rowHeight="91" id="v3r-ZM-tyW" customClass="PorjectCell" customModule="lapse_app" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="project_cell" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="project_cell" rowHeight="91" id="v3r-ZM-tyW" customClass="PorjectCell" customModule="lapse_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v3r-ZM-tyW" id="uB6-Sz-4eR">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                            <frame key="frameInset" width="600" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uQE-xj-8Iu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="90"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="uQE-xj-8Iu" secondAttribute="height" multiplier="16:9" id="J1R-iI-RzX"/>
+                                                        <constraint firstAttribute="height" constant="90" id="Yi3-rj-0TD"/>
                                                         <constraint firstAttribute="width" constant="160" id="nMY-x9-ClR"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="video name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eE0-KW-MX6">
-                                                    <rect key="frame" x="165" y="8" width="94" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cyan="0.0" magenta="0.3695581896551724" yellow="0.88049568965517244" black="0.076131465517241384" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                    <color key="textColor" red="0.83554470539093018" green="0.53728467226028442" blue="0.19192381203174591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016年12月12日12:12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mj-nY-h0J">
-                                                    <rect key="frame" x="165" y="35" width="146" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fps" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9J-Rg-xYT">
-                                                    <rect key="frame" x="567" y="35" width="25" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iS3-Q4-o1B">
-                                                    <rect key="frame" x="165" y="69" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iS3-Q4-o1B">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -446,7 +447,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="s51-q7-rQP" firstAttribute="bottom" secondItem="cM1-ir-27S" secondAttribute="top" id="Mbs-nr-gVk"/>
                             <constraint firstItem="s51-q7-rQP" firstAttribute="trailing" secondItem="OXn-8v-if7" secondAttribute="trailing" id="P7h-vk-Xsg"/>
@@ -458,7 +459,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="f7Z-81-CCc"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="m_btn_back" destination="TIc-eV-iCF" id="22Z-nI-Ss9"/>
                         <outlet property="m_table_view" destination="s51-q7-rQP" id="xCq-Ds-oMm"/>
@@ -468,14 +468,14 @@
             </objects>
             <point key="canvasLocation" x="826" y="-365"/>
         </scene>
-        <!--Gallery Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="m2G-bA-eVM">
             <objects>
-                <tabBarController storyboardIdentifier="gallery" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LZv-XR-o7T" customClass="GalleryTabBarController" customModule="lapse_app" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="gallery" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LZv-XR-o7T" sceneMemberID="viewController">
                     <tabBar key="tabBar" hidden="YES" contentMode="scaleToFill" id="34f-fd-LTk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="U1c-mt-TY1" kind="relationship" relationship="viewControllers" id="ueX-Q1-Fy2"/>
@@ -488,17 +488,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BTN_CAPTURE" width="50" height="50"/>
-        <image name="BTN_LAPSE" width="50" height="50"/>
-        <image name="BTN_LAPSE_CANCEL" width="50" height="50"/>
-        <image name="BTN_LAPSE_RESUME" width="50" height="50"/>
-        <image name="BTN_LIBRARY" width="50" height="50"/>
-        <image name="BTN_MORE" width="50" height="50"/>
-        <image name="BTN_PAUSE" width="50" height="50"/>
-        <image name="BTN_RESOLUTION" width="50" height="50"/>
-        <image name="BTN_RESUME" width="50" height="50"/>
-        <image name="BTN_STOP" width="50" height="50"/>
-        <image name="EXPOSURE_SEL" width="200" height="200"/>
-        <image name="FOCUS_SEL" width="200" height="200"/>
+        <image name="BTN_CAPTURE" width="25" height="25"/>
+        <image name="BTN_FPS" width="25" height="25"/>
+        <image name="BTN_LAPSE" width="25" height="25"/>
+        <image name="BTN_LAPSE_CANCEL" width="25" height="25"/>
+        <image name="BTN_LAPSE_RESUME" width="25" height="25"/>
+        <image name="BTN_LIBRARY" width="25" height="25"/>
+        <image name="BTN_MORE" width="25" height="25"/>
+        <image name="BTN_PAUSE" width="25" height="25"/>
+        <image name="BTN_RESOLUTION" width="25" height="25"/>
+        <image name="BTN_RESUME" width="25" height="25"/>
+        <image name="BTN_STOP" width="25" height="25"/>
+        <image name="EXPOSURE_SEL" width="100" height="100"/>
+        <image name="FOCUS_SEL" width="100" height="100"/>
     </resources>
 </document>

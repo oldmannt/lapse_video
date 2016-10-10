@@ -21,6 +21,9 @@ lapse_event = enum {
 	projects_btn_back;
 	projects_show;
 	projects_list_select;
+	projects_list_update_delete;
+	projects_list_update_add;
+	projects_publish;
 	projects_end;
 
 	ui_end;
@@ -78,6 +81,7 @@ config_key_value = record {
 	const CAPTURE_MODE_VIDEO:string = "video";
 	const CAPTURE_MODE_PHOTO:string = "photo";
 	const CAPTURE_MODE_LINE:string = "capture_video_line";
+	const CAPTURE_IMMEDIATE_LINE:string = "capture_immediate_line";
 }
 
 data_gen = interface +c {
@@ -103,6 +107,7 @@ data_gen = interface +c {
 	setBitrate(bitrate:i32);
 	setResolution(reso:i32);
 	isCaptureModePhoto(interal:i32):bool;
+	isCaptureImmediate(interal:i32):bool;
 }
 
 project_cell_gen = interface +c {

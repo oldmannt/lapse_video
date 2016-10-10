@@ -44,4 +44,6 @@
 
 - (BOOL)isCaptureModePhoto:(int32_t)interal;
 
+- (BOOL)isCaptureImmediate:(int32_t)interal;
+
 @end

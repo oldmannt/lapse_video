@@ -26,52 +26,35 @@ class ProjectSettingView: PopupViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.screenRotate), name: UIDeviceOrientationDidChangeNotification, object: nil)
-        
-        //setBtnSpace()
+    @IBAction func tapDismiss(_ sender: AnyObject) {
+        self.dissmissPopup(animationType: .leftRight)
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillAppear(animated)
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
-    
-    func screenRotate() {
-        //print("screen rotate: \(UIApplication.sharedApplication().statusBarOrientation)")
-        //let ori:UIDeviceOrientation = UIDevice.currentDevice().orientation
-        //setBtnSpace()
-        self.dissmissPopup(.LeftRight)
-    }
-    
-    func setBtnSpace() {
-        let view_width = self.view.frame.size.width
-        let space = view_width - 2*m_btn_watch.frame.size.width
-        
-        m_btn_publish.center.x = space/6
-        m_btn_save.center.x = space/2
-        m_btn_delete.center.x = space*5/6
-    }
-    
-    @IBAction func tapDismiss(sender: AnyObject) {
-        self.dissmissPopup(.LeftRight)
-    }
-    
-    @IBAction func tapDelete(sender: AnyObject) {
-        self.dissmissPopup(.LeftRight)
+    @IBAction func tapDelete(_ sender: AnyObject) {
+        LPAProjectListGen.instance()?.deleteProject(-1)
+        self.dissmissPopup(animationType: .leftRight)
     }
 
-    @IBAction func tapSave(sender: AnyObject) {
-        self.dissmissPopup(.LeftRight)
+    @IBAction func tapSave(_ sender: AnyObject) {
+        LPAProjectListGen.instance()?.saveProject(-1)
+        self.dissmissPopup(animationType: .leftRight)
     }
     
-    @IBAction func tapPublish(sender: AnyObject) {
-        self.dissmissPopup(.LeftRight)
+    @IBAction func tapPublish(_ sender: AnyObject) {
+        self.dissmissPopup(animationType: .leftRight)
+        //GBTaskManagerGen.instance()?.addTaskI(Int64(LPALapseEvent.projectsPublish.rawValue), task: nil)
+        let cell_data:LPAProjectCellGen? =  LPAProjectListGen.instance()?.getProjectData(-1)
+        if nil != cell_data{
+            
+            let video_url:URL = URL(fileURLWithPath: cell_data!.getPath())
+            let activity_vc = UIActivityViewController(activityItems: [video_url], applicationActivities: nil)
+            super.m_popbase?.present(activity_vc, animated: true, completion: nil)
+        }
     }
     
-    @IBAction func tapWatch(sender: AnyObject) {
-        self.dissmissPopup(.LeftRight)
+    @IBAction func tapWatch(_ sender: AnyObject) {
+        self.dissmissPopup(animationType: .leftRight)
+        LPAProjectListGen.instance()?.watchProject(-1)
     }
     /*
     // MARK: - Navigation

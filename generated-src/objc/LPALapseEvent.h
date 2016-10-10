@@ -24,6 +24,9 @@ typedef NS_ENUM(NSInteger, LPALapseEvent)
     LPALapseEventProjectsBtnBack,
     LPALapseEventProjectsShow,
     LPALapseEventProjectsListSelect,
+    LPALapseEventProjectsListUpdateDelete,
+    LPALapseEventProjectsListUpdateAdd,
+    LPALapseEventProjectsPublish,
     LPALapseEventProjectsEnd,
     LPALapseEventUiEnd,
 };

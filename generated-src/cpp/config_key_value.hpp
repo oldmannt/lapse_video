@@ -25,6 +25,8 @@ struct ConfigKeyValue final {
     static std::string const CAPTURE_MODE_PHOTO;
 
     static std::string const CAPTURE_MODE_LINE;
+
+    static std::string const CAPTURE_IMMEDIATE_LINE;
 };
 
 }  // namespace lpase

@@ -22,77 +22,77 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		018DA47D3E845403E793F5F7 /* GBVideoInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C42411D93A24F7EB94AA9C0F /* GBVideoInfoGen+Private.mm */; };
 		0194CADB898C2BAEE459C97D /* config_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC98E9F5A1F23243C7004B9A /* config_imp.cpp */; };
-		03E850F8F4A1B1C74DC61337 /* view_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EB40B1D75BD34C1F97D6542 /* view_gen.cpp */; };
+		02A717EAB9127DCC5A93F209 /* GBTaskExcuserGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94C90F0623F866795293346F /* GBTaskExcuserGen+Private.mm */; };
+		035BC634C8310F1E3BD1793F /* GBAsyncLoopGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C18B1ED30D25BCD311D69599 /* GBAsyncLoopGen+Private.mm */; };
 		04EC88AEEF87EDDCE9567D8A /* zf_log.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B41FBDF86E96AACAD53066A /* zf_log.c */; };
 		05668182B31B8D130F214A91 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B1DA4BF83B7B0A66E64798 /* log.cpp */; };
-		0A05D709C1A2E6FF10143567 /* GBCallbackHttpGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDD3237C016B1A44598F0571 /* GBCallbackHttpGen+Private.mm */; };
+		083766A9697FFD4F808AE7F8 /* GBViewFrame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D479B1116BFDD6928D1714D /* GBViewFrame.mm */; };
+		0BAAB12B96EC562726923734 /* GBViewConf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E7EFC8CEEF89721FABE9D /* GBViewConf.mm */; };
 		0D8290990E5572D244925E0E /* language_store_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6087A7F4D1FED0BFB42BA41 /* language_store_imp.cpp */; };
 		15096F221F17123F99C16FF4 /* video_encoder_imp_ffh264.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED6AEABDF46F2E3B7405CAD9 /* video_encoder_imp_ffh264.cpp */; };
-		17C43D8E58D4BA3D18EA2036 /* GBTyperConvertorDummy+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA0215C7F50B097F081FAA34 /* GBTyperConvertorDummy+Private.mm */; };
-		183DDE5F4595DE29C0FA3347 /* view_constraint_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43457051484C93CAC890B876 /* view_constraint_base.cpp */; };
+		1583E3465EE6027BE177BC74 /* GBHttpRequestGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = D02A5B31DAD5BB9A9EA09894 /* GBHttpRequestGen+Private.mm */; };
+		158DD232953FCC4B125B7584 /* GBTaskManagerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 073150D0D4AE13F5B1A654EA /* GBTaskManagerGen+Private.mm */; };
 		188A1D6E3E8CCB3B920D674E /* ui_value_checker_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59A006BC4C1F75635638FE9C /* ui_value_checker_imp.cpp */; };
-		1ACD970CAB97049967763EBE /* camera_config_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A16B3A9A6F233AAC28329875 /* camera_config_gen.cpp */; };
-		1C2A5A9B6FE868A1C019D170 /* GBVideoFrameGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B41E51D20A3702751EAAFD72 /* GBVideoFrameGen+Private.mm */; };
+		1F2724835884698045EDB4B8 /* view_conf_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50919747B735CE9E68D70ECC /* view_conf_base.cpp */; };
 		1F51E8ACE952D7B663889C77 /* log_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C649FFDE61C36A54749977E /* log_imp.cpp */; };
-		25482A8C1718DAC53F94DCA8 /* GBTaskManagerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 073150D0D4AE13F5B1A654EA /* GBTaskManagerGen+Private.mm */; };
-		2943B584C3213F02CF94294D /* GBCameraConfigGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2385C0F720517D59475337B /* GBCameraConfigGen.mm */; };
+		200A5354E2D30BA951F2C0D5 /* GBCameraConfigGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2385C0F720517D59475337B /* GBCameraConfigGen.mm */; };
+		214FA74C22856468A8BDDC36 /* GBArgbColor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9D0FA675898DDFEA97AE1A5 /* GBArgbColor.mm */; };
+		2646F3FE6D727D9BDA9147D8 /* GBFileInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7EEE8041CB99B25CE816BBD3 /* GBFileInfoGen+Private.mm */; };
 		2B4E23B0A037DC611ECC646F /* jsoncpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7679ACAFBF06FBD3818C5 /* jsoncpp.cpp */; };
-		2C77CE9FE1412BEE8D8E48D2 /* GBUiManagerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8130C1AE76C010DFB20AC9C1 /* GBUiManagerGen+Private.mm */; };
+		323D34AB2029BC5945558B6E /* GBInstanceGetterGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = A959ED8DA9EE959321891219 /* GBInstanceGetterGen+Private.mm */; };
 		32C415F1AB87C4691A571FCB /* ui_manager_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402C89B5021F0978D5F29361 /* ui_manager_imp.cpp */; };
 		34FBF569F6E1EC21D95EE7B1 /* objc_utility.m in Sources */ = {isa = PBXBuildFile; fileRef = C95D4AAA5FEF4F352759C63A /* objc_utility.m */; };
+		371A6FBE61F98557BEAB9BEF /* GBArgbColor+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42233730DD366CC4A6FDEC81 /* GBArgbColor+Private.mm */; };
 		3A3DC374B3B655F7111A7354 /* instance_getter_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEA325DAF1DA50E87E5A1BD9 /* instance_getter_imp.cpp */; };
-		3AF0116CD543682D7361E42E /* GBLogGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03CAD4F9B30791B8C17AE977 /* GBLogGen+Private.mm */; };
+		3B5B23027DFDB45DBE502203 /* GBLanguageStoreGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 485861FA85132CF0F338FC5B /* GBLanguageStoreGen+Private.mm */; };
 		3C5D8A7F39FF749587313596 /* timerImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEF153C651B20FD97E229321 /* timerImp.cpp */; };
-		3FF1B7A67171764A9D38D30B /* GBLogGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD88EFF5A985DD702320798 /* GBLogGen.mm */; };
 		42A8A0373978F7DD7021EB7C /* video_encoder_imp_ffmp4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C770C25921676750187ADA9F /* video_encoder_imp_ffmp4.cpp */; };
-		42D2DE5E0604AE5D979F5A62 /* GBConfigGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38C3778CAA3AD2B952662C90 /* GBConfigGen+Private.mm */; };
-		430E868A6788AA06D7A12F6A /* GBArgbColor+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42233730DD366CC4A6FDEC81 /* GBArgbColor+Private.mm */; };
-		445A541E79A7465166883F98 /* GBViewEventParam.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C14785970BF91C5916B41 /* GBViewEventParam.mm */; };
+		48FD227AD3060E9CECAB9654 /* GBViewConstraint.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B0C409D6E7F87FF8E7C2C /* GBViewConstraint.mm */; };
+		4B22C340AA33D46C17A042F7 /* GBViewGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72121C2EBF2F093DA3CFF8E8 /* GBViewGen.mm */; };
+		4B50976B1A2FC559BE217177 /* GBLogGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD88EFF5A985DD702320798 /* GBLogGen.mm */; };
+		4BF8262E5B0ED7A62DD31873 /* GBVideoInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C42411D93A24F7EB94AA9C0F /* GBVideoInfoGen+Private.mm */; };
+		542086C3F5952C84B938097F /* log_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8358D2D8C6DFD50714CC8945 /* log_gen.cpp */; };
 		54B4DE0E23ADBAFDEC1DD2EF /* async_loop_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BCDFD62591538EE5BA21545 /* async_loop_imp.cpp */; };
-		609138AD3219182340D87AE9 /* GBHttpRequestGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = D02A5B31DAD5BB9A9EA09894 /* GBHttpRequestGen+Private.mm */; };
-		68C4496468D9EFABA5B7A801 /* GBVideoWriterGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65DD3A1D88122E3D2876380 /* GBVideoWriterGen+Private.mm */; };
-		6E65C750D917EBF2EC47B6A8 /* GBViewGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72121C2EBF2F093DA3CFF8E8 /* GBViewGen.mm */; };
-		73FB1646A97B8F68BD5324B5 /* GBFileInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7EEE8041CB99B25CE816BBD3 /* GBFileInfoGen+Private.mm */; };
-		7ADA9D60CC8A4E10DBA51FFC /* GBUiConfGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB1715847C12EB1AD175E845 /* GBUiConfGen+Private.mm */; };
-		7B737BB7BBF15C4934625F12 /* GBCrashHandlerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC131CCE2902F50D5C6F3CD1 /* GBCrashHandlerGen+Private.mm */; };
-		7FA549FBA23EB05127A36E8F /* GBLanguageStoreGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 485861FA85132CF0F338FC5B /* GBLanguageStoreGen+Private.mm */; };
+		56F2F8ADC99A7F52186FCFA2 /* GBViewGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4115D4E136687D12F2D8CBB1 /* GBViewGen+Private.mm */; };
+		60C1211C1B03D6B9CC325371 /* view_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EB40B1D75BD34C1F97D6542 /* view_gen.cpp */; };
+		615ACD45C3533C643FD06DAD /* camera_config_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A16B3A9A6F233AAC28329875 /* camera_config_gen.cpp */; };
+		61F4B9E390A36FB33F712F68 /* GBCrashHandlerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC131CCE2902F50D5C6F3CD1 /* GBCrashHandlerGen+Private.mm */; };
+		65D2EBE76C0DFD1EA002BC29 /* GBTyperConvertorDummy+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA0215C7F50B097F081FAA34 /* GBTyperConvertorDummy+Private.mm */; };
+		66E74873185B805A27F7D958 /* GBViewEventHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 597F7735E2663310D775A5A9 /* GBViewEventHandler+Private.mm */; };
+		761AA8D8DA2917D07EE007E3 /* GBTimerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F1DA8BB83FB969E39E3D /* GBTimerGen+Private.mm */; };
+		7A775601C350135462A582E2 /* GBViewFrame+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9156F47FE7752FF613E222EE /* GBViewFrame+Private.mm */; };
+		7B7AAB037A73173FE51F7302 /* GBCameraConfigGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDAA22219FE769CB388BF897 /* GBCameraConfigGen+Private.mm */; };
 		8433BC8993F1AA53CC24FE9A /* task_info_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E212A65120E1CB214FAFF591 /* task_info_imp.cpp */; };
+		87A9B5E196C661105924DC3E /* GBViewFactoryGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3A0538BD3A137245B24AA20 /* GBViewFactoryGen+Private.mm */; };
+		87B8641B3BB9ED8E3C375BA2 /* GBConfigGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38C3778CAA3AD2B952662C90 /* GBConfigGen+Private.mm */; };
 		897B70A8B8C132AA8A5B916D /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E5B883CC5FDF85C37AB1B /* utils.cpp */; };
-		8E30205D48020F722DD12A78 /* GBArgbColor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9D0FA675898DDFEA97AE1A5 /* GBArgbColor.mm */; };
+		8DAEA932FC26987574FD6F9F /* GBLogGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03CAD4F9B30791B8C17AE977 /* GBLogGen+Private.mm */; };
 		8F85788B27B37E0AA3D20F58 /* ui_conf_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D26FF739A0C8A814736C6F9 /* ui_conf_imp.cpp */; };
 		9122B0E007C66F6695CA31D8 /* httprequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888A0B5394C4BF2413F3CD92 /* httprequest.cpp */; };
+		96E32554FD591ABC8919B90C /* view_constraint_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43457051484C93CAC890B876 /* view_constraint_base.cpp */; };
 		9702095E31C02AC770ADDDF1 /* video_frame_imp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBB6079E2515963454F12A7 /* video_frame_imp.m */; };
-		9969EACDB36FFA22F6082622 /* GBTimerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F1DA8BB83FB969E39E3D /* GBTimerGen+Private.mm */; };
-		9A23E16185741F96832CF16E /* GBUiValueCheckerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = D1428548D4326A359EC5CED6 /* GBUiValueCheckerGen+Private.mm */; };
-		A8BC99D71FCD85C2048AE9F0 /* GBTaskInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31263D69BD764BA8B16A0599 /* GBTaskInfoGen+Private.mm */; };
-		AFCD26EBD2BC67A0E8DB68CD /* log_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8358D2D8C6DFD50714CC8945 /* log_gen.cpp */; };
-		B730B067D0670051F542C1C9 /* GBViewConf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E7EFC8CEEF89721FABE9D /* GBViewConf.mm */; };
+		A574C5EFDA09A37B1AE0A102 /* GBViewEventParam.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C14785970BF91C5916B41 /* GBViewEventParam.mm */; };
+		AB5C0589399CD17966E2DDD7 /* GBCameraCaptureHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19965468ED380CB9C7E90008 /* GBCameraCaptureHandler+Private.mm */; };
+		AD8AFEE67A34D20FEAF5BB68 /* GBPlatformUtilityGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 95747FC98A22EBEB372BB355 /* GBPlatformUtilityGen+Private.mm */; };
+		B0854F8BEAF64943F84AD4A8 /* GBVideoFrameGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B41E51D20A3702751EAAFD72 /* GBVideoFrameGen+Private.mm */; };
+		B1A2CCF1856C15C2A0A749EE /* GBViewConstraint+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7DE9F4FC3CF254F9CE963E96 /* GBViewConstraint+Private.mm */; };
+		BC0DB457078C1E86CAB04827 /* GBCallbackHttpGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDD3237C016B1A44598F0571 /* GBCallbackHttpGen+Private.mm */; };
 		BDA0574D72187B0E3A97669E /* video_writer_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12CEC580F518126277DBEEEA /* video_writer_imp.cpp */; };
-		C7841ECBFF7021542C62FCFD /* GBViewFrame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D479B1116BFDD6928D1714D /* GBViewFrame.mm */; };
+		C57CE18170B069C519C2A55F /* GBUiValueCheckerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = D1428548D4326A359EC5CED6 /* GBUiValueCheckerGen+Private.mm */; };
 		C8B019AF9E42CD355B257721 /* httprequestImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D416EBE16171E08513F7B69 /* httprequestImp.cpp */; };
-		CD8D524D5821B6A38C5DCD33 /* GBVideoEncoderGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EC94AE44056FE9A7745F7 /* GBVideoEncoderGen+Private.mm */; };
+		C99D696E5A6A9CA994D1BDFC /* GBViewEventParam+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B48A7D6F0A06186054DA04A3 /* GBViewEventParam+Private.mm */; };
 		CFEB3486BC7112EF7D187802 /* task_manager_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6D79994D8A27526816356 /* task_manager_imp.cpp */; };
-		D12CBA2E968D90FA8AB61607 /* GBInstanceGetterGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = A959ED8DA9EE959321891219 /* GBInstanceGetterGen+Private.mm */; };
 		D1FA7B4E2B76BB12E4EE6C4A /* camera_config_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C420B6FA86A649E5988027D7 /* camera_config_imp.cpp */; };
-		D5850DC1B17B680DA085201D /* GBTaskExcuserGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94C90F0623F866795293346F /* GBTaskExcuserGen+Private.mm */; };
-		D7A4AC734E56D9D1CCDCCA6D /* GBViewEventHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 597F7735E2663310D775A5A9 /* GBViewEventHandler+Private.mm */; };
-		E0696C4A1184A68E9B06DF26 /* GBViewConstraint+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7DE9F4FC3CF254F9CE963E96 /* GBViewConstraint+Private.mm */; };
-		E3DFDCEF0148B24DF3F5CCC3 /* GBCameraConfigGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDAA22219FE769CB388BF897 /* GBCameraConfigGen+Private.mm */; };
-		E77442D377BE5EE403B24EE4 /* GBViewEventParam+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B48A7D6F0A06186054DA04A3 /* GBViewEventParam+Private.mm */; };
-		E83DFD1675554D76102ED938 /* GBViewConf+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 773B5AECF29FD477F0929E3C /* GBViewConf+Private.mm */; };
-		EA32D2E9EE075F77D44A3205 /* GBCameraControllerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBD7F5B8AAF759D678D6F6 /* GBCameraControllerGen+Private.mm */; };
-		ED835A7AA62C17CD0DA9916D /* GBViewConstraint.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B0C409D6E7F87FF8E7C2C /* GBViewConstraint.mm */; };
-		EF22E745805BC8253A986F78 /* view_conf_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50919747B735CE9E68D70ECC /* view_conf_base.cpp */; };
-		F1A7E5AB082E5F1B51B6969E /* GBViewGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4115D4E136687D12F2D8CBB1 /* GBViewGen+Private.mm */; };
-		F55C5D730DF1A6F9F0827A20 /* GBViewFactoryGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3A0538BD3A137245B24AA20 /* GBViewFactoryGen+Private.mm */; };
-		F68A1C5DA005080E4A36E491 /* GBViewFrame+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9156F47FE7752FF613E222EE /* GBViewFrame+Private.mm */; };
-		F6E362298E20A25E8357176B /* GBAsyncLoopGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C18B1ED30D25BCD311D69599 /* GBAsyncLoopGen+Private.mm */; };
-		F74FE8468563614463073A48 /* GBCameraCaptureHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19965468ED380CB9C7E90008 /* GBCameraCaptureHandler+Private.mm */; };
-		F90C2AB22870724DD3A0EF82 /* argb_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B70A2DA034DAA2A4BEBDCFCF /* argb_color.cpp */; };
-		FBB28F2C1FCCF07FE47BB988 /* GBPlatformUtilityGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 95747FC98A22EBEB372BB355 /* GBPlatformUtilityGen+Private.mm */; };
-		FCB476BAC1A17641DA6A8645 /* GBBreakpadGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B447E38C07913FC79A360653 /* GBBreakpadGen+Private.mm */; };
+		D4AA9FB8A19F556474D6EFDF /* GBUiConfGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB1715847C12EB1AD175E845 /* GBUiConfGen+Private.mm */; };
+		D5DC07C47C25AD8984EDABC9 /* GBTaskInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31263D69BD764BA8B16A0599 /* GBTaskInfoGen+Private.mm */; };
+		D898C17AF9B715F27934417D /* GBVideoWriterGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65DD3A1D88122E3D2876380 /* GBVideoWriterGen+Private.mm */; };
+		DB1B643364550FE0BC5A9BC1 /* GBVideoEncoderGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EC94AE44056FE9A7745F7 /* GBVideoEncoderGen+Private.mm */; };
+		DC18C46EE46B7126C572F922 /* GBCameraControllerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBD7F5B8AAF759D678D6F6 /* GBCameraControllerGen+Private.mm */; };
+		DED42F9F4EF7B30063342F0F /* GBViewConf+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 773B5AECF29FD477F0929E3C /* GBViewConf+Private.mm */; };
+		E426298369F798E58AF97211 /* argb_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B70A2DA034DAA2A4BEBDCFCF /* argb_color.cpp */; };
+		E7343B9C82DB7154A0A9B8B2 /* GBUiManagerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8130C1AE76C010DFB20AC9C1 /* GBUiManagerGen+Private.mm */; };
+		EBAF7E5C2589FC1DE064451C /* GBBreakpadGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B447E38C07913FC79A360653 /* GBBreakpadGen+Private.mm */; };
 		FD337E7C0C25D7539E2D7A37 /* video_info_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7CD7C5D7EC257F2E11D78E4 /* video_info_imp.cpp */; };
 /* End PBXBuildFile section */
 
@@ -159,8 +159,6 @@
 		31263D69BD764BA8B16A0599 /* GBTaskInfoGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBTaskInfoGen+Private.mm"; sourceTree = "<group>"; };
 		31DB65B21EFB740AA1EE80D2 /* GBTextBoarder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBTextBoarder.h; sourceTree = "<group>"; };
 		32C629B8EECEB5A970FA4E0F /* camera_focus_mode.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = camera_focus_mode.hpp; sourceTree = "<group>"; };
-		334979C71D9DD9C700F11CDF /* KFAACEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAACEncoder.h; sourceTree = "<group>"; };
-		334979C81D9DD9C700F11CDF /* KFAACEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAACEncoder.m; sourceTree = "<group>"; };
 		355EEED862602394BEA3599E /* GBViewConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBViewConstraint.h; sourceTree = "<group>"; };
 		365A9BD73947E27E83FE3DB1 /* GBTimerGen+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBTimerGen+Private.h"; sourceTree = "<group>"; };
 		37CC2A72FABA4BE08E2122BD /* GBCrashHandlerGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCrashHandlerGen.h; sourceTree = "<group>"; };
@@ -286,6 +284,7 @@
 		B9D0FA675898DDFEA97AE1A5 /* GBArgbColor.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GBArgbColor.mm; sourceTree = "<group>"; };
 		B9D8FF38079B71D0017935CE /* GBTyperConvertorDummy+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBTyperConvertorDummy+Private.h"; sourceTree = "<group>"; };
 		B9FE5F99B91ECD02B4839749 /* ui_value_checker_gen.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = ui_value_checker_gen.hpp; sourceTree = "<group>"; };
+		BC28871B4CC32452864A7A7C /* GBCameraCaptureMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCameraCaptureMode.h; sourceTree = "<group>"; };
 		BC83D9C3CE13F70FFAE957BD /* crash_handler_gen.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = crash_handler_gen.hpp; sourceTree = "<group>"; };
 		BC949E187E23F3D5F1CAA6E7 /* camera_flash.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = camera_flash.hpp; sourceTree = "<group>"; };
 		BE2AD0FB52A8158FD05DEF27 /* timer_gen.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = timer_gen.hpp; sourceTree = "<group>"; };
@@ -306,6 +305,7 @@
 		CDD3237C016B1A44598F0571 /* GBCallbackHttpGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBCallbackHttpGen+Private.mm"; sourceTree = "<group>"; };
 		CE414F06D96E741327453CD3 /* language_store_imp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = language_store_imp.hpp; sourceTree = "<group>"; };
 		CE819A19E725A4161DA649D3 /* GBViewEventHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBViewEventHandler.h; sourceTree = "<group>"; };
+		CF2218E06FDA3CD50E22EC05 /* camera_capture_mode.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = camera_capture_mode.hpp; sourceTree = "<group>"; };
 		CF22D2B85B00443D46700A48 /* lang_type.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = lang_type.hpp; sourceTree = "<group>"; };
 		D02A5B31DAD5BB9A9EA09894 /* GBHttpRequestGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBHttpRequestGen+Private.mm"; sourceTree = "<group>"; };
 		D098509FE6675299F4B79ABB /* view_event_param.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = view_event_param.hpp; sourceTree = "<group>"; };
@@ -366,7 +366,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2681DBABA2F0CD7ECC212E66 /* objc */ = {
+		388B8625A55FF6EA45FB1FD6 /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				B70A2DA034DAA2A4BEBDCFCF /* argb_color.cpp */,
+				3054411EAA397C561D659C55 /* argb_color.hpp */,
+				8179365809FCC1600F02AF3E /* async_loop_gen.hpp */,
+				7854A952322E8330367F6442 /* breakpad_gen.hpp */,
+				D8184AE778CFFB2E176C579A /* callback_http_gen.hpp */,
+				0F4075A7E26CE0E88F9AAC76 /* camera_capture_handler.hpp */,
+				CF2218E06FDA3CD50E22EC05 /* camera_capture_mode.hpp */,
+				A16B3A9A6F233AAC28329875 /* camera_config_gen.cpp */,
+				82B660EC673B1BE35B8C18D3 /* camera_config_gen.hpp */,
+				DF3B8161EC092CF62C9D9016 /* camera_controller_gen.hpp */,
+				5F1952A7EB0F1925AA556EEE /* camera_exposure_mode.hpp */,
+				BC949E187E23F3D5F1CAA6E7 /* camera_flash.hpp */,
+				32C629B8EECEB5A970FA4E0F /* camera_focus_mode.hpp */,
+				EAA4668998CE796E0253E6E1 /* camera_focus_range.hpp */,
+				DBD4F377135B0D206F3B20C6 /* camera_quality.hpp */,
+				7058B3BB6D44623E338621F0 /* config_gen.hpp */,
+				B30AE1E1A0B91DAA8E34805C /* constraint_type.hpp */,
+				BC83D9C3CE13F70FFAE957BD /* crash_handler_gen.hpp */,
+				6CA6887B7AFFBCAC45DA4890 /* file_info_gen.hpp */,
+				7CF5DC1E15696D694676BE24 /* http_request_gen.hpp */,
+				547745FBECBE492CCEB0A5FA /* instance_getter_gen.hpp */,
+				CF22D2B85B00443D46700A48 /* lang_type.hpp */,
+				04D112F0B0FAC46421478847 /* language_store_gen.hpp */,
+				8358D2D8C6DFD50714CC8945 /* log_gen.cpp */,
+				2EB5CB272966F9D5CD2A28FA /* log_gen.hpp */,
+				7E031E6EE4C769DA5DA48A65 /* platform_utility_gen.hpp */,
+				C34913275DC247D7E8CE0E83 /* task_excuser_gen.hpp */,
+				925782FD1D65721BCA3DEE57 /* task_info_gen.hpp */,
+				A494A78643B996461D520D39 /* task_manager_gen.hpp */,
+				CA10F8D2BCD020364EB5E244 /* text_align.hpp */,
+				7FA730413ECDA27C5CE20F9D /* text_boarder.hpp */,
+				22A4A411177D5C8E09368FEF /* text_keyboard.hpp */,
+				BE2AD0FB52A8158FD05DEF27 /* timer_gen.hpp */,
+				65690E3B18F136C565C396B9 /* typer_convertor_dummy.hpp */,
+				F0FC54784861EB6E44EABE01 /* ui_conf_gen.hpp */,
+				A8E6C76E45C23A2CE43D2E85 /* ui_manager_gen.hpp */,
+				B9FE5F99B91ECD02B4839749 /* ui_value_checker_gen.hpp */,
+				08709325ADD046FB444B31A1 /* video_encoder_gen.hpp */,
+				4AB0C2927979DDECB4CA6B48 /* video_frame_gen.hpp */,
+				DA00E85A8DADB1882F77375C /* video_info_gen.hpp */,
+				44F11E585EC978365F4437F4 /* video_writer_gen.hpp */,
+				50919747B735CE9E68D70ECC /* view_conf_base.cpp */,
+				9390D27B37A0F536880FC25C /* view_conf_base.hpp */,
+				43457051484C93CAC890B876 /* view_constraint_base.cpp */,
+				A9BDEE139F9E6F6B0EB0C3AA /* view_constraint_base.hpp */,
+				F3E1FA0846A1E6902E9FCF4B /* view_event.hpp */,
+				E5200AF2266B95D5A6FDFB7C /* view_event_handler.hpp */,
+				D098509FE6675299F4B79ABB /* view_event_param.hpp */,
+				E1758CED93091AAA11C799DC /* view_factory_gen.hpp */,
+				0AAF88A86FE9B5F6B5970F42 /* view_frame.hpp */,
+				3EB40B1D75BD34C1F97D6542 /* view_gen.cpp */,
+				C15003A285F8BAFD0E80727C /* view_gen.hpp */,
+				E8FB3543268D0CFF133C2F0D /* view_type.hpp */,
+			);
+			path = cpp;
+			sourceTree = "<group>";
+		};
+		3EF17830CE3E0BA072A4B083 /* zf_log */ = {
+			isa = PBXGroup;
+			children = (
+				2B41FBDF86E96AACAD53066A /* zf_log.c */,
+				1A0FE0BF5DE356177ACDD5E3 /* zf_log.h */,
+			);
+			path = zf_log;
+			sourceTree = "<group>";
+		};
+		7A59E594F73E338A40574DE5 /* objc */ = {
 			isa = PBXGroup;
 			children = (
 				5884C9477844692E1B9AA306 /* GBArgbColor+Private.h */,
@@ -385,6 +454,7 @@
 				1F3CADB045DB4BAF14875DC4 /* GBCameraCaptureHandler+Private.h */,
 				19965468ED380CB9C7E90008 /* GBCameraCaptureHandler+Private.mm */,
 				14B986FBD20BF384A284F54C /* GBCameraCaptureHandler.h */,
+				BC28871B4CC32452864A7A7C /* GBCameraCaptureMode.h */,
 				4787435D6498FACA4C8839DF /* GBCameraConfigGen+Private.h */,
 				DDAA22219FE769CB388BF897 /* GBCameraConfigGen+Private.mm */,
 				56B1B8BA3CF6EAF15C1848B4 /* GBCameraConfigGen.h */,
@@ -495,15 +565,6 @@
 			path = objc;
 			sourceTree = "<group>";
 		};
-		3EF17830CE3E0BA072A4B083 /* zf_log */ = {
-			isa = PBXGroup;
-			children = (
-				2B41FBDF86E96AACAD53066A /* zf_log.c */,
-				1A0FE0BF5DE356177ACDD5E3 /* zf_log.h */,
-			);
-			path = zf_log;
-			sourceTree = "<group>";
-		};
 		8EBB9404CA552483936E77BE /* json */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,8 +588,6 @@
 		A7544BD4062D89935C66780C /* objc */ = {
 			isa = PBXGroup;
 			children = (
-				334979C71D9DD9C700F11CDF /* KFAACEncoder.h */,
-				334979C81D9DD9C700F11CDF /* KFAACEncoder.m */,
 				279F83B83877559208F83E47 /* objc_utility.h */,
 				C95D4AAA5FEF4F352759C63A /* objc_utility.m */,
 				092998B91B6B1929F7406DF2 /* video_frame_imp.h */,
@@ -549,69 +608,10 @@
 		BC46C298B7E229F72B9CDD7A /* generated-src */ = {
 			isa = PBXGroup;
 			children = (
-				CE555E34875ED66E865846BA /* cpp */,
-				2681DBABA2F0CD7ECC212E66 /* objc */,
+				388B8625A55FF6EA45FB1FD6 /* cpp */,
+				7A59E594F73E338A40574DE5 /* objc */,
 			);
 			path = "generated-src";
-			sourceTree = "<group>";
-		};
-		CE555E34875ED66E865846BA /* cpp */ = {
-			isa = PBXGroup;
-			children = (
-				B70A2DA034DAA2A4BEBDCFCF /* argb_color.cpp */,
-				3054411EAA397C561D659C55 /* argb_color.hpp */,
-				8179365809FCC1600F02AF3E /* async_loop_gen.hpp */,
-				7854A952322E8330367F6442 /* breakpad_gen.hpp */,
-				D8184AE778CFFB2E176C579A /* callback_http_gen.hpp */,
-				0F4075A7E26CE0E88F9AAC76 /* camera_capture_handler.hpp */,
-				A16B3A9A6F233AAC28329875 /* camera_config_gen.cpp */,
-				82B660EC673B1BE35B8C18D3 /* camera_config_gen.hpp */,
-				DF3B8161EC092CF62C9D9016 /* camera_controller_gen.hpp */,
-				5F1952A7EB0F1925AA556EEE /* camera_exposure_mode.hpp */,
-				BC949E187E23F3D5F1CAA6E7 /* camera_flash.hpp */,
-				32C629B8EECEB5A970FA4E0F /* camera_focus_mode.hpp */,
-				EAA4668998CE796E0253E6E1 /* camera_focus_range.hpp */,
-				DBD4F377135B0D206F3B20C6 /* camera_quality.hpp */,
-				7058B3BB6D44623E338621F0 /* config_gen.hpp */,
-				B30AE1E1A0B91DAA8E34805C /* constraint_type.hpp */,
-				BC83D9C3CE13F70FFAE957BD /* crash_handler_gen.hpp */,
-				6CA6887B7AFFBCAC45DA4890 /* file_info_gen.hpp */,
-				7CF5DC1E15696D694676BE24 /* http_request_gen.hpp */,
-				547745FBECBE492CCEB0A5FA /* instance_getter_gen.hpp */,
-				CF22D2B85B00443D46700A48 /* lang_type.hpp */,
-				04D112F0B0FAC46421478847 /* language_store_gen.hpp */,
-				8358D2D8C6DFD50714CC8945 /* log_gen.cpp */,
-				2EB5CB272966F9D5CD2A28FA /* log_gen.hpp */,
-				7E031E6EE4C769DA5DA48A65 /* platform_utility_gen.hpp */,
-				C34913275DC247D7E8CE0E83 /* task_excuser_gen.hpp */,
-				925782FD1D65721BCA3DEE57 /* task_info_gen.hpp */,
-				A494A78643B996461D520D39 /* task_manager_gen.hpp */,
-				CA10F8D2BCD020364EB5E244 /* text_align.hpp */,
-				7FA730413ECDA27C5CE20F9D /* text_boarder.hpp */,
-				22A4A411177D5C8E09368FEF /* text_keyboard.hpp */,
-				BE2AD0FB52A8158FD05DEF27 /* timer_gen.hpp */,
-				65690E3B18F136C565C396B9 /* typer_convertor_dummy.hpp */,
-				F0FC54784861EB6E44EABE01 /* ui_conf_gen.hpp */,
-				A8E6C76E45C23A2CE43D2E85 /* ui_manager_gen.hpp */,
-				B9FE5F99B91ECD02B4839749 /* ui_value_checker_gen.hpp */,
-				08709325ADD046FB444B31A1 /* video_encoder_gen.hpp */,
-				4AB0C2927979DDECB4CA6B48 /* video_frame_gen.hpp */,
-				DA00E85A8DADB1882F77375C /* video_info_gen.hpp */,
-				44F11E585EC978365F4437F4 /* video_writer_gen.hpp */,
-				50919747B735CE9E68D70ECC /* view_conf_base.cpp */,
-				9390D27B37A0F536880FC25C /* view_conf_base.hpp */,
-				43457051484C93CAC890B876 /* view_constraint_base.cpp */,
-				A9BDEE139F9E6F6B0EB0C3AA /* view_constraint_base.hpp */,
-				F3E1FA0846A1E6902E9FCF4B /* view_event.hpp */,
-				E5200AF2266B95D5A6FDFB7C /* view_event_handler.hpp */,
-				D098509FE6675299F4B79ABB /* view_event_param.hpp */,
-				E1758CED93091AAA11C799DC /* view_factory_gen.hpp */,
-				0AAF88A86FE9B5F6B5970F42 /* view_frame.hpp */,
-				3EB40B1D75BD34C1F97D6542 /* view_gen.cpp */,
-				C15003A285F8BAFD0E80727C /* view_gen.hpp */,
-				E8FB3543268D0CFF133C2F0D /* view_type.hpp */,
-			);
-			path = cpp;
 			sourceTree = "<group>";
 		};
 		D461C47E4D3A640A7FE90674 /* Source */ = {
@@ -782,12 +782,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F90C2AB22870724DD3A0EF82 /* argb_color.cpp in Sources */,
-				1ACD970CAB97049967763EBE /* camera_config_gen.cpp in Sources */,
-				AFCD26EBD2BC67A0E8DB68CD /* log_gen.cpp in Sources */,
-				EF22E745805BC8253A986F78 /* view_conf_base.cpp in Sources */,
-				183DDE5F4595DE29C0FA3347 /* view_constraint_base.cpp in Sources */,
-				03E850F8F4A1B1C74DC61337 /* view_gen.cpp in Sources */,
+				E426298369F798E58AF97211 /* argb_color.cpp in Sources */,
+				615ACD45C3533C643FD06DAD /* camera_config_gen.cpp in Sources */,
+				542086C3F5952C84B938097F /* log_gen.cpp in Sources */,
+				1F2724835884698045EDB4B8 /* view_conf_base.cpp in Sources */,
+				96E32554FD591ABC8919B90C /* view_constraint_base.cpp in Sources */,
+				60C1211C1B03D6B9CC325371 /* view_gen.cpp in Sources */,
 				54B4DE0E23ADBAFDEC1DD2EF /* async_loop_imp.cpp in Sources */,
 				D1FA7B4E2B76BB12E4EE6C4A /* camera_config_imp.cpp in Sources */,
 				0194CADB898C2BAEE459C97D /* config_imp.cpp in Sources */,
@@ -817,48 +817,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				430E868A6788AA06D7A12F6A /* GBArgbColor+Private.mm in Sources */,
-				8E30205D48020F722DD12A78 /* GBArgbColor.mm in Sources */,
-				F6E362298E20A25E8357176B /* GBAsyncLoopGen+Private.mm in Sources */,
-				FCB476BAC1A17641DA6A8645 /* GBBreakpadGen+Private.mm in Sources */,
-				0A05D709C1A2E6FF10143567 /* GBCallbackHttpGen+Private.mm in Sources */,
-				F74FE8468563614463073A48 /* GBCameraCaptureHandler+Private.mm in Sources */,
-				E3DFDCEF0148B24DF3F5CCC3 /* GBCameraConfigGen+Private.mm in Sources */,
-				2943B584C3213F02CF94294D /* GBCameraConfigGen.mm in Sources */,
-				EA32D2E9EE075F77D44A3205 /* GBCameraControllerGen+Private.mm in Sources */,
-				42D2DE5E0604AE5D979F5A62 /* GBConfigGen+Private.mm in Sources */,
-				7B737BB7BBF15C4934625F12 /* GBCrashHandlerGen+Private.mm in Sources */,
-				73FB1646A97B8F68BD5324B5 /* GBFileInfoGen+Private.mm in Sources */,
-				609138AD3219182340D87AE9 /* GBHttpRequestGen+Private.mm in Sources */,
-				D12CBA2E968D90FA8AB61607 /* GBInstanceGetterGen+Private.mm in Sources */,
-				7FA549FBA23EB05127A36E8F /* GBLanguageStoreGen+Private.mm in Sources */,
-				3AF0116CD543682D7361E42E /* GBLogGen+Private.mm in Sources */,
-				3FF1B7A67171764A9D38D30B /* GBLogGen.mm in Sources */,
-				FBB28F2C1FCCF07FE47BB988 /* GBPlatformUtilityGen+Private.mm in Sources */,
-				D5850DC1B17B680DA085201D /* GBTaskExcuserGen+Private.mm in Sources */,
-				A8BC99D71FCD85C2048AE9F0 /* GBTaskInfoGen+Private.mm in Sources */,
-				25482A8C1718DAC53F94DCA8 /* GBTaskManagerGen+Private.mm in Sources */,
-				9969EACDB36FFA22F6082622 /* GBTimerGen+Private.mm in Sources */,
-				17C43D8E58D4BA3D18EA2036 /* GBTyperConvertorDummy+Private.mm in Sources */,
-				7ADA9D60CC8A4E10DBA51FFC /* GBUiConfGen+Private.mm in Sources */,
-				2C77CE9FE1412BEE8D8E48D2 /* GBUiManagerGen+Private.mm in Sources */,
-				9A23E16185741F96832CF16E /* GBUiValueCheckerGen+Private.mm in Sources */,
-				CD8D524D5821B6A38C5DCD33 /* GBVideoEncoderGen+Private.mm in Sources */,
-				1C2A5A9B6FE868A1C019D170 /* GBVideoFrameGen+Private.mm in Sources */,
-				018DA47D3E845403E793F5F7 /* GBVideoInfoGen+Private.mm in Sources */,
-				68C4496468D9EFABA5B7A801 /* GBVideoWriterGen+Private.mm in Sources */,
-				E83DFD1675554D76102ED938 /* GBViewConf+Private.mm in Sources */,
-				B730B067D0670051F542C1C9 /* GBViewConf.mm in Sources */,
-				E0696C4A1184A68E9B06DF26 /* GBViewConstraint+Private.mm in Sources */,
-				ED835A7AA62C17CD0DA9916D /* GBViewConstraint.mm in Sources */,
-				D7A4AC734E56D9D1CCDCCA6D /* GBViewEventHandler+Private.mm in Sources */,
-				E77442D377BE5EE403B24EE4 /* GBViewEventParam+Private.mm in Sources */,
-				445A541E79A7465166883F98 /* GBViewEventParam.mm in Sources */,
-				F55C5D730DF1A6F9F0827A20 /* GBViewFactoryGen+Private.mm in Sources */,
-				F68A1C5DA005080E4A36E491 /* GBViewFrame+Private.mm in Sources */,
-				C7841ECBFF7021542C62FCFD /* GBViewFrame.mm in Sources */,
-				F1A7E5AB082E5F1B51B6969E /* GBViewGen+Private.mm in Sources */,
-				6E65C750D917EBF2EC47B6A8 /* GBViewGen.mm in Sources */,
+				371A6FBE61F98557BEAB9BEF /* GBArgbColor+Private.mm in Sources */,
+				214FA74C22856468A8BDDC36 /* GBArgbColor.mm in Sources */,
+				035BC634C8310F1E3BD1793F /* GBAsyncLoopGen+Private.mm in Sources */,
+				EBAF7E5C2589FC1DE064451C /* GBBreakpadGen+Private.mm in Sources */,
+				BC0DB457078C1E86CAB04827 /* GBCallbackHttpGen+Private.mm in Sources */,
+				AB5C0589399CD17966E2DDD7 /* GBCameraCaptureHandler+Private.mm in Sources */,
+				7B7AAB037A73173FE51F7302 /* GBCameraConfigGen+Private.mm in Sources */,
+				200A5354E2D30BA951F2C0D5 /* GBCameraConfigGen.mm in Sources */,
+				DC18C46EE46B7126C572F922 /* GBCameraControllerGen+Private.mm in Sources */,
+				87B8641B3BB9ED8E3C375BA2 /* GBConfigGen+Private.mm in Sources */,
+				61F4B9E390A36FB33F712F68 /* GBCrashHandlerGen+Private.mm in Sources */,
+				2646F3FE6D727D9BDA9147D8 /* GBFileInfoGen+Private.mm in Sources */,
+				1583E3465EE6027BE177BC74 /* GBHttpRequestGen+Private.mm in Sources */,
+				323D34AB2029BC5945558B6E /* GBInstanceGetterGen+Private.mm in Sources */,
+				3B5B23027DFDB45DBE502203 /* GBLanguageStoreGen+Private.mm in Sources */,
+				8DAEA932FC26987574FD6F9F /* GBLogGen+Private.mm in Sources */,
+				4B50976B1A2FC559BE217177 /* GBLogGen.mm in Sources */,
+				AD8AFEE67A34D20FEAF5BB68 /* GBPlatformUtilityGen+Private.mm in Sources */,
+				02A717EAB9127DCC5A93F209 /* GBTaskExcuserGen+Private.mm in Sources */,
+				D5DC07C47C25AD8984EDABC9 /* GBTaskInfoGen+Private.mm in Sources */,
+				158DD232953FCC4B125B7584 /* GBTaskManagerGen+Private.mm in Sources */,
+				761AA8D8DA2917D07EE007E3 /* GBTimerGen+Private.mm in Sources */,
+				65D2EBE76C0DFD1EA002BC29 /* GBTyperConvertorDummy+Private.mm in Sources */,
+				D4AA9FB8A19F556474D6EFDF /* GBUiConfGen+Private.mm in Sources */,
+				E7343B9C82DB7154A0A9B8B2 /* GBUiManagerGen+Private.mm in Sources */,
+				C57CE18170B069C519C2A55F /* GBUiValueCheckerGen+Private.mm in Sources */,
+				DB1B643364550FE0BC5A9BC1 /* GBVideoEncoderGen+Private.mm in Sources */,
+				B0854F8BEAF64943F84AD4A8 /* GBVideoFrameGen+Private.mm in Sources */,
+				4BF8262E5B0ED7A62DD31873 /* GBVideoInfoGen+Private.mm in Sources */,
+				D898C17AF9B715F27934417D /* GBVideoWriterGen+Private.mm in Sources */,
+				DED42F9F4EF7B30063342F0F /* GBViewConf+Private.mm in Sources */,
+				0BAAB12B96EC562726923734 /* GBViewConf.mm in Sources */,
+				B1A2CCF1856C15C2A0A749EE /* GBViewConstraint+Private.mm in Sources */,
+				48FD227AD3060E9CECAB9654 /* GBViewConstraint.mm in Sources */,
+				66E74873185B805A27F7D958 /* GBViewEventHandler+Private.mm in Sources */,
+				C99D696E5A6A9CA994D1BDFC /* GBViewEventParam+Private.mm in Sources */,
+				A574C5EFDA09A37B1AE0A102 /* GBViewEventParam.mm in Sources */,
+				87A9B5E196C661105924DC3E /* GBViewFactoryGen+Private.mm in Sources */,
+				7A775601C350135462A582E2 /* GBViewFrame+Private.mm in Sources */,
+				083766A9697FFD4F808AE7F8 /* GBViewFrame.mm in Sources */,
+				56F2F8ADC99A7F52186FCFA2 /* GBViewGen+Private.mm in Sources */,
+				4B22C340AA33D46C17A042F7 /* GBViewGen.mm in Sources */,
 				34FBF569F6E1EC21D95EE7B1 /* objc_utility.m in Sources */,
 				9702095E31C02AC770ADDDF1 /* video_frame_imp.m in Sources */,
 			);
@@ -888,6 +888,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = YES;
 				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					ZF_LOG_USE_NSLOG,
 					"NDEBUG=1",
@@ -976,6 +977,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = YES;
 				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					_LARGEFILE_SOURCE,
 					"_FILE_OFFSET_BITS=64",

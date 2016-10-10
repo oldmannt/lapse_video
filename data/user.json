@@ -1,9 +1,9 @@
 {
 	"video":{
-		"interval":400,
+		"interval":300,
 		"interval_unit":"mill_sec",
 		"interval_units":"mill_sec, second, minute",
-		"fps":25,
+		"fps":5,
 		"video_bitrate":8000000,
 		"audio_bitrate":64000,
 		"audio_sample_rate":44100,
@@ -24,6 +24,7 @@
     "root":"home",
     "projects_dir":"",
     "capture_video_line":1500,
+    "capture_immediate_line":1500,
     "capture_mode":"video",
     "capture_modes":"photo video"
 }

@@ -138,3 +138,14 @@ bool DataImp::isCaptureModePhoto(int32_t interal){
         return interal > line;
     }
 }
+
+bool DataImp::isCaptureImmediate(int32_t interal){
+    CHECK_RT(m_vide_config!=nullptr, "m_video_config null");
+    int32_t line = m_user_config->getInt(ConfigKeyValue::CAPTURE_IMMEDIATE_LINE);
+    if (interal<=0) {
+        return this->getCaptureIntevalMillsec() < line;
+    }
+    else {
+        return interal < line;
+    }
+}

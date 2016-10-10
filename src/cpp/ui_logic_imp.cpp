@@ -65,7 +65,7 @@ std::string UilogicImp::getEventStr(LapseEvent event){
             break;
     }
     
-    return "err";
+    return std::to_string(int(event));
 }
 
 bool UilogicImp::handle(const gearsbox::ViewEventParam & param, const std::shared_ptr<gearsbox::ViewGen> & view){

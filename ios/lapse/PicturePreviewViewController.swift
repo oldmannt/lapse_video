@@ -26,15 +26,15 @@ class PicturePreviewViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setPreviewImage(image:UIImage) -> Void {
+    func setPreviewImage(_ image:UIImage) -> Void {
         m_image = image
     }
 
-    @IBAction func tapBack(sender: AnyObject) {
-        dismissViewControllerAnimated(false, completion: nil)
+    @IBAction func tapBack(_ sender: AnyObject) {
+        dismiss(animated: false, completion: nil)
     }
 
-    @IBAction func tapSave(sender: AnyObject) {
+    @IBAction func tapSave(_ sender: AnyObject) {
         UIImageWriteToSavedPhotosAlbum(m_image!, nil, nil, nil)
     }
     /*

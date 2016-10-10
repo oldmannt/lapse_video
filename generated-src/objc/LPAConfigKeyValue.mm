@@ -20,6 +20,8 @@ NSString * __nonnull const LPAConfigKeyValueCAPTUREMODEPHOTO = @"photo";
 
 NSString * __nonnull const LPAConfigKeyValueCAPTUREMODELINE = @"capture_video_line";
 
+NSString * __nonnull const LPAConfigKeyValueCAPTUREIMMEDIATELINE = @"capture_immediate_line";
+
 @implementation LPAConfigKeyValue
 
 - (nonnull instancetype)init

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LapseSetterView" customModule="lapse_app" customModuleProvider="target">
@@ -19,7 +20,6 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-Jb-ZS2">
-                    <rect key="frame" x="100" y="57" width="80" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="YYx-dg-NSe"/>
                     </constraints>
@@ -30,14 +30,14 @@
                     </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybO-Lx-8T8">
-                    <rect key="frame" x="45" y="151" width="50" height="50"/>
+                    <frame key="frameInset" minX="45" minY="151" width="50" height="50"/>
                     <state key="normal" image="BTN_OK"/>
                     <connections>
                         <action selector="btnSaveTap:" destination="-1" eventType="touchUpInside" id="fJO-eT-qqM"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQw-Yi-UHL">
-                    <rect key="frame" x="186" y="151" width="50" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQw-Yi-UHL">
+                    <frame key="frameInset" minX="186" minY="151" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="D0f-YP-znZ"/>
                     </constraints>
@@ -47,7 +47,6 @@
                     </connections>
                 </button>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="taF-2I-eP2">
-                    <rect key="frame" x="45" y="105" width="191" height="29"/>
                     <segments>
                         <segment title="Millsecs"/>
                         <segment title="Second"/>
@@ -58,13 +57,12 @@
                     </connections>
                 </segmentedControl>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="capture_interval" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5td-Aw-RZM">
-                    <rect key="frame" x="79" y="18" width="122" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ybO-Lx-8T8" firstAttribute="top" secondItem="taF-2I-eP2" secondAttribute="bottom" constant="18" id="4vI-z7-n2N"/>
                 <constraint firstItem="RQw-Yi-UHL" firstAttribute="trailing" secondItem="taF-2I-eP2" secondAttribute="trailing" id="ADs-Ic-hUZ"/>
@@ -82,7 +80,7 @@
         </view>
     </objects>
     <resources>
-        <image name="BTN_CANCEL" width="50" height="50"/>
-        <image name="BTN_OK" width="50" height="50"/>
+        <image name="BTN_CANCEL" width="25" height="25"/>
+        <image name="BTN_OK" width="25" height="25"/>
     </resources>
 </document>

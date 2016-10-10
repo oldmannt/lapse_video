@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PublishView" customModule="lapse_app" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="173"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XP5-y1-SDe">
+                    <state key="normal" title="Facebook"/>
+                    <connections>
+                        <action selector="tapFacebook:" destination="-1" eventType="touchUpInside" id="ykP-Gh-8gr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uag-4Z-suM">
+                    <state key="normal" title="Youtube"/>
+                    <connections>
+                        <action selector="tapYoutube:" destination="-1" eventType="touchUpInside" id="f1f-Ah-Gzu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO8-fl-aFz">
+                    <state key="normal" title="Miaopai"/>
+                    <connections>
+                        <action selector="tapMiaopai:" destination="-1" eventType="touchUpInside" id="Nv4-Cn-efm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6n-wc-PuV">
+                    <state key="normal" title="More"/>
+                    <connections>
+                        <action selector="tapMore:" destination="-1" eventType="touchUpInside" id="kBK-sd-dH8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcO-jg-mWL">
+                    <state key="normal" title="Dismiss"/>
+                    <connections>
+                        <action selector="tapDismiss:" destination="-1" eventType="touchUpInside" id="xJA-7l-NWj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="XP5-y1-SDe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="24H-vJ-KKK"/>
+                <constraint firstItem="XP5-y1-SDe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4oj-OP-cPr"/>
+                <constraint firstItem="Uag-4Z-suM" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="9uw-Mq-jXc"/>
+                <constraint firstItem="FO8-fl-aFz" firstAttribute="leading" secondItem="XP5-y1-SDe" secondAttribute="leading" id="BFq-zK-g3U"/>
+                <constraint firstItem="R6n-wc-PuV" firstAttribute="leading" secondItem="Uag-4Z-suM" secondAttribute="leading" id="HA5-iR-Ph5"/>
+                <constraint firstItem="FO8-fl-aFz" firstAttribute="top" secondItem="XP5-y1-SDe" secondAttribute="bottom" id="Kfg-81-Wow"/>
+                <constraint firstItem="R6n-wc-PuV" firstAttribute="width" secondItem="Uag-4Z-suM" secondAttribute="width" id="KmQ-Ou-pVd"/>
+                <constraint firstAttribute="trailing" secondItem="Uag-4Z-suM" secondAttribute="trailing" id="Lto-VQ-MA5"/>
+                <constraint firstAttribute="bottom" secondItem="BcO-jg-mWL" secondAttribute="bottom" id="QH9-tW-Yzp"/>
+                <constraint firstItem="R6n-wc-PuV" firstAttribute="height" secondItem="BcO-jg-mWL" secondAttribute="height" id="UaK-o1-TWy"/>
+                <constraint firstItem="Uag-4Z-suM" firstAttribute="height" secondItem="BcO-jg-mWL" secondAttribute="height" id="ZCf-YC-k0C"/>
+                <constraint firstItem="R6n-wc-PuV" firstAttribute="top" secondItem="Uag-4Z-suM" secondAttribute="bottom" id="bF0-4z-Ofa"/>
+                <constraint firstItem="XP5-y1-SDe" firstAttribute="height" secondItem="BcO-jg-mWL" secondAttribute="height" id="bhD-pa-Eio"/>
+                <constraint firstItem="BcO-jg-mWL" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1:3" id="cxm-Yt-Kjj"/>
+                <constraint firstItem="BcO-jg-mWL" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="fdc-bL-qjE"/>
+                <constraint firstItem="FO8-fl-aFz" firstAttribute="width" secondItem="XP5-y1-SDe" secondAttribute="width" id="gcj-t0-aRd"/>
+                <constraint firstItem="FO8-fl-aFz" firstAttribute="height" secondItem="BcO-jg-mWL" secondAttribute="height" id="mZz-ye-zuj"/>
+                <constraint firstItem="Uag-4Z-suM" firstAttribute="top" secondItem="XP5-y1-SDe" secondAttribute="top" id="nKg-sL-wNR"/>
+                <constraint firstItem="BcO-jg-mWL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pz8-em-5jV"/>
+                <constraint firstItem="XP5-y1-SDe" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="tMD-Eb-WyR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="41.5" y="279.5"/>
+        </view>
+    </objects>
+</document>

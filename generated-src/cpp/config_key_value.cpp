@@ -21,4 +21,6 @@ std::string const ConfigKeyValue::CAPTURE_MODE_PHOTO = {"photo"};
 
 std::string const ConfigKeyValue::CAPTURE_MODE_LINE = {"capture_video_line"};
 
+std::string const ConfigKeyValue::CAPTURE_IMMEDIATE_LINE = {"capture_immediate_line"};
+
 }  // namespace lpase

@@ -35,19 +35,19 @@ class LapseSetterView: PopupViewController {
             break
         }
         
-        m_segUnit.setTitle(GBLanguageStoreGen.instance()?.getString("capture_mill_second"), forSegmentAtIndex: 0)
-        m_segUnit.setTitle(GBLanguageStoreGen.instance()?.getString("capture_second"), forSegmentAtIndex: 1)
-        m_segUnit.setTitle(GBLanguageStoreGen.instance()?.getString("capture_minute"), forSegmentAtIndex: 2)
+        m_segUnit.setTitle(GBLanguageStoreGen.instance()?.getString("capture_mill_second"), forSegmentAt: 0)
+        m_segUnit.setTitle(GBLanguageStoreGen.instance()?.getString("capture_second"), forSegmentAt: 1)
+        m_segUnit.setTitle(GBLanguageStoreGen.instance()?.getString("capture_minute"), forSegmentAt: 2)
         
         //m_txtInterval.inputAccessoryView = self.addKeyboardToolbar()
     }
     
-    private func addKeyboardToolbar() -> UIToolbar{
+    fileprivate func addKeyboardToolbar() -> UIToolbar{
         let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 35))
-        toolbar.barStyle = UIBarStyle.Default
+        toolbar.barStyle = UIBarStyle.default
         toolbar.sizeToFit()
-        let btn_done:UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(LapseSetterView.tooldone))
-        let space:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let btn_done:UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(LapseSetterView.tooldone))
+        let space:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
         toolbar.items = [space, btn_done]
         return toolbar
@@ -62,19 +62,19 @@ class LapseSetterView: PopupViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func txtChange(sender: UITextField) {
+    @IBAction func txtChange(_ sender: UITextField) {
         
     }
     
-    @IBAction func selectSegment(sender: UISegmentedControl) {
+    @IBAction func selectSegment(_ sender: UISegmentedControl) {
         
     }
     
-    @IBAction func btn_cancel_tap(sender: UIButton) {
-        self.dissmissPopup(.Fade)
+    @IBAction func btn_cancel_tap(_ sender: UIButton) {
+        self.dissmissPopup(animationType: .fade)
     }
 
-    @IBAction func btnSaveTap(sender: AnyObject) {
+    @IBAction func btnSaveTap(_ sender: AnyObject) {
         var unit:String = "second"
         switch m_segUnit.selectedSegmentIndex {
         case 0:
@@ -90,7 +90,7 @@ class LapseSetterView: PopupViewController {
             break
         }
         LPADataGen.instance()?.setCaptureInteval(Int32(m_txtInterval.text!)!, unit: unit)
-        self.dissmissPopup(.Fade)
+        self.dissmissPopup(animationType: .fade)
     }
     
     /*

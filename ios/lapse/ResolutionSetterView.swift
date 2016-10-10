@@ -50,7 +50,7 @@ class ResolutionSetterView: PopupViewController {
     }
     */
 
-    @IBAction func save(sender: AnyObject) {
+    @IBAction func save(_ sender: AnyObject) {
         switch m_resolution.selectedSegmentIndex {
         case 0:
             GBCameraControllerImp.instance.setQuality(GBCameraQuality.P360)
@@ -67,10 +67,10 @@ class ResolutionSetterView: PopupViewController {
         default:
             break
         }
-        self.dissmissPopup(.Fade)
+        self.dissmissPopup(animationType: .fade)
     }
     
-    @IBAction func cancel(sender: AnyObject) {
-        self.dissmissPopup(.Fade)
+    @IBAction func cancel(_ sender: AnyObject) {
+        self.dissmissPopup(animationType: .fade)
     }
 }

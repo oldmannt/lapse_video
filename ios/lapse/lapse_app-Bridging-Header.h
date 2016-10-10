@@ -42,6 +42,7 @@
 #import "GBLanguageStoreGen.h"
 #import "GBCameraCaptureHandler.h"
 #import "GBTimerGen.h"
+#import "GBCameraCaptureMode.h"
 
 #import "video_frame_imp.h"
 
@@ -52,3 +53,4 @@
 #import "LPAProjectListGen.h"
 #import "LPAProjectCellGen.h"
 #import "LPADataGen.h"
+
