@@ -5,6 +5,10 @@ package dyno.fun.lapse;
 
 public final class ConfigKeyValue {
 
+    public static final String OK = "ok";
+
+    public static final String NAME = "name";
+
     public static final String VIDEO_INTERVAL = "interval";
 
     public static final String VIDEO_INTERVAL_UNIT = "interval_unit";
@@ -22,6 +26,44 @@ public final class ConfigKeyValue {
     public static final String CAPTURE_MODE_LINE = "capture_video_line";
 
     public static final String CAPTURE_IMMEDIATE_LINE = "capture_immediate_line";
+
+    public static final String QUICK_MODE_LIST = "quick_mode_list";
+
+    public static final String QUICK_MODE = "quick_mode";
+
+    public static final String SECOND = "second";
+
+    public static final String MSEC = "mill_sec";
+
+    public static final String MINUTE = "minute";
+
+    public static final String CUSTOM = "custom";
+
+    public static final String UI_INFO_UPDATE = "ui_info_update";
+
+    public static final String INTERVAL_MODE = "interval_mode";
+
+    public static final String INTERVAL_MODE_LPASE = "lpase";
+
+    public static final String INTERVAL_MODE_SLOMO = "slomo";
+
+    public static final String INTERVAL_DEFAULT = "interval_default";
+
+    public static final String FPS_MAX = "fps_max";
+
+    public static final String FPS_MIN = "fps_min";
+
+    public static final String INTERVAL_MAX = "interval_max";
+
+    public static final String SLOMO_ENABLE = "slomo_enable";
+
+    public static final String FPS_RANGE_ALERT = "fps_range_alert";
+
+    public static final String LAPSE_RANGE_ALERT = "lapse_range_alert";
+
+    public static final String ALERT_TILLE_INFO = "alert_tille_info";
+
+    public static final String CAPTURE_FAILED = "capture_failed";
 
 
     public ConfigKeyValue(

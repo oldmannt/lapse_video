@@ -88,6 +88,35 @@ jni:
   typename: jobject
   typeSignature: 'Ldyno/fun/lapse/DataGen;'
 ---
+name: lapse_interval_mode
+typedef: 'enum'
+params: []
+prefix: lapse_
+cpp:
+  typename: '::lpase::IntervalMode'
+  header: '"interval_mode.hpp"'
+  byValue: true
+objc:
+  typename: 'LPAIntervalMode'
+  pointer: false
+  hash: '%s.hash'
+  boxed: 'NSNumber'
+  header: '"LPAIntervalMode.h"'
+objcpp:
+  translator: '::djinni::Enum<::lpase::IntervalMode, LPAIntervalMode>'
+  header: '"DJIMarshal+Private.h"'
+java:
+  reference: true
+  typename: 'dyno.fun.lapse.IntervalMode'
+  generic: true
+  hash: '%s.hashCode()'
+  boxed: 'dyno.fun.lapse.IntervalMode'
+jni:
+  translator: '::djinni_generated::NativeIntervalMode'
+  header: '"NativeIntervalMode.hpp"'
+  typename: jobject
+  typeSignature: 'Ldyno/fun/lapse/IntervalMode;'
+---
 name: lapse_lapse_event
 typedef: 'enum'
 params: []
@@ -116,6 +145,122 @@ jni:
   header: '"NativeLapseEvent.hpp"'
   typename: jobject
   typeSignature: 'Ldyno/fun/lapse/LapseEvent;'
+---
+name: lapse_lapse_setting_dlg_delegate
+typedef: 'interface +o +j'
+params: []
+prefix: lapse_
+cpp:
+  typename: '::lpase::LapseSettingDlgDelegate'
+  header: '"lapse_setting_dlg_delegate.hpp"'
+  byValue: false
+objc:
+  typename: 'LPALapseSettingDlgDelegate'
+  pointer: true
+  hash: '%s.hash'
+  boxed: 'LPALapseSettingDlgDelegate'
+  header: '"LPALapseSettingDlgDelegate.h"'
+objcpp:
+  translator: '::djinni_generated::LapseSettingDlgDelegate'
+  header: '"LPALapseSettingDlgDelegate+Private.h"'
+java:
+  reference: true
+  typename: 'dyno.fun.lapse.LapseSettingDlgDelegate'
+  generic: true
+  hash: '%s.hashCode()'
+  boxed: 'dyno.fun.lapse.LapseSettingDlgDelegate'
+jni:
+  translator: '::djinni_generated::NativeLapseSettingDlgDelegate'
+  header: '"NativeLapseSettingDlgDelegate.hpp"'
+  typename: jobject
+  typeSignature: 'Ldyno/fun/lapse/LapseSettingDlgDelegate;'
+---
+name: lapse_lapse_setting_dlg_gen
+typedef: 'interface +c'
+params: []
+prefix: lapse_
+cpp:
+  typename: '::lpase::LapseSettingDlgGen'
+  header: '"lapse_setting_dlg_gen.hpp"'
+  byValue: false
+objc:
+  typename: 'LPALapseSettingDlgGen'
+  pointer: true
+  hash: '%s.hash'
+  boxed: 'LPALapseSettingDlgGen'
+  header: '"LPALapseSettingDlgGen.h"'
+objcpp:
+  translator: '::djinni_generated::LapseSettingDlgGen'
+  header: '"LPALapseSettingDlgGen+Private.h"'
+java:
+  reference: true
+  typename: 'dyno.fun.lapse.LapseSettingDlgGen'
+  generic: true
+  hash: '%s.hashCode()'
+  boxed: 'dyno.fun.lapse.LapseSettingDlgGen'
+jni:
+  translator: '::djinni_generated::NativeLapseSettingDlgGen'
+  header: '"NativeLapseSettingDlgGen.hpp"'
+  typename: jobject
+  typeSignature: 'Ldyno/fun/lapse/LapseSettingDlgGen;'
+---
+name: lapse_lapse_setting_gen
+typedef: 'interface +c'
+params: []
+prefix: lapse_
+cpp:
+  typename: '::lpase::LapseSettingGen'
+  header: '"lapse_setting_gen.hpp"'
+  byValue: false
+objc:
+  typename: 'LPALapseSettingGen'
+  pointer: true
+  hash: '%s.hash'
+  boxed: 'LPALapseSettingGen'
+  header: '"LPALapseSettingGen.h"'
+objcpp:
+  translator: '::djinni_generated::LapseSettingGen'
+  header: '"LPALapseSettingGen+Private.h"'
+java:
+  reference: true
+  typename: 'dyno.fun.lapse.LapseSettingGen'
+  generic: true
+  hash: '%s.hashCode()'
+  boxed: 'dyno.fun.lapse.LapseSettingGen'
+jni:
+  translator: '::djinni_generated::NativeLapseSettingGen'
+  header: '"NativeLapseSettingGen.hpp"'
+  typename: jobject
+  typeSignature: 'Ldyno/fun/lapse/LapseSettingGen;'
+---
+name: lapse_lapse_setting_ui_gen
+typedef: 'interface +o +j'
+params: []
+prefix: lapse_
+cpp:
+  typename: '::lpase::LapseSettingUiGen'
+  header: '"lapse_setting_ui_gen.hpp"'
+  byValue: false
+objc:
+  typename: 'LPALapseSettingUiGen'
+  pointer: true
+  hash: '%s.hash'
+  boxed: 'LPALapseSettingUiGen'
+  header: '"LPALapseSettingUiGen.h"'
+objcpp:
+  translator: '::djinni_generated::LapseSettingUiGen'
+  header: '"LPALapseSettingUiGen+Private.h"'
+java:
+  reference: true
+  typename: 'dyno.fun.lapse.LapseSettingUiGen'
+  generic: true
+  hash: '%s.hashCode()'
+  boxed: 'dyno.fun.lapse.LapseSettingUiGen'
+jni:
+  translator: '::djinni_generated::NativeLapseSettingUiGen'
+  header: '"NativeLapseSettingUiGen.hpp"'
+  typename: jobject
+  typeSignature: 'Ldyno/fun/lapse/LapseSettingUiGen;'
 ---
 name: lapse_lapse_ui_scene
 typedef: 'enum'
@@ -261,6 +406,35 @@ jni:
   header: '"NativePublishChannel.hpp"'
   typename: jobject
   typeSignature: 'Ldyno/fun/lapse/PublishChannel;'
+---
+name: lapse_quick_mode_gen
+typedef: 'interface +c'
+params: []
+prefix: lapse_
+cpp:
+  typename: '::lpase::QuickModeGen'
+  header: '"quick_mode_gen.hpp"'
+  byValue: false
+objc:
+  typename: 'LPAQuickModeGen'
+  pointer: true
+  hash: '%s.hash'
+  boxed: 'LPAQuickModeGen'
+  header: '"LPAQuickModeGen.h"'
+objcpp:
+  translator: '::djinni_generated::QuickModeGen'
+  header: '"LPAQuickModeGen+Private.h"'
+java:
+  reference: true
+  typename: 'dyno.fun.lapse.QuickModeGen'
+  generic: true
+  hash: '%s.hashCode()'
+  boxed: 'dyno.fun.lapse.QuickModeGen'
+jni:
+  translator: '::djinni_generated::NativeQuickModeGen'
+  header: '"NativeQuickModeGen.hpp"'
+  typename: jobject
+  typeSignature: 'Ldyno/fun/lapse/QuickModeGen;'
 ---
 name: lapse_uilogic_gen
 typedef: 'interface +c'

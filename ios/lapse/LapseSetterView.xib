@@ -8,79 +8,111 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LapseSetterView" customModule="lapse_app" customModuleProvider="target">
             <connections>
+                <outlet property="m_fps_uint" destination="WX4-YY-ej4" id="pIy-C9-ieU"/>
+                <outlet property="m_lapse_uint" destination="ffk-dY-zUC" id="MeO-xH-Ejm"/>
                 <outlet property="m_lblTittle" destination="5td-Aw-RZM" id="LBt-xl-22i"/>
-                <outlet property="m_segUnit" destination="taF-2I-eP2" id="gyg-ZG-UTR"/>
+                <outlet property="m_segMode" destination="ML4-v9-lBc" id="he0-pb-MbY"/>
+                <outlet property="m_txtFps" destination="OA6-Ak-SVV" id="VyM-Ch-fUM"/>
                 <outlet property="m_txtInterval" destination="bZX-Jb-ZS2" id="lsl-HD-poa"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Fah-UP-wtN"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="280" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="280" height="250"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-Jb-ZS2">
                     <constraints>
-                        <constraint firstAttribute="width" constant="80" id="YYx-dg-NSe"/>
+                        <constraint firstAttribute="width" constant="100" id="YYx-dg-NSe"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                     <connections>
-                        <action selector="txtChange:" destination="-1" eventType="editingDidEnd" id="ef0-Rc-npq"/>
+                        <action selector="txtLapseChange:" destination="-1" eventType="editingDidEnd" id="hxs-rO-eGb"/>
                     </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybO-Lx-8T8">
-                    <frame key="frameInset" minX="45" minY="151" width="50" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybO-Lx-8T8" userLabel="ok">
                     <state key="normal" image="BTN_OK"/>
                     <connections>
                         <action selector="btnSaveTap:" destination="-1" eventType="touchUpInside" id="fJO-eT-qqM"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQw-Yi-UHL">
-                    <frame key="frameInset" minX="186" minY="151" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="D0f-YP-znZ"/>
-                    </constraints>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQw-Yi-UHL" userLabel="cancel">
                     <state key="normal" image="BTN_CANCEL"/>
                     <connections>
                         <action selector="btn_cancel_tap:" destination="-1" eventType="touchUpInside" id="fIy-hm-W9D"/>
                     </connections>
                 </button>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="taF-2I-eP2">
-                    <segments>
-                        <segment title="Millsecs"/>
-                        <segment title="Second"/>
-                        <segment title="Minutes"/>
-                    </segments>
-                    <connections>
-                        <action selector="selectSegment:" destination="-1" eventType="valueChanged" id="lxd-01-ln8"/>
-                    </connections>
-                </segmentedControl>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="capture_interval" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5td-Aw-RZM">
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OA6-Ak-SVV">
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <action selector="txtFpsChange:" destination="-1" eventType="editingDidEnd" id="C4X-r4-qZ0"/>
+                    </connections>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LAPSE_BLACK" translatesAutoresizingMaskIntoConstraints="NO" id="eLc-QU-PlK"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FPS_BLACK" translatesAutoresizingMaskIntoConstraints="NO" id="79M-Au-fOB"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffk-dY-zUC">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ML4-v9-lBc">
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                    <connections>
+                        <action selector="selectSLoLapse:" destination="-1" eventType="valueChanged" id="3B7-Aa-gOd"/>
+                    </connections>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WX4-YY-ej4" userLabel="fps">
+                    <frame key="frameInset" minX="184" minY="111" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ybO-Lx-8T8" firstAttribute="top" secondItem="taF-2I-eP2" secondAttribute="bottom" constant="18" id="4vI-z7-n2N"/>
-                <constraint firstItem="RQw-Yi-UHL" firstAttribute="trailing" secondItem="taF-2I-eP2" secondAttribute="trailing" id="ADs-Ic-hUZ"/>
+                <constraint firstItem="79M-Au-fOB" firstAttribute="leading" secondItem="eLc-QU-PlK" secondAttribute="leading" id="0pU-g1-wtP"/>
+                <constraint firstItem="ML4-v9-lBc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4XF-eM-JD3"/>
+                <constraint firstItem="WX4-YY-ej4" firstAttribute="centerY" secondItem="OA6-Ak-SVV" secondAttribute="centerY" id="6xj-EV-bto"/>
+                <constraint firstItem="OA6-Ak-SVV" firstAttribute="top" secondItem="bZX-Jb-ZS2" secondAttribute="bottom" constant="20" id="7Hx-id-CAb"/>
+                <constraint firstItem="ffk-dY-zUC" firstAttribute="leading" secondItem="bZX-Jb-ZS2" secondAttribute="trailing" constant="16" id="8lS-Xe-vKV"/>
                 <constraint firstItem="5td-Aw-RZM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Hb6-fW-ic2"/>
+                <constraint firstItem="79M-Au-fOB" firstAttribute="centerY" secondItem="OA6-Ak-SVV" secondAttribute="centerY" id="HtB-Xu-4bK"/>
+                <constraint firstItem="bZX-Jb-ZS2" firstAttribute="leading" secondItem="eLc-QU-PlK" secondAttribute="trailing" constant="16" id="LMa-fc-DKE"/>
+                <constraint firstItem="ffk-dY-zUC" firstAttribute="centerY" secondItem="bZX-Jb-ZS2" secondAttribute="centerY" id="M5n-jV-5rN"/>
                 <constraint firstItem="RQw-Yi-UHL" firstAttribute="top" secondItem="ybO-Lx-8T8" secondAttribute="top" id="O5i-qo-cFA"/>
+                <constraint firstItem="ML4-v9-lBc" firstAttribute="leading" secondItem="ybO-Lx-8T8" secondAttribute="trailing" id="S1e-8G-GEE"/>
+                <constraint firstItem="eLc-QU-PlK" firstAttribute="centerY" secondItem="bZX-Jb-ZS2" secondAttribute="centerY" id="SZr-mc-vBV"/>
                 <constraint firstItem="5td-Aw-RZM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="Si7-Fh-apu"/>
-                <constraint firstItem="taF-2I-eP2" firstAttribute="top" secondItem="bZX-Jb-ZS2" secondAttribute="bottom" constant="18" id="hxl-Z2-Cdf"/>
+                <constraint firstItem="OA6-Ak-SVV" firstAttribute="leading" secondItem="bZX-Jb-ZS2" secondAttribute="leading" id="Y80-nO-Kx5"/>
+                <constraint firstItem="OA6-Ak-SVV" firstAttribute="width" secondItem="bZX-Jb-ZS2" secondAttribute="width" id="c2s-W5-JRQ"/>
+                <constraint firstItem="ybO-Lx-8T8" firstAttribute="top" secondItem="ML4-v9-lBc" secondAttribute="bottom" constant="20" id="cpV-Pf-9hX"/>
                 <constraint firstItem="bZX-Jb-ZS2" firstAttribute="top" secondItem="5td-Aw-RZM" secondAttribute="bottom" constant="18" id="pDm-Y3-sLO"/>
-                <constraint firstItem="taF-2I-eP2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rVf-Gn-3cz"/>
-                <constraint firstItem="ybO-Lx-8T8" firstAttribute="leading" secondItem="taF-2I-eP2" secondAttribute="leading" id="x6X-X9-sca"/>
-                <constraint firstItem="bZX-Jb-ZS2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xdm-Zd-PtE"/>
+                <constraint firstItem="RQw-Yi-UHL" firstAttribute="leading" secondItem="ML4-v9-lBc" secondAttribute="trailing" id="tAk-Bf-YlF"/>
+                <constraint firstItem="WX4-YY-ej4" firstAttribute="leading" secondItem="ffk-dY-zUC" secondAttribute="leading" id="uKM-KQ-NRz"/>
+                <constraint firstItem="OA6-Ak-SVV" firstAttribute="height" secondItem="bZX-Jb-ZS2" secondAttribute="height" id="wBA-TO-rB7"/>
+                <constraint firstItem="bZX-Jb-ZS2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-12" id="xdm-Zd-PtE"/>
+                <constraint firstItem="ML4-v9-lBc" firstAttribute="top" secondItem="OA6-Ak-SVV" secondAttribute="bottom" constant="24" id="zeF-xL-XVt"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="506" y="447"/>
+            <point key="canvasLocation" x="926" y="660"/>
         </view>
     </objects>
     <resources>
         <image name="BTN_CANCEL" width="25" height="25"/>
         <image name="BTN_OK" width="25" height="25"/>
+        <image name="FPS_BLACK" width="25" height="25"/>
+        <image name="LAPSE_BLACK" width="25" height="25"/>
     </resources>
 </document>

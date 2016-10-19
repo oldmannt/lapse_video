@@ -7,3 +7,9 @@
 //
 
 #include "quick_mode_imp.hpp"
+
+using namespace lpase;
+
+std::shared_ptr<QuickModeGen> QuickModeGen::create(const std::string & name, int32_t fps, int32_t interval){
+    return std::make_shared<QuickModeImp>(name, fps, interval);
+}

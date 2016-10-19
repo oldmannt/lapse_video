@@ -3,28 +3,53 @@
 		"interval":300,
 		"interval_unit":"mill_sec",
 		"interval_units":"mill_sec, second, minute",
-		"fps":5,
-		"video_bitrate":8000000,
+		"fps":25,
+    	"bitrate_480p":500000,
+    	"bitrate_720p":1500000,
+    	"bitrate_1080p":337500,
+		"video_bitrate":1000000,
 		"audio_bitrate":64000,
-		"audio_sample_rate":44100,
-		"quick_mode":"traffic_flow",
-		"traffic_flow":100,
-		"wind_sky":300,
-		"sun_rise_set":500,
-		"no_wind_sky":1000,
-		"flowers_bloom_fade":60000,
-		"day_turn_night":90000
+		"audio_sample_rate":44100	
 	},
 
 	"camera":{
 		"flash_mode":"auto",
 		"quality":"720p"
 	},
+
+	"quick_mode_list":[
+		{"name":"dyno",					"interval":30, "fps":5},
+		{"name":"diving",				"interval":30, "fps":6},
+		{"name":"slow2X",				"interval":30, "fps":15},
+		{"name":"normal",				"interval":40, "fps":25},
+		{"name":"custom",				"interval":0, "fps":0},
+		{"name":"traffic_flow",			"interval":100, "fps":25},
+		{"name":"wind_sky",				"interval":300,"fps":25},
+		{"name":"sun_rise_set",			"interval":500, "fps":25},
+		{"name":"no_wind_sky",			"interval":1000, "fps":25},
+		{"name":"flowers_bloom_fade",	"interval":60000, "fps":25},
+		{"name":"day_turn_night",		"interval":90000, "fps":25}
+	],
+
+	"quick_mode_temple":[
+		{"name":"","interval":100, "fps":25},
+		{"name":"","interval":100, "fps":25}
+	],
     
     "root":"home",
     "projects_dir":"",
     "capture_video_line":1500,
     "capture_immediate_line":1500,
     "capture_mode":"video",
-    "capture_modes":"photo video"
+    "capture_modes":"photo video",
+    "quick_mode":"4",
+    "ui_info_update":300,
+    "interval_mode":"lapse",
+    "interval_modes":"lapse, slomo",
+    "interval_lapse_line":30,
+    "interval_default":500,
+    "interval_max":1200000,
+    "fps_max":30,
+    "fps_min":1,
+    "slomo_enable":false
 }

@@ -49,7 +49,7 @@ deps:
 	git submodule add https://github.com/oldmannt/gearsbox_client.git gearsbox
 
 mac_proj: djinni lapse.gyp ./gearsbox/deps/djinni/support-lib/support_lib.gyp 
-	gearsbox/deps/gyp/gyp --depth=. -f xcode -DOS=mac --generator-output ./build_mac -Igearsbox/deps/djinni/common.gypi ./lapse.gyp --root-target lapse_objc --root-target test
+	gearsbox/deps/gyp/gyp --depth=. -f xcode -DOS=mac --generator-output ./build_mac -Igearsbox/deps/djinni/common.gypi ./lapse.gyp --root-target lapse_objc --root-target test --root-target gtest
 
 test: mac_proj
 	xcodebuild -project build_mac/lapse.xcodeproj -configuration Debug -target test | cat && ./build/Debug/test

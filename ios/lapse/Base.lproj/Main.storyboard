@@ -348,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JAL-PG-4R7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="531"/>
+            <point key="canvasLocation" x="921" y="533"/>
         </scene>
         <!--projects-->
         <scene sceneID="4hZ-rE-0dr">
@@ -466,7 +466,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RnB-nw-YDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="-365"/>
+            <point key="canvasLocation" x="1089" y="-332"/>
+        </scene>
+        <!--Lapse Setting View Controller-->
+        <scene sceneID="6YF-sQ-aky">
+            <objects>
+                <viewController id="wJX-5s-8SK" customClass="LapseSettingViewController" customModule="lapse_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ADl-Nc-3Z5"/>
+                        <viewControllerLayoutGuide type="bottom" id="v83-k4-pC4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QVO-e2-fBl">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Enx-Et-933">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </pickerView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mz2-07-pbq" userLabel="fps">
+                                <connections>
+                                    <action selector="sliderFps:" destination="wJX-5s-8SK" eventType="valueChanged" id="s1S-0F-6qE"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="i0s-xD-oNN" userLabel="slap">
+                                <connections>
+                                    <action selector="sliderLapse:" destination="wJX-5s-8SK" eventType="valueChanged" id="RXj-uk-Oz0"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTN_LAPSE" translatesAutoresizingMaskIntoConstraints="NO" id="M9l-Qb-WjN"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTN_FPS" translatesAutoresizingMaskIntoConstraints="NO" id="r2Y-2Q-7Nb"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8o-Kb-CsT">
+                                <items>
+                                    <navigationItem title="Lapse" id="4SK-ez-4zU" userLabel="lapse">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="5Sg-DC-YBG">
+                                            <connections>
+                                                <action selector="tapBack:" destination="wJX-5s-8SK" id="g4K-u7-PTM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylo-Wx-lh1" userLabel="fps">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIc-Nd-Kn1" userLabel="lapse">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R8o-Kb-CsT" firstAttribute="centerX" secondItem="QVO-e2-fBl" secondAttribute="centerX" id="09e-Yo-Lta"/>
+                            <constraint firstItem="Ylo-Wx-lh1" firstAttribute="centerY" secondItem="mz2-07-pbq" secondAttribute="centerY" id="0cg-ZM-NGc"/>
+                            <constraint firstItem="R8o-Kb-CsT" firstAttribute="width" secondItem="QVO-e2-fBl" secondAttribute="width" id="1ke-7Y-5Df"/>
+                            <constraint firstItem="mz2-07-pbq" firstAttribute="leading" secondItem="r2Y-2Q-7Nb" secondAttribute="trailing" constant="12" id="3x7-08-pUd"/>
+                            <constraint firstItem="Enx-Et-933" firstAttribute="height" secondItem="QVO-e2-fBl" secondAttribute="height" multiplier="0.5" id="64C-ss-Cdf"/>
+                            <constraint firstItem="mz2-07-pbq" firstAttribute="top" secondItem="Enx-Et-933" secondAttribute="bottom" constant="24" id="78F-bV-z2a"/>
+                            <constraint firstItem="Enx-Et-933" firstAttribute="top" secondItem="R8o-Kb-CsT" secondAttribute="bottom" id="821-Xf-KIk"/>
+                            <constraint firstItem="M9l-Qb-WjN" firstAttribute="leading" secondItem="r2Y-2Q-7Nb" secondAttribute="leading" id="Aqg-Ba-c38"/>
+                            <constraint firstItem="zIc-Nd-Kn1" firstAttribute="leading" secondItem="i0s-xD-oNN" secondAttribute="trailing" constant="12" id="HB8-Ja-foi"/>
+                            <constraint firstItem="R8o-Kb-CsT" firstAttribute="top" secondItem="ADl-Nc-3Z5" secondAttribute="bottom" id="Jes-CM-5ZN"/>
+                            <constraint firstItem="mz2-07-pbq" firstAttribute="width" secondItem="QVO-e2-fBl" secondAttribute="width" multiplier="0.7" id="Re5-Xj-MbJ"/>
+                            <constraint firstItem="M9l-Qb-WjN" firstAttribute="centerY" secondItem="i0s-xD-oNN" secondAttribute="centerY" id="T2E-Hb-hkq"/>
+                            <constraint firstItem="Ylo-Wx-lh1" firstAttribute="leading" secondItem="mz2-07-pbq" secondAttribute="trailing" constant="12" id="Uh2-aC-33T"/>
+                            <constraint firstItem="i0s-xD-oNN" firstAttribute="width" secondItem="mz2-07-pbq" secondAttribute="width" id="bvq-AM-7WE"/>
+                            <constraint firstItem="i0s-xD-oNN" firstAttribute="leading" secondItem="mz2-07-pbq" secondAttribute="leading" id="gQO-5J-4fW"/>
+                            <constraint firstItem="zIc-Nd-Kn1" firstAttribute="centerY" secondItem="i0s-xD-oNN" secondAttribute="centerY" id="gTe-JM-igt"/>
+                            <constraint firstItem="i0s-xD-oNN" firstAttribute="top" secondItem="mz2-07-pbq" secondAttribute="bottom" constant="24" id="m87-Lm-DMd"/>
+                            <constraint firstItem="mz2-07-pbq" firstAttribute="centerX" secondItem="QVO-e2-fBl" secondAttribute="centerX" id="nAX-80-owY"/>
+                            <constraint firstItem="Enx-Et-933" firstAttribute="centerX" secondItem="QVO-e2-fBl" secondAttribute="centerX" id="x9c-gU-ect"/>
+                            <constraint firstItem="r2Y-2Q-7Nb" firstAttribute="centerY" secondItem="mz2-07-pbq" secondAttribute="centerY" id="xuT-Eg-KaB"/>
+                            <constraint firstItem="Enx-Et-933" firstAttribute="width" secondItem="QVO-e2-fBl" secondAttribute="width" id="yuI-uc-pTo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="m_label_fps" destination="Ylo-Wx-lh1" id="e9H-vk-hgL"/>
+                        <outlet property="m_label_lapse" destination="zIc-Nd-Kn1" id="P5J-mo-PbI"/>
+                        <outlet property="m_quick_pick" destination="Enx-Et-933" id="Tsv-rl-uOh"/>
+                        <outlet property="m_slider_fps" destination="mz2-07-pbq" id="KFh-bT-wmH"/>
+                        <outlet property="m_slider_lapse" destination="i0s-xD-oNN" id="JlJ-aT-UXn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hj-kU-AjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700.29985007496259" y="428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="m2G-bA-eVM">

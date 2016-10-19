@@ -5,6 +5,10 @@
 
 namespace lpase {
 
+std::string const ConfigKeyValue::OK = {"ok"};
+
+std::string const ConfigKeyValue::NAME = {"name"};
+
 std::string const ConfigKeyValue::VIDEO_INTERVAL = {"interval"};
 
 std::string const ConfigKeyValue::VIDEO_INTERVAL_UNIT = {"interval_unit"};
@@ -22,5 +26,43 @@ std::string const ConfigKeyValue::CAPTURE_MODE_PHOTO = {"photo"};
 std::string const ConfigKeyValue::CAPTURE_MODE_LINE = {"capture_video_line"};
 
 std::string const ConfigKeyValue::CAPTURE_IMMEDIATE_LINE = {"capture_immediate_line"};
+
+std::string const ConfigKeyValue::QUICK_MODE_LIST = {"quick_mode_list"};
+
+std::string const ConfigKeyValue::QUICK_MODE = {"quick_mode"};
+
+std::string const ConfigKeyValue::SECOND = {"second"};
+
+std::string const ConfigKeyValue::MSEC = {"mill_sec"};
+
+std::string const ConfigKeyValue::MINUTE = {"minute"};
+
+std::string const ConfigKeyValue::CUSTOM = {"custom"};
+
+std::string const ConfigKeyValue::UI_INFO_UPDATE = {"ui_info_update"};
+
+std::string const ConfigKeyValue::INTERVAL_MODE = {"interval_mode"};
+
+std::string const ConfigKeyValue::INTERVAL_MODE_LPASE = {"lpase"};
+
+std::string const ConfigKeyValue::INTERVAL_MODE_SLOMO = {"slomo"};
+
+std::string const ConfigKeyValue::INTERVAL_DEFAULT = {"interval_default"};
+
+std::string const ConfigKeyValue::FPS_MAX = {"fps_max"};
+
+std::string const ConfigKeyValue::FPS_MIN = {"fps_min"};
+
+std::string const ConfigKeyValue::INTERVAL_MAX = {"interval_max"};
+
+std::string const ConfigKeyValue::SLOMO_ENABLE = {"slomo_enable"};
+
+std::string const ConfigKeyValue::FPS_RANGE_ALERT = {"fps_range_alert"};
+
+std::string const ConfigKeyValue::LAPSE_RANGE_ALERT = {"lapse_range_alert"};
+
+std::string const ConfigKeyValue::ALERT_TILLE_INFO = {"alert_tille_info"};
+
+std::string const ConfigKeyValue::CAPTURE_FAILED = {"capture_failed"};
 
 }  // namespace lpase

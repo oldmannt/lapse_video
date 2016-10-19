@@ -3,6 +3,7 @@
 
 #import <Foundation/Foundation.h>
 @class LPADataGen;
+@class LPAQuickModeGen;
 
 
 @interface LPADataGen : NSObject
@@ -45,5 +46,34 @@
 - (BOOL)isCaptureModePhoto:(int32_t)interal;
 
 - (BOOL)isCaptureImmediate:(int32_t)interal;
+
+- (int32_t)getMaxFps;
+
+- (int32_t)getMinFps;
+
+- (int32_t)getMinInterval;
+
+- (int32_t)getMaxInterval;
+
+- (int32_t)getMinLapse;
+
+- (int32_t)getDefaultLapse;
+
+- (int32_t)getQuickModeCount;
+
+- (nullable LPAQuickModeGen *)getQuickMode:(int32_t)index;
+
+- (void)selectQuickMode:(int32_t)index;
+
+- (int32_t)getCurrentQickMode;
+
+- (int32_t)getUiInfoUpdateRate;
+
+/** for message which is relevant to language  */
+- (nonnull NSString *)getFpsRangeAlert;
+
+- (nonnull NSString *)getLapseRangeAlert;
+
+- (nonnull NSString *)getSlomoRangeAlert;
 
 @end

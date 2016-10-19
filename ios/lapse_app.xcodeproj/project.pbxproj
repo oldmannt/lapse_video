@@ -81,6 +81,7 @@
 		33ED95551D51A75E00833349 /* MainLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ED95541D51A75E00833349 /* MainLoop.swift */; };
 		33F3BD401DA6175D0034AC18 /* PublishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3BD3E1DA6175D0034AC18 /* PublishView.swift */; };
 		33F3BD411DA6175D0034AC18 /* PublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F3BD3F1DA6175D0034AC18 /* PublishView.xib */; };
+		33F3BD781DAB68000034AC18 /* LapseSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3BD771DAB68000034AC18 /* LapseSettingViewController.swift */; };
 		F9A2B2A15F7EC3B47899379D /* libPods-lapse_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDAA70029AF1BADD6551022 /* libPods-lapse_app.a */; };
 /* End PBXBuildFile section */
 
@@ -240,6 +241,7 @@
 		33ED95541D51A75E00833349 /* MainLoop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainLoop.swift; path = ../../gearsbox/src/swift/MainLoop.swift; sourceTree = "<group>"; };
 		33F3BD3E1DA6175D0034AC18 /* PublishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishView.swift; sourceTree = "<group>"; };
 		33F3BD3F1DA6175D0034AC18 /* PublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishView.xib; sourceTree = "<group>"; };
+		33F3BD771DAB68000034AC18 /* LapseSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LapseSettingViewController.swift; sourceTree = "<group>"; };
 		4EDAA70029AF1BADD6551022 /* libPods-lapse_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lapse_app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD487B950392F54D673ECBD /* Pods-lapse_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lapse_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-lapse_app/Pods-lapse_app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -397,6 +399,7 @@
 				331E5A611D60068900D32AEE /* ProjectsViewController.swift */,
 				331E5A631D602E2700D32AEE /* PorjectCell.swift */,
 				33E4D9571D7A8FF6002A3E39 /* PicturePreviewViewController.swift */,
+				33F3BD771DAB68000034AC18 /* LapseSettingViewController.swift */,
 			);
 			path = lapse;
 			sourceTree = "<group>";
@@ -833,6 +836,7 @@
 				332C75CE1DA0657F00282A7F /* IQTitleBarButtonItem.swift in Sources */,
 				332C75C81DA0657F00282A7F /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				33E4D9171D73DD74002A3E39 /* MoreCameraSetterView.swift in Sources */,
+				33F3BD781DAB68000034AC18 /* LapseSettingViewController.swift in Sources */,
 				332C75CA1DA0657F00282A7F /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				33E4D9021D737D1A002A3E39 /* PopupViewController.swift in Sources */,
 				3382647A1D49658100DA114F /* TypeConvertor.swift in Sources */,

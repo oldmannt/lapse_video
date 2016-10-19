@@ -10,6 +10,10 @@ namespace lpase {
 
 struct ConfigKeyValue final {
 
+    static std::string const OK;
+
+    static std::string const NAME;
+
     static std::string const VIDEO_INTERVAL;
 
     static std::string const VIDEO_INTERVAL_UNIT;
@@ -27,6 +31,44 @@ struct ConfigKeyValue final {
     static std::string const CAPTURE_MODE_LINE;
 
     static std::string const CAPTURE_IMMEDIATE_LINE;
+
+    static std::string const QUICK_MODE_LIST;
+
+    static std::string const QUICK_MODE;
+
+    static std::string const SECOND;
+
+    static std::string const MSEC;
+
+    static std::string const MINUTE;
+
+    static std::string const CUSTOM;
+
+    static std::string const UI_INFO_UPDATE;
+
+    static std::string const INTERVAL_MODE;
+
+    static std::string const INTERVAL_MODE_LPASE;
+
+    static std::string const INTERVAL_MODE_SLOMO;
+
+    static std::string const INTERVAL_DEFAULT;
+
+    static std::string const FPS_MAX;
+
+    static std::string const FPS_MIN;
+
+    static std::string const INTERVAL_MAX;
+
+    static std::string const SLOMO_ENABLE;
+
+    static std::string const FPS_RANGE_ALERT;
+
+    static std::string const LAPSE_RANGE_ALERT;
+
+    static std::string const ALERT_TILLE_INFO;
+
+    static std::string const CAPTURE_FAILED;
 };
 
 }  // namespace lpase

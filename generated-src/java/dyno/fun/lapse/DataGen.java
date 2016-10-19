@@ -42,6 +42,35 @@ public abstract class DataGen {
 
     public abstract boolean isCaptureImmediate(int interal);
 
+    public abstract int getMaxFps();
+
+    public abstract int getMinFps();
+
+    public abstract int getMinInterval();
+
+    public abstract int getMaxInterval();
+
+    public abstract int getMinLapse();
+
+    public abstract int getDefaultLapse();
+
+    public abstract int getQuickModeCount();
+
+    public abstract QuickModeGen getQuickMode(int index);
+
+    public abstract void selectQuickMode(int index);
+
+    public abstract int getCurrentQickMode();
+
+    public abstract int getUiInfoUpdateRate();
+
+    /** for message which is relevant to language  */
+    public abstract String getFpsRangeAlert();
+
+    public abstract String getLapseRangeAlert();
+
+    public abstract String getSlomoRangeAlert();
+
     public static native DataGen instance();
 
     private static final class CppProxy extends DataGen
@@ -210,5 +239,117 @@ public abstract class DataGen {
             return native_isCaptureImmediate(this.nativeRef, interal);
         }
         private native boolean native_isCaptureImmediate(long _nativeRef, int interal);
+
+        @Override
+        public int getMaxFps()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getMaxFps(this.nativeRef);
+        }
+        private native int native_getMaxFps(long _nativeRef);
+
+        @Override
+        public int getMinFps()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getMinFps(this.nativeRef);
+        }
+        private native int native_getMinFps(long _nativeRef);
+
+        @Override
+        public int getMinInterval()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getMinInterval(this.nativeRef);
+        }
+        private native int native_getMinInterval(long _nativeRef);
+
+        @Override
+        public int getMaxInterval()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getMaxInterval(this.nativeRef);
+        }
+        private native int native_getMaxInterval(long _nativeRef);
+
+        @Override
+        public int getMinLapse()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getMinLapse(this.nativeRef);
+        }
+        private native int native_getMinLapse(long _nativeRef);
+
+        @Override
+        public int getDefaultLapse()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getDefaultLapse(this.nativeRef);
+        }
+        private native int native_getDefaultLapse(long _nativeRef);
+
+        @Override
+        public int getQuickModeCount()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getQuickModeCount(this.nativeRef);
+        }
+        private native int native_getQuickModeCount(long _nativeRef);
+
+        @Override
+        public QuickModeGen getQuickMode(int index)
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getQuickMode(this.nativeRef, index);
+        }
+        private native QuickModeGen native_getQuickMode(long _nativeRef, int index);
+
+        @Override
+        public void selectQuickMode(int index)
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            native_selectQuickMode(this.nativeRef, index);
+        }
+        private native void native_selectQuickMode(long _nativeRef, int index);
+
+        @Override
+        public int getCurrentQickMode()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getCurrentQickMode(this.nativeRef);
+        }
+        private native int native_getCurrentQickMode(long _nativeRef);
+
+        @Override
+        public int getUiInfoUpdateRate()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getUiInfoUpdateRate(this.nativeRef);
+        }
+        private native int native_getUiInfoUpdateRate(long _nativeRef);
+
+        @Override
+        public String getFpsRangeAlert()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getFpsRangeAlert(this.nativeRef);
+        }
+        private native String native_getFpsRangeAlert(long _nativeRef);
+
+        @Override
+        public String getLapseRangeAlert()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getLapseRangeAlert(this.nativeRef);
+        }
+        private native String native_getLapseRangeAlert(long _nativeRef);
+
+        @Override
+        public String getSlomoRangeAlert()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getSlomoRangeAlert(this.nativeRef);
+        }
+        private native String native_getSlomoRangeAlert(long _nativeRef);
     }
 }

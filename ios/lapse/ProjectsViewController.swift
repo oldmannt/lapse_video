@@ -109,10 +109,7 @@ class ProjectsViewController: PopbaseUIViewController, UITableViewDataSource, UI
             let touchPoint = longPressGestureRecognizer.location(in: self.m_table_view)
             if let indexPath = m_table_view.indexPathForRow(at: touchPoint) {
                 // your code here, get the row for the indexPath or do whatever you want
-                LPAProjectListGen.instance()?.selectProject(Int32((indexPath as NSIndexPath).row))
-                let cell = m_table_view.cellForRow(at: indexPath)
-                let pos = cell?.convert(CGPoint(x:0,y:0), to: self.view)
-                self.presentpopupViewController(m_project_setting_view!, pos: pos!, size: (cell?.contentView.frame.size)!,animationType: .rightLeft, completion: nil)
+                
             }
         }
     }

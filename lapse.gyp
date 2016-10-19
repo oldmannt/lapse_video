@@ -54,11 +54,11 @@
       ],
     },
     {
-      'target_name': 'test',
+      'target_name': 'gtest',
       'type': 'executable',
       'dependencies': [
         'lapse',
-        "gearsbox/gearsbox.gyp:test",
+        "gearsbox/gearsbox.gyp:gtest",
         'gearsbox/deps/gtest.gyp:gtest',
       ],
       'cflags_cc!': [ '-Werror', '-Wextra' ],
@@ -67,11 +67,32 @@
       },
       'include_dirs': [
         '.',
-        'test',
+        'gtest',
       ],
       "defines": [
         'TEST_STAND_ALONE',
         'GEARSBOX_TEST',
+      ],
+      'sources': [
+        '<!@(python gearsbox/deps/djinni/example/glob.py gtest *.cpp *.hpp *.h)',
+      ]
+    },
+    {
+      'target_name': 'test',
+      'type': 'executable',
+      'dependencies': [
+        'lapse',
+        "gearsbox/gearsbox.gyp:test",
+      ],
+      'cflags_cc!': [ '-Werror', '-Wextra' ],
+      'xcode_settings': {
+        'OTHER_CPLUSPLUSFLAGS!' : ['-Werror', '-Wextra'],
+      },
+      'include_dirs': [
+        '.',
+      ],
+      "defines": [
+        
       ],
       'sources': [
         '<!@(python gearsbox/deps/djinni/example/glob.py test *.cpp *.hpp *.h)',

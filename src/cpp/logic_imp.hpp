@@ -13,10 +13,11 @@
 #include "task_excuser_gen.hpp"
 #include "task_info_gen.hpp"
 #include "video_writer_gen.hpp"
+#include "video_writer_result_handler.hpp"
 
 namespace lpase {
 
-class LogicImp: public LogicGen , public gearsbox::TaskExcuserGen, public std::enable_shared_from_this<LogicImp> {
+class LogicImp: public LogicGen , public gearsbox::TaskExcuserGen, public gearsbox::VideoWriterResultHandler, public std::enable_shared_from_this<LogicImp> {
 public:
     virtual ~LogicImp() {}
     LogicImp();
@@ -38,6 +39,11 @@ public:
     
     //gearsbox::TaskExcuserGen
     virtual void excuse(const std::shared_ptr<gearsbox::TaskInfoGen> & info);
+    
+    //gearsbox::VideoWriterResultHandler
+    virtual void onComplete(bool success, const std::string & path);
+    
+    virtual void beforeForceStop();
     
 private:
     std::shared_ptr<gearsbox::VideoWriterGen> m_video_writer;

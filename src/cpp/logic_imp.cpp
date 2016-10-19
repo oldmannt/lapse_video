@@ -95,6 +95,19 @@ void LogicImp::excuse(const std::shared_ptr<TaskInfoGen> & info){
     }
 }
 
+void LogicImp::onComplete(bool success, const std::string & path){
+    if (success) {
+        InstanceGetterGen::getPlatformUtility()->playVideo(path);
+        return;
+    }
+    std::string msg = LanguageStoreGen::instance()->getString(ConfigKeyValue::CAPTURE_FAILED);
+    InstanceGetterGen::getPlatformUtility()->alertDialog("", msg);
+    m_video_writer = nullptr;
+}
+
+void LogicImp::beforeForceStop(){
+    
+}
 
 void LogicImp::captureStart(){
     if (m_video_writer!=nullptr) {
@@ -125,13 +138,8 @@ void LogicImp::captureResume(){
 
 void LogicImp::captureStop(){
     CHECK_RT(m_video_writer!=nullptr, "video_writer null stop");
-    
-    // handle in swift
-    std::string video = m_video_writer->getFilePath();
-    InstanceGetterGen::getCameraController()->setCaptureMode(CameraCaptureMode::VIDEO);
     m_video_writer->saveNRlease();
     m_video_writer = nullptr;
-    InstanceGetterGen::getPlatformUtility()->playVideo(video);
 }
 
 void LogicImp::lapseStop(){
@@ -168,6 +176,7 @@ void LogicImp::initialize_video(){
     //TEST_EQ(m_vide_config->getInt("resolution"), 480, "resolution");
     
     m_video_writer = VideoWriterGen::create();
+    m_video_writer->setReslutHandler(shared_from_this());
     m_video_writer->setFPS(DataGen::instance()->getFps());
     m_video_writer->setBitRate(DataGen::instance()->getBitrate());
     
@@ -194,16 +203,16 @@ void LogicImp::setCaptureInteral(int32_t interval){
     }
     bool photo = DataGen::instance()->isCaptureModePhoto(interval_capture);
     if (photo){
-        InstanceGetterGen::getCameraController()->setRefreshDuration(1, 30);
+        InstanceGetterGen::getCameraController()->setFrameDuration(1, 30);
         InstanceGetterGen::getCameraController()->setCaptureMode(CameraCaptureMode::PHOTO);
     }
     else if (DataGen::instance()->isCaptureImmediate(interval_capture)){
-        InstanceGetterGen::getCameraController()->setRefreshDuration(interval_capture, 1000);
+        InstanceGetterGen::getCameraController()->setFrameDuration(interval_capture, 1000);
         InstanceGetterGen::getCameraController()->setCaptureMode(CameraCaptureMode::IMMEDIATE_VIDEO);
     }
     else {
-        //InstanceGetterGen::getCameraController()->setRefreshDuration(interval_capture, 1000);
-        //InstanceGetterGen::getCameraController()->setCaptureMode(CameraCaptureMode::VIDEO);
+        InstanceGetterGen::getCameraController()->setFrameDuration(interval_capture, 1000);
+        InstanceGetterGen::getCameraController()->setCaptureMode(CameraCaptureMode::VIDEO);
     }
 
     

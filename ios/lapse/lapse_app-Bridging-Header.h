@@ -53,4 +53,13 @@
 #import "LPAProjectListGen.h"
 #import "LPAProjectCellGen.h"
 #import "LPADataGen.h"
+#import "LPAQuickModeGen.h"
+#import "LPALapseSettingDlgGen.h"
+#import "LPALapseSettingDlgDelegate.h"
+#import "LPAIntervalMode.h"
+#import "LPAConfigKeyValue.h"
+
+
+#import "LPALapseSettingUiGen.h"
+#import "LPALapseSettingGen.h"
 

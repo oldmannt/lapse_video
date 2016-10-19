@@ -117,7 +117,7 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         LogicTaskExcuserImp.sharedInstance.m_capture_vc = self
         GBTaskManagerGen.instance()?.addTaskExcuser(LogicTaskExcuserImp.sharedInstance)
         
-        m_updateDebugInfo = GBTimerGen.create(0, interval: 300, repeatTimes: -1, hander: self)
+        m_updateDebugInfo = GBTimerGen.create(300, repeatTimes: -1, hander: self)
     }
 
     fileprivate func initViews(){
@@ -176,6 +176,9 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
     }
     
     @IBAction func longPressView(_ sender: UILongPressGestureRecognizer) {
+        if isSubDialogShow() {
+            return
+        }
         if sender.state == UIGestureRecognizerState.began {
             let point:CGPoint = sender.location(in: sender.view)
             showExposure(point)
@@ -332,6 +335,12 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
     
     override var shouldAutorotate : Bool{
         return true
+    }
+    
+    fileprivate func isSubDialogShow() -> Bool{
+        return (m_lapseSetterView?.isShowed())! ||
+            (m_resolutionSetterView?.isShowed())! ||
+            (m_moreCameraSetterView?.isShowed())!
     }
     
     fileprivate func btn_show(_ btn: UIButton?){

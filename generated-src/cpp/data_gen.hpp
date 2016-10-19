@@ -9,6 +9,8 @@
 
 namespace lpase {
 
+class QuickModeGen;
+
 class DataGen {
 public:
     virtual ~DataGen() {}
@@ -50,6 +52,35 @@ public:
     virtual bool isCaptureModePhoto(int32_t interal) = 0;
 
     virtual bool isCaptureImmediate(int32_t interal) = 0;
+
+    virtual int32_t getMaxFps() = 0;
+
+    virtual int32_t getMinFps() = 0;
+
+    virtual int32_t getMinInterval() = 0;
+
+    virtual int32_t getMaxInterval() = 0;
+
+    virtual int32_t getMinLapse() = 0;
+
+    virtual int32_t getDefaultLapse() = 0;
+
+    virtual int32_t getQuickModeCount() = 0;
+
+    virtual std::shared_ptr<QuickModeGen> getQuickMode(int32_t index) = 0;
+
+    virtual void selectQuickMode(int32_t index) = 0;
+
+    virtual int32_t getCurrentQickMode() = 0;
+
+    virtual int32_t getUiInfoUpdateRate() = 0;
+
+    /** for message which is relevant to language  */
+    virtual std::string getFpsRangeAlert() = 0;
+
+    virtual std::string getLapseRangeAlert() = 0;
+
+    virtual std::string getSlomoRangeAlert() = 0;
 };
 
 }  // namespace lpase

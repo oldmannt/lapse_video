@@ -59,6 +59,35 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
     
     var m_curViewType:ViewType = .exposure
     
+    var m_expose_min:Float = 0.0
+    var m_expose_max:Float = 0.0
+    let m_expose_slider_min:Float = 1.0
+    let m_expose_slider_max:Float = 4000.0
+    let m_expose_slider_node1:Float = 2000.0
+    let m_expose_node1:Float = 0.01
+    
+    func exposure_to_slider(duration:Float) -> Float{
+        var value:Float = 0.0
+        if duration < m_expose_node1 {
+            value = m_expose_slider_min+duration*(m_expose_slider_node1-m_expose_slider_min)/m_expose_node1
+        }
+        else {
+            value = m_expose_slider_node1+(duration-m_expose_node1)*(m_expose_slider_max-m_expose_slider_node1)/(m_expose_max-m_expose_node1)
+        }
+        return value
+    }
+    
+    func slider_to_exposure(value:Float) -> Float{
+        var duration:Float = 0.0
+        if value < m_expose_slider_node1 {
+            duration = m_expose_min + value*(m_expose_node1-m_expose_min)/m_expose_slider_node1
+        }
+        else {
+            duration = m_expose_node1 + (value-m_expose_slider_node1)*(m_expose_max-m_expose_node1)/(m_expose_slider_max-m_expose_slider_node1)
+        }
+       return duration
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,10 +98,13 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
         m_zoom_view.backgroundColor = UIColor.clear
         m_more_view.backgroundColor = UIColor.clear
         
-        m_exposure_value_slider.maximumValue = GBCameraControllerImp.instance.getExposureMaxDuration()
-        m_exposure_value_slider.minimumValue = GBCameraControllerImp.instance.getExposureMaxDuration()
+        m_expose_max = GBCameraControllerImp.instance.getExposureMaxDuration()
+        m_expose_min = max(1/4000.0, GBCameraControllerImp.instance.getExposureMinDuration())
         
-        m_updateCamera = GBTimerGen.create(0, interval: 300, repeatTimes: -1, hander: self)
+        m_exposure_value_slider.maximumValue = m_expose_slider_max
+        m_exposure_value_slider.minimumValue = m_expose_slider_min
+        
+        m_updateCamera = GBTimerGen.create(300, repeatTimes: -1, hander: self)
         m_debug_overlay.isHidden = true
     }
 
@@ -167,8 +199,10 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
     }
     
     @IBAction func exposure_slider_change(_ sender: UISlider) {
-        //print("exposure_slider_change \(sender.value)")
-        GBCameraControllerImp.instance.setExposureDuration(sender.value)
+        let value:Float = self.slider_to_exposure(value: sender.value)
+        
+        GBCameraControllerImp.instance.setExposureDuration(value)
+        self.setExposureLabel(duration: value)
     }
     
     @IBAction func iso_slider_change(_ sender: UISlider) {
@@ -223,8 +257,8 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
                 break
             }
             
-            m_exposure_value_slider.maximumValue = GBCameraControllerImp.instance.getExposureMaxDuration()
-            m_exposure_value_slider.minimumValue = GBCameraControllerImp.instance.getExposureMinDuration()
+            //m_exposure_value_slider.maximumValue = GBCameraControllerImp.instance.getExposureMaxDuration()
+            //m_exposure_value_slider.minimumValue = GBCameraControllerImp.instance.getExposureMinDuration()
             self.updateExposure()
             m_iso_value_slider.maximumValue = Float(GBCameraControllerImp.instance.getISOMax())
             m_iso_value_slider.minimumValue = Float(GBCameraControllerImp.instance.getISOMin())
@@ -287,11 +321,21 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
     }
     
     fileprivate func updateExposure(){
-        if m_exposure_view.isHidden || GBCameraControllerImp.instance.getExposureMode() == GBCameraExposureMode.modeCustom{
+        if m_exposure_view.isHidden &&
+            GBCameraControllerImp.instance.getExposureMode() == GBCameraExposureMode.modeCustom{
             return
         }
         let duration = GBCameraControllerImp.instance.getExposureDuration()
-        m_exposure_value_slider.setValue(duration, animated: false)
+        self.setExposureLabel(duration: duration)
+        
+        let iso = GBCameraControllerImp.instance.getISO()
+        m_iso_value.text = String(iso)
+        
+        m_iso_value_slider.setValue(Float(iso), animated: false)
+        m_exposure_value_slider.setValue(exposure_to_slider(duration: duration), animated: false)
+    }
+    
+    fileprivate func setExposureLabel(duration:Float){
         let under = 1/duration
         var text:String?
         if under >= 10 {
@@ -301,10 +345,6 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
             text = String(format: "1/%.01f", under)
         }
         m_exposure_value.text = text
-        
-        let iso = GBCameraControllerImp.instance.getISO()
-        m_iso_value_slider.setValue(Float(iso), animated: false)
-        m_iso_value.text = String(iso)
     }
     
     fileprivate func updateFocus(){

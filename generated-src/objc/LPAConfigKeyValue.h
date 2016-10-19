@@ -9,6 +9,8 @@
 
 @end
 
+extern NSString * __nonnull const LPAConfigKeyValueOK;
+extern NSString * __nonnull const LPAConfigKeyValueNAME;
 extern NSString * __nonnull const LPAConfigKeyValueVIDEOINTERVAL;
 extern NSString * __nonnull const LPAConfigKeyValueVIDEOINTERVALUNIT;
 extern NSString * __nonnull const LPAConfigKeyValueVIDEOFPS;
@@ -18,3 +20,22 @@ extern NSString * __nonnull const LPAConfigKeyValueCAPTUREMODEVIDEO;
 extern NSString * __nonnull const LPAConfigKeyValueCAPTUREMODEPHOTO;
 extern NSString * __nonnull const LPAConfigKeyValueCAPTUREMODELINE;
 extern NSString * __nonnull const LPAConfigKeyValueCAPTUREIMMEDIATELINE;
+extern NSString * __nonnull const LPAConfigKeyValueQUICKMODELIST;
+extern NSString * __nonnull const LPAConfigKeyValueQUICKMODE;
+extern NSString * __nonnull const LPAConfigKeyValueSECOND;
+extern NSString * __nonnull const LPAConfigKeyValueMSEC;
+extern NSString * __nonnull const LPAConfigKeyValueMINUTE;
+extern NSString * __nonnull const LPAConfigKeyValueCUSTOM;
+extern NSString * __nonnull const LPAConfigKeyValueUIINFOUPDATE;
+extern NSString * __nonnull const LPAConfigKeyValueINTERVALMODE;
+extern NSString * __nonnull const LPAConfigKeyValueINTERVALMODELPASE;
+extern NSString * __nonnull const LPAConfigKeyValueINTERVALMODESLOMO;
+extern NSString * __nonnull const LPAConfigKeyValueINTERVALDEFAULT;
+extern NSString * __nonnull const LPAConfigKeyValueFPSMAX;
+extern NSString * __nonnull const LPAConfigKeyValueFPSMIN;
+extern NSString * __nonnull const LPAConfigKeyValueINTERVALMAX;
+extern NSString * __nonnull const LPAConfigKeyValueSLOMOENABLE;
+extern NSString * __nonnull const LPAConfigKeyValueFPSRANGEALERT;
+extern NSString * __nonnull const LPAConfigKeyValueLAPSERANGEALERT;
+extern NSString * __nonnull const LPAConfigKeyValueALERTTILLEINFO;
+extern NSString * __nonnull const LPAConfigKeyValueCAPTUREFAILED;

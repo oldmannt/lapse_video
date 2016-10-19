@@ -4,6 +4,10 @@
 #import "LPAConfigKeyValue.h"
 
 
+NSString * __nonnull const LPAConfigKeyValueOK = @"ok";
+
+NSString * __nonnull const LPAConfigKeyValueNAME = @"name";
+
 NSString * __nonnull const LPAConfigKeyValueVIDEOINTERVAL = @"interval";
 
 NSString * __nonnull const LPAConfigKeyValueVIDEOINTERVALUNIT = @"interval_unit";
@@ -21,6 +25,44 @@ NSString * __nonnull const LPAConfigKeyValueCAPTUREMODEPHOTO = @"photo";
 NSString * __nonnull const LPAConfigKeyValueCAPTUREMODELINE = @"capture_video_line";
 
 NSString * __nonnull const LPAConfigKeyValueCAPTUREIMMEDIATELINE = @"capture_immediate_line";
+
+NSString * __nonnull const LPAConfigKeyValueQUICKMODELIST = @"quick_mode_list";
+
+NSString * __nonnull const LPAConfigKeyValueQUICKMODE = @"quick_mode";
+
+NSString * __nonnull const LPAConfigKeyValueSECOND = @"second";
+
+NSString * __nonnull const LPAConfigKeyValueMSEC = @"mill_sec";
+
+NSString * __nonnull const LPAConfigKeyValueMINUTE = @"minute";
+
+NSString * __nonnull const LPAConfigKeyValueCUSTOM = @"custom";
+
+NSString * __nonnull const LPAConfigKeyValueUIINFOUPDATE = @"ui_info_update";
+
+NSString * __nonnull const LPAConfigKeyValueINTERVALMODE = @"interval_mode";
+
+NSString * __nonnull const LPAConfigKeyValueINTERVALMODELPASE = @"lpase";
+
+NSString * __nonnull const LPAConfigKeyValueINTERVALMODESLOMO = @"slomo";
+
+NSString * __nonnull const LPAConfigKeyValueINTERVALDEFAULT = @"interval_default";
+
+NSString * __nonnull const LPAConfigKeyValueFPSMAX = @"fps_max";
+
+NSString * __nonnull const LPAConfigKeyValueFPSMIN = @"fps_min";
+
+NSString * __nonnull const LPAConfigKeyValueINTERVALMAX = @"interval_max";
+
+NSString * __nonnull const LPAConfigKeyValueSLOMOENABLE = @"slomo_enable";
+
+NSString * __nonnull const LPAConfigKeyValueFPSRANGEALERT = @"fps_range_alert";
+
+NSString * __nonnull const LPAConfigKeyValueLAPSERANGEALERT = @"lapse_range_alert";
+
+NSString * __nonnull const LPAConfigKeyValueALERTTILLEINFO = @"alert_tille_info";
+
+NSString * __nonnull const LPAConfigKeyValueCAPTUREFAILED = @"capture_failed";
 
 @implementation LPAConfigKeyValue
 

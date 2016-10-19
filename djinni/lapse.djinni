@@ -73,6 +73,8 @@ capture_quick_mode = record {
 }
 
 config_key_value = record {
+	const OK:string = "ok";
+	const NAME:string = "name";
 	const VIDEO_INTERVAL:string = "interval";
 	const VIDEO_INTERVAL_UNIT:string = "interval_unit";
 	const VIDEO_FPS:string = "fps";
@@ -82,6 +84,34 @@ config_key_value = record {
 	const CAPTURE_MODE_PHOTO:string = "photo";
 	const CAPTURE_MODE_LINE:string = "capture_video_line";
 	const CAPTURE_IMMEDIATE_LINE:string = "capture_immediate_line";
+
+	const QUICK_MODE_LIST:string = "quick_mode_list";
+	const QUICK_MODE:string = "quick_mode";
+	const SECOND:string = "second";
+	const MSEC:string = "mill_sec";
+	const MINUTE:string = "minute";
+	const CUSTOM:string = "custom";
+	const UI_INFO_UPDATE:string = "ui_info_update";
+	const INTERVAL_MODE:string = "interval_mode";
+	const INTERVAL_MODE_LPASE:string = "lpase";
+	const INTERVAL_MODE_SLOMO:string = "slomo";
+	const INTERVAL_DEFAULT:string = "interval_default";
+	const FPS_MAX:string = "fps_max";
+	const FPS_MIN:string = "fps_min";
+	const INTERVAL_MAX:string = "interval_max";
+	const SLOMO_ENABLE:string = "slomo_enable";
+
+	const FPS_RANGE_ALERT:string = "fps_range_alert";
+	const LAPSE_RANGE_ALERT:string = "lapse_range_alert";
+	const ALERT_TILLE_INFO:string = "alert_tille_info";
+	const CAPTURE_FAILED:string = "capture_failed";
+}
+
+quick_mode_gen = interface +c {
+	static create(name:string, fps:i32, interval:i32):quick_mode_gen;
+	getName():string;
+	getFps():i32;
+	getInterval():i32;
 }
 
 data_gen = interface +c {
@@ -108,6 +138,24 @@ data_gen = interface +c {
 	setResolution(reso:i32);
 	isCaptureModePhoto(interal:i32):bool;
 	isCaptureImmediate(interal:i32):bool;
+	getMaxFps():i32;
+	getMinFps():i32;
+	getMinInterval():i32;
+	getMaxInterval():i32;
+	getMinLapse():i32;
+	getDefaultLapse():i32;
+
+	getQuickModeCount():i32;
+	getQuickMode(index:i32):quick_mode_gen;
+	selectQuickMode(index:i32);
+	getCurrentQickMode():i32;
+
+	getUiInfoUpdateRate():i32;
+
+	# for message which is relevant to language 
+	getFpsRangeAlert():string;
+	getLapseRangeAlert():string;
+	getSlomoRangeAlert():string;
 }
 
 project_cell_gen = interface +c {
@@ -138,3 +186,48 @@ project_list_gen = interface +c {
 	saveProject(index:i32);
 	watchProject(index:i32);
 }
+
+interval_mode = enum {
+	slomo;
+	lapse;
+}
+
+lapse_setting_dlg_delegate = interface +o +j {
+	updateSegMode(mode:interval_mode);
+	updateFps(fps:i32);
+	updateLapse(lapse:f32);
+	getFps():i32;
+	getLapse():f32;
+}
+
+lapse_setting_dlg_gen = interface +c {
+	static instance():lapse_setting_dlg_gen;
+	onLoad(delegate:lapse_setting_dlg_delegate);
+	onShow();
+	onFpsChange(fps:i32):bool;
+	onLapseChange(mode:interval_mode,lapse:f32):bool;
+	onSelectInterval(mode:interval_mode);
+	onSave(fps:i32, lapse:f32, mode:interval_mode):bool;
+}
+
+lapse_setting_ui_gen = interface +o +j {
+	initializeSliberFps(min: i32, max: i32);
+	initializeSliberLapse(min: i32, max: i32);
+	updateFps(fps: i32);
+	updateLapse(lapse: i32);
+	updatePicker(index: i32);
+}
+
+lapse_setting_gen = interface +c {
+	static instance():lapse_setting_gen;
+	getQuickModeCount():i32;
+	getQuickModeName(index:i32):string;
+	selectQuickMode(index:i32);
+	setFps(fps:i32);
+	setLapse(lapse:i32);
+	onLoad(ui:lapse_setting_ui_gen);
+	onShow();
+	onHide();
+	clean();
+}
+

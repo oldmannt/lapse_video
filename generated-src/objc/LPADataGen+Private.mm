@@ -7,6 +7,7 @@
 #import "DJIError.h"
 #import "DJIMarshal+Private.h"
 #import "LPADataGen+Private.h"
+#import "LPAQuickModeGen+Private.h"
 #include <exception>
 #include <utility>
 
@@ -156,6 +157,103 @@ static_assert(__has_feature(objc_arc), "Djinni requires ARC to be enabled for th
     try {
         auto r = _cppRefHandle.get()->isCaptureImmediate(::djinni::I32::toCpp(interal));
         return ::djinni::Bool::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (int32_t)getMaxFps {
+    try {
+        auto r = _cppRefHandle.get()->getMaxFps();
+        return ::djinni::I32::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (int32_t)getMinFps {
+    try {
+        auto r = _cppRefHandle.get()->getMinFps();
+        return ::djinni::I32::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (int32_t)getMinInterval {
+    try {
+        auto r = _cppRefHandle.get()->getMinInterval();
+        return ::djinni::I32::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (int32_t)getMaxInterval {
+    try {
+        auto r = _cppRefHandle.get()->getMaxInterval();
+        return ::djinni::I32::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (int32_t)getMinLapse {
+    try {
+        auto r = _cppRefHandle.get()->getMinLapse();
+        return ::djinni::I32::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (int32_t)getDefaultLapse {
+    try {
+        auto r = _cppRefHandle.get()->getDefaultLapse();
+        return ::djinni::I32::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (int32_t)getQuickModeCount {
+    try {
+        auto r = _cppRefHandle.get()->getQuickModeCount();
+        return ::djinni::I32::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (nullable LPAQuickModeGen *)getQuickMode:(int32_t)index {
+    try {
+        auto r = _cppRefHandle.get()->getQuickMode(::djinni::I32::toCpp(index));
+        return ::djinni_generated::QuickModeGen::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (void)selectQuickMode:(int32_t)index {
+    try {
+        _cppRefHandle.get()->selectQuickMode(::djinni::I32::toCpp(index));
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (int32_t)getCurrentQickMode {
+    try {
+        auto r = _cppRefHandle.get()->getCurrentQickMode();
+        return ::djinni::I32::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (int32_t)getUiInfoUpdateRate {
+    try {
+        auto r = _cppRefHandle.get()->getUiInfoUpdateRate();
+        return ::djinni::I32::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (nonnull NSString *)getFpsRangeAlert {
+    try {
+        auto r = _cppRefHandle.get()->getFpsRangeAlert();
+        return ::djinni::String::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (nonnull NSString *)getLapseRangeAlert {
+    try {
+        auto r = _cppRefHandle.get()->getLapseRangeAlert();
+        return ::djinni::String::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
+- (nonnull NSString *)getSlomoRangeAlert {
+    try {
+        auto r = _cppRefHandle.get()->getSlomoRangeAlert();
+        return ::djinni::String::fromCpp(r);
     } DJINNI_TRANSLATE_EXCEPTIONS()
 }
 

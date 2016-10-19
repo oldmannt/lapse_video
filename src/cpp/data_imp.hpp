@@ -9,8 +9,11 @@
 #ifndef data_imp_hpp
 #define data_imp_hpp
 
+#include <vector>
+
 #include "data_gen.hpp"
 #include "config_gen.hpp"
+#include "quick_mode_gen.hpp"
 
 namespace lpase {
     
@@ -55,10 +58,46 @@ public:
     virtual bool isCaptureModePhoto(int32_t interal);
     
     virtual bool isCaptureImmediate(int32_t interal);
+    
+    virtual int32_t getMaxFps();
+    
+    virtual int32_t getMinFps();
+    
+    virtual int32_t getMinInterval();
+    
+    virtual int32_t getMaxInterval();
+    
+    virtual int32_t getMinLapse();
+    
+    virtual int32_t getDefaultLapse();
+    
+    virtual int32_t getQuickModeCount();
+    
+    virtual std::shared_ptr<QuickModeGen> getQuickMode(int32_t index);
+    
+    virtual void selectQuickMode(int32_t index);
+    
+    virtual int32_t getCurrentQickMode();
+    
+    virtual int32_t getUiInfoUpdateRate();
+    
+    virtual std::string getFpsRangeAlert();
+    
+    virtual std::string getLapseRangeAlert();
+    
+    virtual std::string getSlomoRangeAlert();
 private:
     std::shared_ptr<gearsbox::ConfigGen> m_user_config;
     std::shared_ptr<gearsbox::ConfigGen> m_vide_config;
     std::shared_ptr<gearsbox::ConfigGen> m_camera_config;
+    std::shared_ptr<gearsbox::ConfigGen> m_quick_mode_list;
+    
+    typedef std::vector<std::shared_ptr<QuickModeGen>> VEC_QUICK_MODE;
+    VEC_QUICK_MODE m_vec_quick_mode;
+    
+    bool initializeQuickMode(std::shared_ptr<gearsbox::ConfigGen> quick_mode);
+    
+    int32_t getQuickModeDefaultIndex();
 };
     
 }  // namespace lpase
