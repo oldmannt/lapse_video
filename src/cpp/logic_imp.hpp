@@ -45,6 +45,8 @@ public:
     
     virtual void beforeForceStop();
     
+    virtual void onProgress(float percent);
+    
 private:
     std::shared_ptr<gearsbox::VideoWriterGen> m_video_writer;
     

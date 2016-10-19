@@ -100,13 +100,18 @@ void LogicImp::onComplete(bool success, const std::string & path){
         InstanceGetterGen::getPlatformUtility()->playVideo(path);
         return;
     }
-    std::string msg = LanguageStoreGen::instance()->getString(ConfigKeyValue::CAPTURE_FAILED);
-    InstanceGetterGen::getPlatformUtility()->alertDialog("", msg);
-    m_video_writer = nullptr;
+    this->beforeForceStop();
 }
 
 void LogicImp::beforeForceStop(){
-    
+    std::string msg = LanguageStoreGen::instance()->getString(ConfigKeyValue::CAPTURE_FAILED);
+    InstanceGetterGen::getPlatformUtility()->alertDialog("", msg);
+    m_video_writer = nullptr;
+    InstanceGetterGen::getPlatformUtility()->showLoadingView(false);
+}
+
+void LogicImp::onProgress(float percent){
+    //G_LOG_C(LOG_INFO, "progress: %02f", percent);
 }
 
 void LogicImp::captureStart(){
@@ -140,6 +145,7 @@ void LogicImp::captureStop(){
     CHECK_RT(m_video_writer!=nullptr, "video_writer null stop");
     m_video_writer->saveNRlease();
     m_video_writer = nullptr;
+    InstanceGetterGen::getPlatformUtility()->showLoadingView(true);
 }
 
 void LogicImp::lapseStop(){
