@@ -40,6 +40,11 @@ void LapseSettingDlgImp::onShow(){
     int32_t fps = DataGen::instance()->getFps();
     int32_t interval = DataGen::instance()->getCaptureInteval();
     int32_t min_interval = DataGen::instance()->getMinInterval();
+    bool enable_slomo = DataGen::instance()->isSlowModeEnable();
+    
+    if (!enable_slomo){
+        interval = DataGen::instance()->getMinLapse();
+    }
     
     if (interval == min_interval){
         m_delegate->updateSegMode(IntervalMode::SLOMO);
@@ -48,6 +53,10 @@ void LapseSettingDlgImp::onShow(){
     else {
         m_delegate->updateSegMode(IntervalMode::LAPSE);
         m_delegate->updateLapse(interval/1000.0);
+    }
+    
+    if (!enable_slomo){
+        m_delegate->updateSegMode(IntervalMode::NONE);
     }
     
     m_delegate->updateFps(fps);

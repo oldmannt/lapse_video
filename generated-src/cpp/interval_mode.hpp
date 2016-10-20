@@ -10,6 +10,7 @@ namespace lpase {
 enum class IntervalMode : int {
     SLOMO,
     LAPSE,
+    NONE,
 };
 
 }  // namespace lpase

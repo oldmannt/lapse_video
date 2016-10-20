@@ -144,6 +144,7 @@ data_gen = interface +c {
 	getMaxInterval():i32;
 	getMinLapse():i32;
 	getDefaultLapse():i32;
+	isSlowModeEnable():bool;
 
 	getQuickModeCount():i32;
 	getQuickMode(index:i32):quick_mode_gen;
@@ -190,6 +191,7 @@ project_list_gen = interface +c {
 interval_mode = enum {
 	slomo;
 	lapse;
+	none;
 }
 
 lapse_setting_dlg_delegate = interface +o +j {

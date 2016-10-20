@@ -7,4 +7,5 @@ typedef NS_ENUM(NSInteger, LPAIntervalMode)
 {
     LPAIntervalModeSlomo,
     LPAIntervalModeLapse,
+    LPAIntervalModeNone,
 };

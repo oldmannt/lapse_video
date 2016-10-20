@@ -96,18 +96,21 @@ void LogicImp::excuse(const std::shared_ptr<TaskInfoGen> & info){
 }
 
 void LogicImp::onComplete(bool success, const std::string & path){
+    G_LOG_C(LOG_INFO, "onComplete %.03f", InstanceGetterGen::getPlatformUtility()->getSystemTickSec());
+    InstanceGetterGen::getPlatformUtility()->showLoadingView(false);
     if (success) {
         InstanceGetterGen::getPlatformUtility()->playVideo(path);
-        return;
     }
-    this->beforeForceStop();
+    else{
+        std::string msg = LanguageStoreGen::instance()->getString(ConfigKeyValue::CAPTURE_FAILED);
+        InstanceGetterGen::getPlatformUtility()->alertDialog("", msg);
+    }
+    m_video_writer = nullptr;
+    
 }
 
 void LogicImp::beforeForceStop(){
-    std::string msg = LanguageStoreGen::instance()->getString(ConfigKeyValue::CAPTURE_FAILED);
-    InstanceGetterGen::getPlatformUtility()->alertDialog("", msg);
-    m_video_writer = nullptr;
-    InstanceGetterGen::getPlatformUtility()->showLoadingView(false);
+    InstanceGetterGen::getPlatformUtility()->showLoadingView(true);
 }
 
 void LogicImp::onProgress(float percent){
@@ -145,7 +148,9 @@ void LogicImp::captureStop(){
     CHECK_RT(m_video_writer!=nullptr, "video_writer null stop");
     m_video_writer->saveNRlease();
     m_video_writer = nullptr;
-    InstanceGetterGen::getPlatformUtility()->showLoadingView(true);
+    // set to default frame rate
+    InstanceGetterGen::getCameraController()->setFrameDuration(1, InstanceGetterGen::getCameraController()->getDefaultFrameRate());
+    G_LOG_C(LOG_INFO, "stop %.03f", InstanceGetterGen::getPlatformUtility()->getSystemTickSec());
 }
 
 void LogicImp::lapseStop(){

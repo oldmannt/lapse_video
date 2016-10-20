@@ -23,14 +23,14 @@ class LapseSetterView: PopupViewController, LPALapseSettingDlgDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        m_lblTittle.text = GBLanguageStoreGen.instance()?.getString("capture_interval");
-        m_lapse_uint.text = GBLanguageStoreGen.instance()?.getString("capture_second");
-        m_fps_uint.text = GBLanguageStoreGen.instance()?.getString("video_info_frame");
+        m_lblTittle.text = GBLanguageStoreGen.instance()?.getString("capture_interval")
+        m_lapse_uint.text = GBLanguageStoreGen.instance()?.getString("capture_second")
+        m_fps_uint.text = GBLanguageStoreGen.instance()?.getString("video_info_frame")
         
         m_segMode.setTitle(GBLanguageStoreGen.instance()?.getString("mode_lapse"), forSegmentAt: 0)
         m_segMode.setTitle(GBLanguageStoreGen.instance()?.getString("mode_slomo"), forSegmentAt: 1)
         
-        LPALapseSettingDlgGen.instance()?.onLoad(self);
+        LPALapseSettingDlgGen.instance()?.onLoad(self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,9 +39,9 @@ class LapseSetterView: PopupViewController, LPALapseSettingDlgDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated);
+        super.viewWillAppear(animated)
         
-        LPALapseSettingDlgGen.instance()?.onShow();
+        LPALapseSettingDlgGen.instance()?.onShow()
     }
     
     @IBAction func selectSLoLapse(_ sender: UISegmentedControl) {
@@ -49,7 +49,7 @@ class LapseSetterView: PopupViewController, LPALapseSettingDlgDelegate {
         if sender.selectedSegmentIndex == 1{
             mode = .slomo
         }
-        LPALapseSettingDlgGen.instance()?.onSelectInterval(mode);
+        LPALapseSettingDlgGen.instance()?.onSelectInterval(mode)
     }
     
     @IBAction func txtLapseChange(_ sender: UITextField) {
@@ -87,7 +87,7 @@ class LapseSetterView: PopupViewController, LPALapseSettingDlgDelegate {
     }
 
     @IBAction func btnSaveTap(_ sender: AnyObject) {
-        let mode = getIntervalMode(index: m_segMode.selectedSegmentIndex);
+        let mode = getIntervalMode(index: m_segMode.selectedSegmentIndex)
         let fps:Int32 = (m_txtFps.text! as NSString).intValue
         let lapse:Float = (m_txtInterval.text! as NSString).floatValue
         LPALapseSettingDlgGen.instance()?.onSave(fps, lapse: lapse, mode: mode)
@@ -96,14 +96,17 @@ class LapseSetterView: PopupViewController, LPALapseSettingDlgDelegate {
     
     public func updateSegMode(_ mode: LPAIntervalMode){
         if mode == .lapse {
-            m_segMode.selectedSegmentIndex = 0;
+            m_segMode.selectedSegmentIndex = 0
             m_txtInterval.isUserInteractionEnabled = true
             m_lapse_uint.text = GBLanguageStoreGen.instance()?.getString("capture_second")
         }
-        else {
-            m_segMode.selectedSegmentIndex = 1;
+        else if mode == .slomo{
+            m_segMode.selectedSegmentIndex = 1
             m_txtInterval.isUserInteractionEnabled = false
             m_lapse_uint.text = GBLanguageStoreGen.instance()?.getString("capture_mill_second")
+        }
+        else {
+            m_segMode.isHidden = true
         }
     }
     

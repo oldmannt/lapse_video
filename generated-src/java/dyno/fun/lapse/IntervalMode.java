@@ -6,5 +6,6 @@ package dyno.fun.lapse;
 public enum IntervalMode {
     SLOMO,
     LAPSE,
+    NONE,
     ;
 }

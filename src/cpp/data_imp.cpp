@@ -200,6 +200,10 @@ int32_t DataImp::getDefaultLapse(){
     return m_user_config->getInt(ConfigKeyValue::INTERVAL_DEFAULT);
 }
 
+bool DataImp::isSlowModeEnable(){
+    return m_user_config->getBool(ConfigKeyValue::SLOMO_ENABLE);
+}
+
 int32_t DataImp::getQuickModeCount(){
     return (int32_t)m_vec_quick_mode.size();
 }

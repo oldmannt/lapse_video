@@ -59,6 +59,8 @@
 
 - (int32_t)getDefaultLapse;
 
+- (BOOL)isSlowModeEnable;
+
 - (int32_t)getQuickModeCount;
 
 - (nullable LPAQuickModeGen *)getQuickMode:(int32_t)index;

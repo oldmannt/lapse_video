@@ -265,6 +265,16 @@ CJNIEXPORT jint JNICALL Java_dyno_fun_lapse_DataGen_00024CppProxy_native_1getDef
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }
 
+CJNIEXPORT jboolean JNICALL Java_dyno_fun_lapse_DataGen_00024CppProxy_native_1isSlowModeEnable(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef)
+{
+    try {
+        DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
+        const auto& ref = ::djinni::objectFromHandleAddress<::lpase::DataGen>(nativeRef);
+        auto r = ref->isSlowModeEnable();
+        return ::djinni::release(::djinni::Bool::fromCpp(jniEnv, r));
+    } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
+}
+
 CJNIEXPORT jint JNICALL Java_dyno_fun_lapse_DataGen_00024CppProxy_native_1getQuickModeCount(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef)
 {
     try {

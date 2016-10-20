@@ -54,35 +54,8 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
     }
     
     fileprivate func debuginfo(){
-        var text:String = ""
-
-        let duration = GBCameraControllerImp.instance.getExposureDurationCMT()
-        let duration_max:Float = GBCameraControllerImp.instance.getExposureMaxDuration()
-        let duration_min:Float = GBCameraControllerImp.instance.getExposureMinDuration()
-        let duration_model = GBCameraControllerImp.instance.getExposureMode()
-        
-        let iso = GBCameraControllerImp.instance.getISO()
-        let iso_max = GBCameraControllerImp.instance.getISOMax()
-        let iso_min = GBCameraControllerImp.instance.getISOMin()
-
-        let focus:Float = GBCameraControllerImp.instance.getFocusLens()
-        let focus_max:Float = GBCameraControllerImp.instance.getFocusMax()
-        let focus_min:Float = GBCameraControllerImp.instance.getFocusMin()
-        let focus_model = GBCameraControllerImp.instance.getFocusMode()
-        let focus_range = GBCameraControllerImp.instance.getFocusAutoRange()
-        
-        let zoom:Float = GBCameraControllerImp.instance.getZoom()
-        let zoom_max:Float = GBCameraControllerImp.instance.getZoomMax()
-        
-        text = String("dration: \(duration!.value):\(duration!.timescale) second:\(duration!.seconds) max:\(duration_max) min:\(duration_min) mode:\(duration_model.rawValue)\n")
-        text += String("iso: \(iso) max:\(iso_max) min:\(iso_min)\n")
-        text += String("focus: \(focus) max:\(focus_max) min:\(focus_min) mode:\(focus_model.rawValue) range:\(focus_range.rawValue)\n")
-        
-        text += String("zoom: \(zoom) max:\(zoom_max)\n")
-        
-        m_debug_info.text = text
+        m_debug_info.text = GBCameraControllerImp.instance.getDebugInfo()
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

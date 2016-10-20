@@ -65,6 +65,8 @@ public:
 
     virtual int32_t getDefaultLapse() = 0;
 
+    virtual bool isSlowModeEnable() = 0;
+
     virtual int32_t getQuickModeCount() = 0;
 
     virtual std::shared_ptr<QuickModeGen> getQuickMode(int32_t index) = 0;

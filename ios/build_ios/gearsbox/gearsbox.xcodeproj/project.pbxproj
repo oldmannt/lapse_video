@@ -22,80 +22,82 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0164ABF9309C1E038E429FFE /* GBCameraConfigGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2385C0F720517D59475337B /* GBCameraConfigGen.mm */; };
+		01998F43822E1E24D876CFAA /* GBVideoEncoderGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EC94AE44056FE9A7745F7 /* GBVideoEncoderGen+Private.mm */; };
 		020A178C6A994C13F7B86D46 /* instance_getter_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEA325DAF1DA50E87E5A1BD9 /* instance_getter_imp.cpp */; };
 		03CDC2CDC6620340CF82F632 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B1DA4BF83B7B0A66E64798 /* log.cpp */; };
-		0842427DC5EE13090346AFD6 /* GBTimerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F1DA8BB83FB969E39E3D /* GBTimerGen+Private.mm */; };
-		123A4A040573AF0F4C074581 /* GBArgbColor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9D0FA675898DDFEA97AE1A5 /* GBArgbColor.mm */; };
+		0C2E855F08BBD0A6434B98A4 /* log_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8358D2D8C6DFD50714CC8945 /* log_gen.cpp */; };
+		10434392448F4420AD67CEA2 /* GBBreakpadGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B447E38C07913FC79A360653 /* GBBreakpadGen+Private.mm */; };
+		10A59F6B71F91B476911A84A /* camera_config_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A16B3A9A6F233AAC28329875 /* camera_config_gen.cpp */; };
+		10DC9D1A87D33CE7EF4045D3 /* GBUiManagerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8130C1AE76C010DFB20AC9C1 /* GBUiManagerGen+Private.mm */; };
 		1388031FBE55E029028E6E3B /* timerImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEF153C651B20FD97E229321 /* timerImp.cpp */; };
-		138BE59816A64A0796CB6703 /* GBVideoWriterGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65DD3A1D88122E3D2876380 /* GBVideoWriterGen+Private.mm */; };
-		2297F32746789C6B38481099 /* GBVideoWriterResultHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = BEE2D860A2583692FE38B739 /* GBVideoWriterResultHandler+Private.mm */; };
-		25BDD4026A82C8E4CF37200D /* argb_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B70A2DA034DAA2A4BEBDCFCF /* argb_color.cpp */; };
-		29D9FC912FD3163F866E1A83 /* GBViewFrame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D479B1116BFDD6928D1714D /* GBViewFrame.mm */; };
-		2BAA4925FAF969DA038E9359 /* GBCameraConfigGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDAA22219FE769CB388BF897 /* GBCameraConfigGen+Private.mm */; };
-		2D800A5E0014F58CEA0D2583 /* log_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8358D2D8C6DFD50714CC8945 /* log_gen.cpp */; };
-		313EB6BD93CA10B8FEA6094F /* GBViewConstraint.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B0C409D6E7F87FF8E7C2C /* GBViewConstraint.mm */; };
+		16C25F7BBA8B4C0FE5FDEB6D /* GBViewEventParam+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B48A7D6F0A06186054DA04A3 /* GBViewEventParam+Private.mm */; };
+		1BABE9BC93EEF580C412A90B /* GBFileInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7EEE8041CB99B25CE816BBD3 /* GBFileInfoGen+Private.mm */; };
+		2012B194A3F87057D892FBA5 /* view_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EB40B1D75BD34C1F97D6542 /* view_gen.cpp */; };
+		298C8B5A3882D7214FDF4536 /* GBTaskManagerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 073150D0D4AE13F5B1A654EA /* GBTaskManagerGen+Private.mm */; };
+		2FE493923FC3DC3566DDD4F5 /* GBVideoFrameGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B41E51D20A3702751EAAFD72 /* GBVideoFrameGen+Private.mm */; };
 		34FBF569F6E1EC21D95EE7B1 /* objc_utility.m in Sources */ = {isa = PBXBuildFile; fileRef = C95D4AAA5FEF4F352759C63A /* objc_utility.m */; };
-		38F283929609D9EB81CF1AB7 /* GBViewEventHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 597F7735E2663310D775A5A9 /* GBViewEventHandler+Private.mm */; };
-		3A10E1C038038F7C7FA6CB3E /* GBTaskManagerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 073150D0D4AE13F5B1A654EA /* GBTaskManagerGen+Private.mm */; };
+		3640E4530DD22EFC52CE34A2 /* GBCrashHandlerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC131CCE2902F50D5C6F3CD1 /* GBCrashHandlerGen+Private.mm */; };
+		371039DABF22E4EB267983FD /* GBTaskExcuserGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94C90F0623F866795293346F /* GBTaskExcuserGen+Private.mm */; };
 		3D56C55806B38BB70FAB5233 /* work_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE77ED0B08975830CDDBD803 /* work_thread.cpp */; };
+		431D448A87A547D0F22DE52A /* GBVideoInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C42411D93A24F7EB94AA9C0F /* GBVideoInfoGen+Private.mm */; };
+		43D45FFD1BA784FE45D56508 /* GBViewEventHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 597F7735E2663310D775A5A9 /* GBViewEventHandler+Private.mm */; };
 		47A25535E61053B59B6B7E30 /* task_manager_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6D79994D8A27526816356 /* task_manager_imp.cpp */; };
 		4B90A249978FF51F441CC114 /* async_loop_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BCDFD62591538EE5BA21545 /* async_loop_imp.cpp */; };
-		4DFC881F51732C73099E2DA2 /* GBLanguageStoreGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 485861FA85132CF0F338FC5B /* GBLanguageStoreGen+Private.mm */; };
-		51D17CF3BF2C77647BEDFABD /* GBViewFactoryGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3A0538BD3A137245B24AA20 /* GBViewFactoryGen+Private.mm */; };
 		546DB3346315841556B636D0 /* ui_conf_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D26FF739A0C8A814736C6F9 /* ui_conf_imp.cpp */; };
-		5948669E7213902E3D85C2B7 /* GBConfigGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38C3778CAA3AD2B952662C90 /* GBConfigGen+Private.mm */; };
+		5A081AFC2E7AECE9BA1A1B8F /* GBAsyncLoopGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C18B1ED30D25BCD311D69599 /* GBAsyncLoopGen+Private.mm */; };
+		5A83DA8F5E9861165E4B0B1D /* GBViewGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72121C2EBF2F093DA3CFF8E8 /* GBViewGen.mm */; };
 		5C5AB1B529E268F0885695A8 /* video_encoder_imp_ffmp4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C770C25921676750187ADA9F /* video_encoder_imp_ffmp4.cpp */; };
-		5D96CC704383A413CB0B2D6E /* GBPlatformUtilityGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 95747FC98A22EBEB372BB355 /* GBPlatformUtilityGen+Private.mm */; };
-		7417C5EC2BEF6F35F21B7EBE /* GBUiManagerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8130C1AE76C010DFB20AC9C1 /* GBUiManagerGen+Private.mm */; };
-		74E01CB80704BE56B625A5E0 /* view_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EB40B1D75BD34C1F97D6542 /* view_gen.cpp */; };
+		65EA7A50B7114E156DCE0680 /* GBViewConstraint.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B0C409D6E7F87FF8E7C2C /* GBViewConstraint.mm */; };
+		6855459000088EF5BC52964C /* GBViewEventParam.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C14785970BF91C5916B41 /* GBViewEventParam.mm */; };
 		750A2C765DE69A46667CF328 /* ui_manager_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402C89B5021F0978D5F29361 /* ui_manager_imp.cpp */; };
 		78C3E3167DF90BDF0BB1D0C8 /* zf_log.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B41FBDF86E96AACAD53066A /* zf_log.c */; };
-		79016131BFFC7D1C4B56F445 /* GBAsyncLoopGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C18B1ED30D25BCD311D69599 /* GBAsyncLoopGen+Private.mm */; };
-		793052D65230405EC8B2285A /* GBViewConf+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 773B5AECF29FD477F0929E3C /* GBViewConf+Private.mm */; };
-		7A498CE7BD984A48B4A01E4F /* GBLogGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03CAD4F9B30791B8C17AE977 /* GBLogGen+Private.mm */; };
-		7E2DE2E9AE530C4CDA59A513 /* GBVideoEncoderGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EC94AE44056FE9A7745F7 /* GBVideoEncoderGen+Private.mm */; };
-		83F6ACB66E2F063BBC74FD32 /* GBCameraCaptureHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19965468ED380CB9C7E90008 /* GBCameraCaptureHandler+Private.mm */; };
-		84742F57F72C247575A28A45 /* GBViewFrame+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9156F47FE7752FF613E222EE /* GBViewFrame+Private.mm */; };
+		8226AA15764A50F23517C95B /* GBViewFrame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D479B1116BFDD6928D1714D /* GBViewFrame.mm */; };
+		8A48A980EF02C485522484AD /* GBHttpRequestGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = D02A5B31DAD5BB9A9EA09894 /* GBHttpRequestGen+Private.mm */; };
+		8A5CDAFA6881117936387090 /* GBCameraConfigGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDAA22219FE769CB388BF897 /* GBCameraConfigGen+Private.mm */; };
+		8BF783211CBD026E43F8B579 /* GBUiValueCheckerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = D1428548D4326A359EC5CED6 /* GBUiValueCheckerGen+Private.mm */; };
+		8DA7BDD640D25D98AE4E853F /* GBViewFactoryGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3A0538BD3A137245B24AA20 /* GBViewFactoryGen+Private.mm */; };
 		8EF3D35F574ECB2E34EF0DF2 /* config_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC98E9F5A1F23243C7004B9A /* config_imp.cpp */; };
-		941E0D77F96EBF83E540C6B2 /* GBHttpRequestGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = D02A5B31DAD5BB9A9EA09894 /* GBHttpRequestGen+Private.mm */; };
+		90183048AFB2CA26F074D0F4 /* GBDuration+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1437CFC4ED633F689BE79002 /* GBDuration+Private.mm */; };
+		90BA9291AE0A9BD26B9834DA /* GBConfigGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38C3778CAA3AD2B952662C90 /* GBConfigGen+Private.mm */; };
+		955D5C31012AE1477963AF71 /* GBTimerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F1DA8BB83FB969E39E3D /* GBTimerGen+Private.mm */; };
+		95758619DC1F9A8F0600631B /* GBViewGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4115D4E136687D12F2D8CBB1 /* GBViewGen+Private.mm */; };
 		958F4A9E882068BB3D76E0AD /* ring_buffer_ptr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA6020112EC86BB3A47B7A /* ring_buffer_ptr.cpp */; };
+		9658D7215E529BD080BC4276 /* GBPlatformUtilityGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 95747FC98A22EBEB372BB355 /* GBPlatformUtilityGen+Private.mm */; };
 		9702095E31C02AC770ADDDF1 /* video_frame_imp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBB6079E2515963454F12A7 /* video_frame_imp.m */; };
-		980B83496B37928E70588A93 /* GBViewGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4115D4E136687D12F2D8CBB1 /* GBViewGen+Private.mm */; };
-		9A826C20DB91BAAE7269E263 /* GBCallbackHttpGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDD3237C016B1A44598F0571 /* GBCallbackHttpGen+Private.mm */; };
-		9D638470689F59987846EA54 /* GBCrashHandlerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC131CCE2902F50D5C6F3CD1 /* GBCrashHandlerGen+Private.mm */; };
 		9F7B4031DD6A5A6716A0664F /* language_store_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6087A7F4D1FED0BFB42BA41 /* language_store_imp.cpp */; };
-		A056D6619BC8A9BC38638124 /* camera_config_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A16B3A9A6F233AAC28329875 /* camera_config_gen.cpp */; };
-		A27FA160BA62657AEF44716E /* GBLogGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD88EFF5A985DD702320798 /* GBLogGen.mm */; };
-		A90FC221B2EA9F34C2388A97 /* view_conf_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50919747B735CE9E68D70ECC /* view_conf_base.cpp */; };
-		AAC9B8E2E6417AA48EC56F25 /* GBViewConstraint+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7DE9F4FC3CF254F9CE963E96 /* GBViewConstraint+Private.mm */; };
-		B10A6CD3CFB007D74C6A78E6 /* GBViewEventParam+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B48A7D6F0A06186054DA04A3 /* GBViewEventParam+Private.mm */; };
+		9FFA7CB8AB737BF289AE507B /* GBLogGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03CAD4F9B30791B8C17AE977 /* GBLogGen+Private.mm */; };
+		A1DCBF6C7DE46608B5F7EC6B /* GBCameraCaptureHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19965468ED380CB9C7E90008 /* GBCameraCaptureHandler+Private.mm */; };
+		A29660816585BB9432B6F952 /* GBTyperConvertorDummy+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA0215C7F50B097F081FAA34 /* GBTyperConvertorDummy+Private.mm */; };
+		B05C421DA3A21B0AB4C9F03C /* GBViewFrame+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9156F47FE7752FF613E222EE /* GBViewFrame+Private.mm */; };
+		B2DEE490836B7FDA3EF23D39 /* GBInstanceGetterGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = A959ED8DA9EE959321891219 /* GBInstanceGetterGen+Private.mm */; };
 		B6C7E043AB89174030AC0E19 /* httprequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888A0B5394C4BF2413F3CD92 /* httprequest.cpp */; };
 		B747D5B2BD6CCB6F54FA1BCA /* jsoncpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7679ACAFBF06FBD3818C5 /* jsoncpp.cpp */; };
-		BAEC5EDCB904158E9A6E3E6B /* GBUiValueCheckerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = D1428548D4326A359EC5CED6 /* GBUiValueCheckerGen+Private.mm */; };
-		BD16027B3A214BD8FDA53683 /* GBBreakpadGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B447E38C07913FC79A360653 /* GBBreakpadGen+Private.mm */; };
-		BF126DA0DC5CF03F22AB2B72 /* GBVideoFrameGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B41E51D20A3702751EAAFD72 /* GBVideoFrameGen+Private.mm */; };
-		C2F931D6CEA34AC2D0462A43 /* GBViewConf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E7EFC8CEEF89721FABE9D /* GBViewConf.mm */; };
-		C61AFCB043E0FD0513442A90 /* GBViewEventParam.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C14785970BF91C5916B41 /* GBViewEventParam.mm */; };
-		C742A10CACA59E8C9DA63FEF /* GBCameraControllerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBD7F5B8AAF759D678D6F6 /* GBCameraControllerGen+Private.mm */; };
-		C786A69B726EB6D34CD4351A /* GBUiConfGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB1715847C12EB1AD175E845 /* GBUiConfGen+Private.mm */; };
-		C8D05D9313AE3825FB82A436 /* GBTaskExcuserGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94C90F0623F866795293346F /* GBTaskExcuserGen+Private.mm */; };
-		CB3FEF43A1C0BA262127E5D3 /* GBTaskInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31263D69BD764BA8B16A0599 /* GBTaskInfoGen+Private.mm */; };
-		D442EC6336A24A4F755B0D0C /* GBInstanceGetterGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = A959ED8DA9EE959321891219 /* GBInstanceGetterGen+Private.mm */; };
-		D66A34149A9D2FBC544A11E9 /* GBArgbColor+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42233730DD366CC4A6FDEC81 /* GBArgbColor+Private.mm */; };
+		BBB9754102B955A36CEDB8DE /* GBCallbackHttpGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDD3237C016B1A44598F0571 /* GBCallbackHttpGen+Private.mm */; };
+		C026706B387E35DE58EE4F22 /* GBTaskInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31263D69BD764BA8B16A0599 /* GBTaskInfoGen+Private.mm */; };
+		C3B7570EE2F65134C3C7D564 /* GBCameraControllerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBD7F5B8AAF759D678D6F6 /* GBCameraControllerGen+Private.mm */; };
+		C537A1300D424A61E38114DA /* GBCameraConfigGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2385C0F720517D59475337B /* GBCameraConfigGen.mm */; };
+		C76675D4E456EF971826C2FF /* GBUiConfGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB1715847C12EB1AD175E845 /* GBUiConfGen+Private.mm */; };
+		CAFD1C43797EBC2D46052777 /* GBLanguageStoreGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 485861FA85132CF0F338FC5B /* GBLanguageStoreGen+Private.mm */; };
+		CC9C775E60B2D22D8484B2FD /* GBArgbColor+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42233730DD366CC4A6FDEC81 /* GBArgbColor+Private.mm */; };
+		D548853964FC80FD4B7CFBAE /* GBVideoWriterGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65DD3A1D88122E3D2876380 /* GBVideoWriterGen+Private.mm */; };
+		D77A424E9A6057AC201B4538 /* GBVideoWriterResultHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = BEE2D860A2583692FE38B739 /* GBVideoWriterResultHandler+Private.mm */; };
+		D87585DB1578A2D1EC26257A /* GBArgbColor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9D0FA675898DDFEA97AE1A5 /* GBArgbColor.mm */; };
+		DA07650819439755E55EB31D /* argb_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B70A2DA034DAA2A4BEBDCFCF /* argb_color.cpp */; };
 		DFC3E80CF783AEAC04C45BB4 /* ui_value_checker_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59A006BC4C1F75635638FE9C /* ui_value_checker_imp.cpp */; };
-		DFCD3640958340882F2B17B3 /* GBViewGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72121C2EBF2F093DA3CFF8E8 /* GBViewGen.mm */; };
+		DFC58A70D544DF084CDC83F0 /* GBViewConf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E7EFC8CEEF89721FABE9D /* GBViewConf.mm */; };
 		E12D48C2F071E688D24863B8 /* video_writer_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12CEC580F518126277DBEEEA /* video_writer_imp.cpp */; };
-		E1B9A3E11E6F37A88170F071 /* GBVideoInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C42411D93A24F7EB94AA9C0F /* GBVideoInfoGen+Private.mm */; };
 		E1FCEA6057F0C564B3A6DAA2 /* httprequestImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D416EBE16171E08513F7B69 /* httprequestImp.cpp */; };
-		E3F8BF1E77842BB6788ACFE1 /* GBFileInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7EEE8041CB99B25CE816BBD3 /* GBFileInfoGen+Private.mm */; };
-		F0A11F511543D8DAF86C0F52 /* view_constraint_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43457051484C93CAC890B876 /* view_constraint_base.cpp */; };
+		E4DF406BEBA22F66C96B2A20 /* GBLogGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD88EFF5A985DD702320798 /* GBLogGen.mm */; };
+		ED2B35A8DF15709112B83515 /* GBDuration.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4789242A3F57E4593F8E5ABB /* GBDuration.mm */; };
 		F42413CE852778AAF3C5EA08 /* log_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C649FFDE61C36A54749977E /* log_imp.cpp */; };
 		F53EC80AD64AB93F5D9F4C29 /* camera_config_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C420B6FA86A649E5988027D7 /* camera_config_imp.cpp */; };
+		F6A24C73CBFB6D93B6E6D71D /* view_conf_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50919747B735CE9E68D70ECC /* view_conf_base.cpp */; };
 		F7B74CE07993146D1F8AEF3E /* video_info_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7CD7C5D7EC257F2E11D78E4 /* video_info_imp.cpp */; };
 		F9B2BE51DB244112035D4BA6 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E5B883CC5FDF85C37AB1B /* utils.cpp */; };
+		FCE4A5556D2DA52DD7B38183 /* view_constraint_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43457051484C93CAC890B876 /* view_constraint_base.cpp */; };
+		FE05B8EE855C9B365CCA4610 /* GBViewConf+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 773B5AECF29FD477F0929E3C /* GBViewConf+Private.mm */; };
+		FE0FBC565BEAE4727710ECD8 /* GBViewConstraint+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7DE9F4FC3CF254F9CE963E96 /* GBViewConstraint+Private.mm */; };
 		FEB9763C95607F86818EBBAA /* task_info_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E212A65120E1CB214FAFF591 /* task_info_imp.cpp */; };
-		FF9BEF572358097D2B9E91D3 /* GBTyperConvertorDummy+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA0215C7F50B097F081FAA34 /* GBTyperConvertorDummy+Private.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,7 @@
 		1045E3B2A1344AD982BC13D1 /* GBTyperConvertorDummy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBTyperConvertorDummy.h; sourceTree = "<group>"; };
 		12CEC580F518126277DBEEEA /* video_writer_imp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = video_writer_imp.cpp; sourceTree = "<group>"; };
 		134A721B7E989B5F590C56DA /* GBCallbackHttpGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCallbackHttpGen.h; sourceTree = "<group>"; };
+		1437CFC4ED633F689BE79002 /* GBDuration+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBDuration+Private.mm"; sourceTree = "<group>"; };
 		149FF32ADE0B23FD0BF94DCD /* GBVideoInfoGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBVideoInfoGen.h; sourceTree = "<group>"; };
 		14B986FBD20BF384A284F54C /* GBCameraCaptureHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCameraCaptureHandler.h; sourceTree = "<group>"; };
 		1914ECB2A36B15CDF2D34837 /* GBVideoFrameGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBVideoFrameGen.h; sourceTree = "<group>"; };
@@ -171,6 +174,7 @@
 		3DF6A1F061358C9EA0779BE0 /* GBUiValueCheckerGen+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBUiValueCheckerGen+Private.h"; sourceTree = "<group>"; };
 		3E8168BA05490FD66576FED7 /* GBLanguageStoreGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBLanguageStoreGen.h; sourceTree = "<group>"; };
 		3EB40B1D75BD34C1F97D6542 /* view_gen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = view_gen.cpp; sourceTree = "<group>"; };
+		3EC6EA83F73EED1937B62698 /* GBDuration+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBDuration+Private.h"; sourceTree = "<group>"; };
 		3ED23FE675D9FB4B564A9A33 /* GBVideoInfoGen+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBVideoInfoGen+Private.h"; sourceTree = "<group>"; };
 		3F0E5155F8657F811A8C66FA /* ui_value_checker_imp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = ui_value_checker_imp.hpp; sourceTree = "<group>"; };
 		402C89B5021F0978D5F29361 /* ui_manager_imp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ui_manager_imp.cpp; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		462EB1FF19F7B39BD4300FF2 /* GBViewEventHandler+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBViewEventHandler+Private.h"; sourceTree = "<group>"; };
 		46472257DCF6EE4B1DC8D30A /* GBBreakpadGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBBreakpadGen.h; sourceTree = "<group>"; };
 		4787435D6498FACA4C8839DF /* GBCameraConfigGen+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBCameraConfigGen+Private.h"; sourceTree = "<group>"; };
+		4789242A3F57E4593F8E5ABB /* GBDuration.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GBDuration.mm; sourceTree = "<group>"; };
 		485861FA85132CF0F338FC5B /* GBLanguageStoreGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBLanguageStoreGen+Private.mm"; sourceTree = "<group>"; };
 		4AB0C2927979DDECB4CA6B48 /* video_frame_gen.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = video_frame_gen.hpp; sourceTree = "<group>"; };
 		4B5E5B883CC5FDF85C37AB1B /* utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
@@ -215,6 +220,7 @@
 		5F1952A7EB0F1925AA556EEE /* camera_exposure_mode.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = camera_exposure_mode.hpp; sourceTree = "<group>"; };
 		5FEE493FA948A2AD84FEAAC1 /* ilog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ilog.h; sourceTree = "<group>"; };
 		60191BADD823D0946885E277 /* GBViewGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBViewGen.h; sourceTree = "<group>"; };
+		6062E35C00AD48F33AFDCC84 /* duration.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = duration.hpp; sourceTree = "<group>"; };
 		62F89CC18BC190F5454D6F8A /* GBAsyncLoopGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAsyncLoopGen.h; sourceTree = "<group>"; };
 		6501EE8E7955AA245ADCABA2 /* GBCameraFocusRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCameraFocusRange.h; sourceTree = "<group>"; };
 		65690E3B18F136C565C396B9 /* typer_convertor_dummy.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = typer_convertor_dummy.hpp; sourceTree = "<group>"; };
@@ -304,6 +310,7 @@
 		C3A0538BD3A137245B24AA20 /* GBViewFactoryGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBViewFactoryGen+Private.mm"; sourceTree = "<group>"; };
 		C420B6FA86A649E5988027D7 /* camera_config_imp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = camera_config_imp.cpp; sourceTree = "<group>"; };
 		C42411D93A24F7EB94AA9C0F /* GBVideoInfoGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBVideoInfoGen+Private.mm"; sourceTree = "<group>"; };
+		C5210EBD03F141E17B3F859B /* GBDuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBDuration.h; sourceTree = "<group>"; };
 		C5E254A54EF810E895F2ADBD /* video_writer_result_handler.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = video_writer_result_handler.hpp; sourceTree = "<group>"; };
 		C770C25921676750187ADA9F /* video_encoder_imp_ffmp4.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = video_encoder_imp_ffmp4.cpp; sourceTree = "<group>"; };
 		C8ECE029C1247F44DD494939 /* video_writer_imp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = video_writer_imp.hpp; sourceTree = "<group>"; };
@@ -388,139 +395,6 @@
 			path = interface;
 			sourceTree = "<group>";
 		};
-		2A9647E6112CB5CB2B14A1AE /* objc */ = {
-			isa = PBXGroup;
-			children = (
-				5884C9477844692E1B9AA306 /* GBArgbColor+Private.h */,
-				42233730DD366CC4A6FDEC81 /* GBArgbColor+Private.mm */,
-				C0A796EF7D7E5D0C685B5711 /* GBArgbColor.h */,
-				B9D0FA675898DDFEA97AE1A5 /* GBArgbColor.mm */,
-				3AC6B2991D0A2415566128DF /* GBAsyncLoopGen+Private.h */,
-				C18B1ED30D25BCD311D69599 /* GBAsyncLoopGen+Private.mm */,
-				62F89CC18BC190F5454D6F8A /* GBAsyncLoopGen.h */,
-				088842141A1DAD73F5009812 /* GBBreakpadGen+Private.h */,
-				B447E38C07913FC79A360653 /* GBBreakpadGen+Private.mm */,
-				46472257DCF6EE4B1DC8D30A /* GBBreakpadGen.h */,
-				0BD7B96DD5F63C6EBE961432 /* GBCallbackHttpGen+Private.h */,
-				CDD3237C016B1A44598F0571 /* GBCallbackHttpGen+Private.mm */,
-				134A721B7E989B5F590C56DA /* GBCallbackHttpGen.h */,
-				1F3CADB045DB4BAF14875DC4 /* GBCameraCaptureHandler+Private.h */,
-				19965468ED380CB9C7E90008 /* GBCameraCaptureHandler+Private.mm */,
-				14B986FBD20BF384A284F54C /* GBCameraCaptureHandler.h */,
-				BC28871B4CC32452864A7A7C /* GBCameraCaptureMode.h */,
-				4787435D6498FACA4C8839DF /* GBCameraConfigGen+Private.h */,
-				DDAA22219FE769CB388BF897 /* GBCameraConfigGen+Private.mm */,
-				56B1B8BA3CF6EAF15C1848B4 /* GBCameraConfigGen.h */,
-				D2385C0F720517D59475337B /* GBCameraConfigGen.mm */,
-				0307CBE37DEAE42551ACB145 /* GBCameraControllerGen+Private.h */,
-				0BFBD7F5B8AAF759D678D6F6 /* GBCameraControllerGen+Private.mm */,
-				9372725DC2D054EB81AF80BB /* GBCameraControllerGen.h */,
-				37D104F90DA9A21C7715CEE0 /* GBCameraExposureMode.h */,
-				4F2ABF1EFC75522455BADF6F /* GBCameraFlash.h */,
-				1CB53D1BCD1C5C85A6DDEAC4 /* GBCameraFocusMode.h */,
-				6501EE8E7955AA245ADCABA2 /* GBCameraFocusRange.h */,
-				B6D1A2B54640D3FAE118769B /* GBCameraQuality.h */,
-				8AD5DC2CF3A5B48E5314943A /* GBConfigGen+Private.h */,
-				38C3778CAA3AD2B952662C90 /* GBConfigGen+Private.mm */,
-				DB89834259B7CAD5342260E6 /* GBConfigGen.h */,
-				9F90917EEF774D1C56D31AD9 /* GBConstraintType.h */,
-				A5E9F48D03B87D7B49837D10 /* GBCrashHandlerGen+Private.h */,
-				CC131CCE2902F50D5C6F3CD1 /* GBCrashHandlerGen+Private.mm */,
-				37CC2A72FABA4BE08E2122BD /* GBCrashHandlerGen.h */,
-				5270A617C1E64C83C1920060 /* GBFileInfoGen+Private.h */,
-				7EEE8041CB99B25CE816BBD3 /* GBFileInfoGen+Private.mm */,
-				6F01EDE4F4D197230012D314 /* GBFileInfoGen.h */,
-				A33E1888CF7CC53CFC30AFDA /* GBHttpRequestGen+Private.h */,
-				D02A5B31DAD5BB9A9EA09894 /* GBHttpRequestGen+Private.mm */,
-				5D9ED18F374D99CB84A49B2A /* GBHttpRequestGen.h */,
-				80AF19192AEEC3DF638461C6 /* GBInstanceGetterGen+Private.h */,
-				A959ED8DA9EE959321891219 /* GBInstanceGetterGen+Private.mm */,
-				DB68162A1E1BAACBDEA7086F /* GBInstanceGetterGen.h */,
-				ED25ABB704EA2FBEACFC6317 /* GBLangType.h */,
-				5098DF9CF83D94877ED21458 /* GBLanguageStoreGen+Private.h */,
-				485861FA85132CF0F338FC5B /* GBLanguageStoreGen+Private.mm */,
-				3E8168BA05490FD66576FED7 /* GBLanguageStoreGen.h */,
-				042005233C75261808C8BDC4 /* GBLogGen+Private.h */,
-				03CAD4F9B30791B8C17AE977 /* GBLogGen+Private.mm */,
-				E3596CCF72C65F7AA5709F9B /* GBLogGen.h */,
-				FAD88EFF5A985DD702320798 /* GBLogGen.mm */,
-				4CBCD10B6758CFE943079F32 /* GBPlatformUtilityGen+Private.h */,
-				95747FC98A22EBEB372BB355 /* GBPlatformUtilityGen+Private.mm */,
-				8A11F3053487E58D799883E1 /* GBPlatformUtilityGen.h */,
-				E473A64693F21A20B2A18150 /* GBTaskExcuserGen+Private.h */,
-				94C90F0623F866795293346F /* GBTaskExcuserGen+Private.mm */,
-				02D826A22F155333B01425BA /* GBTaskExcuserGen.h */,
-				5869945EF93BA5E0ECB8F776 /* GBTaskInfoGen+Private.h */,
-				31263D69BD764BA8B16A0599 /* GBTaskInfoGen+Private.mm */,
-				429DF720C1AA24ECBFE5EED0 /* GBTaskInfoGen.h */,
-				9379DE0A63E0580A3F19342A /* GBTaskManagerGen+Private.h */,
-				073150D0D4AE13F5B1A654EA /* GBTaskManagerGen+Private.mm */,
-				E6D65D895678C30040EF4C4B /* GBTaskManagerGen.h */,
-				F1175DF612C33DCBACBB2643 /* GBTextAlign.h */,
-				31DB65B21EFB740AA1EE80D2 /* GBTextBoarder.h */,
-				7F6C3E8B34656C529247DC62 /* GBTextKeyboard.h */,
-				365A9BD73947E27E83FE3DB1 /* GBTimerGen+Private.h */,
-				ACB4F1DA8BB83FB969E39E3D /* GBTimerGen+Private.mm */,
-				4164321CBAAF74E71E646D94 /* GBTimerGen.h */,
-				B9D8FF38079B71D0017935CE /* GBTyperConvertorDummy+Private.h */,
-				CA0215C7F50B097F081FAA34 /* GBTyperConvertorDummy+Private.mm */,
-				1045E3B2A1344AD982BC13D1 /* GBTyperConvertorDummy.h */,
-				F0D0B91ACD4CE9421F00172D /* GBUiConfGen+Private.h */,
-				DB1715847C12EB1AD175E845 /* GBUiConfGen+Private.mm */,
-				41EF9C987AD7DC3993B4CD58 /* GBUiConfGen.h */,
-				B65091B51EF8A30D62217E3C /* GBUiManagerGen+Private.h */,
-				8130C1AE76C010DFB20AC9C1 /* GBUiManagerGen+Private.mm */,
-				2D8FFAFC177341A6B12DC8BC /* GBUiManagerGen.h */,
-				3DF6A1F061358C9EA0779BE0 /* GBUiValueCheckerGen+Private.h */,
-				D1428548D4326A359EC5CED6 /* GBUiValueCheckerGen+Private.mm */,
-				5195580072506F480F53FDC2 /* GBUiValueCheckerGen.h */,
-				0743A7BFEB3081E4CA677543 /* GBVideoEncoderGen+Private.h */,
-				8B0EC94AE44056FE9A7745F7 /* GBVideoEncoderGen+Private.mm */,
-				E085BC700B5B87C897D5E9E0 /* GBVideoEncoderGen.h */,
-				23153213A6950669F81CC8CC /* GBVideoFrameGen+Private.h */,
-				B41E51D20A3702751EAAFD72 /* GBVideoFrameGen+Private.mm */,
-				1914ECB2A36B15CDF2D34837 /* GBVideoFrameGen.h */,
-				3ED23FE675D9FB4B564A9A33 /* GBVideoInfoGen+Private.h */,
-				C42411D93A24F7EB94AA9C0F /* GBVideoInfoGen+Private.mm */,
-				149FF32ADE0B23FD0BF94DCD /* GBVideoInfoGen.h */,
-				A67302B6AF7AA877418F65A5 /* GBVideoWriterGen+Private.h */,
-				B65DD3A1D88122E3D2876380 /* GBVideoWriterGen+Private.mm */,
-				800B5DA0D0349F705040AC12 /* GBVideoWriterGen.h */,
-				41DAD8BBF744018C0C5378C0 /* GBVideoWriterResultHandler+Private.h */,
-				BEE2D860A2583692FE38B739 /* GBVideoWriterResultHandler+Private.mm */,
-				5E8942E5ADC7585A17389E5D /* GBVideoWriterResultHandler.h */,
-				0625196A910AE0416988B490 /* GBViewConf+Private.h */,
-				773B5AECF29FD477F0929E3C /* GBViewConf+Private.mm */,
-				F2F76D40C6C4D4A09E550D78 /* GBViewConf.h */,
-				2C0E7EFC8CEEF89721FABE9D /* GBViewConf.mm */,
-				EAC23AE6D3061F5ED25F9784 /* GBViewConstraint+Private.h */,
-				7DE9F4FC3CF254F9CE963E96 /* GBViewConstraint+Private.mm */,
-				355EEED862602394BEA3599E /* GBViewConstraint.h */,
-				1A4B0C409D6E7F87FF8E7C2C /* GBViewConstraint.mm */,
-				4C40E2DC55B86FB82EDFF873 /* GBViewEvent.h */,
-				462EB1FF19F7B39BD4300FF2 /* GBViewEventHandler+Private.h */,
-				597F7735E2663310D775A5A9 /* GBViewEventHandler+Private.mm */,
-				CE819A19E725A4161DA649D3 /* GBViewEventHandler.h */,
-				B30653FC70F8D941E22956C2 /* GBViewEventParam+Private.h */,
-				B48A7D6F0A06186054DA04A3 /* GBViewEventParam+Private.mm */,
-				00B7EAF9C2307BEC2B61776D /* GBViewEventParam.h */,
-				7A8C14785970BF91C5916B41 /* GBViewEventParam.mm */,
-				F620EFE2BAEEAB4690898376 /* GBViewFactoryGen+Private.h */,
-				C3A0538BD3A137245B24AA20 /* GBViewFactoryGen+Private.mm */,
-				E5D131F856107A52EE594455 /* GBViewFactoryGen.h */,
-				B0B0A5BD3593820B1BF63CE5 /* GBViewFrame+Private.h */,
-				9156F47FE7752FF613E222EE /* GBViewFrame+Private.mm */,
-				45C670697C1A8E9AABE20A4B /* GBViewFrame.h */,
-				4D479B1116BFDD6928D1714D /* GBViewFrame.mm */,
-				8777057AEE9B74531F98BB0A /* GBViewGen+Private.h */,
-				4115D4E136687D12F2D8CBB1 /* GBViewGen+Private.mm */,
-				60191BADD823D0946885E277 /* GBViewGen.h */,
-				72121C2EBF2F093DA3CFF8E8 /* GBViewGen.mm */,
-				4D7FE6C68D25AC277FD7E61F /* GBViewType.h */,
-			);
-			path = objc;
-			sourceTree = "<group>";
-		};
 		3EF17830CE3E0BA072A4B083 /* zf_log */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,7 +404,15 @@
 			path = zf_log;
 			sourceTree = "<group>";
 		};
-		7E6F90DE786DF986B227DBE0 /* cpp */ = {
+		8EBB9404CA552483936E77BE /* json */ = {
+			isa = PBXGroup;
+			children = (
+				08D7679ACAFBF06FBD3818C5 /* jsoncpp.cpp */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		997ABC2D3CCEC03F0260257C /* cpp */ = {
 			isa = PBXGroup;
 			children = (
 				B70A2DA034DAA2A4BEBDCFCF /* argb_color.cpp */,
@@ -551,6 +433,7 @@
 				7058B3BB6D44623E338621F0 /* config_gen.hpp */,
 				B30AE1E1A0B91DAA8E34805C /* constraint_type.hpp */,
 				BC83D9C3CE13F70FFAE957BD /* crash_handler_gen.hpp */,
+				6062E35C00AD48F33AFDCC84 /* duration.hpp */,
 				6CA6887B7AFFBCAC45DA4890 /* file_info_gen.hpp */,
 				7CF5DC1E15696D694676BE24 /* http_request_gen.hpp */,
 				547745FBECBE492CCEB0A5FA /* instance_getter_gen.hpp */,
@@ -591,14 +474,6 @@
 			path = cpp;
 			sourceTree = "<group>";
 		};
-		8EBB9404CA552483936E77BE /* json */ = {
-			isa = PBXGroup;
-			children = (
-				08D7679ACAFBF06FBD3818C5 /* jsoncpp.cpp */,
-			);
-			path = json;
-			sourceTree = "<group>";
-		};
 		A7544BD4062D89935C66780C /* objc */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,8 +497,8 @@
 		BC46C298B7E229F72B9CDD7A /* generated-src */ = {
 			isa = PBXGroup;
 			children = (
-				7E6F90DE786DF986B227DBE0 /* cpp */,
-				2A9647E6112CB5CB2B14A1AE /* objc */,
+				997ABC2D3CCEC03F0260257C /* cpp */,
+				FFD1CCEB24FE97BB6707AAC8 /* objc */,
 			);
 			path = "generated-src";
 			sourceTree = "<group>";
@@ -732,6 +607,143 @@
 			path = ui;
 			sourceTree = "<group>";
 		};
+		FFD1CCEB24FE97BB6707AAC8 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				5884C9477844692E1B9AA306 /* GBArgbColor+Private.h */,
+				42233730DD366CC4A6FDEC81 /* GBArgbColor+Private.mm */,
+				C0A796EF7D7E5D0C685B5711 /* GBArgbColor.h */,
+				B9D0FA675898DDFEA97AE1A5 /* GBArgbColor.mm */,
+				3AC6B2991D0A2415566128DF /* GBAsyncLoopGen+Private.h */,
+				C18B1ED30D25BCD311D69599 /* GBAsyncLoopGen+Private.mm */,
+				62F89CC18BC190F5454D6F8A /* GBAsyncLoopGen.h */,
+				088842141A1DAD73F5009812 /* GBBreakpadGen+Private.h */,
+				B447E38C07913FC79A360653 /* GBBreakpadGen+Private.mm */,
+				46472257DCF6EE4B1DC8D30A /* GBBreakpadGen.h */,
+				0BD7B96DD5F63C6EBE961432 /* GBCallbackHttpGen+Private.h */,
+				CDD3237C016B1A44598F0571 /* GBCallbackHttpGen+Private.mm */,
+				134A721B7E989B5F590C56DA /* GBCallbackHttpGen.h */,
+				1F3CADB045DB4BAF14875DC4 /* GBCameraCaptureHandler+Private.h */,
+				19965468ED380CB9C7E90008 /* GBCameraCaptureHandler+Private.mm */,
+				14B986FBD20BF384A284F54C /* GBCameraCaptureHandler.h */,
+				BC28871B4CC32452864A7A7C /* GBCameraCaptureMode.h */,
+				4787435D6498FACA4C8839DF /* GBCameraConfigGen+Private.h */,
+				DDAA22219FE769CB388BF897 /* GBCameraConfigGen+Private.mm */,
+				56B1B8BA3CF6EAF15C1848B4 /* GBCameraConfigGen.h */,
+				D2385C0F720517D59475337B /* GBCameraConfigGen.mm */,
+				0307CBE37DEAE42551ACB145 /* GBCameraControllerGen+Private.h */,
+				0BFBD7F5B8AAF759D678D6F6 /* GBCameraControllerGen+Private.mm */,
+				9372725DC2D054EB81AF80BB /* GBCameraControllerGen.h */,
+				37D104F90DA9A21C7715CEE0 /* GBCameraExposureMode.h */,
+				4F2ABF1EFC75522455BADF6F /* GBCameraFlash.h */,
+				1CB53D1BCD1C5C85A6DDEAC4 /* GBCameraFocusMode.h */,
+				6501EE8E7955AA245ADCABA2 /* GBCameraFocusRange.h */,
+				B6D1A2B54640D3FAE118769B /* GBCameraQuality.h */,
+				8AD5DC2CF3A5B48E5314943A /* GBConfigGen+Private.h */,
+				38C3778CAA3AD2B952662C90 /* GBConfigGen+Private.mm */,
+				DB89834259B7CAD5342260E6 /* GBConfigGen.h */,
+				9F90917EEF774D1C56D31AD9 /* GBConstraintType.h */,
+				A5E9F48D03B87D7B49837D10 /* GBCrashHandlerGen+Private.h */,
+				CC131CCE2902F50D5C6F3CD1 /* GBCrashHandlerGen+Private.mm */,
+				37CC2A72FABA4BE08E2122BD /* GBCrashHandlerGen.h */,
+				3EC6EA83F73EED1937B62698 /* GBDuration+Private.h */,
+				1437CFC4ED633F689BE79002 /* GBDuration+Private.mm */,
+				C5210EBD03F141E17B3F859B /* GBDuration.h */,
+				4789242A3F57E4593F8E5ABB /* GBDuration.mm */,
+				5270A617C1E64C83C1920060 /* GBFileInfoGen+Private.h */,
+				7EEE8041CB99B25CE816BBD3 /* GBFileInfoGen+Private.mm */,
+				6F01EDE4F4D197230012D314 /* GBFileInfoGen.h */,
+				A33E1888CF7CC53CFC30AFDA /* GBHttpRequestGen+Private.h */,
+				D02A5B31DAD5BB9A9EA09894 /* GBHttpRequestGen+Private.mm */,
+				5D9ED18F374D99CB84A49B2A /* GBHttpRequestGen.h */,
+				80AF19192AEEC3DF638461C6 /* GBInstanceGetterGen+Private.h */,
+				A959ED8DA9EE959321891219 /* GBInstanceGetterGen+Private.mm */,
+				DB68162A1E1BAACBDEA7086F /* GBInstanceGetterGen.h */,
+				ED25ABB704EA2FBEACFC6317 /* GBLangType.h */,
+				5098DF9CF83D94877ED21458 /* GBLanguageStoreGen+Private.h */,
+				485861FA85132CF0F338FC5B /* GBLanguageStoreGen+Private.mm */,
+				3E8168BA05490FD66576FED7 /* GBLanguageStoreGen.h */,
+				042005233C75261808C8BDC4 /* GBLogGen+Private.h */,
+				03CAD4F9B30791B8C17AE977 /* GBLogGen+Private.mm */,
+				E3596CCF72C65F7AA5709F9B /* GBLogGen.h */,
+				FAD88EFF5A985DD702320798 /* GBLogGen.mm */,
+				4CBCD10B6758CFE943079F32 /* GBPlatformUtilityGen+Private.h */,
+				95747FC98A22EBEB372BB355 /* GBPlatformUtilityGen+Private.mm */,
+				8A11F3053487E58D799883E1 /* GBPlatformUtilityGen.h */,
+				E473A64693F21A20B2A18150 /* GBTaskExcuserGen+Private.h */,
+				94C90F0623F866795293346F /* GBTaskExcuserGen+Private.mm */,
+				02D826A22F155333B01425BA /* GBTaskExcuserGen.h */,
+				5869945EF93BA5E0ECB8F776 /* GBTaskInfoGen+Private.h */,
+				31263D69BD764BA8B16A0599 /* GBTaskInfoGen+Private.mm */,
+				429DF720C1AA24ECBFE5EED0 /* GBTaskInfoGen.h */,
+				9379DE0A63E0580A3F19342A /* GBTaskManagerGen+Private.h */,
+				073150D0D4AE13F5B1A654EA /* GBTaskManagerGen+Private.mm */,
+				E6D65D895678C30040EF4C4B /* GBTaskManagerGen.h */,
+				F1175DF612C33DCBACBB2643 /* GBTextAlign.h */,
+				31DB65B21EFB740AA1EE80D2 /* GBTextBoarder.h */,
+				7F6C3E8B34656C529247DC62 /* GBTextKeyboard.h */,
+				365A9BD73947E27E83FE3DB1 /* GBTimerGen+Private.h */,
+				ACB4F1DA8BB83FB969E39E3D /* GBTimerGen+Private.mm */,
+				4164321CBAAF74E71E646D94 /* GBTimerGen.h */,
+				B9D8FF38079B71D0017935CE /* GBTyperConvertorDummy+Private.h */,
+				CA0215C7F50B097F081FAA34 /* GBTyperConvertorDummy+Private.mm */,
+				1045E3B2A1344AD982BC13D1 /* GBTyperConvertorDummy.h */,
+				F0D0B91ACD4CE9421F00172D /* GBUiConfGen+Private.h */,
+				DB1715847C12EB1AD175E845 /* GBUiConfGen+Private.mm */,
+				41EF9C987AD7DC3993B4CD58 /* GBUiConfGen.h */,
+				B65091B51EF8A30D62217E3C /* GBUiManagerGen+Private.h */,
+				8130C1AE76C010DFB20AC9C1 /* GBUiManagerGen+Private.mm */,
+				2D8FFAFC177341A6B12DC8BC /* GBUiManagerGen.h */,
+				3DF6A1F061358C9EA0779BE0 /* GBUiValueCheckerGen+Private.h */,
+				D1428548D4326A359EC5CED6 /* GBUiValueCheckerGen+Private.mm */,
+				5195580072506F480F53FDC2 /* GBUiValueCheckerGen.h */,
+				0743A7BFEB3081E4CA677543 /* GBVideoEncoderGen+Private.h */,
+				8B0EC94AE44056FE9A7745F7 /* GBVideoEncoderGen+Private.mm */,
+				E085BC700B5B87C897D5E9E0 /* GBVideoEncoderGen.h */,
+				23153213A6950669F81CC8CC /* GBVideoFrameGen+Private.h */,
+				B41E51D20A3702751EAAFD72 /* GBVideoFrameGen+Private.mm */,
+				1914ECB2A36B15CDF2D34837 /* GBVideoFrameGen.h */,
+				3ED23FE675D9FB4B564A9A33 /* GBVideoInfoGen+Private.h */,
+				C42411D93A24F7EB94AA9C0F /* GBVideoInfoGen+Private.mm */,
+				149FF32ADE0B23FD0BF94DCD /* GBVideoInfoGen.h */,
+				A67302B6AF7AA877418F65A5 /* GBVideoWriterGen+Private.h */,
+				B65DD3A1D88122E3D2876380 /* GBVideoWriterGen+Private.mm */,
+				800B5DA0D0349F705040AC12 /* GBVideoWriterGen.h */,
+				41DAD8BBF744018C0C5378C0 /* GBVideoWriterResultHandler+Private.h */,
+				BEE2D860A2583692FE38B739 /* GBVideoWriterResultHandler+Private.mm */,
+				5E8942E5ADC7585A17389E5D /* GBVideoWriterResultHandler.h */,
+				0625196A910AE0416988B490 /* GBViewConf+Private.h */,
+				773B5AECF29FD477F0929E3C /* GBViewConf+Private.mm */,
+				F2F76D40C6C4D4A09E550D78 /* GBViewConf.h */,
+				2C0E7EFC8CEEF89721FABE9D /* GBViewConf.mm */,
+				EAC23AE6D3061F5ED25F9784 /* GBViewConstraint+Private.h */,
+				7DE9F4FC3CF254F9CE963E96 /* GBViewConstraint+Private.mm */,
+				355EEED862602394BEA3599E /* GBViewConstraint.h */,
+				1A4B0C409D6E7F87FF8E7C2C /* GBViewConstraint.mm */,
+				4C40E2DC55B86FB82EDFF873 /* GBViewEvent.h */,
+				462EB1FF19F7B39BD4300FF2 /* GBViewEventHandler+Private.h */,
+				597F7735E2663310D775A5A9 /* GBViewEventHandler+Private.mm */,
+				CE819A19E725A4161DA649D3 /* GBViewEventHandler.h */,
+				B30653FC70F8D941E22956C2 /* GBViewEventParam+Private.h */,
+				B48A7D6F0A06186054DA04A3 /* GBViewEventParam+Private.mm */,
+				00B7EAF9C2307BEC2B61776D /* GBViewEventParam.h */,
+				7A8C14785970BF91C5916B41 /* GBViewEventParam.mm */,
+				F620EFE2BAEEAB4690898376 /* GBViewFactoryGen+Private.h */,
+				C3A0538BD3A137245B24AA20 /* GBViewFactoryGen+Private.mm */,
+				E5D131F856107A52EE594455 /* GBViewFactoryGen.h */,
+				B0B0A5BD3593820B1BF63CE5 /* GBViewFrame+Private.h */,
+				9156F47FE7752FF613E222EE /* GBViewFrame+Private.mm */,
+				45C670697C1A8E9AABE20A4B /* GBViewFrame.h */,
+				4D479B1116BFDD6928D1714D /* GBViewFrame.mm */,
+				8777057AEE9B74531F98BB0A /* GBViewGen+Private.h */,
+				4115D4E136687D12F2D8CBB1 /* GBViewGen+Private.mm */,
+				60191BADD823D0946885E277 /* GBViewGen.h */,
+				72121C2EBF2F093DA3CFF8E8 /* GBViewGen.mm */,
+				4D7FE6C68D25AC277FD7E61F /* GBViewType.h */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -777,11 +789,7 @@
 			};
 			buildConfigurationList = E9E9216BB526EDF7E0DEE3F0 /* Build configuration list for PBXProject "gearsbox" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
 			hasScannedForEncodings = 1;
-			knownRegions = (
-				en,
-			);
 			mainGroup = E5556F5BF901223E91FB62E7;
 			projectDirPath = ../../../gearsbox;
 			projectRoot = "";
@@ -798,12 +806,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25BDD4026A82C8E4CF37200D /* argb_color.cpp in Sources */,
-				A056D6619BC8A9BC38638124 /* camera_config_gen.cpp in Sources */,
-				2D800A5E0014F58CEA0D2583 /* log_gen.cpp in Sources */,
-				A90FC221B2EA9F34C2388A97 /* view_conf_base.cpp in Sources */,
-				F0A11F511543D8DAF86C0F52 /* view_constraint_base.cpp in Sources */,
-				74E01CB80704BE56B625A5E0 /* view_gen.cpp in Sources */,
+				DA07650819439755E55EB31D /* argb_color.cpp in Sources */,
+				10A59F6B71F91B476911A84A /* camera_config_gen.cpp in Sources */,
+				0C2E855F08BBD0A6434B98A4 /* log_gen.cpp in Sources */,
+				F6A24C73CBFB6D93B6E6D71D /* view_conf_base.cpp in Sources */,
+				FCE4A5556D2DA52DD7B38183 /* view_constraint_base.cpp in Sources */,
+				2012B194A3F87057D892FBA5 /* view_gen.cpp in Sources */,
 				4B90A249978FF51F441CC114 /* async_loop_imp.cpp in Sources */,
 				F53EC80AD64AB93F5D9F4C29 /* camera_config_imp.cpp in Sources */,
 				8EF3D35F574ECB2E34EF0DF2 /* config_imp.cpp in Sources */,
@@ -834,49 +842,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D66A34149A9D2FBC544A11E9 /* GBArgbColor+Private.mm in Sources */,
-				123A4A040573AF0F4C074581 /* GBArgbColor.mm in Sources */,
-				79016131BFFC7D1C4B56F445 /* GBAsyncLoopGen+Private.mm in Sources */,
-				BD16027B3A214BD8FDA53683 /* GBBreakpadGen+Private.mm in Sources */,
-				9A826C20DB91BAAE7269E263 /* GBCallbackHttpGen+Private.mm in Sources */,
-				83F6ACB66E2F063BBC74FD32 /* GBCameraCaptureHandler+Private.mm in Sources */,
-				2BAA4925FAF969DA038E9359 /* GBCameraConfigGen+Private.mm in Sources */,
-				0164ABF9309C1E038E429FFE /* GBCameraConfigGen.mm in Sources */,
-				C742A10CACA59E8C9DA63FEF /* GBCameraControllerGen+Private.mm in Sources */,
-				5948669E7213902E3D85C2B7 /* GBConfigGen+Private.mm in Sources */,
-				9D638470689F59987846EA54 /* GBCrashHandlerGen+Private.mm in Sources */,
-				E3F8BF1E77842BB6788ACFE1 /* GBFileInfoGen+Private.mm in Sources */,
-				941E0D77F96EBF83E540C6B2 /* GBHttpRequestGen+Private.mm in Sources */,
-				D442EC6336A24A4F755B0D0C /* GBInstanceGetterGen+Private.mm in Sources */,
-				4DFC881F51732C73099E2DA2 /* GBLanguageStoreGen+Private.mm in Sources */,
-				7A498CE7BD984A48B4A01E4F /* GBLogGen+Private.mm in Sources */,
-				A27FA160BA62657AEF44716E /* GBLogGen.mm in Sources */,
-				5D96CC704383A413CB0B2D6E /* GBPlatformUtilityGen+Private.mm in Sources */,
-				C8D05D9313AE3825FB82A436 /* GBTaskExcuserGen+Private.mm in Sources */,
-				CB3FEF43A1C0BA262127E5D3 /* GBTaskInfoGen+Private.mm in Sources */,
-				3A10E1C038038F7C7FA6CB3E /* GBTaskManagerGen+Private.mm in Sources */,
-				0842427DC5EE13090346AFD6 /* GBTimerGen+Private.mm in Sources */,
-				FF9BEF572358097D2B9E91D3 /* GBTyperConvertorDummy+Private.mm in Sources */,
-				C786A69B726EB6D34CD4351A /* GBUiConfGen+Private.mm in Sources */,
-				7417C5EC2BEF6F35F21B7EBE /* GBUiManagerGen+Private.mm in Sources */,
-				BAEC5EDCB904158E9A6E3E6B /* GBUiValueCheckerGen+Private.mm in Sources */,
-				7E2DE2E9AE530C4CDA59A513 /* GBVideoEncoderGen+Private.mm in Sources */,
-				BF126DA0DC5CF03F22AB2B72 /* GBVideoFrameGen+Private.mm in Sources */,
-				E1B9A3E11E6F37A88170F071 /* GBVideoInfoGen+Private.mm in Sources */,
-				138BE59816A64A0796CB6703 /* GBVideoWriterGen+Private.mm in Sources */,
-				2297F32746789C6B38481099 /* GBVideoWriterResultHandler+Private.mm in Sources */,
-				793052D65230405EC8B2285A /* GBViewConf+Private.mm in Sources */,
-				C2F931D6CEA34AC2D0462A43 /* GBViewConf.mm in Sources */,
-				AAC9B8E2E6417AA48EC56F25 /* GBViewConstraint+Private.mm in Sources */,
-				313EB6BD93CA10B8FEA6094F /* GBViewConstraint.mm in Sources */,
-				38F283929609D9EB81CF1AB7 /* GBViewEventHandler+Private.mm in Sources */,
-				B10A6CD3CFB007D74C6A78E6 /* GBViewEventParam+Private.mm in Sources */,
-				C61AFCB043E0FD0513442A90 /* GBViewEventParam.mm in Sources */,
-				51D17CF3BF2C77647BEDFABD /* GBViewFactoryGen+Private.mm in Sources */,
-				84742F57F72C247575A28A45 /* GBViewFrame+Private.mm in Sources */,
-				29D9FC912FD3163F866E1A83 /* GBViewFrame.mm in Sources */,
-				980B83496B37928E70588A93 /* GBViewGen+Private.mm in Sources */,
-				DFCD3640958340882F2B17B3 /* GBViewGen.mm in Sources */,
+				CC9C775E60B2D22D8484B2FD /* GBArgbColor+Private.mm in Sources */,
+				D87585DB1578A2D1EC26257A /* GBArgbColor.mm in Sources */,
+				5A081AFC2E7AECE9BA1A1B8F /* GBAsyncLoopGen+Private.mm in Sources */,
+				10434392448F4420AD67CEA2 /* GBBreakpadGen+Private.mm in Sources */,
+				BBB9754102B955A36CEDB8DE /* GBCallbackHttpGen+Private.mm in Sources */,
+				A1DCBF6C7DE46608B5F7EC6B /* GBCameraCaptureHandler+Private.mm in Sources */,
+				8A5CDAFA6881117936387090 /* GBCameraConfigGen+Private.mm in Sources */,
+				C537A1300D424A61E38114DA /* GBCameraConfigGen.mm in Sources */,
+				C3B7570EE2F65134C3C7D564 /* GBCameraControllerGen+Private.mm in Sources */,
+				90BA9291AE0A9BD26B9834DA /* GBConfigGen+Private.mm in Sources */,
+				3640E4530DD22EFC52CE34A2 /* GBCrashHandlerGen+Private.mm in Sources */,
+				90183048AFB2CA26F074D0F4 /* GBDuration+Private.mm in Sources */,
+				ED2B35A8DF15709112B83515 /* GBDuration.mm in Sources */,
+				1BABE9BC93EEF580C412A90B /* GBFileInfoGen+Private.mm in Sources */,
+				8A48A980EF02C485522484AD /* GBHttpRequestGen+Private.mm in Sources */,
+				B2DEE490836B7FDA3EF23D39 /* GBInstanceGetterGen+Private.mm in Sources */,
+				CAFD1C43797EBC2D46052777 /* GBLanguageStoreGen+Private.mm in Sources */,
+				9FFA7CB8AB737BF289AE507B /* GBLogGen+Private.mm in Sources */,
+				E4DF406BEBA22F66C96B2A20 /* GBLogGen.mm in Sources */,
+				9658D7215E529BD080BC4276 /* GBPlatformUtilityGen+Private.mm in Sources */,
+				371039DABF22E4EB267983FD /* GBTaskExcuserGen+Private.mm in Sources */,
+				C026706B387E35DE58EE4F22 /* GBTaskInfoGen+Private.mm in Sources */,
+				298C8B5A3882D7214FDF4536 /* GBTaskManagerGen+Private.mm in Sources */,
+				955D5C31012AE1477963AF71 /* GBTimerGen+Private.mm in Sources */,
+				A29660816585BB9432B6F952 /* GBTyperConvertorDummy+Private.mm in Sources */,
+				C76675D4E456EF971826C2FF /* GBUiConfGen+Private.mm in Sources */,
+				10DC9D1A87D33CE7EF4045D3 /* GBUiManagerGen+Private.mm in Sources */,
+				8BF783211CBD026E43F8B579 /* GBUiValueCheckerGen+Private.mm in Sources */,
+				01998F43822E1E24D876CFAA /* GBVideoEncoderGen+Private.mm in Sources */,
+				2FE493923FC3DC3566DDD4F5 /* GBVideoFrameGen+Private.mm in Sources */,
+				431D448A87A547D0F22DE52A /* GBVideoInfoGen+Private.mm in Sources */,
+				D548853964FC80FD4B7CFBAE /* GBVideoWriterGen+Private.mm in Sources */,
+				D77A424E9A6057AC201B4538 /* GBVideoWriterResultHandler+Private.mm in Sources */,
+				FE05B8EE855C9B365CCA4610 /* GBViewConf+Private.mm in Sources */,
+				DFC58A70D544DF084CDC83F0 /* GBViewConf.mm in Sources */,
+				FE0FBC565BEAE4727710ECD8 /* GBViewConstraint+Private.mm in Sources */,
+				65EA7A50B7114E156DCE0680 /* GBViewConstraint.mm in Sources */,
+				43D45FFD1BA784FE45D56508 /* GBViewEventHandler+Private.mm in Sources */,
+				16C25F7BBA8B4C0FE5FDEB6D /* GBViewEventParam+Private.mm in Sources */,
+				6855459000088EF5BC52964C /* GBViewEventParam.mm in Sources */,
+				8DA7BDD640D25D98AE4E853F /* GBViewFactoryGen+Private.mm in Sources */,
+				B05C421DA3A21B0AB4C9F03C /* GBViewFrame+Private.mm in Sources */,
+				8226AA15764A50F23517C95B /* GBViewFrame.mm in Sources */,
+				95758619DC1F9A8F0600631B /* GBViewGen+Private.mm in Sources */,
+				5A83DA8F5E9861165E4B0B1D /* GBViewGen.mm in Sources */,
 				34FBF569F6E1EC21D95EE7B1 /* objc_utility.m in Sources */,
 				9702095E31C02AC770ADDDF1 /* video_frame_imp.m in Sources */,
 			);
@@ -994,7 +1004,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = YES;
 				EXECUTABLE_PREFIX = lib;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					_LARGEFILE_SOURCE,
 					"_FILE_OFFSET_BITS=64",
@@ -1038,7 +1047,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = YES;
 				EXECUTABLE_PREFIX = lib;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					ZF_LOG_USE_NSLOG,
 					"DEBUG=1",
