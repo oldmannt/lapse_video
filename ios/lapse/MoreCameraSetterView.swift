@@ -18,6 +18,8 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
     @IBOutlet weak var m_exposure_value: UILabel!
     @IBOutlet weak var m_iso_value_slider: UISlider!
     @IBOutlet weak var m_iso_value: UILabel!
+    @IBOutlet weak var m_ev_slider: UISlider!
+    @IBOutlet weak var m_ev_label: UILabel!
     
     @IBOutlet weak var m_focus_view: UIView!
     @IBOutlet weak var m_focus_control: UISegmentedControl!
@@ -59,35 +61,27 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
     
     var m_curViewType:ViewType = .exposure
     
-    var m_expose_min:Float = 0.0
-    var m_expose_max:Float = 0.0
-    let m_expose_slider_min:Float = 1.0
-    let m_expose_slider_max:Float = 4000.0
-    let m_expose_slider_node1:Float = 2000.0
-    let m_expose_node1:Float = 0.01
-    
+    let m_expose_duration_power:Float = 5.0 // Higher numbers will give the slider more sensitivity at shorter durations
+    let m_expose_duration_min:Float = 1.0/1000.0 // // Limit exposure duration to a useful range
     func exposure_to_slider(duration:Float) -> Float{
-        var value:Float = 0.0
-        if duration < m_expose_node1 {
-            value = m_expose_slider_min+duration*(m_expose_slider_node1-m_expose_slider_min)/m_expose_node1
-        }
-        else {
-            value = m_expose_slider_node1+(duration-m_expose_node1)*(m_expose_slider_max-m_expose_slider_node1)/(m_expose_max-m_expose_node1)
-        }
-        return value
+        let max_duration = GBCameraControllerImp.instance.getExposureMaxDuration()
+        let min_duration = max(GBCameraControllerImp.instance.getExposureMinDuration(),m_expose_duration_min)
+        
+        let p = (duration - min_duration)/(max_duration - min_duration)
+        let rt = powf(p, 1.0/m_expose_duration_power)
+        return rt
     }
     
     func slider_to_exposure(value:Float) -> Float{
-        var duration:Float = 0.0
-        if value < m_expose_slider_node1 {
-            duration = m_expose_min + value*(m_expose_node1-m_expose_min)/m_expose_slider_node1
-        }
-        else {
-            duration = m_expose_node1 + (value-m_expose_slider_node1)*(m_expose_max-m_expose_node1)/(m_expose_slider_max-m_expose_slider_node1)
-        }
-       return duration
+        let min_duration = max(GBCameraControllerImp.instance.getExposureMinDuration(),m_expose_duration_min)
+        let max_duration = GBCameraControllerImp.instance.getExposureMaxDuration()
+        let pow = powf(value, m_expose_duration_power)
+        
+        let rt = pow * (max_duration - min_duration) + min_duration
+        return rt
     }
     
+    let m_slider_update:Int = 300
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -98,14 +92,15 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
         m_zoom_view.backgroundColor = UIColor.clear
         m_more_view.backgroundColor = UIColor.clear
         
-        m_expose_max = GBCameraControllerImp.instance.getExposureMaxDuration()
-        m_expose_min = max(1/4000.0, GBCameraControllerImp.instance.getExposureMinDuration())
+        m_exposure_value_slider.maximumValue = 1
+        m_exposure_value_slider.minimumValue = 0
         
-        m_exposure_value_slider.maximumValue = m_expose_slider_max
-        m_exposure_value_slider.minimumValue = m_expose_slider_min
+        m_ev_slider.minimumValue = GBCameraControllerImp.instance.getEVMin()
+        m_ev_slider.maximumValue = GBCameraControllerImp.instance.getEVMax()
         
-        m_updateCamera = GBTimerGen.create(300, repeatTimes: -1, hander: self)
+        m_updateCamera = GBTimerGen.create(Int64(m_slider_update), repeatTimes: -1, hander: self)
         m_debug_overlay.isHidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -200,14 +195,22 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
     
     @IBAction func exposure_slider_change(_ sender: UISlider) {
         let value:Float = self.slider_to_exposure(value: sender.value)
-        
+        m_expose_set = -m_slider_update*2
         GBCameraControllerImp.instance.setExposureDuration(value)
         self.setExposureLabel(duration: value)
     }
     
     @IBAction func iso_slider_change(_ sender: UISlider) {
         //print("iso_slider_change \(sender.value)")
+        m_expose_set = -m_slider_update
         GBCameraControllerImp.instance.setISO(Int32(sender.value))
+        m_iso_value.text = String.init(format: "%d", Int(sender.value))
+    }
+    
+    @IBAction func ev_slider_change(_ sender: UISlider) {
+        m_expose_set = -m_slider_update
+        GBCameraControllerImp.instance.setEV(sender.value)
+        m_ev_label.text = String.init(format: "%.01f", sender.value)
     }
     
     @objc func excuse(_ info: GBTaskInfoGen?){
@@ -320,9 +323,14 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
         }
     }
     
+    var m_expose_set:Int = 0
     fileprivate func updateExposure(){
         if m_exposure_view.isHidden &&
             GBCameraControllerImp.instance.getExposureMode() == GBCameraExposureMode.modeCustom{
+            return
+        }
+        if m_expose_set < 0 {
+            m_expose_set += m_slider_update
             return
         }
         let duration = GBCameraControllerImp.instance.getExposureDuration()
@@ -333,6 +341,11 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
         
         m_iso_value_slider.setValue(Float(iso), animated: false)
         m_exposure_value_slider.setValue(exposure_to_slider(duration: duration), animated: false)
+        
+        let ev = GBCameraControllerImp.instance.getEV()
+        m_ev_label.text = String.init(format: "%.01f", ev)
+        
+        m_ev_slider.setValue(ev, animated: false)
     }
     
     fileprivate func setExposureLabel(duration:Float){
@@ -364,6 +377,18 @@ class MoreCameraSetterView: PopupViewController, GBTaskExcuserGen {
         let zoom = GBCameraControllerImp.instance.getZoom()
         m_zoom_slider.setValue(zoom, animated: false)
     }
+    
+    /*func addObserver() {
+        
+    }
+    
+    func removeObserver() {
+        
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        
+    }*/
     
     fileprivate func debuginfo(){
         var text:String = ""

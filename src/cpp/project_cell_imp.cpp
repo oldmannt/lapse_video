@@ -28,8 +28,7 @@ bool ProjectCellImp::initializ(const std::string& path, int out_w, int out_h){
     CHECK_RTF(m_video_info!=nullptr, "create video info failled");
     
     G_LOG_C(LOG_INFO, "%s frames:%d w:%d h:%d fps:%d duration:%d",
-            m_video_info->getName().c_str(), m_video_info->getFrameAmount(), m_video_info->getWidth(), m_video_info->getHeight(),
-            m_video_info->getFPS(), m_video_info->getDuration());
+            m_video_info->getName().c_str(), m_video_info->getFrameAmount(), m_video_info->getWidth(), m_video_info->getHeight(), m_video_info->getFPS(), m_video_info->getDuration());
     
     m_path = path;
     

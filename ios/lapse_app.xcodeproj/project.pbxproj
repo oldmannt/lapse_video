@@ -30,6 +30,7 @@
 		332C75D11DA0657F00282A7F /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 332C75C01DA0657F00282A7F /* IQKeyboardManager.bundle */; };
 		332C75D31DA0E36300282A7F /* project_setting_view.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332C75D21DA0E36300282A7F /* project_setting_view.xib */; };
 		332C75D51DA1853A00282A7F /* ProjectSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C75D41DA1853A00282A7F /* ProjectSettingView.swift */; };
+		3340164B1DBA725A00A39588 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340164A1DBA725A00A39588 /* PreviewView.swift */; };
 		334979CA1D9E3FD600F11CDF /* UIButtonBottomTittle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334979C91D9E3FD600F11CDF /* UIButtonBottomTittle.swift */; };
 		338263111D46AA8400DA114F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263101D46AA8400DA114F /* AppDelegate.swift */; };
 		338263131D46AA8400DA114F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263121D46AA8400DA114F /* ViewController.swift */; };
@@ -177,6 +178,7 @@
 		332C75C01DA0657F00282A7F /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		332C75D21DA0E36300282A7F /* project_setting_view.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = project_setting_view.xib; sourceTree = "<group>"; };
 		332C75D41DA1853A00282A7F /* ProjectSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSettingView.swift; sourceTree = "<group>"; };
+		3340164A1DBA725A00A39588 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewView.swift; path = ../../gearsbox/src/swift/PreviewView.swift; sourceTree = "<group>"; };
 		334979C91D9E3FD600F11CDF /* UIButtonBottomTittle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonBottomTittle.swift; path = ../../gearsbox/src/swift/UIButtonBottomTittle.swift; sourceTree = "<group>"; };
 		3382630D1D46AA8400DA114F /* lapse_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lapse_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338263101D46AA8400DA114F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 		338263421D46AC6800DA114F /* gearsbox */ = {
 			isa = PBXGroup;
 			children = (
+				3340164A1DBA725A00A39588 /* PreviewView.swift */,
 				3399AB701D716E3D00F5F3EA /* PopbaseUIVViewController.swift */,
 				33E4D9011D737D19002A3E39 /* PopupViewController.swift */,
 				33ED95541D51A75E00833349 /* MainLoop.swift */,
@@ -838,6 +841,7 @@
 				33E4D9171D73DD74002A3E39 /* MoreCameraSetterView.swift in Sources */,
 				33F3BD781DAB68000034AC18 /* LapseSettingViewController.swift in Sources */,
 				332C75CA1DA0657F00282A7F /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				3340164B1DBA725A00A39588 /* PreviewView.swift in Sources */,
 				33E4D9021D737D1A002A3E39 /* PopupViewController.swift in Sources */,
 				3382647A1D49658100DA114F /* TypeConvertor.swift in Sources */,
 				332C75C41DA0657F00282A7F /* IQUIView+Hierarchy.swift in Sources */,

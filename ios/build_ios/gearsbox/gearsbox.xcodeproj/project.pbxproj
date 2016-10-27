@@ -35,6 +35,7 @@
 		2012B194A3F87057D892FBA5 /* view_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EB40B1D75BD34C1F97D6542 /* view_gen.cpp */; };
 		298C8B5A3882D7214FDF4536 /* GBTaskManagerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 073150D0D4AE13F5B1A654EA /* GBTaskManagerGen+Private.mm */; };
 		2FE493923FC3DC3566DDD4F5 /* GBVideoFrameGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B41E51D20A3702751EAAFD72 /* GBVideoFrameGen+Private.mm */; };
+		336A30681DC08FB00070AB8D /* queue_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336A30671DC08FB00070AB8D /* queue_thread.cpp */; };
 		34FBF569F6E1EC21D95EE7B1 /* objc_utility.m in Sources */ = {isa = PBXBuildFile; fileRef = C95D4AAA5FEF4F352759C63A /* objc_utility.m */; };
 		3640E4530DD22EFC52CE34A2 /* GBCrashHandlerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC131CCE2902F50D5C6F3CD1 /* GBCrashHandlerGen+Private.mm */; };
 		371039DABF22E4EB267983FD /* GBTaskExcuserGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94C90F0623F866795293346F /* GBTaskExcuserGen+Private.mm */; };
@@ -164,6 +165,8 @@
 		31263D69BD764BA8B16A0599 /* GBTaskInfoGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBTaskInfoGen+Private.mm"; sourceTree = "<group>"; };
 		31DB65B21EFB740AA1EE80D2 /* GBTextBoarder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBTextBoarder.h; sourceTree = "<group>"; };
 		32C629B8EECEB5A970FA4E0F /* camera_focus_mode.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = camera_focus_mode.hpp; sourceTree = "<group>"; };
+		336A30531DBF355B0070AB8D /* queue_thread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = queue_thread.hpp; sourceTree = "<group>"; };
+		336A30671DC08FB00070AB8D /* queue_thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = queue_thread.cpp; sourceTree = "<group>"; };
 		355EEED862602394BEA3599E /* GBViewConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBViewConstraint.h; sourceTree = "<group>"; };
 		365A9BD73947E27E83FE3DB1 /* GBTimerGen+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBTimerGen+Private.h"; sourceTree = "<group>"; };
 		37CC2A72FABA4BE08E2122BD /* GBCrashHandlerGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCrashHandlerGen.h; sourceTree = "<group>"; };
@@ -391,6 +394,7 @@
 				5FEE493FA948A2AD84FEAAC1 /* ilog.h */,
 				02C35308CB8A7BAF1649C82F /* macro.h */,
 				5C45E40F8D08B382228A8B7E /* utils.hpp */,
+				336A30531DBF355B0070AB8D /* queue_thread.hpp */,
 			);
 			path = interface;
 			sourceTree = "<group>";
@@ -534,6 +538,7 @@
 		DB58707D43F306FE8A8FA7D2 /* cpp */ = {
 			isa = PBXGroup;
 			children = (
+				336A30671DC08FB00070AB8D /* queue_thread.cpp */,
 				8EBB9404CA552483936E77BE /* json */,
 				F0D109436D3BE92B012C2B05 /* ui */,
 				3EF17830CE3E0BA072A4B083 /* zf_log */,
@@ -789,7 +794,11 @@
 			};
 			buildConfigurationList = E9E9216BB526EDF7E0DEE3F0 /* Build configuration list for PBXProject "gearsbox" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = E5556F5BF901223E91FB62E7;
 			projectDirPath = ../../../gearsbox;
 			projectRoot = "";
@@ -807,6 +816,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA07650819439755E55EB31D /* argb_color.cpp in Sources */,
+				336A30681DC08FB00070AB8D /* queue_thread.cpp in Sources */,
 				10A59F6B71F91B476911A84A /* camera_config_gen.cpp in Sources */,
 				0C2E855F08BBD0A6434B98A4 /* log_gen.cpp in Sources */,
 				F6A24C73CBFB6D93B6E6D71D /* view_conf_base.cpp in Sources */,
@@ -1004,6 +1014,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = YES;
 				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					_LARGEFILE_SOURCE,
 					"_FILE_OFFSET_BITS=64",
@@ -1047,6 +1058,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = YES;
 				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					ZF_LOG_USE_NSLOG,
 					"DEBUG=1",

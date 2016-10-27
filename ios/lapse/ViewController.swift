@@ -23,6 +23,7 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
     @IBOutlet weak var m_btn_LapseStop: UIButton!
     @IBOutlet weak var m_btn_LapseResume: UIButton!
     @IBOutlet weak var m_view_lapse_ctrl: UIView!
+    @IBOutlet var m_camera_preview: PreviewView!
     
     @IBOutlet weak var m_focus_sel: UIImageView!
     @IBOutlet weak var m_exposure_sel: UIImageView!
@@ -66,11 +67,12 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         m_focus_sel.isHidden = true
         
         GBInstanceGetterGen.setPlatformUtility(GBPlatformUtilityImp.sharedInstance)
-        camera_controller.initializ_swif(self.view)
-        camera_controller.setAudioEnable(false)
-        camera_controller.startCamera()
-        camera_controller.setCapturePictureHandler(self)
-        GBInstanceGetterGen.setCameraController(camera_controller)
+        
+        camera_controller.initializ_swif(m_camera_preview, complition: {[unowned self] (result, msg) -> Void in
+            GBInstanceGetterGen.setCameraController(self.camera_controller)
+            LPALogicGen.instance()?.initialize("user.json")
+            LPAUilogicGen.instance()?.initialize(LPALapseUiScene.camera)
+        })
         
         GBUiManagerGen.instance()?.initialize("", factory: GBViewFactoryImp.instance)
         GBViewFactoryImp.instance.addIOSViewToUIMgr(m_viewbtns, id: "camera_view_btns", constroller: self)
@@ -83,9 +85,6 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_capture, id: "camera_btn_capture", constroller: self)
         GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_resume, id: "camera_btn_resume", constroller: self)
         GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_switch, id: "camera_btn_switch", constroller: self)
-        
-        LPALogicGen.instance()?.initialize("user.json")
-        LPAUilogicGen.instance()?.initialize(LPALapseUiScene.camera)
         
         LogicTaskExcuserImp.sharedInstance.m_capture_vc = self
         GBTaskManagerGen.instance()?.addTaskExcuser(LogicTaskExcuserImp.sharedInstance)
@@ -120,11 +119,14 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         self.view.bringSubview(toFront: m_btn_LapseStop)
         self.view.bringSubview(toFront: m_btn_LapseResume)
         m_updateDebugInfo?.start()
+        
+        GBCameraControllerImp.instance.startCamera()
         super.viewWillAppear(animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         m_updateDebugInfo?.pause()
+        GBCameraControllerImp.instance.stopCamera()
         super.viewWillDisappear(animated)
     }
     
@@ -149,10 +151,10 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
     }
     
     @IBAction func longPressView(_ sender: UILongPressGestureRecognizer) {
-        if isSubDialogShow() {
-            return
-        }
         if sender.state == UIGestureRecognizerState.began {
+            if isSubDialogShow() {
+                return
+            }
             let point:CGPoint = sender.location(in: sender.view)
             showExposure(point)
             showFocusSel(point)
@@ -292,8 +294,7 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         if btn_capture.isHidden && btn_resume.isHidden{
             return
         }
-        
-        
+
     }
     
     @IBAction func switch_camer(_ sender: UIButton) {
@@ -311,9 +312,9 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
     }
     
     fileprivate func isSubDialogShow() -> Bool{
-        return (m_lapseSetterView?.isShowed())! ||
-            (m_resolutionSetterView?.isShowed())! ||
-            (m_moreCameraSetterView?.isShowed())!
+        return ((m_lapseSetterView != nil) && m_lapseSetterView!.isShowed()) ||
+            ((m_resolutionSetterView != nil) && m_resolutionSetterView!.isShowed()) ||
+            ((m_moreCameraSetterView != nil) && m_moreCameraSetterView!.isShowed())
     }
     
     fileprivate func btn_show(_ btn: UIButton?){

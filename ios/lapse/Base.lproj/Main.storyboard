@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="PreviewView" customModule="lapse_app" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -234,6 +234,7 @@
                         <outlet property="btn_switch" destination="2LA-Ze-XF0" id="hJo-hz-R8F"/>
                         <outlet property="m_btn_LapseResume" destination="gt9-UF-QnP" id="uYN-RM-LLV"/>
                         <outlet property="m_btn_LapseStop" destination="KLB-Jv-Cnn" id="ZCl-VQ-Sb6"/>
+                        <outlet property="m_camera_preview" destination="8bC-Xf-vdC" id="S9P-Ym-OTb"/>
                         <outlet property="m_debug_info" destination="03d-KZ-TGY" id="duU-7Y-3Yg"/>
                         <outlet property="m_exposure_ctx" destination="ifC-39-9lx" id="6iB-tw-ijY"/>
                         <outlet property="m_exposure_cty" destination="ZC4-fD-NHj" id="fMK-ZN-VT3"/>
@@ -388,7 +389,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v3r-ZM-tyW" id="uB6-Sz-4eR">
-                                            <frame key="frameInset" width="600" height="90"/>
+                                            <frame key="frameInset" width="600" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uQE-xj-8Iu">

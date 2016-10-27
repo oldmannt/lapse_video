@@ -365,7 +365,11 @@
 			};
 			buildConfigurationList = A5E8865742799BA3979398E9 /* Build configuration list for PBXProject "lapse" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 878DE8C45F7DB5678DA1FF52;
 			projectDirPath = ../..;
 			projectRoot = "";
@@ -442,6 +446,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = YES;
 				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				HEADER_SEARCH_PATHS = (
 					"generated-src/cpp",

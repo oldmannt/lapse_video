@@ -57,7 +57,7 @@ std::string LogicImp::getProjectsPath(){
 
 void LogicImp::excuse(const std::shared_ptr<TaskInfoGen> & info){
     LapseEvent event = (LapseEvent)info->getTaskId();
-    G_LOG_C(LOG_INFO, "logic excuse, id:%s", UilogicGen::instance()->getEventStr(event).c_str());
+    //G_LOG_C(LOG_INFO, "logic excuse, id:%s", UilogicGen::instance()->getEventStr(event).c_str());
     
     CHECK_RT(event>LapseEvent::CAMERA_BEGIN && event<LapseEvent::UI_END, "not ui event");
     switch (event) {
@@ -109,7 +109,7 @@ void LogicImp::onComplete(bool success, const std::string & path){
     
 }
 
-void LogicImp::beforeForceStop(){
+void LogicImp::beforeComplete(){
     InstanceGetterGen::getPlatformUtility()->showLoadingView(true);
 }
 
@@ -226,6 +226,5 @@ void LogicImp::setCaptureInteral(int32_t interval){
         InstanceGetterGen::getCameraController()->setCaptureMode(CameraCaptureMode::VIDEO);
     }
 
-    
     m_video_writer->setInterval(interval_capture);
 }

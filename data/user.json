@@ -1,13 +1,13 @@
 {
 	"video":{
-		"interval":300,
+		"interval":400,
 		"interval_unit":"mill_sec",
 		"interval_units":"mill_sec, second, minute",
 		"fps":25,
-    	"bitrate_480p":500000,
-    	"bitrate_720p":1500000,
-    	"bitrate_1080p":337500,
-		"video_bitrate":1000000,
+    	"bitrate_480p":349525,
+    	"bitrate_720p":1048576,
+    	"bitrate_1080p":2359296,
+		"video_bitrate":1048576,
 		"audio_bitrate":64000,
 		"audio_sample_rate":44100	
 	},
@@ -38,15 +38,15 @@
     
     "root":"home",
     "projects_dir":"",
-    "capture_video_line":1500,
-    "capture_immediate_line":1500,
+    "capture_video_line":300,
+    "capture_immediate_line":300,
     "capture_mode":"video",
     "capture_modes":"photo video",
     "quick_mode":"4",
     "ui_info_update":300,
     "interval_mode":"lapse",
     "interval_modes":"lapse, slomo",
-    "interval_lapse_line":30,
+
     "interval_default":500,
     "interval_max":1200000,
     "fps_max":30,

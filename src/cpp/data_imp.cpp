@@ -156,10 +156,10 @@ bool DataImp::isCaptureModePhoto(int32_t interal){
     
     int32_t line = m_user_config->getInt(ConfigKeyValue::CAPTURE_MODE_LINE);
     if (interal<=0) {
-        return this->getCaptureIntevalMillsec() > line;
+        return this->getCaptureIntevalMillsec() >= line;
     }
     else {
-        return interal > line;
+        return interal >= line;
     }
 }
 

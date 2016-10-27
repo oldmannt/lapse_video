@@ -42,7 +42,7 @@ void LapseSettingDlgImp::onShow(){
     int32_t min_interval = DataGen::instance()->getMinInterval();
     bool enable_slomo = DataGen::instance()->isSlowModeEnable();
     
-    if (!enable_slomo){
+    if (enable_slomo && interval == min_interval){
         interval = DataGen::instance()->getMinLapse();
     }
     

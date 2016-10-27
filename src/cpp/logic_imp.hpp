@@ -43,7 +43,7 @@ public:
     //gearsbox::VideoWriterResultHandler
     virtual void onComplete(bool success, const std::string & path);
     
-    virtual void beforeForceStop();
+    virtual void beforeComplete();
     
     virtual void onProgress(float percent);
     

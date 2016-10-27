@@ -31,9 +31,10 @@ bool ProjectListImp::load(int32_t review_w, int32_t review_h){
     std::string projects_dir = LogicGen::instance()->getProjectsPath();
     std::unordered_set<std::string> video_files = InstanceGetterGen::getPlatformUtility()->getFilesFromPathBySuffix(projects_dir, "mp4");
 
+    m_project_paths.insert(video_files.begin(), video_files.end());
     m_project_cells.reserve(video_files.size());
-    std::unordered_set<std::string>::iterator it_video(video_files.begin());
-    for (; it_video!=video_files.end(); ++it_video) {
+    std::set<std::string>::iterator it_video(m_project_paths.begin());
+    for (; it_video!=m_project_paths.end(); ++it_video) {
         if (m_project_paths.find(*it_video)!=m_project_paths.end())
             continue;
         std::shared_ptr<ProjectCellGen> cell = ProjectCellGen::create(*it_video, review_w, review_h);

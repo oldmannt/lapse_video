@@ -45,7 +45,8 @@ class PopbaseUIViewController: UIViewController {
         let sourceView:UIView = self.getTopView()
         let popupView:UIView = popup_ctl.view
         
-        if(sourceView.subviews.contains(popupView)) {
+        if popup_ctl.m_overlay_view != nil &&
+           sourceView.subviews.contains(popup_ctl.m_overlay_view!) {
             return
         }
         
@@ -72,6 +73,7 @@ class PopbaseUIViewController: UIViewController {
             overlayView.addSubview(popupView)
         }
         popupView.alpha = 0.0
+        popup_ctl.m_overlay_view?.frame = sourceView.frame
         sourceView.addSubview(popup_ctl.m_overlay_view!)
         
         

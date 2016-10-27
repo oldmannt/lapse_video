@@ -11,7 +11,7 @@
 
 #include "project_list_gen.hpp"
 #include <vector>
-#include <unordered_set>
+#include <set>
 #include <string>
 
 namespace lpase {
@@ -45,7 +45,7 @@ namespace lpase {
         
     private:
         typedef std::vector<std::shared_ptr<ProjectCellGen>> VEC_CELLS;
-        typedef std::unordered_set<std::string> SET_CELLS_PATH;
+        typedef std::set<std::string> SET_CELLS_PATH;
         VEC_CELLS m_project_cells;
         SET_CELLS_PATH m_project_paths;
         
