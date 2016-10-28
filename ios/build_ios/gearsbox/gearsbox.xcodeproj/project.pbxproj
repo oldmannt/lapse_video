@@ -23,82 +23,83 @@
 
 /* Begin PBXBuildFile section */
 		01998F43822E1E24D876CFAA /* GBVideoEncoderGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B0EC94AE44056FE9A7745F7 /* GBVideoEncoderGen+Private.mm */; };
-		020A178C6A994C13F7B86D46 /* instance_getter_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEA325DAF1DA50E87E5A1BD9 /* instance_getter_imp.cpp */; };
-		03CDC2CDC6620340CF82F632 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B1DA4BF83B7B0A66E64798 /* log.cpp */; };
+		02AE748E2B87320E703FF0C2 /* timerImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEF153C651B20FD97E229321 /* timerImp.cpp */; };
 		0C2E855F08BBD0A6434B98A4 /* log_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8358D2D8C6DFD50714CC8945 /* log_gen.cpp */; };
+		0D3A7B732F4EB1CDD1647DA7 /* task_info_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E212A65120E1CB214FAFF591 /* task_info_imp.cpp */; };
+		0E6D5DD033A713F5E6682C6F /* instance_getter_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEA325DAF1DA50E87E5A1BD9 /* instance_getter_imp.cpp */; };
 		10434392448F4420AD67CEA2 /* GBBreakpadGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B447E38C07913FC79A360653 /* GBBreakpadGen+Private.mm */; };
 		10A59F6B71F91B476911A84A /* camera_config_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A16B3A9A6F233AAC28329875 /* camera_config_gen.cpp */; };
 		10DC9D1A87D33CE7EF4045D3 /* GBUiManagerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8130C1AE76C010DFB20AC9C1 /* GBUiManagerGen+Private.mm */; };
-		1388031FBE55E029028E6E3B /* timerImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEF153C651B20FD97E229321 /* timerImp.cpp */; };
+		12F385061726B1BE6BCAA513 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E5B883CC5FDF85C37AB1B /* utils.cpp */; };
+		14050E61F16F7AEF9F9DE85F /* video_encoder_imp_ffmp4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C770C25921676750187ADA9F /* video_encoder_imp_ffmp4.cpp */; };
 		16C25F7BBA8B4C0FE5FDEB6D /* GBViewEventParam+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B48A7D6F0A06186054DA04A3 /* GBViewEventParam+Private.mm */; };
+		16E00FD5CB36F7B998ED49A0 /* httprequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888A0B5394C4BF2413F3CD92 /* httprequest.cpp */; };
 		1BABE9BC93EEF580C412A90B /* GBFileInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7EEE8041CB99B25CE816BBD3 /* GBFileInfoGen+Private.mm */; };
 		2012B194A3F87057D892FBA5 /* view_gen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EB40B1D75BD34C1F97D6542 /* view_gen.cpp */; };
 		298C8B5A3882D7214FDF4536 /* GBTaskManagerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 073150D0D4AE13F5B1A654EA /* GBTaskManagerGen+Private.mm */; };
 		2FE493923FC3DC3566DDD4F5 /* GBVideoFrameGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B41E51D20A3702751EAAFD72 /* GBVideoFrameGen+Private.mm */; };
-		336A30681DC08FB00070AB8D /* queue_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 336A30671DC08FB00070AB8D /* queue_thread.cpp */; };
 		34FBF569F6E1EC21D95EE7B1 /* objc_utility.m in Sources */ = {isa = PBXBuildFile; fileRef = C95D4AAA5FEF4F352759C63A /* objc_utility.m */; };
 		3640E4530DD22EFC52CE34A2 /* GBCrashHandlerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC131CCE2902F50D5C6F3CD1 /* GBCrashHandlerGen+Private.mm */; };
 		371039DABF22E4EB267983FD /* GBTaskExcuserGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94C90F0623F866795293346F /* GBTaskExcuserGen+Private.mm */; };
-		3D56C55806B38BB70FAB5233 /* work_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE77ED0B08975830CDDBD803 /* work_thread.cpp */; };
+		3F480AF39BDAE62B73AB5A01 /* video_info_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7CD7C5D7EC257F2E11D78E4 /* video_info_imp.cpp */; };
 		431D448A87A547D0F22DE52A /* GBVideoInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C42411D93A24F7EB94AA9C0F /* GBVideoInfoGen+Private.mm */; };
 		43D45FFD1BA784FE45D56508 /* GBViewEventHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 597F7735E2663310D775A5A9 /* GBViewEventHandler+Private.mm */; };
-		47A25535E61053B59B6B7E30 /* task_manager_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6D79994D8A27526816356 /* task_manager_imp.cpp */; };
-		4B90A249978FF51F441CC114 /* async_loop_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BCDFD62591538EE5BA21545 /* async_loop_imp.cpp */; };
-		546DB3346315841556B636D0 /* ui_conf_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D26FF739A0C8A814736C6F9 /* ui_conf_imp.cpp */; };
+		566AFB3BF4B0CD98E4928989 /* async_loop_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BCDFD62591538EE5BA21545 /* async_loop_imp.cpp */; };
+		578970CD84DDD8E1AF210071 /* zf_log.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B41FBDF86E96AACAD53066A /* zf_log.c */; };
+		57DEBBBAA6D5C263BCE2EC72 /* httprequestImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D416EBE16171E08513F7B69 /* httprequestImp.cpp */; };
 		5A081AFC2E7AECE9BA1A1B8F /* GBAsyncLoopGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C18B1ED30D25BCD311D69599 /* GBAsyncLoopGen+Private.mm */; };
 		5A83DA8F5E9861165E4B0B1D /* GBViewGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72121C2EBF2F093DA3CFF8E8 /* GBViewGen.mm */; };
-		5C5AB1B529E268F0885695A8 /* video_encoder_imp_ffmp4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C770C25921676750187ADA9F /* video_encoder_imp_ffmp4.cpp */; };
+		612D7DDFEF1128073F6B742A /* queue_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8FEB095C203163E27CA01BA /* queue_thread.cpp */; };
 		65EA7A50B7114E156DCE0680 /* GBViewConstraint.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B0C409D6E7F87FF8E7C2C /* GBViewConstraint.mm */; };
 		6855459000088EF5BC52964C /* GBViewEventParam.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A8C14785970BF91C5916B41 /* GBViewEventParam.mm */; };
-		750A2C765DE69A46667CF328 /* ui_manager_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402C89B5021F0978D5F29361 /* ui_manager_imp.cpp */; };
-		78C3E3167DF90BDF0BB1D0C8 /* zf_log.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B41FBDF86E96AACAD53066A /* zf_log.c */; };
+		72B348B4D0AC50B05EC866D1 /* config_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC98E9F5A1F23243C7004B9A /* config_imp.cpp */; };
+		75BBCBAB0F06B42571318E85 /* ui_manager_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 402C89B5021F0978D5F29361 /* ui_manager_imp.cpp */; };
+		7C0A837B6F557862B3813F92 /* ring_buffer_ptr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA6020112EC86BB3A47B7A /* ring_buffer_ptr.cpp */; };
+		80F603103D356CFF77320EA0 /* log_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C649FFDE61C36A54749977E /* log_imp.cpp */; };
 		8226AA15764A50F23517C95B /* GBViewFrame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D479B1116BFDD6928D1714D /* GBViewFrame.mm */; };
+		89CAAB8CFE6A864F22DFFECB /* jsoncpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7679ACAFBF06FBD3818C5 /* jsoncpp.cpp */; };
 		8A48A980EF02C485522484AD /* GBHttpRequestGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = D02A5B31DAD5BB9A9EA09894 /* GBHttpRequestGen+Private.mm */; };
 		8A5CDAFA6881117936387090 /* GBCameraConfigGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDAA22219FE769CB388BF897 /* GBCameraConfigGen+Private.mm */; };
 		8BF783211CBD026E43F8B579 /* GBUiValueCheckerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = D1428548D4326A359EC5CED6 /* GBUiValueCheckerGen+Private.mm */; };
 		8DA7BDD640D25D98AE4E853F /* GBViewFactoryGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3A0538BD3A137245B24AA20 /* GBViewFactoryGen+Private.mm */; };
-		8EF3D35F574ECB2E34EF0DF2 /* config_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC98E9F5A1F23243C7004B9A /* config_imp.cpp */; };
 		90183048AFB2CA26F074D0F4 /* GBDuration+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1437CFC4ED633F689BE79002 /* GBDuration+Private.mm */; };
 		90BA9291AE0A9BD26B9834DA /* GBConfigGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38C3778CAA3AD2B952662C90 /* GBConfigGen+Private.mm */; };
 		955D5C31012AE1477963AF71 /* GBTimerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F1DA8BB83FB969E39E3D /* GBTimerGen+Private.mm */; };
 		95758619DC1F9A8F0600631B /* GBViewGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4115D4E136687D12F2D8CBB1 /* GBViewGen+Private.mm */; };
-		958F4A9E882068BB3D76E0AD /* ring_buffer_ptr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA6020112EC86BB3A47B7A /* ring_buffer_ptr.cpp */; };
 		9658D7215E529BD080BC4276 /* GBPlatformUtilityGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 95747FC98A22EBEB372BB355 /* GBPlatformUtilityGen+Private.mm */; };
 		9702095E31C02AC770ADDDF1 /* video_frame_imp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBB6079E2515963454F12A7 /* video_frame_imp.m */; };
-		9F7B4031DD6A5A6716A0664F /* language_store_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6087A7F4D1FED0BFB42BA41 /* language_store_imp.cpp */; };
+		9712E53BC128BA8B5295C679 /* video_writer_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12CEC580F518126277DBEEEA /* video_writer_imp.cpp */; };
+		9C2D1D7268AF858213B04E07 /* ui_value_checker_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59A006BC4C1F75635638FE9C /* ui_value_checker_imp.cpp */; };
 		9FFA7CB8AB737BF289AE507B /* GBLogGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03CAD4F9B30791B8C17AE977 /* GBLogGen+Private.mm */; };
 		A1DCBF6C7DE46608B5F7EC6B /* GBCameraCaptureHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19965468ED380CB9C7E90008 /* GBCameraCaptureHandler+Private.mm */; };
+		A2094DF018103A0BE7F42D78 /* ui_conf_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D26FF739A0C8A814736C6F9 /* ui_conf_imp.cpp */; };
+		A231B5EF00793DFA4EEFFE5E /* camera_config_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C420B6FA86A649E5988027D7 /* camera_config_imp.cpp */; };
 		A29660816585BB9432B6F952 /* GBTyperConvertorDummy+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA0215C7F50B097F081FAA34 /* GBTyperConvertorDummy+Private.mm */; };
 		B05C421DA3A21B0AB4C9F03C /* GBViewFrame+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9156F47FE7752FF613E222EE /* GBViewFrame+Private.mm */; };
+		B113200D90D21D7298A6AA5E /* async_task_pool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF8F388E357FFD301C79540 /* async_task_pool.cpp */; };
+		B24DA70BFC9DC6982779D159 /* work_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE77ED0B08975830CDDBD803 /* work_thread.cpp */; };
 		B2DEE490836B7FDA3EF23D39 /* GBInstanceGetterGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = A959ED8DA9EE959321891219 /* GBInstanceGetterGen+Private.mm */; };
-		B6C7E043AB89174030AC0E19 /* httprequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 888A0B5394C4BF2413F3CD92 /* httprequest.cpp */; };
-		B747D5B2BD6CCB6F54FA1BCA /* jsoncpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08D7679ACAFBF06FBD3818C5 /* jsoncpp.cpp */; };
 		BBB9754102B955A36CEDB8DE /* GBCallbackHttpGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDD3237C016B1A44598F0571 /* GBCallbackHttpGen+Private.mm */; };
 		C026706B387E35DE58EE4F22 /* GBTaskInfoGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31263D69BD764BA8B16A0599 /* GBTaskInfoGen+Private.mm */; };
+		C0F9ECFC4FD8B8A8F93A5F59 /* task_manager_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6D79994D8A27526816356 /* task_manager_imp.cpp */; };
 		C3B7570EE2F65134C3C7D564 /* GBCameraControllerGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBD7F5B8AAF759D678D6F6 /* GBCameraControllerGen+Private.mm */; };
 		C537A1300D424A61E38114DA /* GBCameraConfigGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2385C0F720517D59475337B /* GBCameraConfigGen.mm */; };
+		C55C90362EE4045D828ABEA8 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B1DA4BF83B7B0A66E64798 /* log.cpp */; };
 		C76675D4E456EF971826C2FF /* GBUiConfGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB1715847C12EB1AD175E845 /* GBUiConfGen+Private.mm */; };
 		CAFD1C43797EBC2D46052777 /* GBLanguageStoreGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 485861FA85132CF0F338FC5B /* GBLanguageStoreGen+Private.mm */; };
 		CC9C775E60B2D22D8484B2FD /* GBArgbColor+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42233730DD366CC4A6FDEC81 /* GBArgbColor+Private.mm */; };
+		CD765779F70630BFCF865458 /* language_store_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6087A7F4D1FED0BFB42BA41 /* language_store_imp.cpp */; };
 		D548853964FC80FD4B7CFBAE /* GBVideoWriterGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = B65DD3A1D88122E3D2876380 /* GBVideoWriterGen+Private.mm */; };
 		D77A424E9A6057AC201B4538 /* GBVideoWriterResultHandler+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = BEE2D860A2583692FE38B739 /* GBVideoWriterResultHandler+Private.mm */; };
 		D87585DB1578A2D1EC26257A /* GBArgbColor.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9D0FA675898DDFEA97AE1A5 /* GBArgbColor.mm */; };
 		DA07650819439755E55EB31D /* argb_color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B70A2DA034DAA2A4BEBDCFCF /* argb_color.cpp */; };
-		DFC3E80CF783AEAC04C45BB4 /* ui_value_checker_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59A006BC4C1F75635638FE9C /* ui_value_checker_imp.cpp */; };
 		DFC58A70D544DF084CDC83F0 /* GBViewConf.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E7EFC8CEEF89721FABE9D /* GBViewConf.mm */; };
-		E12D48C2F071E688D24863B8 /* video_writer_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12CEC580F518126277DBEEEA /* video_writer_imp.cpp */; };
-		E1FCEA6057F0C564B3A6DAA2 /* httprequestImp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D416EBE16171E08513F7B69 /* httprequestImp.cpp */; };
 		E4DF406BEBA22F66C96B2A20 /* GBLogGen.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAD88EFF5A985DD702320798 /* GBLogGen.mm */; };
 		ED2B35A8DF15709112B83515 /* GBDuration.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4789242A3F57E4593F8E5ABB /* GBDuration.mm */; };
-		F42413CE852778AAF3C5EA08 /* log_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C649FFDE61C36A54749977E /* log_imp.cpp */; };
-		F53EC80AD64AB93F5D9F4C29 /* camera_config_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C420B6FA86A649E5988027D7 /* camera_config_imp.cpp */; };
 		F6A24C73CBFB6D93B6E6D71D /* view_conf_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50919747B735CE9E68D70ECC /* view_conf_base.cpp */; };
-		F7B74CE07993146D1F8AEF3E /* video_info_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7CD7C5D7EC257F2E11D78E4 /* video_info_imp.cpp */; };
-		F9B2BE51DB244112035D4BA6 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E5B883CC5FDF85C37AB1B /* utils.cpp */; };
 		FCE4A5556D2DA52DD7B38183 /* view_constraint_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43457051484C93CAC890B876 /* view_constraint_base.cpp */; };
 		FE05B8EE855C9B365CCA4610 /* GBViewConf+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 773B5AECF29FD477F0929E3C /* GBViewConf+Private.mm */; };
 		FE0FBC565BEAE4727710ECD8 /* GBViewConstraint+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7DE9F4FC3CF254F9CE963E96 /* GBViewConstraint+Private.mm */; };
-		FEB9763C95607F86818EBBAA /* task_info_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E212A65120E1CB214FAFF591 /* task_info_imp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		1437CFC4ED633F689BE79002 /* GBDuration+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBDuration+Private.mm"; sourceTree = "<group>"; };
 		149FF32ADE0B23FD0BF94DCD /* GBVideoInfoGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBVideoInfoGen.h; sourceTree = "<group>"; };
 		14B986FBD20BF384A284F54C /* GBCameraCaptureHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCameraCaptureHandler.h; sourceTree = "<group>"; };
+		186F938681251BACF5724CEE /* async_task_pool.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = async_task_pool.hpp; sourceTree = "<group>"; };
 		1914ECB2A36B15CDF2D34837 /* GBVideoFrameGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBVideoFrameGen.h; sourceTree = "<group>"; };
 		19965468ED380CB9C7E90008 /* GBCameraCaptureHandler+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBCameraCaptureHandler+Private.mm"; sourceTree = "<group>"; };
 		19B370ED43C38131B635AD67 /* libgearsbox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgearsbox.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,8 +167,7 @@
 		31263D69BD764BA8B16A0599 /* GBTaskInfoGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBTaskInfoGen+Private.mm"; sourceTree = "<group>"; };
 		31DB65B21EFB740AA1EE80D2 /* GBTextBoarder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBTextBoarder.h; sourceTree = "<group>"; };
 		32C629B8EECEB5A970FA4E0F /* camera_focus_mode.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = camera_focus_mode.hpp; sourceTree = "<group>"; };
-		336A30531DBF355B0070AB8D /* queue_thread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = queue_thread.hpp; sourceTree = "<group>"; };
-		336A30671DC08FB00070AB8D /* queue_thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = queue_thread.cpp; sourceTree = "<group>"; };
+		330C442B1DC2AEA5000A3DA6 /* thread_checker.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = thread_checker.hpp; sourceTree = "<group>"; };
 		355EEED862602394BEA3599E /* GBViewConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBViewConstraint.h; sourceTree = "<group>"; };
 		365A9BD73947E27E83FE3DB1 /* GBTimerGen+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBTimerGen+Private.h"; sourceTree = "<group>"; };
 		37CC2A72FABA4BE08E2122BD /* GBCrashHandlerGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCrashHandlerGen.h; sourceTree = "<group>"; };
@@ -262,6 +263,7 @@
 		9372725DC2D054EB81AF80BB /* GBCameraControllerGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCameraControllerGen.h; sourceTree = "<group>"; };
 		9379DE0A63E0580A3F19342A /* GBTaskManagerGen+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBTaskManagerGen+Private.h"; sourceTree = "<group>"; };
 		9390D27B37A0F536880FC25C /* view_conf_base.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = view_conf_base.hpp; sourceTree = "<group>"; };
+		93ED3DB2FA4817F697EF4268 /* queue_thread.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = queue_thread.hpp; sourceTree = "<group>"; };
 		94C90F0623F866795293346F /* GBTaskExcuserGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBTaskExcuserGen+Private.mm"; sourceTree = "<group>"; };
 		95747FC98A22EBEB372BB355 /* GBPlatformUtilityGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBPlatformUtilityGen+Private.mm"; sourceTree = "<group>"; };
 		972E7ED18167A4D50460456B /* async_loop_imp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = async_loop_imp.hpp; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 		DB89834259B7CAD5342260E6 /* GBConfigGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBConfigGen.h; sourceTree = "<group>"; };
 		DBD4F377135B0D206F3B20C6 /* camera_quality.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = camera_quality.hpp; sourceTree = "<group>"; };
 		DBFC33AE0E126981FCAEA339 /* log_imp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = log_imp.hpp; sourceTree = "<group>"; };
+		DCF8F388E357FFD301C79540 /* async_task_pool.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = async_task_pool.cpp; sourceTree = "<group>"; };
 		DDAA22219FE769CB388BF897 /* GBCameraConfigGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GBCameraConfigGen+Private.mm"; sourceTree = "<group>"; };
 		DF3B8161EC092CF62C9D9016 /* camera_controller_gen.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = camera_controller_gen.hpp; sourceTree = "<group>"; };
 		E085BC700B5B87C897D5E9E0 /* GBVideoEncoderGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBVideoEncoderGen.h; sourceTree = "<group>"; };
@@ -362,6 +365,7 @@
 		F3E1FA0846A1E6902E9FCF4B /* view_event.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = view_event.hpp; sourceTree = "<group>"; };
 		F620EFE2BAEEAB4690898376 /* GBViewFactoryGen+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBViewFactoryGen+Private.h"; sourceTree = "<group>"; };
 		F8128497A4DEF2DF670426D8 /* ui_manager_imp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = ui_manager_imp.hpp; sourceTree = "<group>"; };
+		F8FEB095C203163E27CA01BA /* queue_thread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = queue_thread.cpp; sourceTree = "<group>"; };
 		F935C5DDBEF8EA85B687AFD0 /* Ihttprequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ihttprequest.h; sourceTree = "<group>"; };
 		FAD88EFF5A985DD702320798 /* GBLogGen.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GBLogGen.mm; sourceTree = "<group>"; };
 		FEF153C651B20FD97E229321 /* timerImp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = timerImp.cpp; sourceTree = "<group>"; };
@@ -385,20 +389,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0346CD048B1814952AF87085 /* interface */ = {
-			isa = PBXGroup;
-			children = (
-				D783157B726105D7A2559B95 /* json */,
-				F935C5DDBEF8EA85B687AFD0 /* Ihttprequest.h */,
-				5A816FAA2D734EA1BC15E38A /* fn_task.hpp */,
-				5FEE493FA948A2AD84FEAAC1 /* ilog.h */,
-				02C35308CB8A7BAF1649C82F /* macro.h */,
-				5C45E40F8D08B382228A8B7E /* utils.hpp */,
-				336A30531DBF355B0070AB8D /* queue_thread.hpp */,
-			);
-			path = interface;
-			sourceTree = "<group>";
-		};
 		3EF17830CE3E0BA072A4B083 /* zf_log */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +404,51 @@
 				08D7679ACAFBF06FBD3818C5 /* jsoncpp.cpp */,
 			);
 			path = json;
+			sourceTree = "<group>";
+		};
+		8FB4372CCAE1A9AEC4D6CB88 /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				8EBB9404CA552483936E77BE /* json */,
+				F0D109436D3BE92B012C2B05 /* ui */,
+				3EF17830CE3E0BA072A4B083 /* zf_log */,
+				6BCDFD62591538EE5BA21545 /* async_loop_imp.cpp */,
+				972E7ED18167A4D50460456B /* async_loop_imp.hpp */,
+				DCF8F388E357FFD301C79540 /* async_task_pool.cpp */,
+				C420B6FA86A649E5988027D7 /* camera_config_imp.cpp */,
+				AA7941671DC782E6820F1A98 /* camera_config_imp.hpp */,
+				EC98E9F5A1F23243C7004B9A /* config_imp.cpp */,
+				5639DE57F8BB0EBAE79C0CCE /* config_imp.hpp */,
+				888A0B5394C4BF2413F3CD92 /* httprequest.cpp */,
+				8F9A7D45C58DB2295C1595BB /* httprequest.hpp */,
+				9D416EBE16171E08513F7B69 /* httprequestImp.cpp */,
+				5755C14DCAE9EA48EF1DD60F /* httprequestImp.hpp */,
+				BEA325DAF1DA50E87E5A1BD9 /* instance_getter_imp.cpp */,
+				A6087A7F4D1FED0BFB42BA41 /* language_store_imp.cpp */,
+				CE414F06D96E741327453CD3 /* language_store_imp.hpp */,
+				97B1DA4BF83B7B0A66E64798 /* log.cpp */,
+				1C649FFDE61C36A54749977E /* log_imp.cpp */,
+				DBFC33AE0E126981FCAEA339 /* log_imp.hpp */,
+				F8FEB095C203163E27CA01BA /* queue_thread.cpp */,
+				7CBA6020112EC86BB3A47B7A /* ring_buffer_ptr.cpp */,
+				BF4C7354AC49E521E1AD5B2D /* ring_buffer_ptr.hpp */,
+				E212A65120E1CB214FAFF591 /* task_info_imp.cpp */,
+				AC836F978F57AF062E41868B /* task_info_imp.hpp */,
+				3AC6D79994D8A27526816356 /* task_manager_imp.cpp */,
+				E5DE9237B72040D1813948D8 /* task_manager_imp.hpp */,
+				FEF153C651B20FD97E229321 /* timerImp.cpp */,
+				291811FA5EAA7BC62E17D64F /* timerImp.hpp */,
+				4B5E5B883CC5FDF85C37AB1B /* utils.cpp */,
+				C770C25921676750187ADA9F /* video_encoder_imp_ffmp4.cpp */,
+				B02560BA6B66E96FAD4E4275 /* video_encoder_imp_ffmp4.hpp */,
+				B7CD7C5D7EC257F2E11D78E4 /* video_info_imp.cpp */,
+				DA4594FE783C388276B36FD7 /* video_info_imp.hpp */,
+				12CEC580F518126277DBEEEA /* video_writer_imp.cpp */,
+				C8ECE029C1247F44DD494939 /* video_writer_imp.hpp */,
+				CE77ED0B08975830CDDBD803 /* work_thread.cpp */,
+				9D6E494CF552908941A76CFD /* work_thread.hpp */,
+			);
+			path = cpp;
 			sourceTree = "<group>";
 		};
 		997ABC2D3CCEC03F0260257C /* cpp */ = {
@@ -511,7 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				BC46C298B7E229F72B9CDD7A /* generated-src */,
-				0346CD048B1814952AF87085 /* interface */,
+				D88E21BD028B908D4BCCA342 /* interface */,
 				D9E483240F86FE360FABCAC6 /* src */,
 			);
 			name = Source;
@@ -526,57 +561,29 @@
 			path = json;
 			sourceTree = "<group>";
 		};
+		D88E21BD028B908D4BCCA342 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				D783157B726105D7A2559B95 /* json */,
+				F935C5DDBEF8EA85B687AFD0 /* Ihttprequest.h */,
+				186F938681251BACF5724CEE /* async_task_pool.hpp */,
+				5A816FAA2D734EA1BC15E38A /* fn_task.hpp */,
+				5FEE493FA948A2AD84FEAAC1 /* ilog.h */,
+				02C35308CB8A7BAF1649C82F /* macro.h */,
+				93ED3DB2FA4817F697EF4268 /* queue_thread.hpp */,
+				5C45E40F8D08B382228A8B7E /* utils.hpp */,
+				330C442B1DC2AEA5000A3DA6 /* thread_checker.hpp */,
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
 		D9E483240F86FE360FABCAC6 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				DB58707D43F306FE8A8FA7D2 /* cpp */,
+				8FB4372CCAE1A9AEC4D6CB88 /* cpp */,
 				A7544BD4062D89935C66780C /* objc */,
 			);
 			path = src;
-			sourceTree = "<group>";
-		};
-		DB58707D43F306FE8A8FA7D2 /* cpp */ = {
-			isa = PBXGroup;
-			children = (
-				336A30671DC08FB00070AB8D /* queue_thread.cpp */,
-				8EBB9404CA552483936E77BE /* json */,
-				F0D109436D3BE92B012C2B05 /* ui */,
-				3EF17830CE3E0BA072A4B083 /* zf_log */,
-				6BCDFD62591538EE5BA21545 /* async_loop_imp.cpp */,
-				972E7ED18167A4D50460456B /* async_loop_imp.hpp */,
-				C420B6FA86A649E5988027D7 /* camera_config_imp.cpp */,
-				AA7941671DC782E6820F1A98 /* camera_config_imp.hpp */,
-				EC98E9F5A1F23243C7004B9A /* config_imp.cpp */,
-				5639DE57F8BB0EBAE79C0CCE /* config_imp.hpp */,
-				888A0B5394C4BF2413F3CD92 /* httprequest.cpp */,
-				8F9A7D45C58DB2295C1595BB /* httprequest.hpp */,
-				9D416EBE16171E08513F7B69 /* httprequestImp.cpp */,
-				5755C14DCAE9EA48EF1DD60F /* httprequestImp.hpp */,
-				BEA325DAF1DA50E87E5A1BD9 /* instance_getter_imp.cpp */,
-				A6087A7F4D1FED0BFB42BA41 /* language_store_imp.cpp */,
-				CE414F06D96E741327453CD3 /* language_store_imp.hpp */,
-				97B1DA4BF83B7B0A66E64798 /* log.cpp */,
-				1C649FFDE61C36A54749977E /* log_imp.cpp */,
-				DBFC33AE0E126981FCAEA339 /* log_imp.hpp */,
-				7CBA6020112EC86BB3A47B7A /* ring_buffer_ptr.cpp */,
-				BF4C7354AC49E521E1AD5B2D /* ring_buffer_ptr.hpp */,
-				E212A65120E1CB214FAFF591 /* task_info_imp.cpp */,
-				AC836F978F57AF062E41868B /* task_info_imp.hpp */,
-				3AC6D79994D8A27526816356 /* task_manager_imp.cpp */,
-				E5DE9237B72040D1813948D8 /* task_manager_imp.hpp */,
-				FEF153C651B20FD97E229321 /* timerImp.cpp */,
-				291811FA5EAA7BC62E17D64F /* timerImp.hpp */,
-				4B5E5B883CC5FDF85C37AB1B /* utils.cpp */,
-				C770C25921676750187ADA9F /* video_encoder_imp_ffmp4.cpp */,
-				B02560BA6B66E96FAD4E4275 /* video_encoder_imp_ffmp4.hpp */,
-				B7CD7C5D7EC257F2E11D78E4 /* video_info_imp.cpp */,
-				DA4594FE783C388276B36FD7 /* video_info_imp.hpp */,
-				12CEC580F518126277DBEEEA /* video_writer_imp.cpp */,
-				C8ECE029C1247F44DD494939 /* video_writer_imp.hpp */,
-				CE77ED0B08975830CDDBD803 /* work_thread.cpp */,
-				9D6E494CF552908941A76CFD /* work_thread.hpp */,
-			);
-			path = cpp;
 			sourceTree = "<group>";
 		};
 		E5556F5BF901223E91FB62E7 = {
@@ -816,35 +823,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA07650819439755E55EB31D /* argb_color.cpp in Sources */,
-				336A30681DC08FB00070AB8D /* queue_thread.cpp in Sources */,
 				10A59F6B71F91B476911A84A /* camera_config_gen.cpp in Sources */,
 				0C2E855F08BBD0A6434B98A4 /* log_gen.cpp in Sources */,
 				F6A24C73CBFB6D93B6E6D71D /* view_conf_base.cpp in Sources */,
 				FCE4A5556D2DA52DD7B38183 /* view_constraint_base.cpp in Sources */,
 				2012B194A3F87057D892FBA5 /* view_gen.cpp in Sources */,
-				4B90A249978FF51F441CC114 /* async_loop_imp.cpp in Sources */,
-				F53EC80AD64AB93F5D9F4C29 /* camera_config_imp.cpp in Sources */,
-				8EF3D35F574ECB2E34EF0DF2 /* config_imp.cpp in Sources */,
-				B6C7E043AB89174030AC0E19 /* httprequest.cpp in Sources */,
-				E1FCEA6057F0C564B3A6DAA2 /* httprequestImp.cpp in Sources */,
-				020A178C6A994C13F7B86D46 /* instance_getter_imp.cpp in Sources */,
-				9F7B4031DD6A5A6716A0664F /* language_store_imp.cpp in Sources */,
-				03CDC2CDC6620340CF82F632 /* log.cpp in Sources */,
-				F42413CE852778AAF3C5EA08 /* log_imp.cpp in Sources */,
-				958F4A9E882068BB3D76E0AD /* ring_buffer_ptr.cpp in Sources */,
-				FEB9763C95607F86818EBBAA /* task_info_imp.cpp in Sources */,
-				47A25535E61053B59B6B7E30 /* task_manager_imp.cpp in Sources */,
-				1388031FBE55E029028E6E3B /* timerImp.cpp in Sources */,
-				F9B2BE51DB244112035D4BA6 /* utils.cpp in Sources */,
-				5C5AB1B529E268F0885695A8 /* video_encoder_imp_ffmp4.cpp in Sources */,
-				F7B74CE07993146D1F8AEF3E /* video_info_imp.cpp in Sources */,
-				E12D48C2F071E688D24863B8 /* video_writer_imp.cpp in Sources */,
-				3D56C55806B38BB70FAB5233 /* work_thread.cpp in Sources */,
-				B747D5B2BD6CCB6F54FA1BCA /* jsoncpp.cpp in Sources */,
-				546DB3346315841556B636D0 /* ui_conf_imp.cpp in Sources */,
-				750A2C765DE69A46667CF328 /* ui_manager_imp.cpp in Sources */,
-				DFC3E80CF783AEAC04C45BB4 /* ui_value_checker_imp.cpp in Sources */,
-				78C3E3167DF90BDF0BB1D0C8 /* zf_log.c in Sources */,
+				566AFB3BF4B0CD98E4928989 /* async_loop_imp.cpp in Sources */,
+				B113200D90D21D7298A6AA5E /* async_task_pool.cpp in Sources */,
+				A231B5EF00793DFA4EEFFE5E /* camera_config_imp.cpp in Sources */,
+				72B348B4D0AC50B05EC866D1 /* config_imp.cpp in Sources */,
+				16E00FD5CB36F7B998ED49A0 /* httprequest.cpp in Sources */,
+				57DEBBBAA6D5C263BCE2EC72 /* httprequestImp.cpp in Sources */,
+				0E6D5DD033A713F5E6682C6F /* instance_getter_imp.cpp in Sources */,
+				CD765779F70630BFCF865458 /* language_store_imp.cpp in Sources */,
+				C55C90362EE4045D828ABEA8 /* log.cpp in Sources */,
+				80F603103D356CFF77320EA0 /* log_imp.cpp in Sources */,
+				612D7DDFEF1128073F6B742A /* queue_thread.cpp in Sources */,
+				7C0A837B6F557862B3813F92 /* ring_buffer_ptr.cpp in Sources */,
+				0D3A7B732F4EB1CDD1647DA7 /* task_info_imp.cpp in Sources */,
+				C0F9ECFC4FD8B8A8F93A5F59 /* task_manager_imp.cpp in Sources */,
+				02AE748E2B87320E703FF0C2 /* timerImp.cpp in Sources */,
+				12F385061726B1BE6BCAA513 /* utils.cpp in Sources */,
+				14050E61F16F7AEF9F9DE85F /* video_encoder_imp_ffmp4.cpp in Sources */,
+				3F480AF39BDAE62B73AB5A01 /* video_info_imp.cpp in Sources */,
+				9712E53BC128BA8B5295C679 /* video_writer_imp.cpp in Sources */,
+				B24DA70BFC9DC6982779D159 /* work_thread.cpp in Sources */,
+				89CAAB8CFE6A864F22DFFECB /* jsoncpp.cpp in Sources */,
+				A2094DF018103A0BE7F42D78 /* ui_conf_imp.cpp in Sources */,
+				75BBCBAB0F06B42571318E85 /* ui_manager_imp.cpp in Sources */,
+				9C2D1D7268AF858213B04E07 /* ui_value_checker_imp.cpp in Sources */,
+				578970CD84DDD8E1AF210071 /* zf_log.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1058,7 +1066,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = YES;
 				EXECUTABLE_PREFIX = lib;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					ZF_LOG_USE_NSLOG,
 					"DEBUG=1",

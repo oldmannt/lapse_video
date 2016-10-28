@@ -92,7 +92,11 @@
 			};
 			buildConfigurationList = 7609FECDCE37CCF1BA62889B /* Build configuration list for PBXProject "gtest" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 8D5F8A9B33447AED8EB06731;
 			projectDirPath = ../../../gearsbox/deps;
 			projectRoot = "";
@@ -158,6 +162,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEAD_CODE_STRIPPING = YES;
 				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				HEADER_SEARCH_PATHS = (
 					"gtest-1.7.0",

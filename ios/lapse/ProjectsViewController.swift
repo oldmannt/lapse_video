@@ -50,7 +50,6 @@ class ProjectsViewController: PopbaseUIViewController, UITableViewDataSource, UI
     
     override func viewDidAppear(_ animated: Bool) {
         // Do any additional setup after loading the view.
-        //GBTaskManagerGen.instance()?.addTaskI(Int64(LPALapseEvent.ProjectsShow.rawValue), task: nil)
         let cell = m_table_view.dequeueReusableCell(withIdentifier: "project_cell") as! PorjectCell
 
         // Somehow in Xcode 8 / Swift 3 the frame will initially be 1000x1000
@@ -81,7 +80,7 @@ class ProjectsViewController: PopbaseUIViewController, UITableViewDataSource, UI
             GBLogGen.instance()?.logerrf("cell data nil \(indexPath)")
             return cell
         }
-        GBLogGen.instance()?.logerrf("cell index:\(indexPath) name:\(cell_data?.getName()) fps:\(cell_data?.getFps()) time:\(cell_data?.getCreateTime()) length:\(cell_data?.getLength()) path:\(cell_data?.getPath())")
+        //GBLogGen.instance()?.logerrf("cell index:\(indexPath) name:\(cell_data?.getName()) fps:\(cell_data?.getFps()) time:\(cell_data?.getCreateTime()) length:\(cell_data?.getLength()) path:\(cell_data?.getPath())")
         
         cell.m_video_name.text = cell_data?.getName()
         cell.m_fps.text = cell_data?.getFps()
@@ -106,11 +105,6 @@ class ProjectsViewController: PopbaseUIViewController, UITableViewDataSource, UI
     func longPress(_ longPressGestureRecognizer: UILongPressGestureRecognizer) {
         if longPressGestureRecognizer.state == UIGestureRecognizerState.ended {
             
-            let touchPoint = longPressGestureRecognizer.location(in: self.m_table_view)
-            if let indexPath = m_table_view.indexPathForRow(at: touchPoint) {
-                // your code here, get the row for the indexPath or do whatever you want
-                
-            }
         }
     }
     

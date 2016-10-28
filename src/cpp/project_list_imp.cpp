@@ -17,6 +17,7 @@
 #include "task_excuser_gen.hpp"
 #include "task_info_gen.hpp"
 #include "instance_getter_gen.hpp"
+#include "async_task_pool.hpp"
 #include "macro.h"
 
 using namespace lpase;
@@ -27,6 +28,28 @@ std::shared_ptr<ProjectListGen> ProjectListGen::instance(){
     return s_ptr;
 }
 
+void ProjectListImp::asyncLoadCell(const std::string& file,int32_t review_w, int32_t review_h){
+
+    std::shared_ptr<ProjectCellGen> cell = ProjectCellGen::create(file, review_w, review_h);
+    CHECK_RT(cell!=nullptr, "create cell failed file:%s", file.c_str());
+    {
+        std::unique_lock<std::mutex> autolock(m_mutex);
+        m_loading_cells.emplace(std::move(cell));
+    }
+}
+
+void ProjectListImp::asyncLoadComplete(){
+    std::unique_lock<std::mutex> autolock(m_mutex);
+    while (m_loading_cells.size()>0) {
+        m_project_cells.push_back(std::move(m_loading_cells.front()));
+        m_loading_cells.pop();
+        
+        std::shared_ptr<TaskInfoGen> info = TaskManagerGen::instance()->create_info((int64_t)LapseEvent::PROJECTS_LIST_UPDATE_ADD, -1, 0);
+        info->setIValue("index", m_project_cells.size()-1);
+        TaskManagerGen::instance()->addTaskInfo(info, nullptr);
+    }
+}
+
 bool ProjectListImp::load(int32_t review_w, int32_t review_h){
     std::string projects_dir = LogicGen::instance()->getProjectsPath();
     std::unordered_set<std::string> video_files = InstanceGetterGen::getPlatformUtility()->getFilesFromPathBySuffix(projects_dir, "mp4");
@@ -34,17 +57,10 @@ bool ProjectListImp::load(int32_t review_w, int32_t review_h){
     m_project_paths.insert(video_files.begin(), video_files.end());
     m_project_cells.reserve(video_files.size());
     std::set<std::string>::iterator it_video(m_project_paths.begin());
-    for (; it_video!=m_project_paths.end(); ++it_video) {
-        if (m_project_paths.find(*it_video)!=m_project_paths.end())
-            continue;
-        std::shared_ptr<ProjectCellGen> cell = ProjectCellGen::create(*it_video, review_w, review_h);
-        CONTINUE(cell!=nullptr, "create cell failed file:%s", (*it_video).c_str());
-        m_project_cells.push_back(cell);
-        m_project_paths.insert(*it_video);
-
-        std::shared_ptr<TaskInfoGen> info = TaskManagerGen::instance()->create_info((int64_t)LapseEvent::PROJECTS_LIST_UPDATE_ADD, -1, 0);
-        info->setIValue("index", m_project_cells.size()-1);
-        TaskManagerGen::instance()->addTaskInfo(info, nullptr);
+    for (; it_video!=m_project_paths.end(); ++it_video) {        
+        auto load_cell = std::bind(&ProjectListImp::asyncLoadCell, this, *it_video, review_w, review_h);
+        auto complet = std::bind(&ProjectListImp::asyncLoadComplete, this);
+        AsyncTaskPool::instance()->enqueue(AsyncTaskPool::TaskType::OTHER, load_cell, complet);
     }
     
 }
