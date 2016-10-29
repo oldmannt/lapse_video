@@ -32,6 +32,7 @@
 		332C75D51DA1853A00282A7F /* ProjectSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C75D41DA1853A00282A7F /* ProjectSettingView.swift */; };
 		3340164B1DBA725A00A39588 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340164A1DBA725A00A39588 /* PreviewView.swift */; };
 		334979CA1D9E3FD600F11CDF /* UIButtonBottomTittle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334979C91D9E3FD600F11CDF /* UIButtonBottomTittle.swift */; };
+		336A48121DC3FEE0002CE44E /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336A48111DC3FEE0002CE44E /* PhotoCaptureDelegate.swift */; };
 		338263111D46AA8400DA114F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263101D46AA8400DA114F /* AppDelegate.swift */; };
 		338263131D46AA8400DA114F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263121D46AA8400DA114F /* ViewController.swift */; };
 		338263161D46AA8400DA114F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338263141D46AA8400DA114F /* Main.storyboard */; };
@@ -180,6 +181,7 @@
 		332C75D41DA1853A00282A7F /* ProjectSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectSettingView.swift; sourceTree = "<group>"; };
 		3340164A1DBA725A00A39588 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewView.swift; path = ../../gearsbox/src/swift/PreviewView.swift; sourceTree = "<group>"; };
 		334979C91D9E3FD600F11CDF /* UIButtonBottomTittle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonBottomTittle.swift; path = ../../gearsbox/src/swift/UIButtonBottomTittle.swift; sourceTree = "<group>"; };
+		336A48111DC3FEE0002CE44E /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCaptureDelegate.swift; path = ../../gearsbox/src/swift/PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		3382630D1D46AA8400DA114F /* lapse_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lapse_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338263101D46AA8400DA114F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338263121D46AA8400DA114F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 				338264711D49658100DA114F /* StringUtils.swift */,
 				338264721D49658100DA114F /* TypeConvertor.swift */,
 				338263431D46AC7900DA114F /* camera_controller_imp.swift */,
+				336A48111DC3FEE0002CE44E /* PhotoCaptureDelegate.swift */,
 				33CDCC681D692D950042D4B7 /* GBFileInfoImp.swift */,
 				331E5A3F1D5A737000D32AEE /* LogicTaskExcuser.swift */,
 				334979C91D9E3FD600F11CDF /* UIButtonBottomTittle.swift */,
@@ -825,6 +828,7 @@
 				3399AB711D716E3E00F5F3EA /* PopbaseUIVViewController.swift in Sources */,
 				331E5A621D60068900D32AEE /* ProjectsViewController.swift in Sources */,
 				338264751D49658100DA114F /* GBViewFactoryImp.swift in Sources */,
+				336A48121DC3FEE0002CE44E /* PhotoCaptureDelegate.swift in Sources */,
 				332C75C11DA0657F00282A7F /* IQNSArray+Sort.swift in Sources */,
 				331E5A4B1D5AA9C300D32AEE /* ReviewViewController.swift in Sources */,
 				338263131D46AA8400DA114F /* ViewController.swift in Sources */,

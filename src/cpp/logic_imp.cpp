@@ -214,7 +214,6 @@ void LogicImp::setCaptureInteral(int32_t interval){
     }
     bool photo = DataGen::instance()->isCaptureModePhoto(interval_capture);
     if (photo){
-        InstanceGetterGen::getCameraController()->setFrameDuration(1, 30);
         InstanceGetterGen::getCameraController()->setCaptureMode(CameraCaptureMode::PHOTO);
     }
     else if (DataGen::instance()->isCaptureImmediate(interval_capture)){
