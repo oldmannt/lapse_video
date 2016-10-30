@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Timer_white-cancel.png",
+      "filename" : "lapse_cancel-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Timer_white-cancel-1.png",
+      "filename" : "lapse_cancel.png",
       "scale" : "2x"
     },
     {

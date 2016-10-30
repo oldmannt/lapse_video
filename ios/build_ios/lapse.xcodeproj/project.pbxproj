@@ -471,6 +471,7 @@
 		45AA5D4CCDB4372B78643A72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_NAME = All;
 			};
 			name = Release;
@@ -527,6 +528,7 @@
 		EB83D68A22F8B327F6354A8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_NAME = All;
 			};
 			name = Debug;
