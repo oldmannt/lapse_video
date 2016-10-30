@@ -54,6 +54,8 @@ public abstract class DataGen {
 
     public abstract int getDefaultLapse();
 
+    public abstract int getLapsePauseFps();
+
     public abstract boolean isSlowModeEnable();
 
     public abstract int getQuickModeCount();
@@ -289,6 +291,14 @@ public abstract class DataGen {
             return native_getDefaultLapse(this.nativeRef);
         }
         private native int native_getDefaultLapse(long _nativeRef);
+
+        @Override
+        public int getLapsePauseFps()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getLapsePauseFps(this.nativeRef);
+        }
+        private native int native_getLapsePauseFps(long _nativeRef);
 
         @Override
         public boolean isSlowModeEnable()

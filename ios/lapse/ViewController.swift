@@ -67,7 +67,6 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         m_focus_sel.isHidden = true
         
         GBInstanceGetterGen.setPlatformUtility(GBPlatformUtilityImp.sharedInstance)
-        
         camera_controller.initializ_swif(m_camera_preview, complition: {[unowned self] (result, msg) -> Void in
             GBInstanceGetterGen.setCameraController(self.camera_controller)
             LPALogicGen.instance()?.initialize("user.json")
@@ -75,21 +74,12 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         })
         
         GBUiManagerGen.instance()?.initialize("", factory: GBViewFactoryImp.instance)
-        GBViewFactoryImp.instance.addIOSViewToUIMgr(m_viewbtns, id: "camera_view_btns", constroller: self)
-        GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_lapse, id: "camera_btn_lapse", constroller: self)
-        GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_library, id: "camera_btn_library", constroller: self)
-        GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_stop, id: "camera_btn_stop", constroller: self)
-        GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_ratio, id: "camera_btn_ratio", constroller: self)
-        GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_more, id: "camera_btn_more", constroller: self)
-        GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_pause, id: "camera_btn_pause", constroller: self)
-        GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_capture, id: "camera_btn_capture", constroller: self)
-        GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_resume, id: "camera_btn_resume", constroller: self)
-        GBViewFactoryImp.instance.addIOSViewToUIMgr(btn_switch, id: "camera_btn_switch", constroller: self)
-        
         LogicTaskExcuserImp.sharedInstance.m_capture_vc = self
         GBTaskManagerGen.instance()?.addTaskExcuser(LogicTaskExcuserImp.sharedInstance)
         
-        m_updateDebugInfo = GBTimerGen.create(300, repeatTimes: -1, hander: self)
+        #if DEBUG
+            m_updateDebugInfo = GBTimerGen.create(300, repeatTimes: -1, hander: self)
+        #endif
     }
 
     fileprivate func initViews(){

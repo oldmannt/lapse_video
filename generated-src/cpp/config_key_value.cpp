@@ -65,4 +65,6 @@ std::string const ConfigKeyValue::ALERT_TILLE_INFO = {"alert_tille_info"};
 
 std::string const ConfigKeyValue::CAPTURE_FAILED = {"capture_failed"};
 
+std::string const ConfigKeyValue::FPS_LPASE_PAUSE = {"fps_lpase_pause"};
+
 }  // namespace lpase

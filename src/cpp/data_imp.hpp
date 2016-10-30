@@ -71,6 +71,8 @@ public:
     
     virtual int32_t getDefaultLapse();
     
+    virtual int32_t getLapsePauseFps();
+    
     virtual bool isSlowModeEnable();
     
     virtual int32_t getQuickModeCount();

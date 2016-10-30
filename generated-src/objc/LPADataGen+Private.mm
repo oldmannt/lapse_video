@@ -202,6 +202,13 @@ static_assert(__has_feature(objc_arc), "Djinni requires ARC to be enabled for th
     } DJINNI_TRANSLATE_EXCEPTIONS()
 }
 
+- (int32_t)getLapsePauseFps {
+    try {
+        auto r = _cppRefHandle.get()->getLapsePauseFps();
+        return ::djinni::I32::fromCpp(r);
+    } DJINNI_TRANSLATE_EXCEPTIONS()
+}
+
 - (BOOL)isSlowModeEnable {
     try {
         auto r = _cppRefHandle.get()->isSlowModeEnable();

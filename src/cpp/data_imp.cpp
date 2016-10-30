@@ -200,6 +200,10 @@ int32_t DataImp::getDefaultLapse(){
     return m_user_config->getInt(ConfigKeyValue::INTERVAL_DEFAULT);
 }
 
+int32_t DataImp::getLapsePauseFps(){
+    return m_user_config->getInt(ConfigKeyValue::FPS_LPASE_PAUSE);
+}
+
 bool DataImp::isSlowModeEnable(){
     return m_user_config->getBool(ConfigKeyValue::SLOMO_ENABLE);
 }

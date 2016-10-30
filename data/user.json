@@ -51,5 +51,6 @@
     "interval_max":1200000,
     "fps_max":30,
     "fps_min":1,
-    "slomo_enable":false
+    "slomo_enable":false,
+    "fps_lpase_pause":20
 }

@@ -59,6 +59,8 @@
 
 - (int32_t)getDefaultLapse;
 
+- (int32_t)getLapsePauseFps;
+
 - (BOOL)isSlowModeEnable;
 
 - (int32_t)getQuickModeCount;

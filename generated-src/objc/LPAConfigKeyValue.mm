@@ -64,6 +64,8 @@ NSString * __nonnull const LPAConfigKeyValueALERTTILLEINFO = @"alert_tille_info"
 
 NSString * __nonnull const LPAConfigKeyValueCAPTUREFAILED = @"capture_failed";
 
+NSString * __nonnull const LPAConfigKeyValueFPSLPASEPAUSE = @"fps_lpase_pause";
+
 @implementation LPAConfigKeyValue
 
 - (nonnull instancetype)init

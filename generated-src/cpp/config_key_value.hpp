@@ -69,6 +69,8 @@ struct ConfigKeyValue final {
     static std::string const ALERT_TILLE_INFO;
 
     static std::string const CAPTURE_FAILED;
+
+    static std::string const FPS_LPASE_PAUSE;
 };
 
 }  // namespace lpase

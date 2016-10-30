@@ -39,3 +39,4 @@ extern NSString * __nonnull const LPAConfigKeyValueFPSRANGEALERT;
 extern NSString * __nonnull const LPAConfigKeyValueLAPSERANGEALERT;
 extern NSString * __nonnull const LPAConfigKeyValueALERTTILLEINFO;
 extern NSString * __nonnull const LPAConfigKeyValueCAPTUREFAILED;
+extern NSString * __nonnull const LPAConfigKeyValueFPSLPASEPAUSE;

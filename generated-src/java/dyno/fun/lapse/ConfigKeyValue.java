@@ -65,6 +65,8 @@ public final class ConfigKeyValue {
 
     public static final String CAPTURE_FAILED = "capture_failed";
 
+    public static final String FPS_LPASE_PAUSE = "fps_lpase_pause";
+
 
     public ConfigKeyValue(
             ) {

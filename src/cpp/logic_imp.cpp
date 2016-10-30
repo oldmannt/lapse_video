@@ -23,6 +23,7 @@
 #include "language_store_gen.hpp"
 #include "camera_config_gen.hpp"
 #include "config_key_value.hpp"
+#include "duration.hpp"
 
 using namespace lpase;
 using namespace gearsbox;
@@ -149,19 +150,25 @@ void LogicImp::captureStop(){
     m_video_writer->saveNRlease();
     m_video_writer = nullptr;
     // set to default frame rate
-    InstanceGetterGen::getCameraController()->setFrameDuration(1, InstanceGetterGen::getCameraController()->getDefaultFrameRate());
+    InstanceGetterGen::getCameraController()->setFrameDurationMin(Duration(1, InstanceGetterGen::getCameraController()->getDefaultFrameRate()));
     G_LOG_C(LOG_INFO, "stop %.03f", InstanceGetterGen::getPlatformUtility()->getSystemTickSec());
 }
 
 void LogicImp::lapseStop(){
     CHECK_RT(m_video_writer!=nullptr, "video_writer null");
-    int64_t interval = int64_t(1000/m_video_writer->getFPS());
     
-    this->setCaptureInteral((int32_t)interval);
+    //int64_t interval = int64_t(1000/m_video_writer->getFPS());
+    //this->setCaptureInteral((int32_t)interval);
+    
+    Duration dur = Duration(1, DataGen::instance()->getLapsePauseFps());
+    InstanceGetterGen::getCameraController()->setFrameDurationMin(dur);
+    InstanceGetterGen::getCameraController()->setFrameDurationMax(dur);
+    InstanceGetterGen::getCameraController()->setCaptureMode(CameraCaptureMode::IMMEDIATE_VIDEO);
 }
 
 void LogicImp::lapseResume(){
     CHECK_RT(m_video_writer!=nullptr, "video_writer null");
+    m_video_writer->setFPS(DataGen::instance()->getFps());
     this->setCaptureInteral(0);
 }
 
@@ -217,12 +224,10 @@ void LogicImp::setCaptureInteral(int32_t interval){
         InstanceGetterGen::getCameraController()->setCaptureMode(CameraCaptureMode::PHOTO);
     }
     else if (DataGen::instance()->isCaptureImmediate(interval_capture)){
-        InstanceGetterGen::getCameraController()->setFrameDuration(interval_capture, 1000);
+        Duration dur = Duration(interval_capture, 1000);
+        InstanceGetterGen::getCameraController()->setFrameDurationMin(dur);
+        InstanceGetterGen::getCameraController()->setFrameDurationMax(dur);
         InstanceGetterGen::getCameraController()->setCaptureMode(CameraCaptureMode::IMMEDIATE_VIDEO);
-    }
-    else {
-        InstanceGetterGen::getCameraController()->setFrameDuration(interval_capture, 1000);
-        InstanceGetterGen::getCameraController()->setCaptureMode(CameraCaptureMode::VIDEO);
     }
 
     m_video_writer->setInterval(interval_capture);
