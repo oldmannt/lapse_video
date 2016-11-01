@@ -28,9 +28,17 @@ std::shared_ptr<DataGen> DataGen::instance(){
 bool DataImp::initialize(const std::string & config){
     CHECK_RTF(m_user_config==nullptr, "already initialize");
     m_user_config = InstanceGetterGen::getConfig("user");
-    CHECK_RTF(m_user_config, "get user config null");
-    std::string pack_path = InstanceGetterGen::getPlatformUtility()->getPackFilePath(config);
-    CHECK_RTF(m_user_config->initialize(pack_path), "user config initialize failed %s", config.c_str());
+    CHECK_RTF(m_user_config, "get user config instance null");
+    
+    std::string home_path = InstanceGetterGen::getPlatformUtility()->getHomeDirectory();
+    home_path += "/";
+    home_path += config;
+    
+    if (!InstanceGetterGen::getPlatformUtility()->fileExists(home_path)){
+        InstanceGetterGen::getPlatformUtility()->getPackFileToHomePath(config);
+    }
+
+    CHECK_RTF(m_user_config->initialize(home_path), "user config initialize failed %s", config.c_str());
     m_vide_config = m_user_config->getSubConfig("video");
     CHECK_RTF(m_vide_config!=nullptr, "get video node failed %s", config.c_str());
     m_camera_config = m_user_config->getSubConfig("camera");

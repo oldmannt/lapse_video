@@ -66,11 +66,9 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         m_exposure_sel.isHidden = true
         m_focus_sel.isHidden = true
         
-        GBInstanceGetterGen.setPlatformUtility(GBPlatformUtilityImp.sharedInstance)
         camera_controller.initializ_swif(m_camera_preview, complition: {[unowned self] (result, msg) -> Void in
             GBInstanceGetterGen.setCameraController(self.camera_controller)
             LPALogicGen.instance()?.initialize("user.json")
-            LPAUilogicGen.instance()?.initialize(LPALapseUiScene.camera)
         })
         
         GBUiManagerGen.instance()?.initialize("", factory: GBViewFactoryImp.instance)
@@ -79,6 +77,8 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         
         #if DEBUG
             m_updateDebugInfo = GBTimerGen.create(300, repeatTimes: -1, hander: self)
+        #else
+            m_debug_info.isHidden = true
         #endif
     }
 
@@ -119,6 +119,7 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         GBCameraControllerImp.instance.stopCamera()
         super.viewWillDisappear(animated)
     }
+
     
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
         
@@ -190,8 +191,6 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         }
         if sender.state == UIGestureRecognizerState.changed {
             let translation = sender.translation(in: exposure_sel?.superview)
-            //exposure_sel?.center = CGPoint(x: (exposure_sel?.center.x)!+translation.x,
-            //                               y: (exposure_sel?.center.y)!+translation.y)
             constraint_x.constant += translation.x
             constraint_y.constant += translation.y
             sender.setTranslation(CGPoint.zero, in: exposure_sel?.superview)
@@ -330,8 +329,8 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
             btn_pause.isHidden = true
             btn_stop.isHidden = true
             btn_resume.isHidden = true
-            btn_resume.isHidden = true
             m_btn_LapseStop.isHidden = true
+            m_btn_LapseResume.isHidden = true
         }
         else if btn == m_btn_LapseResume {
             m_btn_LapseStop.isHidden = false

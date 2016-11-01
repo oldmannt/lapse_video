@@ -43,11 +43,12 @@
 #import "GBCameraCaptureHandler.h"
 #import "GBTimerGen.h"
 #import "GBCameraCaptureMode.h"
+#import "GBDeviceGen.h"
+#import "GBDeviceOrientation.h"
 
 #import "video_frame_imp.h"
 
 #import "LPALogicGen.h"
-#import "LPAUilogicGen.h"
 #import "LPALapseUiScene.h"
 #import "LPALapseEvent.h"
 #import "LPAProjectListGen.h"

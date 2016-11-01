@@ -24,6 +24,9 @@
 #include "camera_config_gen.hpp"
 #include "config_key_value.hpp"
 #include "duration.hpp"
+#include "device_gen.hpp"
+#include "device_orientation.hpp"
+#include "video_orientation.hpp"
 
 using namespace lpase;
 using namespace gearsbox;
@@ -58,7 +61,6 @@ std::string LogicImp::getProjectsPath(){
 
 void LogicImp::excuse(const std::shared_ptr<TaskInfoGen> & info){
     LapseEvent event = (LapseEvent)info->getTaskId();
-    //G_LOG_C(LOG_INFO, "logic excuse, id:%s", UilogicGen::instance()->getEventStr(event).c_str());
     
     CHECK_RT(event>LapseEvent::CAMERA_BEGIN && event<LapseEvent::UI_END, "not ui event");
     switch (event) {
@@ -111,6 +113,7 @@ void LogicImp::onComplete(bool success, const std::string & path){
 }
 
 void LogicImp::beforeComplete(){
+    G_LOG_C(LOG_INFO, "beforeComplete");
     InstanceGetterGen::getPlatformUtility()->showLoadingView(true);
 }
 
@@ -197,6 +200,22 @@ void LogicImp::initialize_video(){
     m_video_writer->setReslutHandler(shared_from_this());
     m_video_writer->setFPS(DataGen::instance()->getFps());
     m_video_writer->setBitRate(DataGen::instance()->getBitrate());
+    
+    VideoOrientation video_ori = VideoOrientation::LANDSPACE_0;
+    switch (InstanceGetterGen::getDevice()->getOrientation()) {
+        case DeviceOrientation::PORTRAIT:
+            video_ori = VideoOrientation::PORTRAIT_90;
+            break;
+        case DeviceOrientation::LANDSCAPE_RIGHT:
+            video_ori = VideoOrientation::LANDSPACE_180;
+            break;
+        case DeviceOrientation::PROTRAIT_DOWN:
+            video_ori = VideoOrientation::PORTRAIT_270;
+            break;
+        default:
+            break;
+    }
+    m_video_writer->setOrientation(video_ori);
     
     std::string projects_dir = getProjectsPath();
     std::time_t t = std::time(NULL);

@@ -22,8 +22,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		150B59F7012C6B810D8DCF38 /* lapse_setting_dlg_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD1E14FD1D5089AF48BE8734 /* lapse_setting_dlg_imp.cpp */; };
+		00B9F0E984A7AF1615BA1A16 /* data_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7118CD527091F1F73799565A /* data_imp.cpp */; };
 		183DF82F0A679F7E31871C01 /* LPALogicGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 444CF5ECAA96AD36120D54DA /* LPALogicGen+Private.mm */; };
+		209215B198C1CFBB563A38D4 /* lapse_setting_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B03AE5E4D1304BE4BA4ABD6 /* lapse_setting_imp.cpp */; };
 		215A5A462365BE5D3135AE5F /* LPACaptureQuickMode+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88255FFFFCF8DAE313F84F68 /* LPACaptureQuickMode+Private.mm */; };
 		225EB1A50950133C5CB9F25B /* LPALapseSettingGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8B8079D522DAA429BAD40F77 /* LPALapseSettingGen+Private.mm */; };
 		2D5A893D304842859931BB4D /* LPAProjectCellGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C723530A7908C1EA50793AB6 /* LPAProjectCellGen+Private.mm */; };
@@ -31,23 +32,20 @@
 		3884721BE81EB2F5A3626853 /* config_key_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA26FB735DC609FEA4DD0448 /* config_key_value.cpp */; };
 		3B36C74703DB8CBB5BC65509 /* LPAConfigKeyValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71DD55D34BF4845C437FF59B /* LPAConfigKeyValue.mm */; };
 		3B41009010DA0C8DC9CF476F /* LPAQuickModeGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29A87E3EA69F51BDFB75F8A9 /* LPAQuickModeGen+Private.mm */; };
-		43B57E62CA995F388C3D9666 /* project_cell_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B54787FB9CCE6460275E165 /* project_cell_imp.cpp */; };
-		45EC06E4D08D5D2B64D7634B /* ui_logic_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 817AA61D947CC7620C0F3083 /* ui_logic_imp.cpp */; };
-		4A92564CFE4438195F7C1BA8 /* LPAUilogicGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2077AB361E391F980F3843D5 /* LPAUilogicGen+Private.mm */; };
 		4EB775CC64141F0AD3891AF6 /* LPALapseSettingDlgGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51524D696D9B154C3CF311DF /* LPALapseSettingDlgGen+Private.mm */; };
-		7033629A363BFF6D1A283027 /* project_list_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFC0F8C80448BF63E800A973 /* project_list_imp.cpp */; };
-		766BAC77D56097543D2DE3E4 /* logic_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6883277F1B404C6059893BC7 /* logic_imp.cpp */; };
+		777E369E84981BBC9C8291F8 /* quick_mode_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0914F3B63F754658AA57E4D /* quick_mode_imp.cpp */; };
 		83DDCB7EFE35A07634913C7F /* LPACaptureQuickMode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 931FDB8163EED8A734DF3E3C /* LPACaptureQuickMode.mm */; };
 		8CF1A90332804866DE35D6B5 /* LPAVideoInfo+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 800331BBD97D74E93D111986 /* LPAVideoInfo+Private.mm */; };
 		9D0F9EC45F5313890B79F1B5 /* LPAVideoInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 322144243D349DA9A6555529 /* LPAVideoInfo.mm */; };
-		A5311C36F6EA9E2AF6A3A9BE /* quick_mode_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0914F3B63F754658AA57E4D /* quick_mode_imp.cpp */; };
+		9DE1A9F3167F25E387541AF6 /* logic_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6883277F1B404C6059893BC7 /* logic_imp.cpp */; };
+		A1F3E681482A95A881854384 /* project_list_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFC0F8C80448BF63E800A973 /* project_list_imp.cpp */; };
 		A64AEF2033C3863E7C8ED37B /* LPALapseSettingUiGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = A4B1DE8A01DDE0919AC3DAB6 /* LPALapseSettingUiGen+Private.mm */; };
-		B30C3EFBEBC149061DB60C89 /* lapse_setting_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B03AE5E4D1304BE4BA4ABD6 /* lapse_setting_imp.cpp */; };
+		AA52075D65EB8970C6A1C658 /* lapse_setting_dlg_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD1E14FD1D5089AF48BE8734 /* lapse_setting_dlg_imp.cpp */; };
+		C24B8FF13096CFDFF9D9D1D3 /* project_cell_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B54787FB9CCE6460275E165 /* project_cell_imp.cpp */; };
 		C25D037A0E602DBE8C38800B /* LPAProjectListGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = C30E6C0C1794E2C8909CFB3D /* LPAProjectListGen+Private.mm */; };
 		DB968C87A8FA30CFB516ADAA /* LPADataGen+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 450E60AA7F9E2315B98CB852 /* LPADataGen+Private.mm */; };
 		E4FA53CE46B3F6C2D4C4D93F /* LPAConfigKeyValue+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7F27F4A3540FD6F689D811D0 /* LPAConfigKeyValue+Private.mm */; };
 		EE82DBCB1AD0916486DD3A39 /* capture_quick_mode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE100D5AAF99B6D446DC6F3D /* capture_quick_mode.cpp */; };
-		FF470E80785A609FC655137B /* data_imp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7118CD527091F1F73799565A /* data_imp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +75,6 @@
 		1C6FF8C449A1AB6F7926881C /* lapse_setting_imp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = lapse_setting_imp.hpp; sourceTree = "<group>"; };
 		1EBBA68D2E46665ABB445025 /* LPALapseSettingDlgGen+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LPALapseSettingDlgGen+Private.h"; sourceTree = "<group>"; };
 		1F4495C92721797F9E9508A9 /* uilogic_gen.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = uilogic_gen.hpp; sourceTree = "<group>"; };
-		2077AB361E391F980F3843D5 /* LPAUilogicGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "LPAUilogicGen+Private.mm"; sourceTree = "<group>"; };
 		234F442DF1D9D8B1638FEB36 /* LPALapseEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPALapseEvent.h; sourceTree = "<group>"; };
 		2354C0B8EAC89A77F468DD7C /* project_list_gen.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = project_list_gen.hpp; sourceTree = "<group>"; };
 		29A87E3EA69F51BDFB75F8A9 /* LPAQuickModeGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "LPAQuickModeGen+Private.mm"; sourceTree = "<group>"; };
@@ -88,7 +85,6 @@
 		41BE3C7E0EA365BAAC8F4B33 /* LPAIntervalMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPAIntervalMode.h; sourceTree = "<group>"; };
 		444CF5ECAA96AD36120D54DA /* LPALogicGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "LPALogicGen+Private.mm"; sourceTree = "<group>"; };
 		450E60AA7F9E2315B98CB852 /* LPADataGen+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "LPADataGen+Private.mm"; sourceTree = "<group>"; };
-		45264195E3B541E83A7EA55C /* LPAUilogicGen+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LPAUilogicGen+Private.h"; sourceTree = "<group>"; };
 		48AE5A124610AD33E19C30C5 /* LPAProjectListGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPAProjectListGen.h; sourceTree = "<group>"; };
 		4A89FA3EB599379231EBAF9C /* LPALapseSettingDlgDelegate+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LPALapseSettingDlgDelegate+Private.h"; sourceTree = "<group>"; };
 		4E092F34FCF35444631C0E9F /* LPADataGen+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LPADataGen+Private.h"; sourceTree = "<group>"; };
@@ -101,7 +97,6 @@
 		6883277F1B404C6059893BC7 /* logic_imp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = logic_imp.cpp; sourceTree = "<group>"; };
 		694835128325C8BDB03E0E03 /* logic_imp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = logic_imp.hpp; sourceTree = "<group>"; };
 		6A8CD9393CFF11236BAF2A2B /* LPAProjectCellGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPAProjectCellGen.h; sourceTree = "<group>"; };
-		6C0E16351D40E0ECA0775BD2 /* LPAUilogicGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPAUilogicGen.h; sourceTree = "<group>"; };
 		6EAB7126B21FB05246E3ADEF /* lapse_setting_dlg_gen.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = lapse_setting_dlg_gen.hpp; sourceTree = "<group>"; };
 		70DFE5C3B9AB805107F05F6C /* interval_mode.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = interval_mode.hpp; sourceTree = "<group>"; };
 		7118CD527091F1F73799565A /* data_imp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = data_imp.cpp; sourceTree = "<group>"; };
@@ -112,7 +107,6 @@
 		7630295C3C5E3E39FADCB9A6 /* lapse_setting_dlg_imp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = lapse_setting_dlg_imp.hpp; sourceTree = "<group>"; };
 		7F27F4A3540FD6F689D811D0 /* LPAConfigKeyValue+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "LPAConfigKeyValue+Private.mm"; sourceTree = "<group>"; };
 		800331BBD97D74E93D111986 /* LPAVideoInfo+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "LPAVideoInfo+Private.mm"; sourceTree = "<group>"; };
-		817AA61D947CC7620C0F3083 /* ui_logic_imp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ui_logic_imp.cpp; sourceTree = "<group>"; };
 		83EB932F28F18BACDB15E923 /* project_cell_imp.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = project_cell_imp.hpp; sourceTree = "<group>"; };
 		876C8E89282CDD4CBD792FEA /* LPALapseSettingDlgDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPALapseSettingDlgDelegate.h; sourceTree = "<group>"; };
 		881FB1D9E375A4684880A376 /* LPALapseSettingDlgGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPALapseSettingDlgGen.h; sourceTree = "<group>"; };
@@ -208,29 +202,6 @@
 			path = cpp;
 			sourceTree = "<group>";
 		};
-		22F3A358C6F16B2A99F0FC47 /* src/cpp */ = {
-			isa = PBXGroup;
-			children = (
-				7118CD527091F1F73799565A /* data_imp.cpp */,
-				8876A56C0A763AFE88E97389 /* data_imp.hpp */,
-				BD1E14FD1D5089AF48BE8734 /* lapse_setting_dlg_imp.cpp */,
-				7630295C3C5E3E39FADCB9A6 /* lapse_setting_dlg_imp.hpp */,
-				5B03AE5E4D1304BE4BA4ABD6 /* lapse_setting_imp.cpp */,
-				1C6FF8C449A1AB6F7926881C /* lapse_setting_imp.hpp */,
-				6883277F1B404C6059893BC7 /* logic_imp.cpp */,
-				694835128325C8BDB03E0E03 /* logic_imp.hpp */,
-				1B54787FB9CCE6460275E165 /* project_cell_imp.cpp */,
-				83EB932F28F18BACDB15E923 /* project_cell_imp.hpp */,
-				BFC0F8C80448BF63E800A973 /* project_list_imp.cpp */,
-				C5409558487C73F969B13B35 /* project_list_imp.hpp */,
-				B0914F3B63F754658AA57E4D /* quick_mode_imp.cpp */,
-				0A087D025C94C09C2823A7EE /* quick_mode_imp.hpp */,
-				817AA61D947CC7620C0F3083 /* ui_logic_imp.cpp */,
-				9199F28A7243C79A4D0FF78C /* ui_logic_imp.hpp */,
-			);
-			path = src/cpp;
-			sourceTree = "<group>";
-		};
 		593BDA10734A362E4512B2CA /* objc */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,9 +244,6 @@
 				0509A572E4214BF5A2953D2D /* LPAQuickModeGen+Private.h */,
 				29A87E3EA69F51BDFB75F8A9 /* LPAQuickModeGen+Private.mm */,
 				61EF6729DEC1B24F077B444A /* LPAQuickModeGen.h */,
-				45264195E3B541E83A7EA55C /* LPAUilogicGen+Private.h */,
-				2077AB361E391F980F3843D5 /* LPAUilogicGen+Private.mm */,
-				6C0E16351D40E0ECA0775BD2 /* LPAUilogicGen.h */,
 				AA4B8F5F7BB2D6C5964F800F /* LPAVideoInfo+Private.h */,
 				800331BBD97D74E93D111986 /* LPAVideoInfo+Private.mm */,
 				960E324E55F003FB8FAD06BA /* LPAVideoInfo.h */,
@@ -297,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				6A117C21370C7C269BE03EA8 /* generated-src */,
-				22F3A358C6F16B2A99F0FC47 /* src/cpp */,
+				CC2DE01A91720FD24F89D02D /* src/cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -318,6 +286,28 @@
 				8D63DEB770FD191237E4726E /* liblapse_objc.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CC2DE01A91720FD24F89D02D /* src/cpp */ = {
+			isa = PBXGroup;
+			children = (
+				7118CD527091F1F73799565A /* data_imp.cpp */,
+				8876A56C0A763AFE88E97389 /* data_imp.hpp */,
+				BD1E14FD1D5089AF48BE8734 /* lapse_setting_dlg_imp.cpp */,
+				7630295C3C5E3E39FADCB9A6 /* lapse_setting_dlg_imp.hpp */,
+				5B03AE5E4D1304BE4BA4ABD6 /* lapse_setting_imp.cpp */,
+				1C6FF8C449A1AB6F7926881C /* lapse_setting_imp.hpp */,
+				6883277F1B404C6059893BC7 /* logic_imp.cpp */,
+				694835128325C8BDB03E0E03 /* logic_imp.hpp */,
+				1B54787FB9CCE6460275E165 /* project_cell_imp.cpp */,
+				83EB932F28F18BACDB15E923 /* project_cell_imp.hpp */,
+				BFC0F8C80448BF63E800A973 /* project_list_imp.cpp */,
+				C5409558487C73F969B13B35 /* project_list_imp.hpp */,
+				B0914F3B63F754658AA57E4D /* quick_mode_imp.cpp */,
+				0A087D025C94C09C2823A7EE /* quick_mode_imp.hpp */,
+				9199F28A7243C79A4D0FF78C /* ui_logic_imp.hpp */,
+			);
+			path = src/cpp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,7 +389,6 @@
 				2D5A893D304842859931BB4D /* LPAProjectCellGen+Private.mm in Sources */,
 				C25D037A0E602DBE8C38800B /* LPAProjectListGen+Private.mm in Sources */,
 				3B41009010DA0C8DC9CF476F /* LPAQuickModeGen+Private.mm in Sources */,
-				4A92564CFE4438195F7C1BA8 /* LPAUilogicGen+Private.mm in Sources */,
 				8CF1A90332804866DE35D6B5 /* LPAVideoInfo+Private.mm in Sources */,
 				9D0F9EC45F5313890B79F1B5 /* LPAVideoInfo.mm in Sources */,
 			);
@@ -411,14 +400,13 @@
 			files = (
 				EE82DBCB1AD0916486DD3A39 /* capture_quick_mode.cpp in Sources */,
 				3884721BE81EB2F5A3626853 /* config_key_value.cpp in Sources */,
-				FF470E80785A609FC655137B /* data_imp.cpp in Sources */,
-				150B59F7012C6B810D8DCF38 /* lapse_setting_dlg_imp.cpp in Sources */,
-				B30C3EFBEBC149061DB60C89 /* lapse_setting_imp.cpp in Sources */,
-				766BAC77D56097543D2DE3E4 /* logic_imp.cpp in Sources */,
-				43B57E62CA995F388C3D9666 /* project_cell_imp.cpp in Sources */,
-				7033629A363BFF6D1A283027 /* project_list_imp.cpp in Sources */,
-				A5311C36F6EA9E2AF6A3A9BE /* quick_mode_imp.cpp in Sources */,
-				45EC06E4D08D5D2B64D7634B /* ui_logic_imp.cpp in Sources */,
+				00B9F0E984A7AF1615BA1A16 /* data_imp.cpp in Sources */,
+				AA52075D65EB8970C6A1C658 /* lapse_setting_dlg_imp.cpp in Sources */,
+				209215B198C1CFBB563A38D4 /* lapse_setting_imp.cpp in Sources */,
+				9DE1A9F3167F25E387541AF6 /* logic_imp.cpp in Sources */,
+				C24B8FF13096CFDFF9D9D1D3 /* project_cell_imp.cpp in Sources */,
+				A1F3E681482A95A881854384 /* project_list_imp.cpp in Sources */,
+				777E369E84981BBC9C8291F8 /* quick_mode_imp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,7 +459,6 @@
 		45AA5D4CCDB4372B78643A72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_NAME = All;
 			};
 			name = Release;
@@ -528,7 +515,6 @@
 		EB83D68A22F8B327F6354A8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_NAME = All;
 			};
 			name = Debug;
