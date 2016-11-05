@@ -42,14 +42,6 @@ video_info = record {
 	iso:i32;
 }
 
-
-
-uilogic_gen = interface + c {
-	static instance():uilogic_gen;
-	initialize(scene:lapse_ui_scene):bool;
-	getEventStr(event:lapse_event):string;
-}
-
 logic_gen = interface + c {
 	static instance():logic_gen;
 	initialize(config:string):bool;
@@ -106,6 +98,12 @@ config_key_value = record {
 	const ALERT_TILLE_INFO:string = "alert_tille_info";
 	const CAPTURE_FAILED:string = "capture_failed";
 	const FPS_LPASE_PAUSE:string = "fps_lpase_pause";
+
+	const FRAME:string = "frame";
+	const FPS:string = "fps";
+	const RECORD_DURATION:string = "record_duration";
+	const RECORD_LAPSE:string = "record_lapse";
+	const MOIVES:string = "moives";
 }
 
 quick_mode_gen = interface +c {
@@ -168,6 +166,7 @@ project_cell_gen = interface +c {
 	getCreateTime():string;
 	getLength():string;
 	getFps():string;
+	getRecordDuration():string;
 }
 
 publish_channel = enum {
@@ -235,3 +234,27 @@ lapse_setting_gen = interface +c {
 	clean();
 }
 
+moive_info_gen = interface +c {
+	getName():string;
+	getFrameAmount():i32;
+	getDurationSecond():f32;
+	getFPS():f32;
+	getRecordLapse():f32;
+	getRecordDuration():f32;
+
+	setName(name:string):bool;
+	setFrameAmount(amount:i32);
+	setDurationSecond(seconds:f32);
+	setFPS(fps:f32);
+	setRecordDuration(duration:f32);
+	setRecordLapse(lapse:f32);
+}
+
+moive_info_manager_gen = interface +c {
+	static instance():moive_info_manager_gen;
+	initialize(config:string):bool;
+	createMoiveInfo(path:string):moive_info_gen;
+	findMoiveInfo(name:string):moive_info_gen;
+	removeMoiveInfo(name:string);
+	save();
+}

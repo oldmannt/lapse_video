@@ -320,6 +320,64 @@ jni:
   typename: jobject
   typeSignature: 'Ldyno/fun/lapse/LogicGen;'
 ---
+name: lapse_moive_info_gen
+typedef: 'interface +c'
+params: []
+prefix: lapse_
+cpp:
+  typename: '::lpase::MoiveInfoGen'
+  header: '"moive_info_gen.hpp"'
+  byValue: false
+objc:
+  typename: 'LPAMoiveInfoGen'
+  pointer: true
+  hash: '%s.hash'
+  boxed: 'LPAMoiveInfoGen'
+  header: '"LPAMoiveInfoGen.h"'
+objcpp:
+  translator: '::djinni_generated::MoiveInfoGen'
+  header: '"LPAMoiveInfoGen+Private.h"'
+java:
+  reference: true
+  typename: 'dyno.fun.lapse.MoiveInfoGen'
+  generic: true
+  hash: '%s.hashCode()'
+  boxed: 'dyno.fun.lapse.MoiveInfoGen'
+jni:
+  translator: '::djinni_generated::NativeMoiveInfoGen'
+  header: '"NativeMoiveInfoGen.hpp"'
+  typename: jobject
+  typeSignature: 'Ldyno/fun/lapse/MoiveInfoGen;'
+---
+name: lapse_moive_info_manager_gen
+typedef: 'interface +c'
+params: []
+prefix: lapse_
+cpp:
+  typename: '::lpase::MoiveInfoManagerGen'
+  header: '"moive_info_manager_gen.hpp"'
+  byValue: false
+objc:
+  typename: 'LPAMoiveInfoManagerGen'
+  pointer: true
+  hash: '%s.hash'
+  boxed: 'LPAMoiveInfoManagerGen'
+  header: '"LPAMoiveInfoManagerGen.h"'
+objcpp:
+  translator: '::djinni_generated::MoiveInfoManagerGen'
+  header: '"LPAMoiveInfoManagerGen+Private.h"'
+java:
+  reference: true
+  typename: 'dyno.fun.lapse.MoiveInfoManagerGen'
+  generic: true
+  hash: '%s.hashCode()'
+  boxed: 'dyno.fun.lapse.MoiveInfoManagerGen'
+jni:
+  translator: '::djinni_generated::NativeMoiveInfoManagerGen'
+  header: '"NativeMoiveInfoManagerGen.hpp"'
+  typename: jobject
+  typeSignature: 'Ldyno/fun/lapse/MoiveInfoManagerGen;'
+---
 name: lapse_project_cell_gen
 typedef: 'interface +c'
 params: []
@@ -435,35 +493,6 @@ jni:
   header: '"NativeQuickModeGen.hpp"'
   typename: jobject
   typeSignature: 'Ldyno/fun/lapse/QuickModeGen;'
----
-name: lapse_uilogic_gen
-typedef: 'interface +c'
-params: []
-prefix: lapse_
-cpp:
-  typename: '::lpase::UilogicGen'
-  header: '"uilogic_gen.hpp"'
-  byValue: false
-objc:
-  typename: 'LPAUilogicGen'
-  pointer: true
-  hash: '%s.hash'
-  boxed: 'LPAUilogicGen'
-  header: '"LPAUilogicGen.h"'
-objcpp:
-  translator: '::djinni_generated::UilogicGen'
-  header: '"LPAUilogicGen+Private.h"'
-java:
-  reference: true
-  typename: 'dyno.fun.lapse.UilogicGen'
-  generic: true
-  hash: '%s.hashCode()'
-  boxed: 'dyno.fun.lapse.UilogicGen'
-jni:
-  translator: '::djinni_generated::NativeUilogicGen'
-  header: '"NativeUilogicGen.hpp"'
-  typename: jobject
-  typeSignature: 'Ldyno/fun/lapse/UilogicGen;'
 ---
 name: lapse_video_info
 typedef: 'record'

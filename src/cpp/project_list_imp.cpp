@@ -10,6 +10,7 @@
 #include "project_cell_imp.hpp"
 #include "logic_gen.hpp"
 #include "lapse_event.hpp"
+#include "moive_info_manager_gen.hpp"
 
 #include "config_gen.hpp"
 #include "platform_utility_gen.hpp"
@@ -29,7 +30,6 @@ std::shared_ptr<ProjectListGen> ProjectListGen::instance(){
 }
 
 void ProjectListImp::asyncLoadCell(const std::string& file,int32_t review_w, int32_t review_h){
-
     std::shared_ptr<ProjectCellGen> cell = ProjectCellGen::create(file, review_w, review_h);
     CHECK_RT(cell!=nullptr, "create cell failed file:%s", file.c_str());
     {
@@ -54,15 +54,24 @@ bool ProjectListImp::load(int32_t review_w, int32_t review_h){
     std::string projects_dir = LogicGen::instance()->getProjectsPath();
     std::unordered_set<std::string> video_files = InstanceGetterGen::getPlatformUtility()->getFilesFromPathBySuffix(projects_dir, "mp4");
 
-    m_project_paths.insert(video_files.begin(), video_files.end());
-    m_project_cells.reserve(video_files.size());
-    std::set<std::string>::iterator it_video(m_project_paths.begin());
-    for (; it_video!=m_project_paths.end(); ++it_video) {        
+    std::set<std::string> new_cells;
+    new_cells.insert(video_files.begin(), video_files.end());
+    G_LOG_C(LOG_INFO, "load files:%d", new_cells.size());
+    std::set<std::string>::iterator it_video(new_cells.begin());
+    for (; it_video!=new_cells.end(); ++it_video) {
+        if (m_project_paths.find(*it_video)!=m_project_paths.end()){
+            continue;
+        }
+        m_project_paths.insert(*it_video);
         auto load_cell = std::bind(&ProjectListImp::asyncLoadCell, this, *it_video, review_w, review_h);
         auto complet = std::bind(&ProjectListImp::asyncLoadComplete, this);
         AsyncTaskPool::instance()->enqueue(AsyncTaskPool::TaskType::OTHER, load_cell, complet);
     }
     
+    auto save = [](){
+        MoiveInfoManagerGen::instance()->save();
+    };
+    AsyncTaskPool::instance()->enqueue(AsyncTaskPool::TaskType::OTHER, save, nullptr);
 }
 
 std::shared_ptr<ProjectCellGen> ProjectListImp::getProjectData(int32_t index){
@@ -95,6 +104,7 @@ void ProjectListImp::deleteProject(int32_t index){
     std::shared_ptr<TaskInfoGen> info = TaskManagerGen::instance()->create_info((int64_t)LapseEvent::PROJECTS_LIST_UPDATE_DELETE, -1, 0);
     info->setIValue("index", target);
     TaskManagerGen::instance()->addTaskInfo(info, nullptr);
+    MoiveInfoManagerGen::instance()->removeMoiveInfo(cell->getName());
 }
 
 void ProjectListImp::publishProject(int32_t index, PublishChannel channel){

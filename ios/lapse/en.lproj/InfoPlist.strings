@@ -1,0 +1,10 @@
+/* 
+  infoPlist.strings
+  lapse_app
+
+  Created by dyno on 10/31/16.
+  Copyright © 2016 dyno. All rights reserved.
+*/
+CFBundleDisplayName = "Lapse Video";
+NSCameraUsageDescription = "This App need you agreement to assess camera";
+NSPhotoLibraryUsageDescription = "Save video to Library";

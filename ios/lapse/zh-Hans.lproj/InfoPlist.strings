@@ -1,0 +1,11 @@
+/* 
+  infoPlist.strings
+  lapse_app
+
+  Created by dyno on 10/31/16.
+  Copyright © 2016 dyno. All rights reserved.
+*/
+
+CFBundleDisplayName = "延时拍照";
+NSCameraUsageDescription = "我可以使用你的相机吗";
+NSPhotoLibraryUsageDescription = "我可以使用你的相册吗";

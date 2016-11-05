@@ -62,9 +62,6 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         btn_show(nil)
-        btn_switch.isHidden = true
-        m_exposure_sel.isHidden = true
-        m_focus_sel.isHidden = true
         
         camera_controller.initializ_swif(m_camera_preview, complition: {[unowned self] (result, msg) -> Void in
             GBInstanceGetterGen.setCameraController(self.camera_controller)
@@ -74,6 +71,18 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         GBUiManagerGen.instance()?.initialize("", factory: GBViewFactoryImp.instance)
         LogicTaskExcuserImp.sharedInstance.m_capture_vc = self
         GBTaskManagerGen.instance()?.addTaskExcuser(LogicTaskExcuserImp.sharedInstance)
+        
+        self.btn_lapse.setTitle(GBLanguageStoreGen.instance()?.getString("capture"), for: .normal)
+        self.btn_capture.setTitle(GBLanguageStoreGen.instance()?.getString("capture"), for: .normal)
+        self.btn_ratio.setTitle(GBLanguageStoreGen.instance()?.getString("ratio"), for: .normal)
+        self.btn_lapse.setTitle(GBLanguageStoreGen.instance()?.getString("lapse"), for: .normal)
+        self.btn_more.setTitle(GBLanguageStoreGen.instance()?.getString("more"), for: .normal)
+        self.btn_library.setTitle(GBLanguageStoreGen.instance()?.getString("library"), for: .normal)
+        self.btn_pause.setTitle(GBLanguageStoreGen.instance()?.getString("pause"), for: .normal)
+        self.btn_resume.setTitle(GBLanguageStoreGen.instance()?.getString("resume"), for: .normal)
+        self.m_btn_LapseStop.setTitle(GBLanguageStoreGen.instance()?.getString("lapse_pause"), for: .normal)
+        self.m_btn_LapseResume.setTitle(GBLanguageStoreGen.instance()?.getString("lapse_resume"), for: .normal)
+        self.btn_stop.setTitle(GBLanguageStoreGen.instance()?.getString("stop"), for: .normal)
         
         #if DEBUG
             m_updateDebugInfo = GBTimerGen.create(300, repeatTimes: -1, hander: self)
@@ -211,7 +220,7 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
     }
     
     func screenRotate() {
-        print("screen rotate: \(UIApplication.shared.statusBarOrientation)")
+        //print("screen rotate: \(UIApplication.shared.statusBarOrientation)")
         //let ori:UIDeviceOrientation = UIDevice.currentDevice().orientation
         camera_controller.rotateScreen()
     }
@@ -318,10 +327,12 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
         else if btn == btn_pause {
             btn_resume.isHidden = false
             btn_pause.isHidden = true
+            m_view_lapse_ctrl.isHidden = true
         }
         else if btn == btn_resume {
             btn_resume.isHidden = true
             btn_pause.isHidden = false
+            m_view_lapse_ctrl.isHidden = false
         }
         else if btn == btn_stop {
             btn_capture.isHidden = false
@@ -331,6 +342,7 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
             btn_resume.isHidden = true
             m_btn_LapseStop.isHidden = true
             m_btn_LapseResume.isHidden = true
+            m_view_lapse_ctrl.isHidden = true
         }
         else if btn == m_btn_LapseResume {
             m_btn_LapseStop.isHidden = false
@@ -346,6 +358,9 @@ class ViewController: PopbaseUIViewController ,CapturePictureHandler , GBTaskExc
             btn_resume.isHidden = true
             m_btn_LapseStop.isHidden = true
             m_btn_LapseResume.isHidden = true
+            btn_switch.isHidden = true
+            m_exposure_sel.isHidden = true
+            m_focus_sel.isHidden = true
         }
         
     }

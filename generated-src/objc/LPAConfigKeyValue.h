@@ -40,3 +40,8 @@ extern NSString * __nonnull const LPAConfigKeyValueLAPSERANGEALERT;
 extern NSString * __nonnull const LPAConfigKeyValueALERTTILLEINFO;
 extern NSString * __nonnull const LPAConfigKeyValueCAPTUREFAILED;
 extern NSString * __nonnull const LPAConfigKeyValueFPSLPASEPAUSE;
+extern NSString * __nonnull const LPAConfigKeyValueFRAME;
+extern NSString * __nonnull const LPAConfigKeyValueFPS;
+extern NSString * __nonnull const LPAConfigKeyValueRECORDDURATION;
+extern NSString * __nonnull const LPAConfigKeyValueRECORDLAPSE;
+extern NSString * __nonnull const LPAConfigKeyValueMOIVES;

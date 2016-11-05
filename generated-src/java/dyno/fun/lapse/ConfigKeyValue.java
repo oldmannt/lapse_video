@@ -67,6 +67,16 @@ public final class ConfigKeyValue {
 
     public static final String FPS_LPASE_PAUSE = "fps_lpase_pause";
 
+    public static final String FRAME = "frame";
+
+    public static final String FPS = "fps";
+
+    public static final String RECORD_DURATION = "record_duration";
+
+    public static final String RECORD_LAPSE = "record_lapse";
+
+    public static final String MOIVES = "moives";
+
 
     public ConfigKeyValue(
             ) {

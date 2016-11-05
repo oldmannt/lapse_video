@@ -12,6 +12,7 @@ class ProjectsViewController: PopbaseUIViewController, UITableViewDataSource, UI
 
     @IBOutlet weak var m_btn_back: UIButton!
     @IBOutlet weak var m_table_view: UITableView!
+    @IBOutlet weak var m_view_tittle: UINavigationItem!
     
     var m_project_setting_view: ProjectSettingView?
     var m_publish_view: PublishView?
@@ -41,6 +42,9 @@ class ProjectsViewController: PopbaseUIViewController, UITableViewDataSource, UI
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(ProjectsViewController.longPress))
         self.view.addGestureRecognizer(longPressRecognizer)
         GBTaskManagerGen.instance()?.addTaskExcuser(self)
+        
+        m_view_tittle.title = GBLanguageStoreGen.instance()?.getString("projects")
+        m_btn_back.setTitle(GBLanguageStoreGen.instance()?.getString("back"), for: .normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,8 +62,10 @@ class ProjectsViewController: PopbaseUIViewController, UITableViewDataSource, UI
         
         LPAProjectListGen.instance()?.load(Int32(cell.m_video_review.frame.size.width)
             , reviewH: Int32(cell.m_video_review.frame.size.height))
-        
-        //m_table_view.reloadData()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -68,6 +74,7 @@ class ProjectsViewController: PopbaseUIViewController, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //print("table number:\((LPAProjectListGen.instance()?.getProjectAmount())!)")
         return Int((LPAProjectListGen.instance()?.getProjectAmount())!)
     }
     
@@ -86,6 +93,7 @@ class ProjectsViewController: PopbaseUIViewController, UITableViewDataSource, UI
         cell.m_fps.text = cell_data?.getFps()
         cell.m_video_create_time.text = cell_data?.getCreateTime()
         cell.m_video_length.text = cell_data?.getLength()
+        cell.m_record_duration.text = cell_data?.getRecordDuration()
         cell.m_video_review.image = ObjcUtility.videoReview2UIImage((cell_data?.getPath())!)
 
         return cell

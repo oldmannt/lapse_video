@@ -1,0 +1,84 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "03d-KZ-TGY"; */
+"03d-KZ-TGY.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "pause"; ObjectID = "1VT-JF-5EV"; */
+"1VT-JF-5EV.normalTitle" = "pause";
+
+/* Class = "UIButton"; normalTitle = "FPS"; ObjectID = "24e-Z1-H5r"; */
+"24e-Z1-H5r.normalTitle" = "FPS";
+
+/* Class = "UIButton"; normalTitle = "switch"; ObjectID = "2LA-Ze-XF0"; */
+"2LA-Ze-XF0.normalTitle" = "switch";
+
+/* Class = "UIButton"; normalTitle = "capture"; ObjectID = "3M3-Nu-Zft"; */
+"3M3-Nu-Zft.normalTitle" = "capture";
+
+/* Class = "UILabel"; text = "2016年12月12日12:12"; ObjectID = "3Mj-nY-h0J"; */
+"3Mj-nY-h0J.text" = "2016年12月12日12:12";
+
+/* Class = "UINavigationItem"; title = "Lapse"; ObjectID = "4SK-ez-4zU"; */
+"4SK-ez-4zU.title" = "Lapse";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "5Sg-DC-YBG"; */
+"5Sg-DC-YBG.title" = "Back";
+
+/* Class = "UILabel"; text = "fps"; ObjectID = "F9J-Rg-xYT"; */
+"F9J-Rg-xYT.text" = "fps";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Ik9-C0-hHX"; */
+"Ik9-C0-hHX.normalTitle" = "Save";
+
+/* Class = "UINavigationItem"; title = "Projects"; ObjectID = "Iwr-eq-ahH"; */
+"Iwr-eq-ahH.title" = "Projects";
+
+/* Class = "UIButton"; normalTitle = "ratio"; ObjectID = "J7W-Uq-53v"; */
+"J7W-Uq-53v.normalTitle" = "ratio";
+
+/* Class = "UIButton"; normalTitle = "stop"; ObjectID = "KLB-Jv-Cnn"; */
+"KLB-Jv-Cnn.normalTitle" = "stop";
+
+/* Class = "UIButton"; normalTitle = "stop"; ObjectID = "RuC-AN-waf"; */
+"RuC-AN-waf.normalTitle" = "stop";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "TIc-eV-iCF"; */
+"TIc-eV-iCF.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "more"; ObjectID = "VJj-Al-lTn"; */
+"VJj-Al-lTn.normalTitle" = "more";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ylo-Wx-lh1"; */
+"Ylo-Wx-lh1.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "library"; ObjectID = "d4w-Yi-t3T"; */
+"d4w-Yi-t3T.normalTitle" = "library";
+
+/* Class = "UILabel"; text = "video name"; ObjectID = "eE0-KW-MX6"; */
+"eE0-KW-MX6.text" = "video name";
+
+/* Class = "UITabBarItem"; title = "Item 1"; ObjectID = "f7Z-81-CCc"; */
+"f7Z-81-CCc.title" = "Item 1";
+
+/* Class = "UIButton"; normalTitle = "resume"; ObjectID = "gt9-UF-QnP"; */
+"gt9-UF-QnP.normalTitle" = "resume";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "hqP-zF-KvG"; */
+"hqP-zF-KvG.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iS3-Q4-o1B"; */
+"iS3-Q4-o1B.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "jo9-MI-lwC"; */
+"jo9-MI-lwC.title" = "Item 2";
+
+/* Class = "UIButton"; normalTitle = "resume"; ObjectID = "qUy-5W-LOT"; */
+"qUy-5W-LOT.normalTitle" = "resume";
+
+/* Class = "UINavigationItem"; title = "Preview"; ObjectID = "sW7-FY-Q8c"; */
+"sW7-FY-Q8c.title" = "Preview";
+
+/* Class = "UIButton"; normalTitle = "lapse"; ObjectID = "uBb-Xr-myx"; */
+"uBb-Xr-myx.normalTitle" = "lapse";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zIc-Nd-Kn1"; */
+"zIc-Nd-Kn1.text" = "Label";

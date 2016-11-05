@@ -25,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GBInstanceGetterGen.setPlatformUtility(GBPlatformUtilityImp.sharedInstance)
         GBInstanceGetterGen.setCameraController(GBCameraControllerImp.instance)
         GBInstanceGetterGen.setDevice(GBDeviceImp.sharedInstance);
+        
+        let lang_path = GBInstanceGetterGen.getPlatformUtility()?.getPackFilePath("language.json");
+        GBLanguageStoreGen.instance()?.initialize(lang_path!);
         return true
     }
 

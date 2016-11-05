@@ -34,6 +34,8 @@
 		334979CA1D9E3FD600F11CDF /* UIButtonBottomTittle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334979C91D9E3FD600F11CDF /* UIButtonBottomTittle.swift */; };
 		336A48121DC3FEE0002CE44E /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336A48111DC3FEE0002CE44E /* PhotoCaptureDelegate.swift */; };
 		336E87851DC7325C00FB4BCA /* GBDeviceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E87841DC7325C00FB4BCA /* GBDeviceImp.swift */; };
+		336E878A1DC8654E00FB4BCA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 336E878C1DC8654E00FB4BCA /* InfoPlist.strings */; };
+		336E87921DC86B7B00FB4BCA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 336E87911DC86B7B00FB4BCA /* Info.plist */; };
 		338263111D46AA8400DA114F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263101D46AA8400DA114F /* AppDelegate.swift */; };
 		338263131D46AA8400DA114F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338263121D46AA8400DA114F /* ViewController.swift */; };
 		338263161D46AA8400DA114F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338263141D46AA8400DA114F /* Main.storyboard */; };
@@ -184,13 +186,17 @@
 		334979C91D9E3FD600F11CDF /* UIButtonBottomTittle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonBottomTittle.swift; path = ../../gearsbox/src/swift/UIButtonBottomTittle.swift; sourceTree = "<group>"; };
 		336A48111DC3FEE0002CE44E /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCaptureDelegate.swift; path = ../../gearsbox/src/swift/PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		336E87841DC7325C00FB4BCA /* GBDeviceImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GBDeviceImp.swift; path = ../../gearsbox/src/swift/GBDeviceImp.swift; sourceTree = "<group>"; };
+		336E87871DC863FE00FB4BCA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		336E878B1DC8654E00FB4BCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		336E878D1DC8655000FB4BCA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		336E87911DC86B7B00FB4BCA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		336E87931DC86C3B00FB4BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3382630D1D46AA8400DA114F /* lapse_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lapse_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338263101D46AA8400DA114F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338263121D46AA8400DA114F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		338263151D46AA8400DA114F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		338263171D46AA8400DA114F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3382631A1D46AA8400DA114F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3382631C1D46AA8400DA114F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		338263211D46AA8400DA114F /* lapse_app.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lapse_app.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3382632C1D46AA8400DA114F /* lapse_app.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lapse_app.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3382633E1D46AC0700DA114F /* lapse_app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lapse_app-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -399,7 +405,8 @@
 				338263141D46AA8400DA114F /* Main.storyboard */,
 				338263171D46AA8400DA114F /* Assets.xcassets */,
 				338263191D46AA8400DA114F /* LaunchScreen.storyboard */,
-				3382631C1D46AA8400DA114F /* Info.plist */,
+				336E87911DC86B7B00FB4BCA /* Info.plist */,
+				336E878C1DC8654E00FB4BCA /* InfoPlist.strings */,
 				3382633E1D46AC0700DA114F /* lapse_app-Bridging-Header.h */,
 				3382638E1D47247900DA114F /* justfor_cpplink.cpp */,
 				331E5A611D60068900D32AEE /* ProjectsViewController.swift */,
@@ -627,6 +634,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 32DR82A3MW;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 0;
@@ -652,6 +660,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 338263041D46AA8400DA114F;
 			productRefGroup = 3382630E1D46AA8400DA114F /* Products */;
@@ -749,12 +758,14 @@
 				3382631B1D46AA8400DA114F /* LaunchScreen.storyboard in Resources */,
 				338263181D46AA8400DA114F /* Assets.xcassets in Resources */,
 				338263161D46AA8400DA114F /* Main.storyboard in Resources */,
+				336E878A1DC8654E00FB4BCA /* InfoPlist.strings in Resources */,
 				332C75D31DA0E36300282A7F /* project_setting_view.xib in Resources */,
 				33E4D9141D73CB25002A3E39 /* ResolutionSetterView.xib in Resources */,
 				3399AB7D1D7217AB00F5F3EA /* LapseSetterView.xib in Resources */,
 				33F3BD411DA6175D0034AC18 /* PublishView.xib in Resources */,
 				33E4D9181D73DD74002A3E39 /* MoreCameraSetterView.xib in Resources */,
 				332C75D11DA0657F00282A7F /* IQKeyboardManager.bundle in Resources */,
+				336E87921DC86B7B00FB4BCA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,6 +918,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		336E878C1DC8654E00FB4BCA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				336E878B1DC8654E00FB4BCA /* en */,
+				336E878D1DC8655000FB4BCA /* zh-Hans */,
+				336E87931DC86C3B00FB4BCA /* Base */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		338263141D46AA8400DA114F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -919,6 +940,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3382631A1D46AA8400DA114F /* Base */,
+				336E87871DC863FE00FB4BCA /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -930,6 +952,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -946,7 +969,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: li lin (32DR82A3MW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li lin (32DR82A3MW)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -965,7 +989,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-D DEBUG";
@@ -979,6 +1003,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -995,7 +1020,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: li lin (32DR82A3MW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: li lin (32DR82A3MW)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1008,7 +1034,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1024,6 +1050,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 32DR82A3MW;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1034,8 +1063,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "../gearsbox/deps/ffmpeg/ios-fat";
-				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapsevideo;
+				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapse;
 				PRODUCT_NAME = lapse_app;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "lapse/lapse_app-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1051,6 +1082,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: li lin (32DR82A3MW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 32DR82A3MW;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1061,8 +1095,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "../gearsbox/deps/ffmpeg/ios-fat";
-				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapsevideo;
+				PRODUCT_BUNDLE_IDENTIFIER = dyno.fun.lapse;
 				PRODUCT_NAME = lapse_app;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "lapse/lapse_app-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

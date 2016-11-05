@@ -21,4 +21,6 @@
 
 - (nonnull NSString *)getFps;
 
+- (nonnull NSString *)getRecordDuration;
+
 @end

@@ -12,6 +12,8 @@
 #include "platform_utility_gen.hpp"
 #include "file_info_gen.hpp"
 #include "language_store_gen.hpp"
+#include "moive_info_manager_gen.hpp"
+#include "moive_info_gen.hpp"
 
 using namespace lpase;
 using namespace gearsbox;
@@ -32,17 +34,19 @@ bool ProjectCellImp::initializ(const std::string& path, int out_w, int out_h){
     m_path = path;
     
     if (m_video_info->getDuration() < 1){
-        m_length = std::to_string(m_video_info->getFrameAmount()) + " frame";
+        m_length = std::to_string(m_video_info->getFrameAmount()) + LanguageStoreGen::instance()->getString("cell_frame");
     }
     else{
-        m_length = std::to_string(m_video_info->getDuration()) + " s";
+        m_length = std::to_string(m_video_info->getDuration()) + LanguageStoreGen::instance()->getString("cell_duration");
     }
     
-    m_fps = "fps:" + std::to_string(m_video_info->getFPS());
+    m_fps = LanguageStoreGen::instance()->getString("cell_fps");
+    m_fps += ":";
+    m_fps += std::to_string(m_video_info->getFPS());
     
     std::shared_ptr<FileInfoGen> file_info = InstanceGetterGen::getPlatformUtility()->getFileInfo(path);
     CHECK_RTF(file_info!=nullptr,"get file info failed:%s", path.c_str());
-    m_name = file_info->getName();
+    m_name = file_info->getPrefix();
     std::chrono::system_clock::time_point tp = file_info->getCreateDate();
     std::time_t t = std::chrono::system_clock::to_time_t(tp);
     
@@ -51,6 +55,16 @@ bool ProjectCellImp::initializ(const std::string& path, int out_w, int out_h){
         m_create_time = mbstr;
     } else {
         G_LOG_FC(LOG_ERROR, "get datetime failed,fmt:",LanguageStoreGen::instance()->getString("projects_review_date").c_str());
+    }
+    
+    auto moive_info = MoiveInfoManagerGen::instance()->findMoiveInfo(file_info->getPrefix());
+    if (moive_info!=nullptr){
+        moive_info->setFPS(m_video_info->getFPS());
+        moive_info->setFrameAmount(m_video_info->getFrameAmount());
+        moive_info->setDurationSecond(m_video_info->getDuration());
+        sprintf(mbstr, "%.01f%s", moive_info->getRecordDuration(),LanguageStoreGen::instance()->getString("cell_duration").c_str());
+        m_record_duration = mbstr;
+        //G_LOG_C(LOG_INFO,"moive info file:%s, record duration:%.03f, record lapse:%.03f",moive_info->getName().c_str(), moive_info->getRecordDuration(), moive_info->getRecordLapse());
     }
     
     return true;

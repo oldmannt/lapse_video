@@ -7,7 +7,6 @@
 //
 
 #include "logic_imp.hpp"
-#include "uilogic_gen.hpp"
 #include "data_imp.hpp"
 
 #include "macro.h"
@@ -27,6 +26,8 @@
 #include "device_gen.hpp"
 #include "device_orientation.hpp"
 #include "video_orientation.hpp"
+#include "moive_info_gen.hpp"
+#include "moive_info_manager_gen.hpp"
 
 using namespace lpase;
 using namespace gearsbox;
@@ -44,12 +45,7 @@ bool LogicImp::initialize(const std::string &config){
     TaskManagerGen::instance()->addTaskExcuser(shared_from_this());
     CHECK_RTF(DataGen::instance()->initialize(config),"initialize failed:%s", config.c_str());
     initialize_camera();
-    
-    std::string lang_path = InstanceGetterGen::getPlatformUtility()->getPackFilePath("language.json");
-    CHECK(LanguageStoreGen::instance()->initialize(lang_path),"read language failed:%s", lang_path.c_str());
-    
-    LangType lang_type = InstanceGetterGen::getPlatformUtility()->getLanguage();
-    LanguageStoreGen::instance()->setLanguage(lang_type);
+    MoiveInfoManagerGen::instance()->initialize("");
     return true;
 }
 
@@ -98,11 +94,18 @@ void LogicImp::excuse(const std::shared_ptr<TaskInfoGen> & info){
     }
 }
 
-void LogicImp::onComplete(bool success, const std::string & path){
-    G_LOG_C(LOG_INFO, "onComplete %.03f", InstanceGetterGen::getPlatformUtility()->getSystemTickSec());
+void LogicImp::onComplete(bool success, const std::string & path, int32_t duration){
+    //G_LOG_C(LOG_INFO, "onComplete %.03f", InstanceGetterGen::getPlatformUtility()->getSystemTickSec());
     InstanceGetterGen::getPlatformUtility()->showLoadingView(false);
     if (success) {
         InstanceGetterGen::getPlatformUtility()->playVideo(path);
+        auto moive_info = MoiveInfoManagerGen::instance()->createMoiveInfo(path);
+        if (moive_info){
+            moive_info->setRecordDuration(duration/1000.0);
+            float f = DataGen::instance()->getCaptureIntevalMillsec()/1000.0;
+            moive_info->setRecordLapse(DataGen::instance()->getCaptureIntevalMillsec()/1000.0);
+            MoiveInfoManagerGen::instance()->save();
+        }
     }
     else{
         std::string msg = LanguageStoreGen::instance()->getString(ConfigKeyValue::CAPTURE_FAILED);
@@ -113,7 +116,7 @@ void LogicImp::onComplete(bool success, const std::string & path){
 }
 
 void LogicImp::beforeComplete(){
-    G_LOG_C(LOG_INFO, "beforeComplete");
+    //G_LOG_C(LOG_INFO, "beforeComplete");
     InstanceGetterGen::getPlatformUtility()->showLoadingView(true);
 }
 
@@ -154,7 +157,7 @@ void LogicImp::captureStop(){
     m_video_writer = nullptr;
     // set to default frame rate
     InstanceGetterGen::getCameraController()->setFrameDurationMin(Duration(1, InstanceGetterGen::getCameraController()->getDefaultFrameRate()));
-    G_LOG_C(LOG_INFO, "stop %.03f", InstanceGetterGen::getPlatformUtility()->getSystemTickSec());
+    //G_LOG_C(LOG_INFO, "stop %.03f", InstanceGetterGen::getPlatformUtility()->getSystemTickSec());
 }
 
 void LogicImp::lapseStop(){
@@ -192,6 +195,22 @@ void LogicImp::initialize_camera(){
 #include <iostream>
 #include <locale>
 
+std::string LogicImp::genFileName(){
+    std::string projects_dir = getProjectsPath();
+    std::time_t t = std::time(NULL);
+    char mbstr[1024];
+    if (std::strftime(mbstr, sizeof(mbstr), "/%y%m%d%H%M%S", std::localtime(&t))) {
+        projects_dir += mbstr;
+    }
+    else{
+        G_LOG_FC(LOG_ERROR, "time format failed");
+        projects_dir += '/';
+        projects_dir += std::to_string(TimerGen::currentTick());
+    }
+    projects_dir+=".mp4";
+    return projects_dir;
+}
+
 void LogicImp::initialize_video(){
     //TEST_EQ(m_vide_config->getInt("interval"), 1000, "interval");
     //TEST_EQ(m_vide_config->getInt("resolution"), 480, "resolution");
@@ -216,21 +235,8 @@ void LogicImp::initialize_video(){
             break;
     }
     m_video_writer->setOrientation(video_ori);
-    
-    std::string projects_dir = getProjectsPath();
-    std::time_t t = std::time(NULL);
-    char mbstr[1024];
-    if (std::strftime(mbstr, sizeof(mbstr), "/lapse_%y%m%d%H%M%S.mp4", std::localtime(&t))) {
-        projects_dir += mbstr;
-        m_video_writer->setFilePath(projects_dir);
-    }
-    else{
-        G_LOG_FC(LOG_ERROR, "time format failed");
-        projects_dir += '/';
-        projects_dir += std::to_string(TimerGen::currentTick());
-        projects_dir += ".mp4";
-        m_video_writer->setFilePath(projects_dir);
-    }
+    std::string name = this->genFileName();
+    m_video_writer->setFilePath(name);
 }
 
 void LogicImp::setCaptureInteral(int32_t interval){

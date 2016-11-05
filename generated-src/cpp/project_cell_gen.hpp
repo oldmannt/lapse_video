@@ -24,6 +24,8 @@ public:
     virtual std::string getLength() = 0;
 
     virtual std::string getFps() = 0;
+
+    virtual std::string getRecordDuration() = 0;
 };
 
 }  // namespace lpase

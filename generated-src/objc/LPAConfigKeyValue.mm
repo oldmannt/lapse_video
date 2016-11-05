@@ -66,6 +66,16 @@ NSString * __nonnull const LPAConfigKeyValueCAPTUREFAILED = @"capture_failed";
 
 NSString * __nonnull const LPAConfigKeyValueFPSLPASEPAUSE = @"fps_lpase_pause";
 
+NSString * __nonnull const LPAConfigKeyValueFRAME = @"frame";
+
+NSString * __nonnull const LPAConfigKeyValueFPS = @"fps";
+
+NSString * __nonnull const LPAConfigKeyValueRECORDDURATION = @"record_duration";
+
+NSString * __nonnull const LPAConfigKeyValueRECORDLAPSE = @"record_lapse";
+
+NSString * __nonnull const LPAConfigKeyValueMOIVES = @"moives";
+
 @implementation LPAConfigKeyValue
 
 - (nonnull instancetype)init

@@ -30,6 +30,8 @@ namespace lpase {
         
         virtual std::string getFps(){return m_fps;}
         
+        virtual std::string getRecordDuration(){return m_record_duration;};
+        
         bool initializ(const std::string& path, int out_w, int out_h);
         
         void setPath(std::string path){
@@ -54,6 +56,7 @@ namespace lpase {
         std::string m_create_time;
         std::string m_length;
         std::string m_fps;
+        std::string m_record_duration;
         std::shared_ptr<gearsbox::VideoInfoGen> m_video_info;
     };
     

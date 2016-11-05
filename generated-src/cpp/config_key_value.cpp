@@ -67,4 +67,14 @@ std::string const ConfigKeyValue::CAPTURE_FAILED = {"capture_failed"};
 
 std::string const ConfigKeyValue::FPS_LPASE_PAUSE = {"fps_lpase_pause"};
 
+std::string const ConfigKeyValue::FRAME = {"frame"};
+
+std::string const ConfigKeyValue::FPS = {"fps"};
+
+std::string const ConfigKeyValue::RECORD_DURATION = {"record_duration"};
+
+std::string const ConfigKeyValue::RECORD_LAPSE = {"record_lapse"};
+
+std::string const ConfigKeyValue::MOIVES = {"moives"};
+
 }  // namespace lpase

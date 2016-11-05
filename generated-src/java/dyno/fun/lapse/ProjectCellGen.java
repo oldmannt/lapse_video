@@ -16,6 +16,8 @@ public abstract class ProjectCellGen {
 
     public abstract String getFps();
 
+    public abstract String getRecordDuration();
+
     public static native ProjectCellGen create(String path, int outW, int outH);
 
     private static final class CppProxy extends ProjectCellGen
@@ -80,5 +82,13 @@ public abstract class ProjectCellGen {
             return native_getFps(this.nativeRef);
         }
         private native String native_getFps(long _nativeRef);
+
+        @Override
+        public String getRecordDuration()
+        {
+            assert !this.destroyed.get() : "trying to use a destroyed object";
+            return native_getRecordDuration(this.nativeRef);
+        }
+        private native String native_getRecordDuration(long _nativeRef);
     }
 }

@@ -71,6 +71,16 @@ struct ConfigKeyValue final {
     static std::string const CAPTURE_FAILED;
 
     static std::string const FPS_LPASE_PAUSE;
+
+    static std::string const FRAME;
+
+    static std::string const FPS;
+
+    static std::string const RECORD_DURATION;
+
+    static std::string const RECORD_LAPSE;
+
+    static std::string const MOIVES;
 };
 
 }  // namespace lpase

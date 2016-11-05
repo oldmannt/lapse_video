@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -22,14 +25,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03d-KZ-TGY">
-                                <frame key="frameInset" width="600" height="233"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24e-Z1-H5r" userLabel="Btn FPS" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                <frame key="frameInset" minX="592" minY="300" width="75" height="75"/>
+                                <rect key="frame" x="592" y="300" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="FPS" image="BTN_FPS"/>
                                 <connections>
@@ -37,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LA-Ze-XF0">
-                                <frame key="frameInset" minX="555" minY="20" width="45" height="30"/>
+                                <rect key="frame" x="555" y="20" width="45" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2bN-2K-gkR"/>
                                     <constraint firstAttribute="width" constant="45" id="R8m-TJ-2Qf"/>
@@ -48,7 +51,7 @@
                                 </connections>
                             </button>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="EXPOSURE_SEL" translatesAutoresizingMaskIntoConstraints="NO" id="R4P-dT-SaB">
-                                <frame key="frameInset" minX="250" minY="250" width="100" height="100"/>
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="hZP-sk-LTF"/>
                                     <constraint firstAttribute="height" constant="100" id="hfG-fH-wWs"/>
@@ -58,7 +61,7 @@
                                 </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FOCUS_SEL" translatesAutoresizingMaskIntoConstraints="NO" id="0t1-lw-au1">
-                                <frame key="frameInset" minX="250" minY="250" width="100" height="100"/>
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="34y-4S-ahd"/>
@@ -68,41 +71,11 @@
                                     <outletCollection property="gestureRecognizers" destination="g3r-Ph-Ksu" appends="YES" id="ePP-WC-gdf"/>
                                 </connections>
                             </imageView>
-                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CRm-a8-Rov" userLabel="lapse_ctrl_view">
-                                <frame key="frameInset" minX="540" minY="230" width="60" height="140"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLB-Jv-Cnn" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <frame key="frameInset" minX="28" width="98" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="Pv7-6X-vAD"/>
-                                            <constraint firstAttribute="height" constant="60" id="cXJ-jQ-s1r"/>
-                                        </constraints>
-                                        <state key="normal" title="stop" image="BTN_LAPSE_CANCEL"/>
-                                        <connections>
-                                            <action selector="lapseStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="63t-9p-h7K"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt9-UF-QnP" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <state key="normal" title="resume" image="BTN_LAPSE_RESUME"/>
-                                        <connections>
-                                            <action selector="lapseResume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="850-4k-W3W"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="gt9-UF-QnP" firstAttribute="leading" secondItem="CRm-a8-Rov" secondAttribute="leading" id="9ER-Rg-fc4"/>
-                                    <constraint firstItem="KLB-Jv-Cnn" firstAttribute="centerX" secondItem="gt9-UF-QnP" secondAttribute="centerX" id="ApV-nz-XAu"/>
-                                    <constraint firstItem="gt9-UF-QnP" firstAttribute="height" secondItem="KLB-Jv-Cnn" secondAttribute="height" id="Ech-kE-Ylu"/>
-                                    <constraint firstAttribute="height" constant="140" id="OxV-p0-awa" userLabel="height = 240"/>
-                                    <constraint firstAttribute="width" constant="60" id="Yjj-cR-59q" userLabel="width = 240"/>
-                                    <constraint firstItem="gt9-UF-QnP" firstAttribute="centerY" secondItem="CRm-a8-Rov" secondAttribute="centerY" id="plY-Ob-1Jd"/>
-                                    <constraint firstItem="gt9-UF-QnP" firstAttribute="width" secondItem="KLB-Jv-Cnn" secondAttribute="width" id="s9p-HE-o0c"/>
-                                    <constraint firstItem="KLB-Jv-Cnn" firstAttribute="top" secondItem="gt9-UF-QnP" secondAttribute="top" id="v4s-1h-Bnv"/>
-                                </constraints>
-                            </view>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e36-d7-Jw2">
+                                <rect key="frame" x="-4" y="0.0" width="240" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M3-Nu-Zft" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="133"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="3M3-Nu-Zft" secondAttribute="height" id="HMY-zt-uY6"/>
                                         </constraints>
@@ -115,24 +88,30 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-Xr-myx" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <state key="normal" title="lapse" image="BTN_LAPSE"/>
+                                        <rect key="frame" x="0.0" y="133" width="133" height="133"/>
+                                        <state key="normal" title="lapse" image="BTN_LAPSE">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="lapse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NGY-9S-svq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7W-Uq-53v" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="266" width="133" height="133"/>
                                         <state key="normal" title="ratio" image="BTN_RESOLUTION"/>
                                         <connections>
                                             <action selector="ratio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DTM-rv-9d7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJj-Al-lTn" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="399" width="133" height="133"/>
                                         <state key="normal" title="more" image="BTN_MORE"/>
                                         <connections>
                                             <action selector="more_camera_setting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ad0-iM-cbr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4w-Yi-t3T" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="532" width="133" height="133"/>
                                         <state key="normal" title="library" image="BTN_LIBRARY"/>
                                         <connections>
                                             <action selector="library_tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fBw-GU-ezi"/>
@@ -140,21 +119,21 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1VT-JF-5EV" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <frame key="frameInset" minX="120" width="120" height="120"/>
+                                        <rect key="frame" x="120" y="0.0" width="120" height="120"/>
                                         <state key="normal" title="pause" image="BTN_PAUSE"/>
                                         <connections>
                                             <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="beY-JH-eER"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUy-5W-LOT" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
-                                        <frame key="frameInset" minX="120" minY="133" width="120" height="120"/>
+                                        <rect key="frame" x="120" y="133" width="120" height="120"/>
                                         <state key="normal" title="resume" image="BTN_RESUME"/>
                                         <connections>
                                             <action selector="resume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQa-F4-Y1y"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuC-AN-waf">
-                                        <frame key="frameInset" minX="120" minY="480" width="120" height="120"/>
+                                        <rect key="frame" x="120" y="480" width="120" height="120"/>
                                         <state key="normal" title="stop" image="BTN_STOP"/>
                                         <connections>
                                             <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTx-ka-U29"/>
@@ -196,6 +175,39 @@
                                     <constraint firstItem="1VT-JF-5EV" firstAttribute="height" secondItem="3M3-Nu-Zft" secondAttribute="height" id="ztq-dn-z4o"/>
                                 </constraints>
                             </view>
+                            <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CRm-a8-Rov" userLabel="lapse_ctrl_view">
+                                <rect key="frame" x="301" y="399" width="60" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLB-Jv-Cnn" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="0.0" width="98" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Pv7-6X-vAD"/>
+                                            <constraint firstAttribute="height" constant="60" id="cXJ-jQ-s1r"/>
+                                        </constraints>
+                                        <state key="normal" title="stop" image="BTN_LAPSE_CANCEL"/>
+                                        <connections>
+                                            <action selector="lapseStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="63t-9p-h7K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt9-UF-QnP" customClass="UIButtonBottomTittle" customModule="lapse_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40" width="60" height="60"/>
+                                        <state key="normal" title="resume" image="BTN_LAPSE_RESUME"/>
+                                        <connections>
+                                            <action selector="lapseResume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="850-4k-W3W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gt9-UF-QnP" firstAttribute="height" secondItem="KLB-Jv-Cnn" secondAttribute="height" id="08e-77-Vyf"/>
+                                    <constraint firstItem="gt9-UF-QnP" firstAttribute="centerX" secondItem="CRm-a8-Rov" secondAttribute="centerX" id="6Nh-Jw-xkh"/>
+                                    <constraint firstItem="gt9-UF-QnP" firstAttribute="width" secondItem="KLB-Jv-Cnn" secondAttribute="width" id="7Ez-qQ-xgt"/>
+                                    <constraint firstAttribute="height" constant="140" id="OxV-p0-awa" userLabel="height = 240"/>
+                                    <constraint firstAttribute="width" constant="60" id="Yjj-cR-59q" userLabel="width = 240"/>
+                                    <constraint firstItem="KLB-Jv-Cnn" firstAttribute="centerY" secondItem="CRm-a8-Rov" secondAttribute="centerY" id="fnH-zi-O4a"/>
+                                    <constraint firstItem="KLB-Jv-Cnn" firstAttribute="centerX" secondItem="CRm-a8-Rov" secondAttribute="centerX" id="fpf-U4-c5f"/>
+                                    <constraint firstItem="gt9-UF-QnP" firstAttribute="centerY" secondItem="CRm-a8-Rov" secondAttribute="centerY" id="nEP-ln-91A"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -208,7 +220,7 @@
                             <constraint firstItem="e36-d7-Jw2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Sgz-s8-taU"/>
                             <constraint firstItem="R4P-dT-SaB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZC4-fD-NHj"/>
                             <constraint firstItem="CRm-a8-Rov" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aY0-Zf-vTQ"/>
-                            <constraint firstItem="CRm-a8-Rov" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="fYU-3h-sWX"/>
+                            <constraint firstItem="CRm-a8-Rov" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-20" id="fYU-3h-sWX"/>
                             <constraint firstItem="d4w-Yi-t3T" firstAttribute="width" secondItem="3M3-Nu-Zft" secondAttribute="width" id="gKT-8j-Pzm"/>
                             <constraint firstItem="d4w-Yi-t3T" firstAttribute="top" secondItem="VJj-Al-lTn" secondAttribute="bottom" id="guD-x2-2MH"/>
                             <constraint firstItem="2LA-Ze-XF0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="i6G-xZ-wUN"/>
@@ -268,7 +280,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="124" y="634"/>
+            <point key="canvasLocation" x="124" y="633.73313343328346"/>
         </scene>
         <!--other-->
         <scene sceneID="LiO-YV-57I">
@@ -302,10 +314,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j7M-Q7-ADh" userLabel="preview_image">
-                                <frame key="frameInset" minY="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83F-kj-Q8d">
-                                <frame key="frameInset" minY="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Preview" id="sW7-FY-Q8c">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="fDl-uc-QqP">
@@ -349,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JAL-PG-4R7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921" y="533"/>
+            <point key="canvasLocation" x="1279" y="567"/>
         </scene>
         <!--projects-->
         <scene sceneID="4hZ-rE-0dr">
@@ -364,7 +376,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" misplaced="YES" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="awx-uu-1ST">
-                                <frame key="frameInset" minY="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Projects" id="Iwr-eq-ahH">
@@ -382,59 +394,82 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s51-q7-rQP">
-                                <frame key="frameInset" minY="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="project_cell" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="project_cell" rowHeight="91" id="v3r-ZM-tyW" customClass="PorjectCell" customModule="lapse_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v3r-ZM-tyW" id="uB6-Sz-4eR">
-                                            <frame key="frameInset" width="600" height="91"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uQE-xj-8Iu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="90" id="Yi3-rj-0TD"/>
                                                         <constraint firstAttribute="width" constant="160" id="nMY-x9-ClR"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="video name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eE0-KW-MX6">
+                                                    <rect key="frame" x="165" y="8" width="93.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" red="0.83554470539093018" green="0.53728467226028442" blue="0.19192381203174591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016年12月12日12:12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mj-nY-h0J">
+                                                    <rect key="frame" x="165" y="34.5" width="147" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fps" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9J-Rg-xYT">
+                                                    <rect key="frame" x="567.5" y="34.5" width="24.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iS3-Q4-o1B">
+                                                    <rect key="frame" x="165" y="62" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wM1-A8-5eS" userLabel="record duration">
+                                                    <rect key="frame" x="550" y="62" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="BTN_CAPTURE" translatesAutoresizingMaskIntoConstraints="NO" id="RHO-vL-qzZ">
+                                                    <rect key="frame" x="284" y="56" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="qKc-gJ-iI7"/>
+                                                        <constraint firstAttribute="height" constant="20" id="wMB-YY-883"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="F9J-Rg-xYT" secondAttribute="trailing" id="0rq-Ri-SXs"/>
                                                 <constraint firstItem="eE0-KW-MX6" firstAttribute="leading" secondItem="uQE-xj-8Iu" secondAttribute="trailing" constant="5" id="4dm-g1-ELL"/>
                                                 <constraint firstItem="eE0-KW-MX6" firstAttribute="top" secondItem="uB6-Sz-4eR" secondAttribute="topMargin" id="6QR-e3-gTD"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wM1-A8-5eS" secondAttribute="trailing" id="FUP-Y0-yRy"/>
                                                 <constraint firstItem="iS3-Q4-o1B" firstAttribute="bottom" secondItem="uB6-Sz-4eR" secondAttribute="bottomMargin" id="Ffw-q1-yBO"/>
                                                 <constraint firstItem="3Mj-nY-h0J" firstAttribute="leading" secondItem="eE0-KW-MX6" secondAttribute="leading" id="XGc-o6-daw"/>
                                                 <constraint firstItem="uQE-xj-8Iu" firstAttribute="top" secondItem="uB6-Sz-4eR" secondAttribute="top" id="ach-F7-n6V"/>
                                                 <constraint firstItem="3Mj-nY-h0J" firstAttribute="top" secondItem="eE0-KW-MX6" secondAttribute="bottom" constant="5" id="bCX-wd-55r"/>
+                                                <constraint firstItem="wM1-A8-5eS" firstAttribute="top" secondItem="iS3-Q4-o1B" secondAttribute="top" id="bWY-IX-4Fe"/>
                                                 <constraint firstItem="uQE-xj-8Iu" firstAttribute="leading" secondItem="uB6-Sz-4eR" secondAttribute="leading" id="ev5-qh-Jb0"/>
                                                 <constraint firstItem="F9J-Rg-xYT" firstAttribute="top" secondItem="3Mj-nY-h0J" secondAttribute="top" id="nzx-z7-5Jt"/>
+                                                <constraint firstItem="wM1-A8-5eS" firstAttribute="leading" secondItem="RHO-vL-qzZ" secondAttribute="trailing" constant="2" id="vBP-ru-f6f"/>
+                                                <constraint firstItem="RHO-vL-qzZ" firstAttribute="centerY" secondItem="iS3-Q4-o1B" secondAttribute="centerY" id="vEK-oI-OG8"/>
                                                 <constraint firstItem="iS3-Q4-o1B" firstAttribute="leading" secondItem="eE0-KW-MX6" secondAttribute="leading" id="wJf-5w-qmf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
                                             <outlet property="m_fps" destination="F9J-Rg-xYT" id="9fI-Mo-vzY"/>
+                                            <outlet property="m_record_duration" destination="wM1-A8-5eS" id="AiN-MF-H4g"/>
                                             <outlet property="m_video_create_time" destination="3Mj-nY-h0J" id="4rY-aT-0qQ"/>
                                             <outlet property="m_video_length" destination="iS3-Q4-o1B" id="8tM-X4-Vnc"/>
                                             <outlet property="m_video_name" destination="eE0-KW-MX6" id="bX6-mI-dHX"/>
@@ -463,6 +498,7 @@
                     <connections>
                         <outlet property="m_btn_back" destination="TIc-eV-iCF" id="22Z-nI-Ss9"/>
                         <outlet property="m_table_view" destination="s51-q7-rQP" id="xCq-Ds-oMm"/>
+                        <outlet property="m_view_tittle" destination="Iwr-eq-ahH" id="om0-ZY-hvO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RnB-nw-YDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -482,21 +518,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Enx-Et-933">
+                                <rect key="frame" x="0.0" y="64" width="375" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </pickerView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mz2-07-pbq" userLabel="fps">
+                                <rect key="frame" x="54.5" y="421.5" width="266.5" height="31"/>
                                 <connections>
                                     <action selector="sliderFps:" destination="wJX-5s-8SK" eventType="valueChanged" id="s1S-0F-6qE"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="i0s-xD-oNN" userLabel="slap">
+                                <rect key="frame" x="54.5" y="475.5" width="266.5" height="31"/>
                                 <connections>
                                     <action selector="sliderLapse:" destination="wJX-5s-8SK" eventType="valueChanged" id="RXj-uk-Oz0"/>
                                 </connections>
                             </slider>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTN_LAPSE" translatesAutoresizingMaskIntoConstraints="NO" id="M9l-Qb-WjN"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTN_FPS" translatesAutoresizingMaskIntoConstraints="NO" id="r2Y-2Q-7Nb"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTN_LAPSE" translatesAutoresizingMaskIntoConstraints="NO" id="M9l-Qb-WjN">
+                                <rect key="frame" x="19.5" y="478.5" width="25" height="25"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTN_FPS" translatesAutoresizingMaskIntoConstraints="NO" id="r2Y-2Q-7Nb">
+                                <rect key="frame" x="19.5" y="424.5" width="25" height="25"/>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8o-Kb-CsT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Lapse" id="4SK-ez-4zU" userLabel="lapse">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="5Sg-DC-YBG">
@@ -508,11 +552,13 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylo-Wx-lh1" userLabel="fps">
+                                <rect key="frame" x="331" y="426.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIc-Nd-Kn1" userLabel="lapse">
+                                <rect key="frame" x="331" y="480.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

@@ -16,7 +16,6 @@
 #include "video_writer_result_handler.hpp"
 
 namespace lpase {
-
 class LogicImp: public LogicGen , public gearsbox::TaskExcuserGen, public gearsbox::VideoWriterResultHandler, public std::enable_shared_from_this<LogicImp> {
 public:
     virtual ~LogicImp() {}
@@ -41,7 +40,7 @@ public:
     virtual void excuse(const std::shared_ptr<gearsbox::TaskInfoGen> & info);
     
     //gearsbox::VideoWriterResultHandler
-    virtual void onComplete(bool success, const std::string & path);
+    virtual void onComplete(bool success, const std::string & path, int32_t duration);
     
     virtual void beforeComplete();
     
@@ -53,6 +52,7 @@ private:
     void initialize_camera();
     void initialize_video();
     void setCaptureInteral(int32_t interval);
+    std::string genFileName();
 };
     
 }
