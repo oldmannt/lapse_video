@@ -5,3 +5,4 @@ Capture a photo in specified duration, then make these photo as video. This app 
 1. encode lapse video using ffmpeg
 2. c++ 11 code crosplatform for iOS and Android.
 
+release on Appstore
