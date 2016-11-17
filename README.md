@@ -13,6 +13,26 @@ android not yet
 I shared the process in below page 
 https://github.com/oldmannt/build_x264_ffmpeg_ios_android
 
+### How to use
+  ```shell
+  make djinni
+  ```
+  generate C++, objective-C, and Jave interface from djinni files
+  ```shell
+  make mac_proj
+  ```
+  generate gtest mac xcode project, unit test for C++ code
+  
+  ```shell
+  make ios_proj
+  ```
+  generate ios xcode project
+  
+  ```shell
+  make android_proj
+  ```
+  generate android.mk, but I didn't use it, I prefer cmake in Android Studio
+
 ![image](https://github.com/oldmannt/lapse_video/blob/master/data/screen/ios1.PNG) 
 ![image](https://github.com/oldmannt/lapse_video/blob/master/data/screen/ios2.PNG) 
 ![image](https://github.com/oldmannt/lapse_video/blob/master/data/screen/ios3.PNG) 
